@@ -1,113 +1,181 @@
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    content: [
-      './templates/**/*.html.twig',
-      './js/**/*.js',
-    ],
-    theme: {
-      extend: {
-        colors: {
-          primary: {
-            DEFAULT: '#a05ea6',
-            light: '#a05ea6',
-            10: 'rgba(160, 94, 166, 0.1)'
+<html>
+
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      content: [
+        './templates/**/*.html.twig',
+        './js/**/*.js',
+      ],
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#a05ea6',
+              light: '#a05ea6',
+              10: 'rgba(160, 94, 166, 0.1)',
+              gradient: {
+                start: '#A05EA7',
+                end: '#765FA4'
+              }
+            },
+            secondary: '#739549',
+            text: {
+              DEFAULT: '#191919',
+              muted: '#777776'
+            },
+            border: {
+              muted: 'rgba(115, 117, 120, 0.3)'
+            }
           },
-          secondary: '#739549',
-          text: {
-            DEFAULT: '#191919',
-            muted: '#777776'
+          fontFamily: {
+            sans: ['Arial', 'sans-serif'],
+            // Add your fonts here
           },
-          border: {
-            muted: 'rgba(115, 117, 120, 0.3)'
+          container: {
+            center: true,
+            padding: '1rem',
+            screens: {
+              sm: '640px',
+              md: '768px',
+              lg: '1024px',
+              xl: '1280px',
+              '2xl': '1440px',
+            },
+          },
+          spacing: {
+            '18': '4.5rem',
+          },
+          backgroundImage: {
+            'fade-white': 'linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0) 100%)',
+            'primary-gradient': 'linear-gradient(to right, #A05EA7, #765FA4)'
           }
         },
-        fontFamily: {
-          sans: ['Arial', 'sans-serif'],
-          // Add your fonts here
-        },
-        container: {
-          center: true,
-          padding: '1rem',
-          screens: {
-            sm: '640px',
-            md: '768px',
-            lg: '1024px',
-            xl: '1280px',
-            '2xl': '1440px',
-          },
-        },
-        spacing: {
-          '18': '4.5rem',
-        },
-        backgroundImage: {
-          'fade-white': 'linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0) 100%)'
-        }
       },
-    },
-    plugins: [],
-  }
-  </script> 
-    <div class="flex flex-col bg-white">
-      <div class="container">
-        <div class="w-full overflow-hidden">
-          <header class="flex flex-col gap-8">
-            <div class="flex flex-col gap-4 pb-8 bg-fade-white">
-              <div class="flex justify-center bg-primary-10">
-                <p class="text-sm font-semibold text-text">
-                  For US HCPs Only
-                </p>
-              </div>
-              <div class="flex justify-between items-center px-10">
-                <div class="w-[286px]">
-                  <!-- SVG logo will go here -->
-                   <img src="logo.svg" />
-                </div>
-                <div class="flex flex-col">
-                  <div class="flex justify-end">
-                    <div class="flex gap-4">
-                      <div class="flex gap-4">
-                        <a href="#" class="text-sm text-text p-0.5">
-                          Patient Website
-                        </a>
-                        <a href="#" class="text-sm text-text p-0.5">
-                          Prescribing Information
-                        </a>
-                        <a href="#" class="text-sm text-text p-0.5">
-                          Contact an Account Manager
-                        </a>
-                        <a href="#" class="text-sm text-text p-0.5">
-                          Important Safety Information
-                        </a>
-                      </div>
+      plugins: [],
+    }
+  </script>
+  <div class="container">
+    <div class="w-full overflow-hidden">
+      <header class="flex flex-col gap-8">
+        <div class="flex flex-col gap-4 pb-8 bg-fade-white">
+          <div class="flex justify-center bg-primary-10">
+            <p class="text-sm font-semibold text-text">
+              For US HCPs Only
+            </p>
+          </div>
+          <div class="flex justify-between items-center px-10">
+            <div class="w-[286px]">
+              <!-- SVG logo will go here -->
+              <img src="logo.svg">
+            </div>
+            <div class="flex flex-col">
+              <div class="flex justify-end">
+                <div class="flex gap-4">
+                  <div class="flex gap-4">
+                    <a href="#" class="text-sm text-text p-0.5">
+                      Patient Website
+                    </a>
+                    <a href="#" class="text-sm text-text p-0.5">
+                      Prescribing Information
+                    </a>
+                    <a href="#" class="text-sm text-text p-0.5">
+                      Contact an Account Manager
+                    </a>
+                    <a href="#" class="text-sm text-text p-0.5">
+                      Important Safety Information
+                    </a>
+                  </div>
+                  <div class="flex items-center">
+                    <!-- Email icon SVG will go here -->
+                    <div class="w-[152px] h-10">
                       <div class="flex items-center">
-                        <!-- Email icon SVG will go here -->
-                        <div class="w-[152px] h-10">
-                          <div class="flex items-center">
-                            <div class="px-2 py-4">
-                              <p class="text-base font-bold text-center capitalize text-primary">
-                                Stay in the Know
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="flex gap-2">
-                      <div class="p-4 rounded-lg bg-white border border-border-muted">
-                        <div class="flex gap-2">
-                          <p class="text-base text-text">
-                            SLOS
+                        <div class="px-2 py-4">
+                          <p class="text-base font-bold text-center capitalize text-primary">
+                            Stay in the Know
                           </p>
-                          <!-- Arrow SVG will go here -->
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="flex gap-2">
+                  <div class="p-4 rounded-lg bg-white border border-border-muted">
+                    <div class="flex gap-2">
+                      <p class="text-base text-text">
+                        SLOS
+                      </p>
+                      <!-- Arrow SVG will go here -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-end rounded-[20px]">
+                <div class="flex items-center gap-10">
+                  <nav class="flex items-center gap-8">
+                    <a href="#" class="text-center">
+                      <p class="text-base font-bold text-primary">
+                        About<br>CHOLBAM
+                      </p>
+                    </a>
+                    <a href="#" class="text-center">
+                      <p class="text-base font-bold text-primary">
+                        Dosing and<br>Administration
+                      </p>
+                    </a>
+                    <a href="#" class="text-center">
+                      <p class="text-base font-bold text-primary">
+                        Understanding<br>SLOS
+                      </p>
+                    </a>
+                    <a href="#" class="text-center">
+                      <p class="text-base font-bold text-primary">
+                        Support With<br>Mirum Access Plus
+                      </p>
+                    </a>
+                    <div class="flex items-center gap-2">
+                      <a href="#" class="text-center">
+                        <p class="text-base font-bold text-primary">
+                          Videos and<br>Resources
+                        </p>
+                      </a>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5">
+                        <path
+                          d="M9.99027 13C9.88396 13 9.7843 12.9809 9.69128 12.9427C9.59826 12.9046 9.51484 12.8473 9.44101 12.771L5.2405 8.42759C5.0731 8.25449 4.99309 8.05725 5.00047 7.83588C5.00785 7.6145 5.09275 7.41985 5.25516 7.25191C5.41758 7.08397 5.60583 7 5.81992 7C6.03401 7 6.22226 7.08397 6.38468 7.25191L9.9947 11.0076L13.6269 7.25191C13.7893 7.08397 13.9775 7.00382 14.1916 7.01145C14.4057 7.01908 14.594 7.10687 14.7564 7.27481C14.9188 7.44275 15 7.6374 15 7.85878C15 8.08015 14.9163 8.27696 14.7489 8.44921L10.5484 12.771C10.4687 12.8473 10.3823 12.9046 10.2893 12.9427C10.1962 12.9809 10.0966 13 9.99027 13Z"
+                          fill="#A05EA6"></path>
+                      </svg>
+                    </div>
+                  </nav>
+
+                  <div class="flex items-center">
+                    <div class="flex items-center space-x-[-1px]">
+                      <!-- SVG divider lines - keeping as is -->
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <!-- Top decorative line SVG - keeping as is -->
+                      <div class="flex items-center p-4">
+                        <p class="text-base font-semibold text-center capitalize">
+                          Prescribe CHOLBAM
+                        </p>
+                      </div>
+                      <!-- Bottom decorative line SVG - keeping as is -->
+                    </div>
+                    <div class="flex items-center">
+                      <!-- SVG divider line - keeping as is -->
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </header>
+          </div>
         </div>
-      </div>
+      </header>
     </div>
+  </div>
+  </div>
+  </body>
+
+</html>
