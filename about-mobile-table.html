@@ -1,0 +1,244 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    content: [
+      './templates/**/*.html.twig',
+      './js/**/*.js',
+    ],
+    theme: {
+      extend: {
+        colors: {
+          primary: {
+            DEFAULT: '#a05ea6',
+            light: '#a05ea6',
+            10: 'rgba(160, 94, 166, 0.1)',
+            gradient: {
+              start: '#A05EA7',
+              end: '#765FA4'
+            }
+          },
+          secondary: '#739549',
+          text: {
+            DEFAULT: '#191919',
+            muted: '#777776'
+          },
+          border: {
+            muted: 'rgba(115, 117, 120, 0.3)'
+          },
+          teal: '#0080a3',
+          dark: '#231f20'
+        },
+        fontFamily: {
+          sans: ['Arial', 'sans-serif'],
+        },
+        container: {
+          center: true,
+          padding: '1rem',
+          screens: {
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+            '2xl': '1440px',
+          },
+        },
+        spacing: {
+          '18': '4.5rem',
+        },
+        backgroundImage: {
+          'fade-white': 'linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0) 100%)',
+          'primary-gradient': 'linear-gradient(to right, #A05EA7, #765FA4)',
+          'teal-primary-gradient': 'linear-gradient(to right, #0081a3 0%, #a05fa6 322.36%)',
+          'teal-primary-gradient-2': 'linear-gradient(to right, #0081a3 -110.9%, #a05fa6 211.89%)',
+          'teal-primary-gradient-3': 'linear-gradient(to right, #0081a3 -221.37%, #a05fa6 100%)'
+        }
+      },
+    },
+    plugins: [],
+  }
+</script>
+
+<div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 overflow-hidden rounded-xl bg-white" style="box-shadow: 0px 0px 12px 0 rgba(160,94,166,0.12);">
+  <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0">
+    <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[120px] relative gap-2.5 pl-2 py-2 border-t-0 border-r border-b-0 border-l-0 border-white" style="background: linear-gradient(86.73deg, #a05ea7 13.35%, #765fa4 321.4%);">
+      <p class="flex-grow w-28 text-base font-semibold text-left text-white">
+        Adverse Reactions
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-white" style="background: linear-gradient(85.12deg, #a05ea7 13.83%, #865fa5 136.48%, #805fa5 166.1%, #765fa4 215.17%);">
+      <p class="flex-grow w-[70px] text-base font-semibold text-center text-white">
+        Trial 1
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-white" style="background: linear-gradient(to right, #a05ea7 -21.67%, #855fa5 95.06%, #765fa4 161.67%);">
+      <p class="flex-grow w-[70px] text-base text-center text-white">
+        <span class="flex-grow w-[70px] text-base font-semibold text-center text-white">Trial 2</span><span class="flex-grow w-[70px] text-base text-center text-white">§</span>
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 w-[91px] relative gap-2.5" style="background: linear-gradient(84.87deg, #a05ea7 -96.36%, #765fa4 87.27%);">
+      <p class="flex-grow w-[91px] text-base text-center text-white">
+        <span class="flex-grow w-[91px] text-base font-semibold text-center text-white">Overall </span><span class="flex-grow w-[91px] text-base text-center text-white">(%)</span>
+      </p>
+    </div>
+  </div>
+  <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+    <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[120px] relative gap-2.5 pl-2 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-28 text-base font-semibold text-left text-[#191919]">
+        Diarrhea
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">1</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">2§</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 w-[91px] relative gap-2.5">
+      <p class="flex-grow w-[91px] text-lg text-center text-[#191919]">3 (2%)</p>
+    </div>
+  </div>
+  <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+    <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[120px] relative gap-2.5 pl-2 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-28 text-base font-semibold text-left text-[#191919]">
+        Reflux esophagitis
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">1</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">0</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 w-[91px] relative gap-2.5">
+      <p class="flex-grow w-[91px] text-lg text-center text-[#191919]">1 (1%)</p>
+    </div>
+  </div>
+  <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+    <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[120px] relative gap-2.5 pl-2 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-28 text-base font-semibold text-left text-[#191919]">
+        Malaise
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">1</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">0</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 w-[91px] relative gap-2.5">
+      <p class="flex-grow w-[91px] text-lg text-center text-[#191919]">1 (1%)</p>
+    </div>
+  </div>
+  <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+    <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[120px] relative gap-2.5 pl-2 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-28 text-base font-semibold text-left text-[#191919]">
+        Jaundice
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">1</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">0</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 w-[91px] relative gap-2.5">
+      <p class="flex-grow w-[91px] text-lg text-center text-[#191919]">1 (1%)</p>
+    </div>
+  </div>
+  <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+    <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[120px] relative gap-2.5 pl-2 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-28 text-base font-semibold text-left text-[#191919]">
+        Skin lesion
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">1</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">0</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 w-[91px] relative gap-2.5">
+      <p class="flex-grow w-[91px] text-lg text-center text-[#191919]">1 (1%)</p>
+    </div>
+  </div>
+  <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+    <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[120px] relative gap-2.5 pl-2 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-28 text-base font-semibold text-left text-[#191919]">
+        Nausea
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">0</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">1§</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 w-[91px] relative gap-2.5">
+      <p class="flex-grow w-[91px] text-lg text-center text-[#191919]">1 (1%)</p>
+    </div>
+  </div>
+  <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+    <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[120px] relative gap-2.5 pl-2 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-28 text-base font-semibold text-left text-[#191919]">
+        Abdominal pain
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">0</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">1§</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 w-[91px] relative gap-2.5">
+      <p class="flex-grow w-[91px] text-lg text-center text-[#191919]">1 (1%)</p>
+    </div>
+  </div>
+  <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+    <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[120px] relative gap-2.5 pl-2 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-28 text-base font-semibold text-left text-[#191919]">
+        Intestinal polyp
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">0</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">1§</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 w-[91px] relative gap-2.5">
+      <p class="flex-grow w-[91px] text-lg text-center text-[#191919]">1 (1%)</p>
+    </div>
+  </div>
+  <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+    <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[120px] relative gap-2.5 pl-2 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-28 text-base font-semibold text-left text-[#191919]">
+        Urinary tract infection
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">0</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">1§</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 w-[91px] relative gap-2.5">
+      <p class="flex-grow w-[91px] text-lg text-center text-[#191919]">1 (1%)</p>
+    </div>
+  </div>
+  <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10">
+    <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[120px] relative gap-2.5 pl-2 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-28 text-base font-semibold text-left text-[#191919]">
+        Peripheral neuropathy
+      </p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">0</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+      <p class="flex-grow w-[70px] text-lg text-center text-[#191919]">1</p>
+    </div>
+    <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 w-[91px] relative gap-2.5">
+      <p class="flex-grow w-[91px] text-lg text-center text-[#191919]">1 (1%)</p>
+    </div>
+  </div>
+</div>
