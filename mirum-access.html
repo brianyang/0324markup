@@ -1,0 +1,1302 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/tailwind.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    content: [
+      './templates/**/*.html.twig',
+      './js/**/*.js',
+    ],
+    theme: {
+      extend: {
+        colors: {
+          primary: {
+            DEFAULT: '#a05ea6',
+            light: '#a05ea6',
+            10: 'rgba(160, 94, 166, 0.1)',
+            gradient: {
+              start: '#A05EA7',
+              end: '#765FA4'
+            }
+          },
+          secondary: '#739549',
+          text: {
+            DEFAULT: '#191919',
+            muted: '#777776'
+          },
+          border: {
+            muted: 'rgba(115, 117, 120, 0.3)'
+          },
+          teal: '#0080a3',
+          dark: '#231f20',
+          purple: '#765ea4'
+        },
+        fontFamily: {
+          sans: ['Arial', 'sans-serif'],
+        },
+        container: {
+          center: true,
+          padding: '1rem',
+          screens: {
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+            '2xl': '1440px',
+          },
+        },
+        spacing: {
+          '18': '4.5rem',
+        },
+        backgroundImage: {
+          'fade-white': 'linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0) 100%)',
+          'primary-gradient': 'linear-gradient(to right, #A05EA7, #765FA4)',
+          'teal-primary-gradient': 'linear-gradient(to right, #0081a3 0%, #a05fa6 322.36%)',
+          'teal-primary-gradient-2': 'linear-gradient(to right, #0081a3 -110.9%, #a05fa6 211.89%)',
+          'teal-primary-gradient-3': 'linear-gradient(to right, #0081a3 -221.37%, #a05fa6 100%)',
+          'teal-primary': 'linear-gradient(to right, #0081a3 0%, #a05fa6 155.94%)'
+        }
+      },
+    },
+    plugins: [],
+  }
+</script>
+
+<div class="flex flex-col justify-start items-start w-[1440px] overflow-hidden bg-white">
+  <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0">
+    <div
+      class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-[68px]"
+    >
+      <div
+        class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[1440px] gap-8 pt-10"
+      >
+        <div
+          class="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 gap-8 px-[150px]"
+        >
+          <div
+            class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+          >
+            <div
+              class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0"
+            >
+              <div
+                class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-8"
+              >
+                <div
+                  class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-6"
+                >
+                  <img
+                    src="mirum-access-plus-logo-plus-tagline-1.png"
+                    class="flex-grow-0 flex-shrink-0 w-[423.87px] h-[204.32px] object-contain"
+                  />
+                  <div class="flex flex-col justify-center items-start flex-grow gap-6">
+                    <div
+                      class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-6"
+                    >
+                      <p
+                        class="self-stretch flex-grow-0 flex-shrink-0 w-[692.13px] text-lg text-left text-[#18314c]"
+                      >
+                        If you’d like to prescribe CHOLBAM for your patient, download the Patient
+                        Enrollment Form and Patient Authorization Form. Once you have filled out the
+                        forms, fax them to Mirum Access Plus at 1-855-282-4884.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-6 px-[172px]"
+                >
+                  <div
+                    class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-[18px]"
+                  >
+                    <div
+                      class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2 px-14 py-[22px] rounded-[135px] border-2 border-[#353d7c]"
+                    >
+                      <p
+                        class="flex-grow-0 flex-shrink-0 text-base font-semibold text-center text-[#353d7c]"
+                      >
+                        <span
+                          class="flex-grow-0 flex-shrink-0 text-base font-semibold text-center text-[#353d7c]"
+                          >Download the Patient </span
+                        ><br /><span
+                          class="flex-grow-0 flex-shrink-0 text-base font-semibold text-center text-[#353d7c]"
+                          >Enrollment Form</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-[18px]"
+                  >
+                    <div
+                      class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2 px-14 py-[22px] rounded-[135px] border-2 border-[#353d7c]"
+                    >
+                      <p
+                        class="flex-grow-0 flex-shrink-0 text-base font-semibold text-center text-[#353d7c]"
+                      >
+                        <span
+                          class="flex-grow-0 flex-shrink-0 text-base font-semibold text-center text-[#353d7c]"
+                          >Download the Patient </span
+                        ><br /><span
+                          class="flex-grow-0 flex-shrink-0 text-base font-semibold text-center text-[#353d7c]"
+                          >Authorization Form [English]</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-[18px]"
+                  >
+                    <div
+                      class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2 px-14 py-[22px] rounded-[135px] border-2 border-[#353d7c]"
+                    >
+                      <p
+                        class="flex-grow-0 flex-shrink-0 text-base font-semibold text-center text-[#353d7c]"
+                      >
+                        <span
+                          class="flex-grow-0 flex-shrink-0 text-base font-semibold text-center text-[#353d7c]"
+                          >Descargar la Versión </span
+                        ><br /><span
+                          class="flex-grow-0 flex-shrink-0 text-base font-semibold text-center text-[#353d7c]"
+                          >en Español</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0">
+        <div
+          class="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 gap-[26px] px-[150px] py-24"
+          style="background: linear-gradient(88.56deg, rgba(235,236,236,0) 12.58%, #eceded 97.35%);"
+        >
+          <div
+            class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 gap-[26px]"
+          >
+            <div class="flex flex-col justify-center items-start flex-grow gap-[26px]">
+              <div
+                class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-8"
+              >
+                <pre>
+Failed to transform TEXT Mirum Access Plus is available to help you, your office, and your patient not only get started with CHOLBAM after you’ve prescribed it, but also to provide support throughout treatment. Read on to learn about the details of Mirum Access Plus support available to you and your patients. If you have any questions about Mirum Access Plus,  contact us at 1-855-MRM-4YOU (1-855-676-4968)  Monday through Friday, 8:00 am through 8:00 pm ET.
+TypeError: cannot read property 'className' of undefined</pre
+                >
+                <p class="flex-grow-0 flex-shrink-0 text-lg font-bold text-left text-[#353d7c]">
+                  Refer to this step-by-step guide for more information on prescribing CHOLBAM
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[1440px] gap-8 py-16"
+        >
+          <div
+            class="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 gap-8 px-[150px]"
+          >
+            <div
+              class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+            >
+              <div
+                class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2"
+              >
+                <div
+                  class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-16"
+                >
+                  <div
+                    class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+                  >
+                    <div
+                      class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2"
+                    >
+                      <div
+                        class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-6"
+                      >
+                        <p
+                          class="flex-grow-0 flex-shrink-0 text-[32px] font-light text-left text-[#18314c]"
+                        >
+                          Ready, Set, Go
+                        </p>
+                        <svg
+                          width="902"
+                          height="3"
+                          viewBox="0 0 902 3"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="flex-grow"
+                          preserveAspectRatio="none"
+                        >
+                          <line
+                            x1="1"
+                            y1="1.32214"
+                            x2="901"
+                            y2="1.32222"
+                            stroke="#D91B5B"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          ></line>
+                        </svg>
+                      </div>
+                      <p
+                        class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[40px] font-bold text-left text-[#18314c]"
+                      >
+                        Getting Your Patients the Treatment They Need
+                      </p>
+                    </div>
+                    <div
+                      class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2 pr-[116px]"
+                    >
+                      <div
+                        class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+                      >
+                        <div
+                          class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+                        >
+                          <div
+                            class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2"
+                          >
+                            <p class="flex-grow w-[1024px] text-lg text-left text-[#18314c]">
+                              Support and resources are available through Mirum Access Plus to help
+                              you and your office navigate insurance coverage, as well as assist
+                              your patients with treatment costs and prescription fulfillment.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-10"
+                  >
+                    <div
+                      class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-4"
+                    >
+                      <img
+                        src="map-chat-icon-1.png"
+                        class="flex-grow-0 flex-shrink-0 w-[70px] h-[68.85px] object-cover"
+                      />
+                      <div
+                        class="flex flex-col justify-center items-start flex-grow relative gap-4"
+                      >
+                        <p
+                          class="flex-grow-0 flex-shrink-0 text-[26px] font-bold text-left text-[#18314c]"
+                        >
+                          Insurance Coverage and Access Support
+                        </p>
+                        <p
+                          class="self-stretch flex-grow-0 flex-shrink-0 w-[1054px] text-lg text-left text-[#18314c]"
+                        >
+                          Throughout the payer approval process, Mirum Access Plus works closely
+                          with you, your patients, and the insurance plan to help ensure patients
+                          get the treatment they need.
+                        </p>
+                        <div
+                          class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-4"
+                        >
+                          <p
+                            class="flex-grow-0 flex-shrink-0 text-base font-semibold text-left text-[#353d7c]"
+                          >
+                            Template Letter of Medical Necessity
+                          </p>
+                          <p
+                            class="flex-grow-0 flex-shrink-0 text-base font-semibold text-left text-[#353d7c]"
+                          >
+                            Prior Authorization Checklist
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-4"
+                    >
+                      <img
+                        src="6_0-dollar-icon-1.png"
+                        class="flex-grow-0 flex-shrink-0 w-[70px] h-[70px] object-cover"
+                      />
+                      <div
+                        class="flex flex-col justify-center items-start flex-grow relative gap-4"
+                      >
+                        <p
+                          class="flex-grow-0 flex-shrink-0 text-[26px] font-bold text-left text-[#18314c]"
+                        >
+                          Financial Support for Patients
+                        </p>
+                        <p
+                          class="self-stretch flex-grow-0 flex-shrink-0 w-[1054px] text-lg text-left text-[#18314c]"
+                        >
+                          <span
+                            class="self-stretch flex-grow-0 flex-shrink-0 w-[1054px] text-lg font-bold text-left text-[#18314c]"
+                            >Mirum Access Plus Savings Program: </span
+                          ><span
+                            class="self-stretch flex-grow-0 flex-shrink-0 w-[1054px] text-lg text-left text-[#18314c]"
+                            >Eligible patients with commercial or private insurance may </span
+                          ><span
+                            class="self-stretch flex-grow-0 flex-shrink-0 w-[1054px] text-lg font-bold text-left text-[#18314c]"
+                            >pay as little as $0 out of pocket per fill</span
+                          ><span
+                            class="self-stretch flex-grow-0 flex-shrink-0 w-[1054px] text-lg text-left text-[#18314c]"
+                          >
+                            for CHOLBAM.*</span
+                          ><br /><br /><span
+                            class="self-stretch flex-grow-0 flex-shrink-0 w-[1054px] text-lg font-bold text-left text-[#18314c]"
+                            >Mirum Patient Assistance Program (PAP): </span
+                          ><span
+                            class="self-stretch flex-grow-0 flex-shrink-0 w-[1054px] text-lg text-left text-[#18314c]"
+                            >Provides CHOLBAM at no cost for up to 1 calendar year for patients
+                            without insurance coverage, with eligibility reviewed each year.†</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-4"
+                    >
+                      <img
+                        src="6_0-star-icon-1.png"
+                        class="flex-grow-0 flex-shrink-0 w-[70px] h-[68.85px] object-cover"
+                      />
+                      <div
+                        class="flex flex-col justify-center items-start flex-grow relative gap-4"
+                      >
+                        <p
+                          class="flex-grow-0 flex-shrink-0 text-[26px] font-bold text-left text-[#18314c]"
+                        >
+                          Single-Source Specialty Pharmacy
+                        </p>
+                        <p
+                          class="self-stretch flex-grow-0 flex-shrink-0 w-[1054px] text-lg text-left text-[#18314c]"
+                        >
+                          Mirum Access Plus is a single-source specialty pharmacy that will ship
+                          CHOLBAM directly to patients, provide 24/7 access to pharmacists, and
+                          proactively manage refills.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0"
+                    >
+                      <div
+                        class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative"
+                      >
+                        <p class="flex-grow-0 flex-shrink-0 text-sm text-left text-[#18314c]">*</p>
+                        <p class="flex-grow w-[1135px] text-sm text-left text-[#18314c]">
+                          Eligibility restrictions: This program is not available to individuals who
+                          use any state or federal government-funded health care program to cover a
+                          portion of medication costs, such as Medicare, Medicaid, TRICARE,
+                          Department of Defense, or Veterans Administration, or any other state or
+                          federal government-funded health care program.
+                        </p>
+                      </div>
+                      <div
+                        class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative"
+                      >
+                        <p class="flex-grow-0 flex-shrink-0 text-sm text-left text-[#18314c]">†</p>
+                        <p class="flex-grow w-[1136px] text-sm text-left text-[#18314c]">
+                          Subject to program terms and conditions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[1440px] gap-8 pb-16"
+        >
+          <div
+            class="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 gap-8 px-[150px]"
+          >
+            <div
+              class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+            >
+              <div
+                class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2"
+              >
+                <div
+                  class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-16"
+                >
+                  <div
+                    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-10"
+                  >
+                    <div
+                      class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+                    >
+                      <div
+                        class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-2"
+                      >
+                        <div
+                          class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-6"
+                        >
+                          <p
+                            class="flex-grow-0 flex-shrink-0 text-[32px] font-light text-left text-[#18314c]"
+                          >
+                            By Your Side at Every Turn
+                          </p>
+                          <svg
+                            width="737"
+                            height="3"
+                            viewBox="0 0 737 3"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="flex-grow"
+                            preserveAspectRatio="none"
+                          >
+                            <line
+                              x1="1"
+                              y1="1.32227"
+                              x2="736"
+                              y2="1.32233"
+                              stroke="#D91B5B"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            ></line>
+                          </svg>
+                        </div>
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2"
+                        >
+                          <p
+                            class="flex-grow w-[1140px] text-[40px] font-bold text-left text-[#18314c]"
+                          >
+                            A Team Dedicated to Your Patient’s Treatment Journey
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2 pr-[116px]"
+                      >
+                        <div
+                          class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+                        >
+                          <div
+                            class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+                          >
+                            <div
+                              class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2"
+                            >
+                              <p class="flex-grow w-[1024px] text-lg text-left text-[#18314c]">
+                                Focus on what matters and leave the rest to our experienced and
+                                dedicated team at Mirum Access Plus, who will work with your office
+                                staff through the access process and assist your patients at every
+                                turn.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-10"
+                    >
+                      <div class="flex justify-start items-start flex-grow relative gap-4">
+                        <img
+                          src="6_1-briefcase-icon-1.png"
+                          class="flex-grow-0 flex-shrink-0 w-[68.85px] h-[70px] object-cover"
+                        />
+                        <div
+                          class="flex flex-col justify-center items-start flex-grow relative gap-4"
+                        >
+                          <p
+                            class="flex-grow-0 flex-shrink-0 text-[26px] font-bold text-left text-[#18314c]"
+                          >
+                            Mirum Access Plus Coordinators
+                          </p>
+                          <p
+                            class="self-stretch flex-grow-0 flex-shrink-0 w-[465.15px] text-lg text-left text-[#18314c]"
+                          >
+                            Available to your office staff and your patients, Mirum Access Plus
+                            Coordinators are experts who specialize in the insurance coverage
+                            process and available financial support options.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex justify-start items-start flex-grow relative gap-4">
+                        <img
+                          src="6_1-team-icon-1.png"
+                          class="flex-grow-0 flex-shrink-0 w-[70px] h-[71.17px] object-contain"
+                        />
+                        <div
+                          class="flex flex-col justify-center items-start flex-grow relative gap-4"
+                        >
+                          <p
+                            class="flex-grow-0 flex-shrink-0 text-[26px] font-bold text-left text-[#18314c]"
+                          >
+                            Experienced Navigators
+                          </p>
+                          <p
+                            class="self-stretch flex-grow-0 flex-shrink-0 w-[464px] text-lg text-left text-[#18314c]"
+                          >
+                            Navigators will connect with your patients to provide health education
+                            and the emotional support needed to address the difficulties of living
+                            with their medical condition.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[1440px] relative gap-8"
+        >
+          <div
+            class="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 gap-8 px-[150px]"
+          >
+            <div
+              class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+            >
+              <div
+                class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2"
+              >
+                <div
+                  class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-16"
+                >
+                  <div
+                    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-10"
+                  >
+                    <div
+                      class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+                    >
+                      <div
+                        class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-2"
+                      >
+                        <div
+                          class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-6"
+                        >
+                          <p class="flex-grow-0 flex-shrink-0 text-[32px] text-left text-[#18314c]">
+                            <span
+                              class="flex-grow-0 flex-shrink-0 text-[32px] font-light text-left text-[#18314c]"
+                              >Mirum Access </span
+                            ><span
+                              class="flex-grow-0 flex-shrink-0 text-[32px] italic text-left text-[#18314c]"
+                              >PLUS</span
+                            >
+                          </p>
+                          <svg
+                            width="824"
+                            height="3"
+                            viewBox="0 0 824 3"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="flex-grow"
+                            preserveAspectRatio="none"
+                          >
+                            <line
+                              x1="1"
+                              y1="1.32227"
+                              x2="823"
+                              y2="1.32234"
+                              stroke="#D91B5B"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            ></line>
+                          </svg>
+                        </div>
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2"
+                        >
+                          <p
+                            class="flex-grow w-[1140px] text-[40px] font-bold text-left text-[#18314c]"
+                          >
+                            Even More to Help Patients Start and Stay on Therapy
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2 pr-[116px]"
+                      >
+                        <div
+                          class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+                        >
+                          <div
+                            class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-6"
+                          >
+                            <div
+                              class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2"
+                            >
+                              <p class="flex-grow w-[1024px] text-lg text-left text-[#18314c]">
+                                <span class="flex-grow w-[1024px] text-lg text-left text-[#18314c]"
+                                  >In addition to helping your patients get the treatment they need,
+                                  Mirum Access Plus offers educational resources and tools for
+                                  patients who sign up for the program.</span
+                                ><br /><br /><span
+                                  class="flex-grow w-[1024px] text-lg text-left text-[#18314c]"
+                                  >If your patients choose to enroll, they will have access to an
+                                  even wider range of support services tailored to them:</span
+                                >
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-10"
+                    >
+                      <div class="flex justify-start items-start flex-grow relative gap-4">
+                        <img
+                          src="map-chat-icon-1.png"
+                          class="flex-grow-0 flex-shrink-0 w-[70px] h-[68.85px] object-cover"
+                        />
+                        <div
+                          class="flex flex-col justify-center items-start flex-grow relative gap-4"
+                        >
+                          <p
+                            class="flex-grow-0 flex-shrink-0 text-[26px] font-bold text-left text-[#18314c]"
+                          >
+                            Personalized support
+                          </p>
+                          <p
+                            class="self-stretch flex-grow-0 flex-shrink-0 w-[464px] text-lg text-left text-[#18314c]"
+                          >
+                            Navigators can support all patients by answering questions about
+                            CHOLBAM, the disease, or the access process. For patients who have
+                            provided their consent, navigators can help track treatment goals,
+                            develop a support network, and prepare for health care appointments.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex justify-start items-start flex-grow relative gap-4">
+                        <svg
+                          width="70"
+                          height="71"
+                          viewBox="0 0 70 71"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="flex-grow-0 flex-shrink-0 w-[70px] h-[70px]"
+                          preserveAspectRatio="none"
+                        >
+                          <mask
+                            id="mask0_46_25695"
+                            style="mask-type:luminance"
+                            maskUnits="userSpaceOnUse"
+                            x="0"
+                            y="0"
+                            width="70"
+                            height="71"
+                          >
+                            <path
+                              d="M35 70.3222C41.9223 70.3222 48.6892 68.2695 54.4449 64.4237C60.2006 60.5778 64.6867 55.1116 67.3358 48.7162C69.9849 42.3208 70.6779 35.2834 69.3275 28.4941C67.977 21.7048 64.6436 15.4684 59.7488 10.5735C54.8539 5.67871 48.6175 2.34528 41.8281 0.994802C35.0388 -0.35568 28.0015 0.337414 21.6061 2.98648C15.2107 5.63554 9.7444 10.1216 5.89856 15.8773C2.05271 21.633 0 28.3999 0 35.3223C0 44.6048 3.6875 53.5072 10.2513 60.071C16.815 66.6347 25.7174 70.3222 35 70.3222Z"
+                              fill="white"
+                            ></path>
+                          </mask>
+                          <g mask="url(#mask0_46_25695)">
+                            <mask
+                              id="mask1_46_25695"
+                              style="mask-type:luminance"
+                              maskUnits="userSpaceOnUse"
+                              x="-682"
+                              y="-485"
+                              width="2241"
+                              height="1313"
+                            >
+                              <path
+                                d="M1558.67 -484.101H-681.33V827.232H1558.67V-484.101Z"
+                                fill="white"
+                              ></path>
+                            </mask>
+                            <g mask="url(#mask1_46_25695)">
+                              <path
+                                d="M75.8365 -5.53442H-5.83008V76.1322H75.8365V-5.53442Z"
+                                fill="#D91C5C"
+                              ></path>
+                            </g>
+                          </g>
+                          <mask
+                            id="mask2_46_25695"
+                            style="mask-type:luminance"
+                            maskUnits="userSpaceOnUse"
+                            x="5"
+                            y="6"
+                            width="60"
+                            height="59"
+                          >
+                            <path
+                              d="M35.0026 64.4888C40.7712 64.4888 46.4103 62.7782 51.2067 59.5733C56.0032 56.3685 59.7415 51.8133 61.949 46.4837C64.1566 41.1542 64.7342 35.2898 63.6088 29.632C62.4834 23.9743 59.7055 18.7773 55.6265 14.6982C51.5475 10.6192 46.3505 7.84136 40.6927 6.71596C35.0349 5.59056 29.1705 6.16815 23.841 8.3757C18.5115 10.5833 13.9563 14.3216 10.7514 19.1181C7.54653 23.9145 5.83594 29.5535 5.83594 35.3222C5.83594 43.0576 8.90884 50.4763 14.3786 55.9461C19.8485 61.4159 27.2671 64.4888 35.0026 64.4888Z"
+                              fill="white"
+                            ></path>
+                          </mask>
+                          <g mask="url(#mask2_46_25695)">
+                            <mask
+                              id="mask3_46_25695"
+                              style="mask-type:luminance"
+                              maskUnits="userSpaceOnUse"
+                              x="-682"
+                              y="-485"
+                              width="2241"
+                              height="1313"
+                            >
+                              <path
+                                d="M1558.67 -484.101H-681.33V827.231H1558.67V-484.101Z"
+                                fill="white"
+                              ></path>
+                            </mask>
+                            <g mask="url(#mask3_46_25695)">
+                              <mask
+                                id="mask4_46_25695"
+                                style="mask-type:luminance"
+                                maskUnits="userSpaceOnUse"
+                                x="4"
+                                y="18"
+                                width="61"
+                                height="42"
+                              >
+                                <path
+                                  d="M64.1699 18.7322H4.66992V59.5655H64.1699V18.7322Z"
+                                  fill="white"
+                                ></path>
+                              </mask>
+                              <g mask="url(#mask4_46_25695)">
+                                <mask
+                                  id="mask5_46_25695"
+                                  style="mask-type:luminance"
+                                  maskUnits="userSpaceOnUse"
+                                  x="11"
+                                  y="19"
+                                  width="54"
+                                  height="40"
+                                >
+                                  <path
+                                    d="M64.1693 19.2104H11.9727V58.2238H64.1693V19.2104Z"
+                                    fill="white"
+                                  ></path>
+                                </mask>
+                                <g mask="url(#mask5_46_25695)">
+                                  <mask
+                                    id="mask6_46_25695"
+                                    style="mask-type:luminance"
+                                    maskUnits="userSpaceOnUse"
+                                    x="4"
+                                    y="5"
+                                    width="61"
+                                    height="61"
+                                  >
+                                    <path
+                                      d="M64.1699 5.89868H4.66992V65.3986H64.1699V5.89868Z"
+                                      fill="white"
+                                    ></path>
+                                  </mask>
+                                  <g mask="url(#mask6_46_25695)">
+                                    <mask
+                                      id="mask7_46_25695"
+                                      style="mask-type:luminance"
+                                      maskUnits="userSpaceOnUse"
+                                      x="11"
+                                      y="18"
+                                      width="55"
+                                      height="42"
+                                    >
+                                      <path
+                                        d="M65.3365 18.7319H11.6699V59.5652H65.3365V18.7319Z"
+                                        fill="white"
+                                      ></path>
+                                    </mask>
+                                    <g mask="url(#mask7_46_25695)">
+                                      <mask
+                                        id="mask8_46_25695"
+                                        style="mask-type:luminance"
+                                        maskUnits="userSpaceOnUse"
+                                        x="12"
+                                        y="19"
+                                        width="53"
+                                        height="40"
+                                      >
+                                        <path
+                                          d="M40.183 19.2104C42.4114 19.2104 44.4531 19.2104 46.5064 19.2104C46.726 19.2566 46.9234 19.3759 47.0664 19.5488C49.0147 21.4155 50.963 23.2821 52.8997 25.1721C53.0726 25.3522 53.2813 25.4941 53.5124 25.5886C53.7435 25.683 53.9919 25.7279 54.2414 25.7204C57.3097 25.7204 60.3897 25.7204 63.458 25.7204H64.1813V43.6404H57.9864C57.9585 43.4785 57.9196 43.3187 57.8697 43.1621C57.6621 42.4441 57.3433 41.763 56.9247 41.1438C55.1747 39.2421 53.343 37.4104 51.5114 35.6021C51.032 35.101 50.4145 34.7537 49.7374 34.6042C49.0602 34.4546 48.3539 34.5096 47.708 34.7621C46.9853 35.0063 46.3417 35.4408 45.8449 36.0197C45.3481 36.5986 45.0164 37.3007 44.8847 38.0521C44.8138 38.5082 44.7671 38.9677 44.7447 39.4288C41.7814 39.5454 40.2064 41.6921 40.428 44.6088C39.7732 44.6462 39.1326 44.8141 38.5435 45.1026C37.9545 45.3911 37.429 45.7944 36.998 46.2888C36.6166 46.825 36.3528 47.436 36.2241 48.0814C36.0954 48.7268 36.1047 49.3922 36.2514 50.0337L35.3414 50.2671C34.7767 50.3804 34.2434 50.6153 33.7787 50.9555C33.3139 51.2957 32.9289 51.733 32.6502 52.237C32.3715 52.7411 32.2059 53.2998 32.165 53.8743C32.124 54.4487 32.2087 55.0253 32.4131 55.5638C32.5741 56.0652 32.5338 56.6097 32.3009 57.082C32.068 57.5544 31.6606 57.9178 31.1647 58.0954C30.5451 58.2763 29.8804 58.2214 29.2988 57.9414C28.7172 57.6613 28.2597 57.176 28.0147 56.5788C27.9447 56.4154 27.8864 56.2521 27.8164 56.0537L29.5897 54.5488C30.0097 54.1871 30.0681 53.8021 29.7764 53.3821C29.7092 53.2905 29.6214 53.216 29.52 53.1646C29.4187 53.1132 29.3067 53.0864 29.1931 53.0864C29.0794 53.0864 28.9674 53.1132 28.8661 53.1646C28.7647 53.216 28.6769 53.2905 28.6097 53.3821C28.0031 53.8604 27.4431 54.3854 26.8248 54.8754C26.473 55.2081 26.059 55.468 25.6065 55.6402C25.1541 55.8123 24.672 55.8934 24.1881 55.8787C23.7701 55.8133 23.3777 55.6354 23.053 55.3642C22.7283 55.0929 22.4835 54.7384 22.3447 54.3387C22.1912 53.8964 22.1633 53.4201 22.2643 52.9629C22.3652 52.5057 22.5909 52.0854 22.9164 51.7487C25.5842 49.361 28.2481 46.9615 30.9081 44.5504C31.0412 44.4308 31.1659 44.3022 31.2814 44.1654C31.3452 44.1044 31.3962 44.0311 31.4309 43.9499C31.4656 43.8687 31.4835 43.7812 31.4835 43.6929C31.4835 43.6046 31.4656 43.5172 31.4309 43.436C31.3962 43.3547 31.3452 43.2814 31.2814 43.2204C31.2267 43.1454 31.1569 43.0826 31.0766 43.0361C30.9962 42.9897 30.907 42.9606 30.8147 42.9507C30.7223 42.9408 30.629 42.9503 30.5406 42.9787C30.4522 43.0071 30.3707 43.0536 30.3014 43.1154C30.0885 43.2818 29.8858 43.4611 29.6947 43.6521C26.918 46.1371 24.153 48.6338 21.3764 51.1071C20.6691 51.7832 19.7672 52.2199 18.7981 52.3554C16.4648 52.6354 15.0064 50.8388 15.6714 48.4938C15.7335 48.2664 15.8423 48.0546 15.9909 47.8717C16.1396 47.6889 16.3248 47.5392 16.5348 47.4321C17.9061 46.6418 19.2129 45.7446 20.4431 44.7487C22.7764 42.6837 25.1097 40.4904 27.3731 38.3438C27.8631 37.8888 27.9097 37.4921 27.5714 37.1771C27.233 36.8621 26.8364 36.8388 26.323 37.3171C24.293 39.2071 22.3097 41.1554 20.2097 42.9754C18.8419 44.17 17.3699 45.2398 15.8114 46.1721C14.3298 47.0471 12.6847 46.2538 12.0664 44.2938C12.0664 44.1421 12.1947 43.8738 12.3347 43.7221C15.788 39.9499 19.2492 36.1932 22.7181 32.4521C23.8847 31.1338 25.1331 29.8155 26.3581 28.5205C26.5531 28.3193 26.814 28.1951 27.0931 28.1704C29.4264 28.0188 31.8297 27.9138 34.2097 27.7738C34.5166 27.7443 34.8259 27.7943 35.1078 27.9189C35.3898 28.0436 35.6349 28.2387 35.8197 28.4855C36.333 29.1271 36.8814 29.7338 37.4064 30.3521C37.7309 30.7432 38.1429 31.0526 38.609 31.2552C39.0751 31.4579 39.5823 31.5481 40.0897 31.5188C42.1539 31.5213 44.1765 30.9388 45.9231 29.8388C46.0667 29.7439 46.2032 29.6387 46.3314 29.5238C46.5844 29.3461 46.7984 29.1185 46.9601 28.855C47.1218 28.5914 47.2278 28.2975 47.2715 27.9914C47.3153 27.6853 47.2958 27.3735 47.2143 27.0752C47.1329 26.7769 46.9913 26.4985 46.7981 26.2571C45.1967 23.8094 43.2294 21.6217 40.9647 19.7705C40.8131 19.6305 40.6497 19.5021 40.3347 19.2571"
+                                          fill="white"
+                                        ></path>
+                                      </mask>
+                                      <g mask="url(#mask8_46_25695)">
+                                        <mask
+                                          id="mask9_46_25695"
+                                          style="mask-type:luminance"
+                                          maskUnits="userSpaceOnUse"
+                                          x="11"
+                                          y="18"
+                                          width="54"
+                                          height="41"
+                                        >
+                                          <path
+                                            d="M64.1699 18.7322H11.6699V58.3988H64.1699V18.7322Z"
+                                            fill="white"
+                                          ></path>
+                                        </mask>
+                                        <g mask="url(#mask9_46_25695)">
+                                          <path
+                                            d="M70.0039 13.3772H6.14062V64.0572H70.0039V13.3772Z"
+                                            fill="white"
+                                          ></path>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </g>
+                                <mask
+                                  id="mask10_46_25695"
+                                  style="mask-type:luminance"
+                                  maskUnits="userSpaceOnUse"
+                                  x="5"
+                                  y="18"
+                                  width="41"
+                                  height="26"
+                                >
+                                  <path
+                                    d="M45.5512 18.9653H5.83789V43.0687H45.5512V18.9653Z"
+                                    fill="white"
+                                  ></path>
+                                </mask>
+                                <g mask="url(#mask10_46_25695)">
+                                  <mask
+                                    id="mask11_46_25695"
+                                    style="mask-type:luminance"
+                                    maskUnits="userSpaceOnUse"
+                                    x="4"
+                                    y="5"
+                                    width="61"
+                                    height="61"
+                                  >
+                                    <path
+                                      d="M64.1699 5.89868H4.66992V65.3986H64.1699V5.89868Z"
+                                      fill="white"
+                                    ></path>
+                                  </mask>
+                                  <g mask="url(#mask11_46_25695)">
+                                    <mask
+                                      id="mask12_46_25695"
+                                      style="mask-type:luminance"
+                                      maskUnits="userSpaceOnUse"
+                                      x="4"
+                                      y="18"
+                                      width="43"
+                                      height="26"
+                                    >
+                                      <path
+                                        d="M46.6699 18.7319H4.66992V43.2319H46.6699V18.7319Z"
+                                        fill="white"
+                                      ></path>
+                                    </mask>
+                                    <g mask="url(#mask12_46_25695)">
+                                      <mask
+                                        id="mask13_46_25695"
+                                        style="mask-type:luminance"
+                                        maskUnits="userSpaceOnUse"
+                                        x="5"
+                                        y="18"
+                                        width="41"
+                                        height="26"
+                                      >
+                                        <path
+                                          d="M5.83789 43.0568V25.6619H6.47961C9.01128 25.6619 11.5429 25.6619 14.0745 25.6619C14.5953 25.6802 15.1038 25.501 15.4979 25.1602C17.8312 23.2469 20.1646 21.3491 22.4979 19.4669C22.7801 19.2508 23.1227 19.1284 23.4779 19.1168C26.8612 19.0585 30.2445 19.1168 33.6162 18.9768C35.099 18.9152 36.5768 19.186 37.9414 19.7694C39.306 20.3528 40.5229 21.234 41.5029 22.3485C42.6695 23.6435 43.8362 25.0202 45.0029 26.4202C45.2128 26.6046 45.369 26.8424 45.455 27.1083C45.541 27.3741 45.5536 27.6583 45.4914 27.9308C45.4293 28.2032 45.2948 28.4539 45.102 28.6562C44.9092 28.8585 44.6654 29.005 44.3963 29.0802C42.9403 29.7627 41.3334 30.06 39.7296 29.9435C39.3249 29.8842 38.938 29.7377 38.5955 29.5141C38.2531 29.2905 37.9633 28.9951 37.7462 28.6485L36.3929 27.0619C36.1542 26.7652 35.8466 26.5313 35.4969 26.3808C35.1471 26.2304 34.7658 26.1678 34.3862 26.1985C31.7729 26.3268 29.1479 26.4435 26.5346 26.6185C26.064 26.6858 25.629 26.9074 25.2979 27.2485C20.5379 32.3741 15.7935 37.5074 11.0646 42.6485C10.9488 42.7881 10.8019 42.8987 10.6359 42.9716C10.4698 43.0445 10.2891 43.0777 10.1079 43.0685C8.87126 43.0685 7.6346 43.0685 6.39794 43.0685L5.83789 43.0568Z"
+                                          fill="white"
+                                        ></path>
+                                      </mask>
+                                      <g mask="url(#mask13_46_25695)">
+                                        <mask
+                                          id="mask14_46_25695"
+                                          style="mask-type:luminance"
+                                          maskUnits="userSpaceOnUse"
+                                          x="4"
+                                          y="18"
+                                          width="43"
+                                          height="26"
+                                        >
+                                          <path
+                                            d="M46.6699 18.7319H4.66992V43.2319H46.6699V18.7319Z"
+                                            fill="white"
+                                          ></path>
+                                        </mask>
+                                        <g mask="url(#mask14_46_25695)">
+                                          <path
+                                            d="M51.3819 13.1321H0.00195312V48.9021H51.3819V13.1321Z"
+                                            fill="white"
+                                          ></path>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </g>
+                                <mask
+                                  id="mask15_46_25695"
+                                  style="mask-type:luminance"
+                                  maskUnits="userSpaceOnUse"
+                                  x="46"
+                                  y="35"
+                                  width="11"
+                                  height="12"
+                                >
+                                  <path
+                                    d="M49.0016 35.917C49.4885 36.1054 49.9509 36.3522 50.3783 36.652C52.175 38.3942 53.9444 40.1636 55.6866 41.9603C56.0991 42.3431 56.3594 42.8621 56.4194 43.4217C56.4795 43.9813 56.3352 44.5437 56.0133 45.0053C55.7234 45.5026 55.2747 45.888 54.7394 46.0996C54.2041 46.3112 53.6132 46.3366 53.0616 46.172C52.6554 46.0003 52.2868 45.7506 51.9766 45.437C50.3316 43.792 48.6983 42.1353 47.0533 40.4787C46.6786 40.1601 46.4178 39.7282 46.3104 39.2483C46.2031 38.7683 46.255 38.2665 46.4583 37.8187C46.6577 37.3227 46.9961 36.8948 47.4327 36.5865C47.8694 36.2781 48.3859 36.1024 48.92 36.0803L49.0016 35.9286"
+                                    fill="white"
+                                  ></path>
+                                </mask>
+                                <g mask="url(#mask15_46_25695)">
+                                  <mask
+                                    id="mask16_46_25695"
+                                    style="mask-type:luminance"
+                                    maskUnits="userSpaceOnUse"
+                                    x="4"
+                                    y="5"
+                                    width="61"
+                                    height="61"
+                                  >
+                                    <path
+                                      d="M64.1679 5.89868H4.66797V65.3986H64.1679V5.89868Z"
+                                      fill="white"
+                                    ></path>
+                                  </mask>
+                                  <g mask="url(#mask16_46_25695)">
+                                    <path
+                                      d="M62.2657 30.0837H40.4141V52.1221H62.2657V30.0837Z"
+                                      fill="white"
+                                    ></path>
+                                  </g>
+                                </g>
+                                <mask
+                                  id="mask17_46_25695"
+                                  style="mask-type:luminance"
+                                  maskUnits="userSpaceOnUse"
+                                  x="41"
+                                  y="40"
+                                  width="12"
+                                  height="12"
+                                >
+                                  <path
+                                    d="M44.6526 40.8987C45.1536 41.1073 45.6244 41.382 46.0526 41.7154C47.8259 43.4304 49.5526 45.2153 51.2676 46.9537C51.5094 47.18 51.7004 47.4552 51.8276 47.7611C51.9549 48.0669 52.0156 48.3963 52.0056 48.7274C51.9957 49.0585 51.9154 49.3837 51.77 49.6813C51.6247 49.979 51.4176 50.2423 51.1626 50.4537C50.97 50.7052 50.7256 50.9125 50.446 51.0616C50.1665 51.2107 49.8583 51.2982 49.5421 51.3181C49.2259 51.338 48.9091 51.2899 48.613 51.177C48.317 51.0641 48.0486 50.8891 47.826 50.6637C45.9593 48.8787 44.1276 47.047 42.3776 45.157C42.1332 44.8428 41.9675 44.4748 41.8942 44.0835C41.821 43.6923 41.8423 43.2893 41.9565 42.9079C42.0706 42.5266 42.2743 42.1781 42.5505 41.8915C42.8267 41.6049 43.1674 41.3885 43.5442 41.2603C43.8592 41.132 44.1976 41.062 44.7109 40.9104"
+                                    fill="white"
+                                  ></path>
+                                </mask>
+                                <g mask="url(#mask17_46_25695)">
+                                  <mask
+                                    id="mask18_46_25695"
+                                    style="mask-type:luminance"
+                                    maskUnits="userSpaceOnUse"
+                                    x="4"
+                                    y="5"
+                                    width="61"
+                                    height="61"
+                                  >
+                                    <path
+                                      d="M64.1699 5.89868H4.66992V65.3986H64.1699V5.89868Z"
+                                      fill="white"
+                                    ></path>
+                                  </mask>
+                                  <g mask="url(#mask18_46_25695)">
+                                    <path
+                                      d="M57.8126 35.0654H35.9727V57.1387H57.8126V35.0654Z"
+                                      fill="white"
+                                    ></path>
+                                  </g>
+                                </g>
+                                <mask
+                                  id="mask19_46_25695"
+                                  style="mask-type:luminance"
+                                  maskUnits="userSpaceOnUse"
+                                  x="37"
+                                  y="46"
+                                  width="10"
+                                  height="10"
+                                >
+                                  <path
+                                    d="M43.9988 55.552C43.5257 55.3802 43.0782 55.1447 42.6687 54.852C41.1521 53.4131 39.6704 51.9354 38.2237 50.4187C38.0009 50.187 37.8284 49.9117 37.717 49.6101C37.6055 49.3085 37.5576 48.9872 37.5762 48.6662C37.5948 48.3452 37.6796 48.0316 37.8251 47.7449C37.9707 47.4583 38.174 47.2048 38.4221 47.0004C38.6253 46.7513 38.8791 46.5483 39.1668 46.405C39.4545 46.2616 39.7694 46.1812 40.0906 46.1691C40.4118 46.157 40.7318 46.2133 41.0295 46.3345C41.3272 46.4558 41.5957 46.639 41.8171 46.872C43.2054 48.2487 44.5821 49.6487 45.9471 51.0487C46.3264 51.3777 46.5835 51.8252 46.6767 52.3186C46.7698 52.8119 46.6936 53.3224 46.4604 53.767C46.2507 54.2599 45.9107 54.6865 45.4771 55.0009C45.0434 55.3154 44.5324 55.5059 43.9988 55.552Z"
+                                    fill="white"
+                                  ></path>
+                                </mask>
+                                <g mask="url(#mask19_46_25695)">
+                                  <mask
+                                    id="mask20_46_25695"
+                                    style="mask-type:luminance"
+                                    maskUnits="userSpaceOnUse"
+                                    x="4"
+                                    y="5"
+                                    width="61"
+                                    height="61"
+                                  >
+                                    <path
+                                      d="M64.1699 5.89868H4.66992V65.3986H64.1699V5.89868Z"
+                                      fill="white"
+                                    ></path>
+                                  </mask>
+                                  <g mask="url(#mask20_46_25695)">
+                                    <path
+                                      d="M52.5495 40.3386H31.7129V61.3853H52.5495V40.3386Z"
+                                      fill="white"
+                                    ></path>
+                                  </g>
+                                </g>
+                                <mask
+                                  id="mask21_46_25695"
+                                  style="mask-type:luminance"
+                                  maskUnits="userSpaceOnUse"
+                                  x="33"
+                                  y="51"
+                                  width="8"
+                                  height="8"
+                                >
+                                  <path
+                                    d="M40.6141 55.6919C40.6163 56.2612 40.4533 56.8189 40.1447 57.2973C39.8362 57.7757 39.3953 58.1542 38.8757 58.3869C38.4422 58.6127 37.9445 58.6837 37.465 58.5883C36.9856 58.4928 36.5531 58.2366 36.2391 57.8619C35.5974 57.2086 34.9441 56.5786 34.3141 55.9136C34.0736 55.6856 33.8844 55.4091 33.7591 55.1023C33.6338 54.7956 33.5754 54.4657 33.5875 54.1346C33.5996 53.8035 33.6821 53.4787 33.8295 53.182C33.977 52.8852 34.1859 52.6233 34.4424 52.4136C34.6564 52.1609 34.9217 51.9566 35.2207 51.8143C35.5197 51.672 35.8455 51.595 36.1766 51.5884C36.5077 51.5817 36.8364 51.6457 37.1408 51.7759C37.4453 51.9061 37.7185 52.0996 37.9424 52.3436C38.6891 53.0786 39.4357 53.8136 40.1124 54.6069C40.3336 54.9385 40.5064 55.2999 40.6257 55.6803"
+                                    fill="white"
+                                  ></path>
+                                </mask>
+                                <g mask="url(#mask21_46_25695)">
+                                  <mask
+                                    id="mask22_46_25695"
+                                    style="mask-type:luminance"
+                                    maskUnits="userSpaceOnUse"
+                                    x="4"
+                                    y="5"
+                                    width="61"
+                                    height="61"
+                                  >
+                                    <path
+                                      d="M64.1699 5.89868H4.66992V65.3986H64.1699V5.89868Z"
+                                      fill="white"
+                                    ></path>
+                                  </mask>
+                                  <g mask="url(#mask22_46_25695)">
+                                    <path
+                                      d="M46.4499 45.7754H27.7832V64.4654H46.4499V45.7754Z"
+                                      fill="white"
+                                    ></path>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                        <div
+                          class="flex flex-col justify-center items-start flex-grow relative gap-4"
+                        >
+                          <p
+                            class="flex-grow-0 flex-shrink-0 text-[26px] font-bold text-left text-[#18314c]"
+                          >
+                            Drive adherence
+                          </p>
+                          <p
+                            class="self-stretch flex-grow-0 flex-shrink-0 w-[464px] text-lg text-left text-[#18314c]"
+                          >
+                            Navigators can help reinforce adherence. They will also encourage
+                            communication between patients and their physicians.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="self-stretch flex-grow-0 flex-shrink-0 h-[552px]">
+            <div
+              class="flex justify-start items-center w-[1440px] absolute left-0 top-[532px] gap-[139px] pl-[60px] pr-[150px] py-[72px]"
+              style="background: linear-gradient(85.44deg, rgba(235,236,236,0) -63.1%, #eceded 94.86%);"
+            >
+              <div
+                class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[422.84px] relative gap-2 pl-[71px] py-[72px] rounded-tr-[140px] rounded-br-[140px]"
+                style="background: linear-gradient(266.68deg, #fff -0.69%, rgba(255,255,255,0) 97.26%);"
+              >
+                <svg
+                  width="239"
+                  height="138"
+                  viewBox="0 0 239 138"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-[238px] h-[137px] relative"
+                  preserveAspectRatio="none"
+                >
+                  <g clip-path="url(#clip0_46_25804)">
+                    <path
+                      d="M80.8004 50.3391C76.7453 50.3391 72.3503 51.9898 68.878 54.7834C66.1585 51.9117 62.2054 50.3391 57.6356 50.3391C51.0698 50.3391 45.0334 53.0887 41.969 55.8138L41.6582 56.0922V87.324L42.3867 87.4803C43.3725 87.6903 44.3535 87.7929 45.4753 87.7929C46.3057 87.7929 47.5295 87.7392 48.6513 87.4803L49.3652 87.3143V59.5841C51.4486 58.3876 54.2362 57.655 56.7712 57.655C62.2151 57.655 64.9735 60.8002 64.9735 66.9977V87.3143L65.6874 87.4803C66.6004 87.6903 67.6397 87.7929 68.8635 87.7929C70.0193 87.7929 71.0634 87.6854 71.9667 87.4803L72.6806 87.3143V64.5216C72.6806 63.3007 72.5252 62.0358 72.2144 60.7562C73.8315 59.3302 76.3083 57.6599 79.9408 57.6599C85.3848 57.6599 88.1432 60.8051 88.1432 67.0026V87.3192L88.8571 87.4852C89.7701 87.6952 90.8093 87.7978 92.0331 87.7978C93.1938 87.7978 94.2379 87.6903 95.1363 87.4852L95.8502 87.3192V64.5265C95.8502 55.2229 88.284 50.3538 80.815 50.3538L80.8004 50.3391Z"
+                      fill="#18314C"
+                    ></path>
+                    <path
+                      d="M106.85 50.9937C105.694 50.9937 104.665 51.0962 103.688 51.3062L102.96 51.4625V87.3193L103.688 87.4755C104.665 87.6855 105.694 87.7881 106.85 87.7881C108.006 87.7881 109.05 87.6807 109.953 87.4755L110.667 87.3095V51.4771L109.953 51.3111C109.055 51.1011 108.011 50.9985 106.85 50.9985V50.9937Z"
+                      fill="#18314C"
+                    ></path>
+                    <path
+                      d="M140.796 51.7505L140.228 51.5552C137.8 50.7152 135.449 50.3391 132.618 50.3391C126.261 50.3391 120.914 52.9666 118.272 55.218L117.947 55.4964V87.3192L118.675 87.4754C119.676 87.6903 120.652 87.788 121.837 87.788C123.022 87.788 124.1 87.6854 125.013 87.4754L125.727 87.3094V59.0811C127.392 58.1922 129.641 57.7234 132.263 57.7234C134.463 57.7234 136.59 57.9725 138.251 58.4169L138.839 58.5781L139.213 58.0946C140.373 56.5952 141.014 54.3438 140.849 52.3561L140.801 51.7554L140.796 51.7505Z"
+                      fill="#18314C"
+                    ></path>
+                    <path
+                      d="M173.936 51.1401C172.78 51.1401 171.75 51.2427 170.774 51.4527L170.046 51.609V79.9496C167.593 80.7945 165.116 81.2047 162.494 81.2047C156.477 81.2047 153.422 79.7396 153.422 71.7204V51.6187L152.708 51.4527C151.81 51.2427 150.766 51.1401 149.605 51.1401C148.445 51.1401 147.42 51.2427 146.444 51.4527L145.715 51.609V74.1232C145.715 83.2706 151.329 88.5158 161.11 88.5158C168.414 88.5158 173.154 86.8699 177.189 85.0873L177.738 84.8432V51.6187L177.024 51.4527C176.126 51.2427 175.082 51.1401 173.921 51.1401H173.936Z"
+                      fill="#18314C"
+                    ></path>
+                    <path
+                      d="M223.883 50.3391C219.828 50.3391 215.433 51.9898 211.961 54.7834C209.241 51.9117 205.288 50.3391 200.718 50.3391C194.152 50.3391 188.116 53.0887 185.052 55.8138L184.741 56.0922V87.324L185.469 87.4803C186.455 87.6903 187.436 87.7929 188.558 87.7929C189.388 87.7929 190.612 87.7392 191.734 87.4803L192.448 87.3143V59.5841C194.531 58.3876 197.319 57.655 199.854 57.655C205.298 57.655 208.056 60.8002 208.056 66.9977V87.3143L208.77 87.4803C209.683 87.6903 210.722 87.7929 211.946 87.7929C213.102 87.7929 214.146 87.6854 215.049 87.4803L215.763 87.3143V64.5216C215.763 63.3007 215.608 62.0358 215.297 60.7562C216.914 59.3302 219.391 57.655 223.028 57.655C228.472 57.655 231.231 60.8002 231.231 66.9977V87.3143L231.944 87.4803C232.857 87.6903 233.897 87.7929 235.121 87.7929C236.281 87.7929 237.325 87.6854 238.224 87.4803L238.938 87.3143V64.5216C238.938 55.218 231.376 50.3489 223.902 50.3489L223.883 50.3391Z"
+                      fill="#18314C"
+                    ></path>
+                    <path
+                      d="M112.114 103.289C113.294 100.295 111.837 96.8913 108.86 95.6997C105.883 94.5129 102.498 95.978 101.313 98.9767C100.133 101.97 101.59 105.374 104.572 106.566C106.014 107.142 107.593 107.118 109.02 106.498C110.443 105.877 111.546 104.74 112.119 103.289H112.114Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M81.514 113.911C79.9988 113.569 78.4448 113.843 77.1335 114.678C74.4286 116.402 73.6175 120.016 75.3318 122.741C77.0461 125.461 80.6398 126.277 83.3497 124.553C86.0547 122.829 86.8657 119.215 85.1514 116.49C84.3209 115.171 83.0291 114.258 81.514 113.916V113.911Z"
+                      fill="#004C8A"
+                    ></path>
+                    <path
+                      d="M48.3985 113.081H48.3694C45.1836 112.891 42.4349 115.332 42.2309 118.536C42.1338 120.094 42.6437 121.598 43.6684 122.766C44.6931 123.938 46.1112 124.636 47.6603 124.739H47.6895C49.2289 124.831 50.7101 124.319 51.8659 123.293C53.0315 122.263 53.7259 120.836 53.8279 119.279C54.0319 116.065 51.5988 113.281 48.4034 113.076L48.3985 113.081Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M26.8461 103.03C27.8368 101.829 28.303 100.31 28.1573 98.7569C28.0116 97.2039 27.2735 95.7974 26.0788 94.8011C23.6118 92.745 19.9452 93.0917 17.9007 95.5727C15.8562 98.0537 16.201 101.741 18.668 103.797C19.8627 104.793 21.373 105.262 22.9173 105.116C24.4616 104.969 25.8603 104.227 26.851 103.025L26.8461 103.03Z"
+                      fill="#004C8A"
+                    ></path>
+                    <path
+                      d="M18.0806 71.2514C18.8722 69.9084 19.0956 68.3358 18.7119 66.8267C18.3283 65.3176 17.3813 64.043 16.0458 63.2469C15.2348 62.7634 14.3461 62.4899 13.4331 62.4362C12.8406 62.402 12.2384 62.4606 11.6459 62.612C8.54271 63.4081 6.66331 66.5972 7.45489 69.7179C7.83854 71.2319 8.78553 72.5017 10.121 73.2977C11.4565 74.0938 13.0203 74.3185 14.5209 73.9326C16.0263 73.5468 17.289 72.5945 18.0806 71.2514Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M29.0997 39.8339C30.2798 36.8402 28.8229 33.4362 25.8411 32.2445C25.2535 32.0101 24.6464 31.8733 24.0345 31.8392C23.1409 31.7854 22.2425 31.9417 21.3975 32.3129C19.9746 32.9331 18.8722 34.071 18.2992 35.5215C17.1191 38.5153 18.576 41.9193 21.5578 43.1109C23.0001 43.6872 24.5784 43.6628 26.0062 43.0426C27.4291 42.4223 28.5315 41.2844 29.1045 39.8339H29.0997Z"
+                      fill="#004C8A"
+                    ></path>
+                    <path
+                      d="M44.5036 17.9205C44.1637 19.4442 44.4357 21.0071 45.2661 22.3257C46.9804 25.046 50.5741 25.8615 53.2839 24.1376C55.9889 22.4136 56.7999 18.7996 55.0856 16.0744C54.0464 14.4237 52.3175 13.4763 50.511 13.3688C49.3406 13.3004 48.1362 13.5837 47.0678 14.2626C45.7566 15.0977 44.8485 16.3968 44.5085 17.9156L44.5036 17.9205Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M82.7574 14.072H82.7283C81.1888 13.9792 79.7076 14.492 78.5518 15.5176C77.3863 16.5481 76.6918 17.9741 76.5898 19.5321C76.4927 21.09 77.0026 22.5893 78.0273 23.7614C79.052 24.9335 80.47 25.6319 82.0192 25.7345H82.0484C85.2341 25.9249 87.9828 23.483 88.1868 20.2793C88.3908 17.0657 85.9577 14.282 82.7622 14.0769L82.7574 14.072Z"
+                      fill="#004C8A"
+                    ></path>
+                    <path
+                      d="M111.424 32.6256C108.03 30.1202 103.256 30.8528 100.765 34.2665C98.2734 37.6803 99.0018 42.4811 102.396 44.9864C105.791 47.4918 110.565 46.7593 113.056 43.3455C115.547 39.9317 114.819 35.131 111.424 32.6256Z"
+                      fill="#D91C5C"
+                    ></path>
+                    <path
+                      d="M86.6569 106.503C86.8025 107.807 87.4484 108.979 88.4731 109.799C90.5856 111.489 93.6694 111.137 95.3497 109.013C96.1656 107.982 96.5298 106.698 96.3841 105.389C96.2384 104.085 95.5925 102.913 94.5678 102.093C93.5432 101.272 92.2708 100.906 90.9644 101.052C89.6629 101.199 88.5023 101.848 87.6864 102.879C86.8705 103.909 86.5063 105.194 86.652 106.503H86.6569Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M69.8542 113.203C69.5045 111.933 68.6838 110.883 67.5474 110.234C66.411 109.589 65.0901 109.423 63.8274 109.775C61.2244 110.497 59.6947 113.218 60.4183 115.835C60.7679 117.1 61.5886 118.155 62.725 118.805C63.8614 119.454 65.1823 119.616 66.445 119.264C69.048 118.541 70.5777 115.821 69.8542 113.208V113.203Z"
+                      fill="#004C8A"
+                    ></path>
+                    <path
+                      d="M37.0686 110.473C38.2924 110.932 39.623 110.888 40.8128 110.341C42.0026 109.794 42.9108 108.817 43.3672 107.587C43.8237 106.356 43.78 105.018 43.2361 103.821C42.6922 102.625 41.7209 101.712 40.4971 101.252C37.9718 100.3 35.1454 101.594 34.1985 104.139C33.2515 106.683 34.5384 109.526 37.0686 110.473Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M18.4399 85.9956C19.1635 87.0944 20.2658 87.8416 21.5479 88.1054C22.83 88.3642 24.1364 88.1151 25.229 87.3874C26.3217 86.6598 27.0647 85.5511 27.3221 84.2618C27.5844 82.9725 27.3318 81.6588 26.6082 80.5648C25.7244 79.2218 24.2918 78.455 22.8057 78.3671C21.7859 78.3085 20.7369 78.5624 19.8239 79.1729C17.5754 80.6722 16.9538 83.7295 18.4447 85.9956H18.4399Z"
+                      fill="#004C8A"
+                    ></path>
+                    <path
+                      d="M22.8542 50.4856C22.8299 50.4856 22.8056 50.4856 22.7765 50.4856C20.0812 50.3684 17.789 52.4782 17.6724 55.1887C17.6142 56.5024 18.0707 57.7576 18.9545 58.7294C19.8384 59.7013 21.0622 60.2727 22.3491 60.3216C23.6555 60.3802 24.9036 59.9211 25.87 59.0322C26.8315 58.1434 27.3949 56.9322 27.4531 55.6185C27.5114 54.3047 27.0549 53.0496 26.1711 52.0777C25.3066 51.1254 24.1265 50.5638 22.8493 50.4905L22.8542 50.4856Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M42.7262 35.9318C43.5421 34.9013 43.9063 33.6169 43.7606 32.308C43.6149 30.9992 42.969 29.832 41.9443 29.0115C41.1285 28.3571 40.1621 28.0103 39.1908 27.9517C37.6513 27.8589 36.0973 28.4987 35.0677 29.7978C34.2519 30.8283 33.8877 32.1127 34.0333 33.4215C34.179 34.7304 34.8249 35.8976 35.8496 36.7181C36.8743 37.5386 38.1515 37.9097 39.453 37.7583C40.7497 37.6118 41.9152 36.9623 42.7311 35.9318H42.7262Z"
+                      fill="#004C8A"
+                    ></path>
+                    <path
+                      d="M60.5589 25.6076C61.2776 28.2253 63.9826 29.7637 66.5856 29.036C69.1886 28.3132 70.7135 25.5929 69.9948 22.9752C69.4217 20.8947 67.5957 19.498 65.5609 19.3759C65.0364 19.3466 64.5022 19.4003 63.968 19.5468C61.365 20.2696 59.8353 22.9899 60.5589 25.6027V25.6076Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M87.0456 31.224C86.0986 33.7684 87.3856 36.6108 89.9157 37.5583C91.1395 38.0173 92.4702 37.9734 93.66 37.4264C94.8498 36.8794 95.7579 35.9026 96.2144 34.6719C97.1614 32.1324 95.8745 29.29 93.3443 28.3377C92.8732 28.1618 92.3973 28.0642 91.9214 28.0349C89.8332 27.9128 87.8178 29.1533 87.0456 31.224Z"
+                      fill="#004C8A"
+                    ></path>
+                    <path
+                      d="M107.918 123.669C109.108 122.17 109.642 120.289 109.424 118.385C109.21 116.48 108.268 114.771 106.772 113.574C105.607 112.641 104.218 112.109 102.761 112.026C102.353 112.002 101.935 112.011 101.518 112.06C99.6235 112.275 97.9238 113.223 96.734 114.727C95.5442 116.226 95.01 118.106 95.2285 120.011C95.4422 121.916 96.3844 123.625 97.8801 124.817C99.371 126.013 101.236 126.55 103.135 126.331C105.029 126.116 106.728 125.168 107.918 123.669Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M72.9328 128.719C72.4229 126.868 71.2283 125.33 69.5674 124.387C68.6058 123.84 67.552 123.528 66.4739 123.464C65.6969 123.42 64.9101 123.503 64.1428 123.718C62.3023 124.231 60.7725 125.432 59.8353 127.102C58.898 128.773 58.66 130.712 59.1699 132.558C59.6799 134.409 60.8745 135.947 62.5354 136.89C64.1963 137.832 66.1242 138.071 67.9599 137.559C71.7576 136.499 73.9867 132.533 72.9328 128.719Z"
+                      fill="#004C8A"
+                    ></path>
+                    <path
+                      d="M32.2414 112.422C31.5615 112.163 30.8574 112.016 30.1483 111.972C29.0022 111.904 27.8513 112.119 26.778 112.612C25.0443 113.408 23.7185 114.834 23.0484 116.631C21.6691 120.343 23.5486 124.489 27.2345 125.876C30.9205 127.263 35.0484 125.373 36.4276 121.667C37.0978 119.869 37.0298 117.916 36.2382 116.172C35.4466 114.429 34.0286 113.096 32.2414 112.422Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M1.06388 87.9685C0.685085 89.8488 1.05417 91.7681 2.108 93.3651C3.16182 94.967 4.76928 96.0561 6.63897 96.4419C8.50867 96.8228 10.4124 96.4517 12.0052 95.3919C13.5981 94.3321 14.6811 92.7156 15.0647 90.8353C15.4484 88.9551 15.0745 87.0406 14.0206 85.4387C12.9668 83.8368 11.3593 82.7478 9.48965 82.3619C7.61995 81.9761 5.71626 82.3522 4.12338 83.412C2.5305 84.4717 1.44753 86.0883 1.06388 87.9685Z"
+                      fill="#004C8A"
+                    ></path>
+                    <path
+                      d="M0.990786 50.0899C0.908228 52.0093 1.56869 53.8407 2.86048 55.257C4.14741 56.6733 5.90541 57.5035 7.81396 57.5817C9.71765 57.6647 11.5436 57.0005 12.952 55.7014C14.3603 54.4072 15.181 52.6344 15.2636 50.72C15.3462 48.8006 14.6857 46.9692 13.3939 45.5529C12.1313 44.1659 10.4121 43.3454 8.55212 43.2331C8.51327 43.2331 8.47928 43.2331 8.44043 43.2282C4.50678 43.0573 1.16561 46.1341 0.990786 50.0899Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M36.491 24.5379C37.6808 23.0386 38.215 21.1583 37.9964 19.2536C37.7828 17.349 36.8406 15.6396 35.3449 14.4431C34.1793 13.5103 32.7904 12.978 31.3335 12.8949C30.9207 12.8705 30.5079 12.8803 30.0903 12.9291C28.1963 13.144 26.4966 14.0915 25.3117 15.5957C24.1218 17.095 23.5877 18.9753 23.8062 20.8799C24.0199 22.7846 24.962 24.4939 26.4529 25.6856C27.9438 26.8821 29.8135 27.4193 31.7075 27.1996C33.6014 26.9847 35.3012 26.0372 36.491 24.5379Z"
+                      fill="#004C8A"
+                    ></path>
+                    <path
+                      d="M73.511 6.08705C72.6757 3.04934 70.0095 1.00791 67.0423 0.832096C66.2799 0.788142 65.498 0.866283 64.721 1.08117C62.8804 1.59397 61.3507 2.79538 60.4134 4.46563C59.4761 6.13589 59.2381 8.07475 59.7481 9.92082C60.258 11.7718 61.4526 13.3102 63.1135 14.2527C64.7744 15.2002 66.7024 15.4346 68.5381 14.9218C72.3357 13.862 74.5648 9.89641 73.511 6.08217V6.08705Z"
+                      fill="#007EAE"
+                    ></path>
+                    <path
+                      d="M106.029 12.7974C105.344 12.5385 104.645 12.3969 103.951 12.3529C100.906 12.1722 97.9626 13.9841 96.8359 17.0072C95.4567 20.7189 97.3362 24.8652 101.022 26.2522C104.708 27.6392 108.836 25.7492 110.215 22.0424C110.885 20.2451 110.817 18.2965 110.026 16.5481C109.234 14.8046 107.816 13.4713 106.029 12.7974Z"
+                      fill="#004C8A"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_46_25804">
+                      <rect
+                        width="238"
+                        height="137"
+                        fill="white"
+                        transform="translate(0.917969 0.822266)"
+                      ></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="flex justify-center items-start flex-grow gap-2">
+                <div class="flex justify-center items-center flex-grow gap-[43px]">
+                  <div class="flex flex-col justify-center items-start flex-grow gap-6">
+                    <div
+                      class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0"
+                    >
+                      <div
+                        class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[18px]"
+                      >
+                        <p
+                          class="flex-grow-0 flex-shrink-0 w-[569.69px] text-[32px] font-bold text-left text-[#18314c]"
+                        >
+                          Mirum Is Your Partner in Patient-Centric Care
+                        </p>
+                        <div
+                          class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative"
+                        >
+                          <p
+                            class="self-stretch flex-grow-0 flex-shrink-0 w-[668.16px] text-lg text-left text-[#18314c]"
+                          >
+                            Mirum has a driven and focused team whose mission is to create
+                            transformative, life-changing medicine for patients with rare diseases.
+                            We have a strong understanding of the significant impact rare diseases
+                            have on quality of life for patients and caregivers. With 140+ industry
+                            veterans, scientists, and thought leaders, Mirum is backed by
+                            significant expertise in rare diseases and pharmaceutical development.
+                            We aim to always provide dedicated leadership and safe, effective
+                            treatments that you, your patients, and their caregivers can rely on.
+                          </p>
+                        </div>
+                        <div
+                          class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-[18px]"
+                        >
+                          <div
+                            class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2 px-20 py-[22px] rounded-[135px] border-2 border-[#353d7c]"
+                          >
+                            <p
+                              class="flex-grow-0 flex-shrink-0 text-base font-semibold text-center text-[#353d7c]"
+                            >
+                              Discover Mirum
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

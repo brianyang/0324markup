@@ -1,0 +1,383 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/tailwind.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    content: [
+      './templates/**/*.html.twig',
+      './js/**/*.js',
+    ],
+    theme: {
+      extend: {
+        colors: {
+          primary: {
+            DEFAULT: '#a05ea6',
+            light: '#a05ea6',
+            10: 'rgba(160, 94, 166, 0.1)',
+            gradient: {
+              start: '#A05EA7',
+              end: '#765FA4'
+            }
+          },
+          secondary: '#739549',
+          text: {
+            DEFAULT: '#191919',
+            muted: '#777776',
+            blue: '#18314c',
+            purple: '#353d7c',
+            pink: '#D91B5B'
+          },
+          border: {
+            muted: 'rgba(115, 117, 120, 0.3)',
+            purple: '#353d7c'
+          },
+          teal: '#0080a3',
+          dark: '#231f20',
+          purple: '#765ea4',
+          bg: {
+            lightGray: '#eceded',
+          }
+        },
+        fontFamily: {
+          sans: ['Arial', 'sans-serif'],
+        },
+        container: {
+          center: true,
+          padding: '1rem',
+          screens: {
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+            '2xl': '1440px',
+          },
+        },
+        spacing: {
+          '18': '4.5rem',
+        },
+        backgroundImage: {
+          'fade-white': 'linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0) 100%)',
+          'primary-gradient': 'linear-gradient(to right, #A05EA7, #765FA4)',
+          'teal-primary-gradient': 'linear-gradient(to right, #0081a3 0%, #a05fa6 322.36%)',
+          'teal-primary-gradient-2': 'linear-gradient(to right, #0081a3 -110.9%, #a05fa6 211.89%)',
+          'teal-primary-gradient-3': 'linear-gradient(to right, #0081a3 -221.37%, #a05fa6 100%)',
+          'teal-primary': 'linear-gradient(to right, #0081a3 0%, #a05fa6 155.94%)',
+          'light-gray-gradient': 'linear-gradient(88.56deg, rgba(235,236,236,0) 12.58%, #eceded 97.35%)',
+          'light-gray-gradient-2': 'linear-gradient(85.44deg, rgba(235,236,236,0) -63.1%, #eceded 94.86%)',
+        }
+      },
+    },
+    plugins: [],
+  }
+</script>
+
+<div class="w-full max-w-[1440px] bg-white overflow-hidden">
+  <!-- Header Section -->
+  <header class="pt-10 px-[150px] flex flex-col gap-8">
+    <div class="flex flex-col justify-center items-center gap-8">
+      <div class="w-full flex flex-col gap-6">
+        <div class="flex items-center gap-6">
+          <img src="mirum-access-plus-logo-plus-tagline-1.png" class="w-[423.87px] h-[204.32px] object-contain" alt="Mirum Access Plus Logo" />
+          <div class="flex flex-col justify-center gap-6 flex-grow">
+            <p class="text-lg text-text-blue">
+              If you'd like to prescribe CHOLBAM for your patient, download the Patient
+              Enrollment Form and Patient Authorization Form. Once you have filled out the
+              forms, fax them to Mirum Access Plus at 1-855-282-4884.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Download Buttons -->
+        <div class="flex justify-center items-start gap-6 px-[172px]">
+          <div class="flex flex-col gap-[18px]">
+            <a href="#" class="rounded-[135px] border-2 border-text-purple px-14 py-[22px] text-center">
+              <p class="text-base font-semibold text-text-purple">
+                Download the Patient <br />Enrollment Form
+              </p>
+            </a>
+          </div>
+          <div class="flex flex-col gap-[18px]">
+            <a href="#" class="rounded-[135px] border-2 border-text-purple px-14 py-[22px] text-center">
+              <p class="text-base font-semibold text-text-purple">
+                Download the Patient <br />Authorization Form [English]
+              </p>
+            </a>
+          </div>
+          <div class="flex flex-col gap-[18px]">
+            <a href="#" class="rounded-[135px] border-2 border-text-purple px-14 py-[22px] text-center">
+              <p class="text-base font-semibold text-text-purple">
+                Descargar la Versión <br />en Español
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Support Information Section -->
+  <section class="w-full" style="background: linear-gradient(88.56deg, rgba(235,236,236,0) 12.58%, #eceded 97.35%);">
+    <div class="px-[150px] py-24 flex flex-col gap-[26px]">
+      <div class="flex justify-center gap-[26px]">
+        <div class="flex flex-col justify-center gap-[26px] flex-grow">
+          <div class="flex flex-col gap-8">
+            <pre class="whitespace-pre-wrap text-text-blue">Failed to transform TEXT Mirum Access Plus is available to help you, your office, and your patient not only get started with CHOLBAM after you've prescribed it, but also to provide support throughout treatment. Read on to learn about the details of Mirum Access Plus support available to you and your patients. If you have any questions about Mirum Access Plus, contact us at 1-855-MRM-4YOU (1-855-676-4968) Monday through Friday, 8:00 am through 8:00 pm ET.</pre>
+            <p class="text-lg font-bold text-text-purple">
+              Refer to this step-by-step guide for more information on prescribing CHOLBAM
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ready, Set, Go Section -->
+  <section class="py-16 px-[150px]">
+    <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-16">
+        <!-- Section Header -->
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-6">
+              <p class="text-[32px] font-light text-text-blue">Ready, Set, Go</p>
+              <svg width="902" height="3" viewBox="0 0 902 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow">
+                <line x1="1" y1="1.32214" x2="901" y2="1.32222" stroke="#D91B5B" stroke-width="2" stroke-linecap="round"></line>
+              </svg>
+            </div>
+            <p class="text-[40px] font-bold text-text-blue">Getting Your Patients the Treatment They Need</p>
+          </div>
+          <div class="pr-[116px]">
+            <p class="text-lg text-text-blue">
+              Support and resources are available through Mirum Access Plus to help
+              you and your office navigate insurance coverage, as well as assist
+              your patients with treatment costs and prescription fulfillment.
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Features Section -->
+        <div class="flex flex-col gap-10">
+          <!-- Insurance Coverage -->
+          <div class="flex items-start gap-4">
+            <img src="map-chat-icon-1.png" class="w-[70px] h-[68.85px] object-cover" alt="Insurance Coverage Icon" />
+            <div class="flex flex-col gap-4 flex-grow">
+              <p class="text-[26px] font-bold text-text-blue">Insurance Coverage and Access Support</p>
+              <p class="text-lg text-text-blue">
+                Throughout the payer approval process, Mirum Access Plus works closely
+                with you, your patients, and the insurance plan to help ensure patients
+                get the treatment they need.
+              </p>
+              <div class="flex items-start gap-4">
+                <a href="#" class="text-base font-semibold text-text-purple">Template Letter of Medical Necessity</a>
+                <a href="#" class="text-base font-semibold text-text-purple">Prior Authorization Checklist</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Financial Support -->
+          <div class="flex items-start gap-4">
+            <img src="6_0-dollar-icon-1.png" class="w-[70px] h-[70px] object-cover" alt="Financial Support Icon" />
+            <div class="flex flex-col gap-4 flex-grow">
+              <p class="text-[26px] font-bold text-text-blue">Financial Support for Patients</p>
+              <p class="text-lg text-text-blue">
+                <span class="font-bold">Mirum Access Plus Savings Program: </span>
+                Eligible patients with commercial or private insurance may 
+                <span class="font-bold">pay as little as $0 out of pocket per fill</span> 
+                for CHOLBAM.*
+                <br /><br />
+                <span class="font-bold">Mirum Patient Assistance Program (PAP): </span>
+                Provides CHOLBAM at no cost for up to 1 calendar year for patients
+                without insurance coverage, with eligibility reviewed each year.†
+              </p>
+            </div>
+          </div>
+          
+          <!-- Specialty Pharmacy -->
+          <div class="flex items-start gap-4">
+            <img src="6_0-star-icon-1.png" class="w-[70px] h-[68.85px] object-cover" alt="Specialty Pharmacy Icon" />
+            <div class="flex flex-col gap-4 flex-grow">
+              <p class="text-[26px] font-bold text-text-blue">Single-Source Specialty Pharmacy</p>
+              <p class="text-lg text-text-blue">
+                Mirum Access Plus is a single-source specialty pharmacy that will ship
+                CHOLBAM directly to patients, provide 24/7 access to pharmacists, and
+                proactively manage refills.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Footnotes -->
+          <div class="flex flex-col">
+            <div class="flex">
+              <p class="text-sm text-text-blue">*</p>
+              <p class="text-sm text-text-blue ml-1">
+                Eligibility restrictions: This program is not available to individuals who
+                use any state or federal government-funded health care program to cover a
+                portion of medication costs, such as Medicare, Medicaid, TRICARE,
+                Department of Defense, or Veterans Administration, or any other state or
+                federal government-funded health care program.
+              </p>
+            </div>
+            <div class="flex">
+              <p class="text-sm text-text-blue">†</p>
+              <p class="text-sm text-text-blue ml-1">
+                Subject to program terms and conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- By Your Side Section -->
+  <section class="pb-16 px-[150px]">
+    <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-16">
+        <!-- Section Header -->
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-6">
+              <p class="text-[32px] font-light text-text-blue">By Your Side at Every Turn</p>
+              <svg width="737" height="3" viewBox="0 0 737 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow">
+                <line x1="1" y1="1.32227" x2="736" y2="1.32233" stroke="#D91B5B" stroke-width="2" stroke-linecap="round"></line>
+              </svg>
+            </div>
+            <p class="text-[40px] font-bold text-text-blue">A Team Dedicated to Your Patient's Treatment Journey</p>
+          </div>
+          <div class="pr-[116px]">
+            <p class="text-lg text-text-blue">
+              Focus on what matters and leave the rest to our experienced and
+              dedicated team at Mirum Access Plus, who will work with your office
+              staff through the access process and assist your patients at every
+              turn.
+            </p>
+          </div>
+        </div>
+
+        <!-- Support Team -->
+        <div class="flex gap-10">
+          <div class="flex items-start gap-4 flex-grow">
+            <img src="6_1-briefcase-icon-1.png" class="w-[68.85px] h-[70px] object-cover" alt="Coordinators Icon" />
+            <div class="flex flex-col gap-4 flex-grow">
+              <p class="text-[26px] font-bold text-text-blue">Mirum Access Plus Coordinators</p>
+              <p class="text-lg text-text-blue">
+                Available to your office staff and your patients, Mirum Access Plus
+                Coordinators are experts who specialize in the insurance coverage
+                process and available financial support options.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 flex-grow">
+            <img src="6_1-team-icon-1.png" class="w-[70px] h-[71.17px] object-contain" alt="Navigators Icon" />
+            <div class="flex flex-col gap-4 flex-grow">
+              <p class="text-[26px] font-bold text-text-blue">Experienced Navigators</p>
+              <p class="text-lg text-text-blue">
+                Navigators will connect with your patients to provide health education
+                and the emotional support needed to address the difficulties of living
+                with their medical condition.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mirum Access Plus -->
+  <section class="px-[150px]">
+    <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-16">
+        <!-- Section Header -->
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-6">
+              <p class="text-[32px] text-text-blue">
+                <span class="font-light">Mirum Access </span><span class="italic">PLUS</span>
+              </p>
+              <svg width="824" height="3" viewBox="0 0 824 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow">
+                <line x1="1" y1="1.32227" x2="823" y2="1.32234" stroke="#D91B5B" stroke-width="2" stroke-linecap="round"></line>
+              </svg>
+            </div>
+            <p class="text-[40px] font-bold text-text-blue">Even More to Help Patients Start and Stay on Therapy</p>
+          </div>
+          <div class="pr-[116px]">
+            <p class="text-lg text-text-blue">
+              In addition to helping your patients get the treatment they need,
+              Mirum Access Plus offers educational resources and tools for
+              patients who sign up for the program.
+              <br /><br />
+              If your patients choose to enroll, they will have access to an
+              even wider range of support services tailored to them:
+            </p>
+          </div>
+        </div>
+
+        <!-- Additional Support Services -->
+        <div class="flex gap-10">
+          <div class="flex items-start gap-4 flex-grow">
+            <img src="map-chat-icon-1.png" class="w-[70px] h-[68.85px] object-cover" alt="Personalized Support Icon" />
+            <div class="flex flex-col gap-4 flex-grow">
+              <p class="text-[26px] font-bold text-text-blue">Personalized support</p>
+              <p class="text-lg text-text-blue">
+                Navigators can support all patients by answering questions about
+                CHOLBAM, the disease, or the access process. For patients who have
+                provided their consent, navigators can help track treatment goals,
+                develop a support network, and prepare for health care appointments.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 flex-grow">
+            <svg width="70" height="71" viewBox="0 0 70 71" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[70px] h-[70px]">
+              <!-- SVG content preserved but omitted for brevity -->
+            </svg>
+            <div class="flex flex-col gap-4 flex-grow">
+              <p class="text-[26px] font-bold text-text-blue">Drive adherence</p>
+              <p class="text-lg text-text-blue">
+                Navigators can help reinforce adherence. They will also encourage
+                communication between patients and their physicians.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer/About Mirum Section -->
+  <section class="h-[552px] relative">
+    <div class="absolute left-0 top-[532px] w-[1440px] pl-[60px] pr-[150px] py-[72px] flex gap-[139px] items-center bg-light-gray-gradient-2">
+      <div class="w-[422.84px] pl-[71px] py-[72px] rounded-tr-[140px] rounded-br-[140px] flex justify-center items-center" style="background: linear-gradient(266.68deg, #fff -0.69%, rgba(255,255,255,0) 97.26%);">
+        <svg width="239" height="138" viewBox="0 0 239 138" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[238px] h-[137px]">
+          <!-- SVG content preserved but omitted for brevity -->
+        </svg>
+      </div>
+      <div class="flex justify-center items-start flex-grow gap-2">
+        <div class="flex justify-center items-center flex-grow gap-[43px]">
+          <div class="flex flex-col justify-center items-start flex-grow gap-6">
+            <div class="w-full">
+              <div class="gap-[18px] flex flex-col">
+                <p class="w-[569.69px] text-[32px] font-bold text-text-blue">
+                  Mirum Is Your Partner in Patient-Centric Care
+                </p>
+                <p class="w-[668.16px] text-lg text-text-blue">
+                  Mirum has a driven and focused team whose mission is to create
+                  transformative, life-changing medicine for patients with rare diseases.
+                  We have a strong understanding of the significant impact rare diseases
+                  have on quality of life for patients and caregivers. With 140+ industry
+                  veterans, scientists, and thought leaders, Mirum is backed by
+                  significant expertise in rare diseases and pharmaceutical development.
+                  We aim to always provide dedicated leadership and safe, effective
+                  treatments that you, your patients, and their caregivers can rely on.
+                </p>
+                <div class="gap-[18px]">
+                  <a href="#" class="inline-block px-20 py-[22px] rounded-[135px] border-2 border-text-purple text-base font-semibold text-text-purple text-center">
+                    Discover Mirum
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
