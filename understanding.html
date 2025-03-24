@@ -1,99 +1,104 @@
 
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/tailwind.min.css" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-
+<script>
+  tailwind.config = {
+    content: [
+      './templates/**/*.html.twig',
+      './js/**/*.js',
+    ],
+    theme: {
+      extend: {
+        colors: {
+          primary: {
+            DEFAULT: '#a05ea6',
+            light: '#a05ea6',
+            10: 'rgba(160, 94, 166, 0.1)',
+            gradient: {
+              start: '#A05EA7',
+              end: '#765FA4'
+            }
+          },
+          secondary: '#739549',
+          text: {
+            DEFAULT: '#191919',
+            muted: '#777776'
+          },
+          border: {
+            muted: 'rgba(115, 117, 120, 0.3)'
+          },
+          teal: '#0080a3',
+          dark: '#231f20',
+          purple: '#765ea4'
+        },
+        fontFamily: {
+          sans: ['Arial', 'sans-serif'],
+        },
+        container: {
+          center: true,
+          padding: '1rem',
+          screens: {
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+            '2xl': '1440px',
+          },
+        },
+        spacing: {
+          '18': '4.5rem',
+        },
+        backgroundImage: {
+          'fade-white': 'linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0) 100%)',
+          'primary-gradient': 'linear-gradient(to right, #A05EA7, #765FA4)',
+          'teal-primary-gradient': 'linear-gradient(to right, #0081a3 0%, #a05fa6 322.36%)',
+          'teal-primary-gradient-2': 'linear-gradient(to right, #0081a3 -110.9%, #a05fa6 211.89%)',
+          'teal-primary-gradient-3': 'linear-gradient(to right, #0081a3 -221.37%, #a05fa6 100%)',
+          'teal-primary': 'linear-gradient(to right, #0081a3 0%, #a05fa6 155.94%)'
+        }
+      },
+    },
+    plugins: [],
+  }
+</script>
 <div class="flex flex-col justify-start items-start w-[1440px] overflow-hidden bg-white">
-  <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0">
-    <div
-      class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 h-72 gap-2.5 px-[150px] bg-[url(&#x27;banner.png&#x27;)]"
-    >
-      <div
-        class="flex flex-col justify-center items-center self-stretch flex-grow-0 flex-shrink-0 gap-4"
-      >
-        <div
-          class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5"
-        >
-          <p
-            class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[52px] font-bold text-center text-white"
-          >
-            UNDERSTANDING SLOS
-          </p>
-        </div>
-        <div class="flex justify-center items-start self-stretch flex-grow relative gap-2.5">
-          <p class="flex-grow w-[740px] text-center text-white">
-            <span class="flex-grow w-[740px] text-lg font-semibold text-center text-white"
-              >Smith-Lemli-Opitz Syndrome (SLOS) disrupts the cholesterol biosynthesis
-              pathway.</span
-            ><span class="flex-grow w-[740px] text-base text-center text-white">1</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  
   <div class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-2.5">
-    <div
-      class="flex flex-col justify-start items-start flex-grow bg-[url(&#x27;frame-626252.png&#x27;)]"
-    >
-      <div
-        class="flex flex-col justify-start items-end flex-grow-0 flex-shrink-0 w-[1440px] gap-[11px] px-60 pt-6 pb-16"
-      >
-        <div
-          class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[81px]"
-        >
+    <div class="flex flex-col justify-start items-start flex-grow bg-[url('frame-626252.png')]">
+      <div class="flex flex-col justify-start items-end flex-grow-0 flex-shrink-0 w-[1440px] gap-[11px] px-60 pt-6 pb-16">
+        <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[81px]">
           <div class="flex flex-col justify-start items-start flex-grow gap-6 pb-10">
-            <div
-              class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5"
-            >
+            <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
               <p class="flex-grow w-[481px] text-lg text-left text-[#191919]">
-                <span class="flex-grow w-[481px] text-lg font-semibold text-left text-[#191919]"
-                  >SLOS results from an autosomal recessive mutation on the 7-dehydrocholesterol
-                  reductase (DHCR7) gene.</span
-                ><span class="flex-grow w-[481px] text-lg text-left text-[#191919]">1-3</span>
+                <span class="flex-grow w-[481px] text-lg font-semibold text-left text-[#191919]">SLOS results from an autosomal recessive mutation on the 7-dehydrocholesterol
+                  reductase (DHCR7) gene.</span><span class="flex-grow w-[481px] text-lg text-left text-[#191919]">1-3</span>
               </p>
             </div>
-            <div
-              class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-4"
-            >
-              <div
-                class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-4 pl-6 border-t-0 border-r-0 border-b-0 border-l-2 border-[#0080a3]"
-              >
-                <div
-                  class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5"
-                >
+            <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-4">
+              <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-4 pl-6 border-t-0 border-r-0 border-b-0 border-l-2 border-[#0080a3]">
+                <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
                   <p class="flex-grow w-[457px] text-lg text-left text-[#191919]">
                     Deficient activity of DHCR7 impairs the final step in cholesterol biosynthesis4.
                     This results in:
                   </p>
                 </div>
-                <div
-                  class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-1"
-                >
+                <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-1">
                   <div class="flex justify-start items-start flex-grow">
-                    <div
-                      class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 w-0 h-36 gap-2"
-                    ></div>
+                    <div class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 w-0 h-36 gap-2"></div>
                     <div class="flex flex-col justify-start items-start flex-grow gap-4">
-                      <div
-                        class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0"
-                      >
-                        <div
-                          class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-1"
-                        >
+                      <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0">
+                        <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-1">
                           <p class="flex-grow-0 flex-shrink-0 text-base text-left text-[#191919]">
                             Low choletesterol levels1,5
                           </p>
                         </div>
-                        <div
-                          class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-1"
-                        >
+                        <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-1">
                           <p class="flex-grow w-[457px] text-base text-left text-[#191919]">
                             A buildup of toxic cholesterol precursors 7-DHC (7-dehydrocholesterol)
                             and 8-DHC (8-dehydrocholesterol)4,5
                           </p>
                         </div>
-                        <div
-                          class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-1"
-                        >
+                        <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-1">
                           <p class="flex-grow w-[457px] text-base text-left text-[#191919]">
                             Bile acids are also impacted because cholesterol is needed for bile acid
                             synthesis1,6
@@ -109,825 +114,68 @@
           <div class="flex-grow-0 flex-shrink-0 w-[398px] h-[479.82px]">
             <div class="w-[398px] h-[479.82px]">
               <div class="w-[398px] h-[479.82px]">
-                <div
-                  class="flex justify-center items-center absolute left-[640px] top-[117px] gap-2 px-10 py-4 rounded-[140px] bg-white"
-                >
-                  <p class="flex-grow-0 flex-shrink-0 text-lg font-bold text-left text-black/10">
-                    Acetyl-CoA
-                  </p>
-                </div>
-                <div
-                  class="flex justify-center items-center absolute left-[646px] top-[210px] gap-2 px-10 py-4 rounded-[140px] bg-white"
-                >
-                  <p class="flex-grow-0 flex-shrink-0 text-lg font-bold text-left text-black/10">
-                    HMG-CoA
-                  </p>
-                </div>
-                <div
-                  class="flex justify-center items-center absolute left-[642px] top-[314px] gap-2 px-10 py-4 rounded-[140px] bg-white"
-                >
-                  <p class="flex-grow-0 flex-shrink-0 text-lg font-bold text-left text-black/10">
-                    Lanosterol
-                  </p>
-                </div>
-                <p
-                  class="absolute left-[602px] top-[399.26px] text-[26px] font-semibold text-left text-[#bd5a0f]"
-                >
-                  DHCR7
+                
+                
+                
+                
+                <p class="w-[334px] absolute left-[562px] top-0 text-[26px] font-semibold text-center text-[#191919]">
+                  <span class="w-[334px] text-[26px] font-semibold text-center text-[#191919]">Cholesterol and </span><br><span class="w-[334px] text-[26px] font-semibold text-center text-[#191919]">Bile Acid Biosynthesis</span>
                 </p>
-                <p
-                  class="w-[334px] absolute left-[562px] top-0 text-[26px] font-semibold text-center text-[#191919]"
-                >
-                  <span class="w-[334px] text-[26px] font-semibold text-center text-[#191919]"
-                    >Cholesterol and </span
-                  ><br /><span
-                    class="w-[334px] text-[26px] font-semibold text-center text-[#191919]"
-                    >Bile Acid Biosynthesis</span
-                  >
-                </p>
-                <div
-                  class="flex justify-center items-center absolute left-[887px] top-[367.26px] gap-2 p-2 rounded-[10px] bg-white"
-                >
-                  <p class="flex-grow-0 flex-shrink-0 text-lg font-bold text-left text-black/10">
-                    7-DHC
-                  </p>
-                </div>
-                <div
-                  class="flex justify-center items-center absolute left-[885px] top-[419.26px] gap-2 p-2 rounded-[10px] bg-white"
-                >
-                  <p class="flex-grow-0 flex-shrink-0 text-lg font-bold text-left text-black/10">
-                    8-DHC
-                  </p>
-                </div>
-                <svg
-                  width="88"
-                  height="96"
-                  viewBox="0 0 88 96"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-[72.87px] h-[60.19px]"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M2.7557 41.4405C22.2313 67.2247 56.1182 65.961 85.4828 53.4479C85.9875 53.2339 86.5508 53.4531 86.7376 53.9392C86.9244 54.4253 86.668 54.9953 86.1633 55.2093C55.9769 68.0744 21.1867 69.1555 1.16587 42.6486C0.853085 42.2364 0.955977 41.6304 1.39552 41.295C1.83288 40.9609 2.4418 41.0262 2.7557 41.4405Z"
-                    fill="#0080A3"
-                  ></path></svg
-                ><svg
-                  width="88"
-                  height="96"
-                  viewBox="0 0 88 96"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-[72.87px] h-[60.19px]"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M2.94418 54.6745C22.4198 28.8903 56.3067 30.154 85.6713 42.6671C86.176 42.8811 86.7392 42.6619 86.926 42.1758C87.1129 41.6897 86.8565 41.1197 86.3518 40.9057C56.1654 28.0406 21.3751 26.9595 1.35435 53.4663C1.04156 53.8786 1.14445 54.4846 1.584 54.82C2.02136 55.1541 2.63027 55.0888 2.94418 54.6745Z"
-                    fill="#0080A3"
-                  ></path></svg
-                ><svg
-                  width="14"
-                  height="27"
-                  viewBox="0 0 14 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-[11.18px] h-[25.4px]"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M5.99947 8.0063C6.03389 5.82047 6.12199 3.6353 6.26379 1.45079C6.26566 1.33221 6.36172 1.21965 6.53085 1.13788C6.69999 1.0561 6.92833 1.0118 7.16565 1.01473C7.40297 1.01766 7.62983 1.06758 7.79632 1.1535C7.96281 1.23942 8.0553 1.3543 8.05343 1.47288C7.5568 9.14052 7.72069 16.9207 8.53656 24.5985C8.54893 24.7173 8.46647 24.8328 8.30733 24.9198C8.14819 25.0067 7.9254 25.0579 7.68796 25.0621C7.45053 25.0663 7.21791 25.0231 7.04127 24.9421C6.86463 24.8611 6.75844 24.7488 6.74607 24.6301C6.16453 19.1225 5.91217 13.5504 5.99947 8.0063Z"
-                    fill="url(#paint0_linear_1_18898)"
-                  ></path>
-                  <path
-                    d="M1.70204 16.6126C1.6897 16.4198 1.74831 16.2286 1.86758 16.0726C1.98685 15.9166 2.15915 15.8058 2.35422 15.7596C2.5493 15.7135 2.75468 15.7349 2.9343 15.8202C3.11393 15.9055 3.25631 16.0492 3.33645 16.226C4.48429 18.7418 5.77323 21.1952 7.19758 23.5753C8.3138 20.4677 9.64005 17.433 11.1678 14.4907C11.2184 14.394 11.2882 14.3077 11.3733 14.2368C11.4584 14.166 11.5571 14.1119 11.6637 14.0777C11.7703 14.0434 11.8827 14.0297 11.9946 14.0373C12.1065 14.0449 12.2156 14.0737 12.3157 14.122C12.4159 14.1703 12.5051 14.2371 12.5782 14.3187C12.6513 14.4003 12.707 14.4951 12.742 14.5976C12.7771 14.7002 12.7907 14.8084 12.7823 14.9162C12.7738 15.024 12.7435 15.1293 12.6928 15.226C10.9091 18.6308 9.40228 22.1628 8.18605 25.79C8.13648 25.9411 8.04279 26.0754 7.91621 26.1768C7.78964 26.2782 7.63556 26.3424 7.47246 26.3617C7.30936 26.3811 7.14416 26.3547 6.99669 26.2858C6.84921 26.2168 6.72572 26.1083 6.64103 25.9731C4.80193 23.0556 3.16578 20.0231 1.7433 16.8955C1.71238 16.8044 1.69841 16.7086 1.70204 16.6126Z"
-                    fill="url(#paint1_linear_1_18898)"
-                  ></path>
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear_1_18898"
-                      x1="7.19742"
-                      y1="32.6641"
-                      x2="8.61303"
-                      y2="1.05913"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#A05EA6"></stop>
-                      <stop offset="1" stop-color="#0080A3"></stop>
-                    </linearGradient>
-                    <linearGradient
-                      id="paint1_linear_1_18898"
-                      x1="8.92252"
-                      y1="30.0777"
-                      x2="7.95756"
-                      y2="14.2913"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#A05EA6"></stop>
-                      <stop offset="1" stop-color="#0080A3"></stop>
-                    </linearGradient>
-                  </defs></svg
-                ><svg
-                  width="21"
-                  height="100"
-                  viewBox="0 0 21 100"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-[13.37px] h-[98.81px]"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M10.8134 28.1919C10.8885 19.4519 11.0172 10.7131 11.1997 1.97527C11.2038 1.50114 11.302 1.0483 11.4728 0.716378C11.6436 0.384451 11.8729 0.200627 12.1104 0.205343C12.3478 0.210059 12.5739 0.402929 12.7389 0.741525C12.9039 1.08012 12.9943 1.53671 12.9903 2.01084C12.3508 32.6805 12.3702 63.7805 13.0439 94.4525C13.0541 94.9269 12.9694 95.3913 12.8086 95.7435C12.6477 96.0958 12.4238 96.307 12.1861 96.3307C11.9484 96.3545 11.7164 96.1888 11.5412 95.8701C11.3659 95.5514 11.2617 95.1058 11.2516 94.6314C10.772 72.6293 10.623 50.3595 10.8134 28.1919Z"
-                    fill="url(#paint0_linear_1_18901)"
-                  ></path>
-                  <path
-                    d="M6.21195 88.408C6.19839 88.1964 6.25581 87.987 6.37414 87.8166C6.49246 87.6462 6.66413 87.5257 6.859 87.4763C7.05386 87.4269 7.25946 87.4518 7.4397 87.5465C7.61994 87.6412 7.76329 87.7997 7.84458 87.9942C9.00883 90.7615 10.3138 93.4613 11.7538 96.0814C12.8508 92.6792 14.1584 89.3582 15.6682 86.1399C15.7182 86.0342 15.7875 85.94 15.8722 85.8628C15.9568 85.7856 16.0552 85.7269 16.1616 85.69C16.2681 85.6531 16.3805 85.6388 16.4924 85.6478C16.6044 85.6569 16.7138 85.6891 16.8143 85.7427C16.9147 85.7963 17.0044 85.8703 17.0781 85.9603C17.1518 86.0503 17.2081 86.1546 17.2437 86.2673C17.2794 86.38 17.2938 86.4988 17.286 86.6171C17.2783 86.7353 17.2485 86.8506 17.1985 86.9563C15.4356 90.6804 13.9505 94.5458 12.7567 98.5175C12.7081 98.6829 12.6152 98.8296 12.4892 98.9401C12.3632 99.0505 12.2095 99.12 12.0465 99.1402C11.8834 99.1604 11.718 99.1304 11.57 99.0538C11.422 98.9773 11.2978 98.8574 11.2122 98.7086C9.3539 95.4961 7.69788 92.1589 6.25501 88.7186C6.2235 88.6185 6.20892 88.5133 6.21195 88.408Z"
-                    fill="url(#paint1_linear_1_18901)"
-                  ></path>
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear_1_18901"
-                      x1="11.5539"
-                      y1="126.738"
-                      x2="30.0945"
-                      y2="2.81427"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#A05EA6"></stop>
-                      <stop offset="1" stop-color="#0080A3"></stop>
-                    </linearGradient>
-                    <linearGradient
-                      id="paint1_linear_1_18901"
-                      x1="13.5206"
-                      y1="103.226"
-                      x2="12.4685"
-                      y2="85.9002"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#A05EA6"></stop>
-                      <stop offset="1" stop-color="#0080A3"></stop>
-                    </linearGradient>
-                  </defs></svg
-                ><svg
-                  width="13"
-                  height="14"
-                  viewBox="0 0 13 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-[11.18px] h-[12.01px]"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M4.73156 4.22298C4.7449 3.37566 4.81193 2.52899 4.93265 1.68299C4.93338 1.63702 5.02834 1.5941 5.19667 1.56367C5.36499 1.53324 5.59288 1.51779 5.8302 1.52072C6.06752 1.52364 6.29484 1.54471 6.46214 1.57929C6.62944 1.61386 6.72302 1.65911 6.72229 1.70508C6.29964 4.67456 6.53851 7.69266 7.4283 10.676C7.44181 10.7222 7.36048 10.7664 7.2022 10.7989C7.04391 10.8314 6.82164 10.8495 6.58428 10.8494C6.34691 10.8492 6.1139 10.8307 5.9365 10.7979C5.7591 10.7652 5.65185 10.7209 5.63833 10.6747C5.00377 8.53469 4.69772 6.37212 4.73156 4.22298Z"
-                    fill="url(#paint0_linear_1_18904)"
-                  ></path>
-                  <path
-                    d="M0.702531 3.57443C0.690193 3.38158 0.748802 3.19036 0.868069 3.03437C0.987335 2.87838 1.15963 2.76758 1.35471 2.72143C1.54978 2.67528 1.75517 2.69673 1.93479 2.78201C2.11441 2.86729 2.25679 3.01096 2.33693 3.18777C3.48478 5.70361 4.77372 8.15697 6.19807 10.537C7.31429 7.42946 8.64054 4.39475 10.1683 1.45244C10.2189 1.35574 10.2887 1.2695 10.3738 1.19864C10.4589 1.12778 10.5575 1.07369 10.6641 1.03945C10.7707 1.00522 10.8832 0.991513 10.9951 0.999117C11.107 1.00672 11.2161 1.03548 11.3162 1.08377C11.4164 1.13205 11.5055 1.19891 11.5787 1.28053C11.6518 1.36214 11.7075 1.45691 11.7425 1.55943C11.7775 1.66195 11.7912 1.77021 11.7828 1.87802C11.7743 1.98584 11.7439 2.0911 11.6933 2.1878C9.90958 5.59259 8.40277 9.12458 7.18654 12.7518C7.13697 12.9029 7.04328 13.0372 6.9167 13.1386C6.79013 13.24 6.63605 13.3042 6.47295 13.3235C6.30985 13.3429 6.14465 13.3165 5.99717 13.2475C5.8497 13.1786 5.72621 13.0701 5.64152 12.9349C3.80242 10.0174 2.16627 6.98489 0.743788 3.85733C0.712865 3.76618 0.698899 3.67042 0.702531 3.57443Z"
-                    fill="url(#paint1_linear_1_18904)"
-                  ></path>
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear_1_18904"
-                      x1="6.16707"
-                      y1="13.7935"
-                      x2="6.47268"
-                      y2="1.52881"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#A05EA6"></stop>
-                      <stop offset="1" stop-color="#0080A3"></stop>
-                    </linearGradient>
-                    <linearGradient
-                      id="paint1_linear_1_18904"
-                      x1="7.92301"
-                      y1="17.0395"
-                      x2="6.95805"
-                      y2="1.25313"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#A05EA6"></stop>
-                      <stop offset="1" stop-color="#0080A3"></stop>
-                    </linearGradient>
-                  </defs></svg
-                ><svg
-                  width="13"
-                  height="27"
-                  viewBox="0 0 13 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-[11.18px] h-[25.97px]"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M5.48436 7.21963C5.57882 5.03557 5.72693 2.85364 5.92869 0.673854C5.93382 0.555371 6.03294 0.445494 6.20425 0.368395C6.37557 0.291296 6.60504 0.25329 6.84219 0.262739C7.07934 0.272187 7.30475 0.328316 7.46882 0.418777C7.63288 0.509238 7.72218 0.626621 7.71705 0.745104C7.00995 8.3962 6.96003 16.1779 7.56464 23.8753C7.57375 23.9943 7.48815 24.1076 7.32668 24.1901C7.1652 24.2726 6.94109 24.3177 6.70363 24.3153C6.46617 24.313 6.23482 24.2635 6.06048 24.1776C5.88613 24.0918 5.78307 23.9767 5.77396 23.8576C5.34396 18.3361 5.24478 12.7592 5.48436 7.21963Z"
-                    fill="url(#paint0_linear_1_18907)"
-                  ></path>
-                  <path
-                    d="M1.07655 16.2712C1.06951 16.0781 1.13335 15.8886 1.25686 15.7359C1.38037 15.5832 1.55564 15.4772 1.75191 15.4364C1.94818 15.3957 2.1529 15.4228 2.33011 15.5129C2.50732 15.6031 2.6457 15.7506 2.72096 15.9296C3.79925 18.476 5.02029 20.9639 6.37872 23.3822C7.5799 20.3064 8.98902 17.3093 10.597 14.4101C10.6503 14.3148 10.7224 14.2305 10.8094 14.162C10.8964 14.0935 10.9965 14.0422 11.104 14.0109C11.2115 13.9796 11.3243 13.969 11.436 13.9796C11.5476 13.9903 11.6559 14.0221 11.7547 14.0731C11.8534 14.1241 11.9408 14.1934 12.0116 14.277C12.0825 14.3606 12.1355 14.4568 12.1677 14.5603C12.1999 14.6637 12.2106 14.7723 12.1992 14.8799C12.1878 14.9874 12.1545 15.0918 12.1013 15.1871C10.2247 18.5416 8.6214 22.0308 7.30596 25.6233C7.25226 25.7729 7.15492 25.9046 7.02561 26.0025C6.8963 26.1003 6.74051 26.1603 6.57694 26.1752C6.41337 26.19 6.24896 26.1591 6.10343 26.0861C5.9579 26.0132 5.83744 25.9013 5.7565 25.7638C3.99825 22.7969 2.44603 19.7206 1.11002 16.5551C1.08161 16.4632 1.07028 16.3671 1.07655 16.2712Z"
-                    fill="url(#paint1_linear_1_18907)"
-                  ></path>
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear_1_18907"
-                      x1="6.00441"
-                      y1="31.901"
-                      x2="8.2878"
-                      y2="0.346887"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#A05EA6"></stop>
-                      <stop offset="1" stop-color="#0080A3"></stop>
-                    </linearGradient>
-                    <linearGradient
-                      id="paint1_linear_1_18907"
-                      x1="7.92436"
-                      y1="29.9296"
-                      x2="7.39348"
-                      y2="14.1226"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#A05EA6"></stop>
-                      <stop offset="1" stop-color="#0080A3"></stop>
-                    </linearGradient>
-                  </defs>
-                </svg>
+                
+                
+                
               </div>
-              <svg
-                width="14"
-                height="11"
-                viewBox="0 0 14 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute left-[856.5px] top-[434.84px]"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M5.82156 10.0719C5.64131 10.1416 5.44132 10.1431 5.25671 10.0762C5.0721 10.0093 4.91467 9.87822 4.81207 9.70601C4.70946 9.5338 4.66823 9.33146 4.69563 9.13451C4.72302 8.93757 4.81729 8.75861 4.96188 8.62907C7.01683 6.77861 8.96981 4.81235 10.8122 2.73893C7.51285 2.60756 4.21992 2.25398 0.954622 1.68047C0.847185 1.66123 0.743946 1.62052 0.650803 1.56064C0.55766 1.50077 0.476436 1.42291 0.411767 1.33152C0.347098 1.24012 0.300252 1.13698 0.273902 1.02798C0.247552 0.918978 0.242213 0.80625 0.258194 0.696235C0.274174 0.586219 0.311161 0.481069 0.367039 0.386789C0.422917 0.292509 0.496595 0.210947 0.583864 0.146756C0.671133 0.0825655 0.770281 0.0370053 0.875655 0.0126761C0.981029 -0.0116531 1.09056 -0.0142743 1.198 0.00496181C4.98133 0.683772 8.8028 1.06023 12.6278 1.13092C12.7868 1.13284 12.9431 1.18187 13.0778 1.27214C13.2125 1.36241 13.3201 1.49009 13.3875 1.63986C13.4549 1.78962 13.4794 1.95512 13.4579 2.11649C13.4365 2.27786 13.37 2.42825 13.2665 2.54962C11.036 5.18006 8.63495 7.65144 6.079 9.94757C6.00135 10.0044 5.9142 10.0465 5.82156 10.0719Z"
-                  fill="url(#paint0_linear_1_18910)"
-                ></path>
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_1_18910"
-                    x1="16.4964"
-                    y1="-0.859304"
-                    x2="1.72866"
-                    y2="4.80234"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#A05EA6"></stop>
-                    <stop offset="1" stop-color="#0080A3"></stop>
-                  </linearGradient>
-                </defs></svg
-              ><svg
-                width="14"
-                height="11"
-                viewBox="0 0 14 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="absolute left-[857.5px] top-[392.92px]"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M5.82156 0.694103C5.64131 0.624413 5.44132 0.622889 5.25671 0.689799C5.0721 0.756709 4.91467 0.887776 4.81207 1.05998C4.70946 1.23219 4.66823 1.43454 4.69563 1.63148C4.72302 1.82842 4.81729 2.00738 4.96188 2.13692C7.01683 3.98738 8.96981 5.95364 10.8122 8.02706C7.51285 8.15843 4.21992 8.51201 0.954622 9.08552C0.847185 9.10476 0.743946 9.14547 0.650803 9.20535C0.55766 9.26522 0.476436 9.34308 0.411767 9.43447C0.347098 9.52587 0.300252 9.62901 0.273902 9.73801C0.247552 9.84701 0.242213 9.95974 0.258194 10.0698C0.274174 10.1798 0.311161 10.2849 0.367039 10.3792C0.422917 10.4735 0.496595 10.555 0.583864 10.6192C0.671133 10.6834 0.770281 10.729 0.875655 10.7533C0.981029 10.7776 1.09056 10.7803 1.198 10.761C4.98133 10.0822 8.8028 9.70576 12.6278 9.63507C12.7868 9.63316 12.9431 9.58412 13.0778 9.49385C13.2125 9.40358 13.3201 9.2759 13.3875 9.12614C13.4549 8.97637 13.4794 8.81087 13.4579 8.6495C13.4365 8.48814 13.37 8.33774 13.2665 8.21637C11.036 5.58593 8.63495 3.11455 6.079 0.81842C6.00135 0.76155 5.9142 0.719466 5.82156 0.694103Z"
-                  fill="url(#paint0_linear_1_18911)"
-                ></path>
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_1_18911"
-                    x1="16.4964"
-                    y1="11.6253"
-                    x2="1.72866"
-                    y2="5.96365"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#A05EA6"></stop>
-                    <stop offset="1" stop-color="#0080A3"></stop>
-                  </linearGradient>
-                </defs>
-              </svg>
+              
             </div>
-            <svg
-              width="26"
-              height="24"
-              viewBox="0 0 26 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-[25.32px] h-[23px]"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M2.76837 3.04022C3.98651 7.25522 6.90096 9.46493 9.80687 11.6682C11.178 12.7077 12.5472 13.7459 13.7354 14.9925C14.8811 16.198 15.9404 17.5088 16.9997 18.8194C18.2035 20.3089 19.4072 21.7982 20.737 23.1322C20.8127 23.2065 21.2767 22.7771 21.777 22.1687C22.2772 21.5603 22.6207 21.0074 22.5451 20.9332C21.2154 19.5993 20.0119 18.1101 18.8082 16.6207C17.7491 15.3102 16.6899 13.9995 15.5444 12.7942C14.3571 11.548 12.9882 10.5113 11.6173 9.47308C8.71713 7.27665 5.80851 5.07386 4.59404 0.867857C4.55772 0.746108 4.12188 1.13123 3.61787 1.73041C3.11435 2.32999 2.73556 2.91521 2.76837 3.04022Z"
-                fill="#BD5A0F"
-              ></path>
-              <path
-                d="M2.76837 3.04022C3.98651 7.25522 6.90096 9.46493 9.80687 11.6682C11.178 12.7077 12.5472 13.7459 13.7354 14.9925C14.8811 16.198 15.9404 17.5088 16.9997 18.8194C18.2035 20.3089 19.4072 21.7982 20.737 23.1322C20.8127 23.2065 21.2767 22.7771 21.777 22.1687C22.2772 21.5603 22.6207 21.0074 22.5451 20.9332C21.2154 19.5993 20.0119 18.1101 18.8082 16.6207C17.7491 15.3102 16.6899 13.9995 15.5444 12.7942C14.3571 11.548 12.9882 10.5113 11.6173 9.47308C8.71713 7.27665 5.80851 5.07386 4.59404 0.867857C4.55772 0.746108 4.12188 1.13123 3.61787 1.73041C3.11435 2.32999 2.73556 2.91521 2.76837 3.04022Z"
-                stroke="black"
-              ></path>
-              <path
-                d="M2.76935 20.4703C3.98749 16.2553 6.90193 14.0456 9.80784 11.8423C11.179 10.8027 12.5482 9.76462 13.7364 8.51796C14.882 7.31254 15.9414 6.00174 17.0006 4.69115C18.2045 3.20158 19.4081 1.71228 20.7379 0.378253C20.8136 0.303979 21.2777 0.733433 21.778 1.34182C22.2782 1.95025 22.6217 2.50305 22.546 2.57729C21.2164 3.91119 20.0129 5.40036 18.8092 6.8898C17.7501 8.20027 16.6909 9.51096 15.5454 10.7163C14.3581 11.9625 12.9892 12.9992 11.6183 14.0374C8.71811 16.2338 5.80948 18.4366 4.59501 22.6426C4.5587 22.7644 4.12286 22.3793 3.61885 21.7801C3.11533 21.1805 2.73653 20.5953 2.76935 20.4703Z"
-                fill="#BD5A0F"
-              ></path>
-              <path
-                d="M2.76935 20.4703C3.98749 16.2553 6.90193 14.0456 9.80784 11.8423C11.179 10.8027 12.5482 9.76462 13.7364 8.51796C14.882 7.31254 15.9414 6.00174 17.0006 4.69115C18.2045 3.20158 19.4081 1.71228 20.7379 0.378253C20.8136 0.303979 21.2777 0.733433 21.778 1.34182C22.2782 1.95025 22.6217 2.50305 22.546 2.57729C21.2164 3.91119 20.0129 5.40036 18.8092 6.8898C17.7501 8.20027 16.6909 9.51096 15.5454 10.7163C14.3581 11.9625 12.9892 12.9992 11.6183 14.0374C8.71811 16.2338 5.80948 18.4366 4.59501 22.6426C4.5587 22.7644 4.12286 22.3793 3.61885 21.7801C3.11533 21.1805 2.73653 20.5953 2.76935 20.4703Z"
-                stroke="black"
-              ></path>
-            </svg>
+            
           </div>
         </div>
-        <div
-          class="flex flex-col justify-start items-end self-stretch flex-grow-0 flex-shrink-0 relative gap-10 pr-16"
-        >
-          <div
-            class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-3 pl-8 pr-[70px] py-6 rounded-xl bg-white"
-          >
+        <div class="flex flex-col justify-start items-end self-stretch flex-grow-0 flex-shrink-0 relative gap-10 pr-16">
+          <div class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-3 pl-8 pr-[70px] py-6 rounded-xl bg-white">
             <p class="flex-grow-0 flex-shrink-0 w-[476px] text-lg text-left text-[#191919]">
-              <span
-                class="flex-grow-0 flex-shrink-0 w-[476px] text-lg font-semibold text-left text-[#191919]"
-                >Low cholesterol levels and high concentrations of 7-DHC and 8-DHC are seen in
-                patients with SLOS.</span
-              ><span class="flex-grow-0 flex-shrink-0 w-[476px] text-lg text-left text-[#191919]"
-                >1,5,8,9</span
-              >
+              <span class="flex-grow-0 flex-shrink-0 w-[476px] text-lg font-semibold text-left text-[#191919]">Low cholesterol levels and high concentrations of 7-DHC and 8-DHC are seen in
+                patients with SLOS.</span><span class="flex-grow-0 flex-shrink-0 w-[476px] text-lg text-left text-[#191919]">1,5,8,9</span>
             </p>
-            <svg
-              width="111"
-              height="3"
-              viewBox="0 0 111 3"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="flex-grow"
-              preserveAspectRatio="none"
-            >
-              <line
-                x1="1"
-                y1="1.82239"
-                x2="110"
-                y2="1.82239"
-                stroke="#0080A3"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-dasharray="5 5"
-              ></line>
-            </svg>
-            <div
-              class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2 px-10 py-4 rounded-[10px] bg-[#0080a3] border border-[#0080a3]"
-            >
+            
+            <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2 px-10 py-4 rounded-[10px] bg-[#0080a3] border border-[#0080a3]">
               <p class="flex-grow-0 flex-shrink-0 text-lg font-bold text-left text-white">
                 Cholesterol
               </p>
             </div>
           </div>
-          <div
-            class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-3 px-8 py-6 rounded-xl bg-white"
-          >
+          <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-3 px-8 py-6 rounded-xl bg-white">
             <p class="flex-grow-0 flex-shrink-0 text-lg text-left text-[#191919]">
-              <span class="flex-grow-0 flex-shrink-0 text-lg font-semibold text-left text-[#191919]"
-                >Low cholesterol levels result in low levels of bile acids.</span
-              ><span class="flex-grow-0 flex-shrink-0 text-lg text-left text-[#191919]">2</span>
+              <span class="flex-grow-0 flex-shrink-0 text-lg font-semibold text-left text-[#191919]">Low cholesterol levels result in low levels of bile acids.</span><span class="flex-grow-0 flex-shrink-0 text-lg text-left text-[#191919]">2</span>
             </p>
-            <svg
-              width="92"
-              height="3"
-              viewBox="0 0 92 3"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="flex-grow"
-              preserveAspectRatio="none"
-            >
-              <line
-                x1="1"
-                y1="1.82239"
-                x2="91"
-                y2="1.82239"
-                stroke="#A05EA6"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-dasharray="5 5"
-              ></line>
-            </svg>
-            <div
-              class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 relative gap-0.5 px-10 py-2 rounded-[59px] bg-[#a05ea6]"
-            >
+            
+            <div class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 relative gap-0.5 px-10 py-2 rounded-[59px] bg-[#a05ea6]">
               <p class="flex-grow-0 flex-shrink-0 text-lg font-bold text-left text-white">
                 Primary Bile Acids
               </p>
               <p class="flex-grow-0 flex-shrink-0 text-lg text-left text-white">Cholic Acid</p>
             </div>
           </div>
-          <div
-            class="flex justify-start items-center flex-grow-0 flex-shrink-0 w-[11.94px] absolute left-[730.06px] top-[98px] gap-2.5"
-          >
-            <svg
-              width="12"
-              height="63"
-              viewBox="0 0 12 63"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="flex-grow-0 flex-shrink-0 w-[11.94px] h-[62.08px]"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M0.190812 52.4795C0.178474 52.2866 0.237083 52.0954 0.35635 51.9394C0.475616 51.7834 0.647915 51.6726 0.84299 51.6265C1.03807 51.5803 1.24345 51.6018 1.42307 51.687C1.60269 51.7723 1.74508 51.916 1.82522 52.0928C2.97306 54.6086 4.262 57.062 5.68635 59.4421C6.80257 56.3345 8.12882 53.2998 9.65655 50.3575C9.70716 50.2608 9.77701 50.1745 9.86209 50.1037C9.94717 50.0328 10.0458 49.9787 10.1524 49.9445C10.259 49.9102 10.3715 49.8965 10.4834 49.9041C10.5952 49.9117 10.7044 49.9405 10.8045 49.9888C10.9046 50.0371 10.9938 50.1039 11.067 50.1856C11.1401 50.2672 11.1958 50.3619 11.2308 50.4645C11.2658 50.567 11.2795 50.6752 11.2711 50.7831C11.2626 50.8909 11.2322 50.9961 11.1816 51.0928C9.39786 54.4976 7.89105 58.0296 6.67482 61.6568C6.62525 61.8079 6.53156 61.9422 6.40498 62.0436C6.27841 62.145 6.12433 62.2092 5.96123 62.2286C5.79813 62.2479 5.63293 62.2215 5.48546 62.1526C5.33798 62.0836 5.21449 61.9751 5.1298 61.8399C3.2907 58.9224 1.65455 55.8899 0.23207 52.7624C0.201147 52.6712 0.18718 52.5754 0.190812 52.4795Z"
-                fill="url(#paint0_linear_1_18928)"
-              ></path>
-              <path
-                d="M3.69224 18.9038C3.78109 13.2614 3.92362 7.61961 4.11985 1.9785C4.12466 1.67241 4.22356 1.38001 4.39478 1.16564C4.566 0.95127 4.79552 0.832483 5.03284 0.835413C5.27016 0.838342 5.49585 0.962747 5.66025 1.18126C5.82465 1.39977 5.91431 1.6945 5.90949 2.00059C5.22181 21.8009 5.19207 41.8787 5.81704 61.6798C5.82646 61.9861 5.7411 62.286 5.57975 62.5134C5.41839 62.7409 5.19426 62.8774 4.95665 62.8928C4.71904 62.9083 4.48741 62.8014 4.31274 62.5957C4.13806 62.3901 4.03464 62.1025 4.02522 61.7962C3.58061 47.5921 3.46689 33.2151 3.69224 18.9038Z"
-                fill="url(#paint1_linear_1_18928)"
-              ></path>
-              <defs>
-                <linearGradient
-                  id="paint0_linear_1_18928"
-                  x1="7.41129"
-                  y1="65.9445"
-                  x2="6.44633"
-                  y2="50.1582"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#A05EA6"></stop>
-                  <stop offset="1" stop-color="#0080A3"></stop>
-                </linearGradient>
-                <linearGradient
-                  id="paint1_linear_1_18928"
-                  x1="4.27669"
-                  y1="82.5237"
-                  x2="12.0726"
-                  y2="1.45965"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#A05EA6"></stop>
-                  <stop offset="1" stop-color="#0080A3"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
+          <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 w-[11.94px] absolute left-[730.06px] top-[98px] gap-2.5">
+            
           </div>
         </div>
       </div>
-      <div
-        class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-10 px-[150px] py-16"
-      >
+      <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-10 px-[150px] py-16">
         <div class="flex flex-col justify-start items-center flex-grow gap-10">
-          <div
-            class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2"
-          >
-            <p
-              class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[40px] text-center text-[#191919]"
-            >
-              <span
-                class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[40px] font-semibold text-center text-[#191919]"
-                >Patients with SLOS can present </span
-              ><br /><span
-                class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[40px] font-semibold text-center text-[#191919]"
-                >with broad clinical manifestations</span
-              ><span
-                class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[40px] text-center text-[#191919]"
-                >1,8,10</span
-              >
+          <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2">
+            <p class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[40px] text-center text-[#191919]">
+              <span class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[40px] font-semibold text-center text-[#191919]">Patients with SLOS can present </span><br><span class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[40px] font-semibold text-center text-[#191919]">with broad clinical manifestations</span><span class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[40px] text-center text-[#191919]">1,8,10</span>
             </p>
-            <div
-              class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5 px-[104px]"
-            >
+            <div class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5 px-[104px]">
               <p class="flex-grow w-[932px] text-lg text-center text-[#191919]">
                 Clinical SLOS phenotypes may include major and minor malformations1,5:
               </p>
             </div>
           </div>
-          <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-10">
-            <div
-              class="flex flex-col justify-start items-center self-stretch flex-grow gap-4 px-4 pt-4 pb-8 rounded-2xl"
-            >
-              <div
-                class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5 px-24"
-              >
-                <svg
-                  width="130"
-                  height="98"
-                  viewBox="0 0 130 98"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="self-stretch flex-grow-0 flex-shrink-0 h-[97px] relative"
-                  preserveAspectRatio="xMidYMid meet"
-                >
-                  <path
-                    d="M86.0172 37.617C87.1156 38.8157 88.214 40.0144 89.3898 41.2988C89.413 40.1857 88.8638 39.3761 88.2837 38.59C86.2957 35.889 84.3309 33.1802 82.3042 30.5104C81.6312 29.6308 80.8113 28.8602 80.0532 28.0585C78.305 26.2137 76.5877 24.3378 74.8008 22.5397C72.1089 19.8387 69.8889 16.803 68.0942 13.4326C67.2356 11.8136 65.9129 11.4633 64.0486 11.6423C62.0529 11.8369 60.9081 12.8333 59.887 14.3122C56.5994 19.0603 53.3506 23.8318 49.9934 28.5177C47.4639 32.0516 44.772 35.4609 42.1883 38.9558C41.4148 39.9989 40.7341 41.1275 40.0766 42.2484C39.7672 42.7777 39.5351 43.3693 39.3804 43.9686C38.9395 45.6811 39.597 46.9265 41.3143 47.4091C42.1265 47.6348 43.0238 47.6659 43.8669 47.6192C46.8219 47.4713 49.7691 47.2612 52.9174 47.0588C52.9793 48.6078 53.0721 50.0789 53.0875 51.5501C53.1572 57.8316 53.1262 64.121 53.3041 70.3947C53.397 73.6172 53.6986 76.8553 54.2014 80.0389C54.9208 84.5847 58.0382 87.0599 62.6408 87.0444C63.7547 87.0444 64.8608 86.9043 65.9747 86.8965C69.5562 86.8653 74.0582 82.9423 74.4837 79.6731C74.7467 77.6415 75.2572 75.6255 75.3423 73.5939C75.6131 67.0633 75.3887 60.5404 74.7003 54.0331C74.5224 52.3674 74.6152 50.6783 74.6384 48.997C74.6384 48.5222 74.855 48.0551 75.0252 47.339C76.3711 47.339 77.6552 47.339 78.947 47.339C80.9892 47.339 83.0313 47.3624 85.0735 47.3701C86.0945 47.3701 86.9919 47.1288 87.7345 46.3115C88.129 45.8834 88.7555 45.6655 89.2893 45.3697C90.2949 44.817 90.9214 43.6962 90.7126 42.5831C90.6507 42.2562 90.2871 41.9915 89.8617 41.4466C89.6296 42.1783 89.5213 42.5753 89.3744 42.9567C89.2429 43.3148 89.0727 43.6573 88.7478 43.9997C88.7942 41.3999 86.9609 39.6953 86.0404 37.5937C85.9089 37.4691 85.7851 37.3446 85.6536 37.22C85.4138 36.8464 85.1663 36.4728 84.9265 36.0992C84.795 35.9746 84.6712 35.8501 84.5397 35.7255C84.2999 35.3441 84.0524 34.9705 83.8126 34.5891C82.397 33.0012 80.9582 31.4211 79.5736 29.802C79.1868 29.3506 78.9625 28.7668 78.6685 28.2453C78.5216 28.1052 78.3823 27.9728 78.2354 27.8327C78.1039 27.716 77.9724 27.5992 77.8409 27.4825L77.7558 27.428L77.8099 27.5136C77.9414 27.6303 78.0729 27.7471 78.2044 27.8716C78.3437 28.004 78.4906 28.1441 78.6299 28.2764C80.8886 29.9421 82.4589 32.1761 83.7817 34.6202C84.0292 35.0016 84.269 35.3753 84.5165 35.7567C84.648 35.8812 84.7718 36.0058 84.9033 36.1303C85.1431 36.5039 85.3906 36.8775 85.6304 37.2512C85.7619 37.3757 85.8857 37.5002 86.0172 37.6248V37.617ZM52.6234 29.0081C52.4764 29.1248 52.3217 29.2494 52.1748 29.3661C52.0819 29.6152 51.9814 29.8565 51.8886 30.1056C51.7416 30.2379 51.6023 30.3703 51.4554 30.5026C51.3239 30.6193 51.1924 30.7361 51.0609 30.8528C50.9603 31.1019 50.8675 31.351 50.7669 31.5923C50.6199 31.7169 50.4807 31.8336 50.3337 31.9582C50.0785 33.3048 49.2121 34.2077 48.1446 34.9627C48.0209 35.0873 47.8893 35.2118 47.7656 35.3286C47.518 35.7022 47.2783 36.0836 47.0307 36.4572C46.6594 36.9554 46.2881 37.4535 45.9168 37.9517C45.793 38.0762 45.6616 38.2008 45.5378 38.3253C45.3985 38.4421 45.2516 38.5588 45.1123 38.6678C45.0195 38.9247 44.9267 39.1816 44.8339 39.4384C44.6869 39.5707 44.5476 39.7031 44.4007 39.8354C44.2692 39.9521 44.1454 40.0767 44.0139 40.1934C43.9133 40.4347 43.8205 40.6838 43.72 40.9251L43.2868 41.3299C43.194 41.6023 43.0934 41.8748 43.0006 42.1472C42.8613 42.3807 42.7298 42.6064 42.5906 42.84C42.521 43.665 42.4591 44.4901 42.3895 45.3152C41.8789 45.1751 41.4767 44.8015 41.5463 44.6302C41.8171 43.9997 42.2425 43.4393 42.6061 42.8555C42.7376 42.6298 42.8691 42.3963 43.0006 42.1705C43.1011 41.8981 43.2017 41.6257 43.31 41.3532C43.457 41.2209 43.5962 41.0808 43.7432 40.9485C43.8437 40.7072 43.9443 40.4581 44.0371 40.2168C44.1609 40.1 44.2924 39.9755 44.4162 39.8587C44.5631 39.7264 44.7101 39.5941 44.8571 39.4618C44.9499 39.2049 45.0427 38.9558 45.1433 38.699C45.2825 38.5822 45.4218 38.4654 45.561 38.3487C45.6848 38.2241 45.8085 38.0918 45.9323 37.9673C46.3036 37.4691 46.6826 36.9787 47.0539 36.4806C47.3015 36.1069 47.5413 35.7333 47.7888 35.3519C47.9126 35.2274 48.0363 35.095 48.1601 34.9705C48.895 33.9742 49.6298 32.9778 50.3569 31.9737C50.5039 31.8492 50.6509 31.7324 50.7979 31.6079C50.8984 31.3588 50.9912 31.1097 51.0918 30.8606C51.2233 30.7439 51.3548 30.6271 51.4863 30.5104C51.6333 30.378 51.7725 30.2457 51.9195 30.1056C52.0123 29.8565 52.1129 29.6152 52.2134 29.3661C52.3449 29.2416 52.4764 29.1171 52.608 28.9925L52.6853 28.9225L52.6312 28.9847L52.6234 29.0081ZM54.8357 25.6377L55.5938 24.5168C56.7541 22.4074 57.8758 20.2746 59.0902 18.1963C59.887 16.8342 60.8152 15.5498 61.6816 14.2344C61.8054 14.3122 61.9214 14.39 62.0451 14.4757C60.3202 18.0874 57.9918 21.3254 55.5706 24.5012C55.3308 24.8904 55.0833 25.2718 54.8435 25.661C54.8435 25.6844 54.828 25.7155 54.8203 25.7389C54.8203 25.7077 54.8357 25.6766 54.8435 25.6455L54.8357 25.6377ZM67.1118 14.39L67.1273 14.4367L67.1041 14.3589C66.4234 14.211 66.083 13.7595 65.851 13.2147C65.9515 13.1368 66.0444 13.059 66.1449 12.9812C66.4698 13.4482 66.787 13.923 67.1118 14.39ZM58.5178 83.9386L58.6184 83.9853L58.5487 83.9075C57.079 83.1057 56.3364 81.7669 56.0425 80.1946C55.7099 78.4277 55.4004 76.6374 55.2999 74.8471C55.1374 71.8737 55.1374 68.8925 55.091 65.919C54.9982 60.0189 54.9131 54.1265 54.8357 48.2264C54.8357 47.9384 54.975 47.6581 55.0523 47.3701C55.4546 50.7405 55.6866 54.0642 55.7949 57.3879C55.9961 63.5294 56.1198 69.6708 56.2823 75.8123C56.3519 78.381 56.7464 80.8718 58.2161 83.0746C58.3786 83.3159 58.425 83.6428 58.5255 83.9308L58.5178 83.9386ZM43.8592 44.1632C43.9056 42.9178 44.625 42.046 45.2903 41.1586C47.7811 37.8349 50.3802 34.5891 52.7549 31.172C56.0425 26.4316 59.1753 21.5745 62.3468 16.7563C62.8806 15.9468 63.2673 15.0361 63.7624 14.0942C64.1182 14.3433 64.4045 14.4757 64.6056 14.6858C67.1505 17.4024 69.8811 19.971 72.1785 22.8822C76.7038 28.6345 80.966 34.6046 85.3906 40.4425C86.3498 41.7035 86.6206 42.9567 86.0713 44.7003C85.205 44.8015 84.2535 44.9883 83.3021 45.0116C79.8985 45.0973 76.5104 45.1907 73.1687 46.0235C71.026 46.5528 70.8635 46.6073 70.9177 48.888C71.0492 54.9827 71.3199 61.0775 71.3818 67.18C71.4282 71.718 71.2735 76.2637 71.1111 80.8017C71.0492 82.4752 70.206 83.6584 68.4965 84.25C66.6941 84.8727 64.8686 85.0751 63.0198 84.9116C62.1457 84.8338 60.9699 84.5458 60.5213 83.923C59.4461 82.4441 58.3322 80.7939 57.9531 79.0504C57.3884 76.4661 57.3498 73.7496 57.2415 71.0797C56.932 63.3737 56.7155 55.6599 56.406 47.9461C56.3751 47.1211 55.9961 46.3115 55.8336 45.6966C54.155 44.8949 52.693 44.9727 51.2001 45.144C50.0398 45.2763 48.8485 45.3775 47.6882 45.2841C46.3732 45.1751 44.9576 45.1985 43.8747 44.171L43.8592 44.1632ZM72.9211 48.2575C73.0758 48.2497 73.2383 48.2419 73.393 48.2264C73.393 48.7712 73.3621 49.3161 73.393 49.8532C73.5477 52.2039 73.7256 54.5546 73.8803 56.8976C73.9345 57.6993 74.1201 58.54 73.9809 59.3028C73.3621 62.5798 73.7875 65.8645 73.7411 69.1493C73.7024 71.7258 73.5322 74.2944 73.4162 76.8631C73.393 76.8631 73.3698 76.8475 73.3389 76.8475C73.1996 67.3123 73.0604 57.7849 72.9134 48.2497L72.9211 48.2575Z"
-                    fill="#0080A3"
-                  ></path>
-                </svg>
-              </div>
-              <div
-                class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-8"
-              >
-                <div
-                  class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-4"
-                >
-                  <p
-                    class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-[26px] text-center text-[#0080a3]"
-                  >
-                    <span
-                      class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-[26px] font-semibold text-center text-[#0080a3]"
-                      >Increase in toxic cholesterol precursors 7-DHC and 8-DHC</span
-                    ><span
-                      class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-[26px] text-center text-[#0080a3]"
-                      >1,5,7</span
-                    >
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex flex-col justify-start items-center flex-grow gap-4 px-4 pt-4 pb-8 rounded-2xl"
-            >
-              <div
-                class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5 px-24"
-              >
-                <svg
-                  width="130"
-                  height="98"
-                  viewBox="0 0 130 98"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="self-stretch flex-grow-0 flex-shrink-0 h-[97px] relative"
-                  preserveAspectRatio="xMidYMid meet"
-                >
-                  <path
-                    d="M44.3161 61.0275C43.2176 59.8288 42.1192 58.6301 40.9434 57.3458C40.9202 58.4589 41.4694 59.2684 42.0496 60.0545C44.0376 62.7555 46.0024 65.4643 48.0291 68.1342C48.702 69.0137 49.522 69.7843 50.2801 70.5861C52.0283 72.4308 53.7455 74.3067 55.5324 76.1048C58.2243 78.8058 60.4444 81.8415 62.239 85.2119C63.0976 86.8309 64.4204 87.1812 66.2846 87.0022C68.2804 86.8076 69.4252 85.8113 70.4463 84.3323C73.7338 79.5842 76.9827 74.8127 80.3399 70.1268C82.8693 66.593 85.5613 63.1836 88.1449 59.6887C88.9184 58.6457 89.5991 57.517 90.2567 56.3961C90.5661 55.8668 90.7981 55.2753 90.9528 54.6759C91.3938 52.9635 90.7363 51.7181 89.019 51.2355C88.2068 51.0097 87.3095 50.9786 86.4663 51.0253C83.5114 51.1732 80.5642 51.3834 77.4159 51.5857C77.354 50.0367 77.2612 48.5656 77.2457 47.0945C77.1761 40.8129 77.207 34.5236 77.0291 28.2498C76.9363 25.0273 76.6346 21.7892 76.1318 18.6056C75.4124 14.0599 72.295 11.5846 67.6925 11.6002C66.5786 11.6002 65.4724 11.7403 64.3585 11.7481C60.777 11.7792 56.275 15.7023 55.8496 18.9715C55.5866 21.003 55.076 23.0191 54.9909 25.0506C54.7202 31.5813 54.9445 38.1041 55.633 44.6114C55.8109 46.2771 55.7181 47.9662 55.6948 49.6476C55.6948 50.1224 55.4783 50.5894 55.3081 51.3055C53.9621 51.3055 52.678 51.3055 51.3862 51.3055C49.3441 51.3055 47.3019 51.2822 45.2598 51.2744C44.2387 51.2744 43.3414 51.5157 42.5988 52.333C42.2043 52.7611 41.5777 52.979 41.044 53.2748C40.0384 53.8275 39.4118 54.9483 39.6207 56.0614C39.6825 56.3884 40.0461 56.653 40.4716 57.1979C40.7036 56.4662 40.8119 56.0692 40.9589 55.6878C41.0904 55.3298 41.2606 54.9873 41.5855 54.6448C41.539 57.2446 43.3723 58.9492 44.2929 61.0509C44.4244 61.1754 44.5481 61.3 44.6796 61.4245C44.9194 61.7981 45.167 62.1717 45.4068 62.5454C45.5383 62.6699 45.662 62.7944 45.7935 62.919C46.0333 63.3004 46.2809 63.674 46.5207 64.0554C47.9362 65.6433 49.375 67.2235 50.7597 68.8425C51.1464 69.294 51.3708 69.8777 51.6647 70.3993C51.8117 70.5394 51.9509 70.6717 52.0979 70.8118C52.2294 70.9286 52.3609 71.0453 52.4924 71.1621L52.5775 71.2166L52.5233 71.1309C52.3918 71.0142 52.2603 70.8974 52.1288 70.7729C51.9896 70.6405 51.8426 70.5004 51.7034 70.3681C49.4446 68.7024 47.8743 66.4684 46.5516 64.0243C46.3041 63.6429 46.0643 63.2693 45.8167 62.8879C45.6852 62.7633 45.5615 62.6388 45.43 62.5142C45.1902 62.1406 44.9426 61.767 44.7028 61.3934C44.5713 61.2688 44.4476 61.1443 44.3161 61.0197L44.3161 61.0275ZM77.7098 69.6364C77.8568 69.5197 78.0115 69.3951 78.1585 69.2784C78.2513 69.0293 78.3519 68.788 78.4447 68.5389C78.5917 68.4066 78.7309 68.2743 78.8779 68.1419C79.0094 68.0252 79.1409 67.9084 79.2724 67.7917C79.3729 67.5426 79.4658 67.2935 79.5663 67.0522C79.7133 66.9277 79.8525 66.8109 79.9995 66.6864C80.2548 65.3398 81.1211 64.4368 82.1886 63.6818C82.3124 63.5573 82.4439 63.4327 82.5677 63.316C82.8152 62.9423 83.055 62.5609 83.3025 62.1873C83.6738 61.6891 84.0451 61.191 84.4164 60.6928C84.5402 60.5683 84.6717 60.4437 84.7955 60.3192C84.9347 60.2024 85.0817 60.0857 85.2209 59.9767C85.3137 59.7198 85.4066 59.463 85.4994 59.2061C85.6464 59.0738 85.7856 58.9415 85.9326 58.8091C86.0641 58.6924 86.1878 58.5678 86.3193 58.4511C86.4199 58.2098 86.5127 57.9607 86.6133 57.7194L87.0465 57.3146C87.1393 57.0422 87.2398 56.7698 87.3327 56.4973C87.4719 56.2638 87.6034 56.0381 87.7426 55.8046C87.8123 54.9795 87.8741 54.1544 87.9438 53.3293C88.4543 53.4694 88.8565 53.843 88.7869 54.0143C88.5162 54.6448 88.0907 55.2052 87.7272 55.789C87.5957 56.0147 87.4642 56.2483 87.3327 56.474C87.2321 56.7464 87.1315 57.0188 87.0232 57.2913C86.8763 57.4236 86.737 57.5637 86.5901 57.696C86.4895 57.9373 86.389 58.1864 86.2961 58.4277C86.1724 58.5445 86.0409 58.669 85.9171 58.7858C85.7701 58.9181 85.6231 59.0504 85.4762 59.1827C85.3833 59.4396 85.2905 59.6887 85.19 59.9456C85.0507 60.0623 84.9115 60.1791 84.7722 60.2958C84.6485 60.4204 84.5247 60.5527 84.4009 60.6773C84.0296 61.1754 83.6506 61.6658 83.2793 62.164C83.0318 62.5376 82.792 62.9112 82.5445 63.2926C82.4207 63.4172 82.2969 63.5495 82.1732 63.674C81.4383 64.6704 80.7034 65.6667 79.9763 66.6708C79.8293 66.7953 79.6823 66.9121 79.5354 67.0366C79.4348 67.2857 79.342 67.5348 79.2414 67.7839C79.1099 67.9006 78.9784 68.0174 78.8469 68.1342C78.7 68.2665 78.5607 68.3988 78.4137 68.5389C78.3209 68.788 78.2204 69.0293 78.1198 69.2784C77.9883 69.4029 77.8568 69.5275 77.7253 69.652L77.6479 69.7221L77.7021 69.6598L77.7098 69.6364ZM75.4975 73.0068L74.7394 74.1277C73.5791 76.2371 72.4575 78.3699 71.243 80.4482C70.4463 81.8103 69.518 83.0947 68.6517 84.4102C68.5279 84.3323 68.4119 84.2545 68.2881 84.1689C70.0131 80.5572 72.3414 77.3191 74.7626 74.1433C75.0024 73.7541 75.25 73.3727 75.4898 72.9835C75.4898 72.9601 75.5052 72.929 75.513 72.9056C75.513 72.9368 75.4975 72.9679 75.4898 72.9991L75.4975 73.0068ZM63.2214 84.2545L63.2059 84.2078L63.2291 84.2856C63.9098 84.4335 64.2502 84.885 64.4823 85.4298C64.3817 85.5077 64.2889 85.5855 64.1883 85.6633C63.8634 85.1963 63.5463 84.7215 63.2214 84.2545ZM71.8154 14.7059L71.7149 14.6592L71.7845 14.7371C73.2542 15.5388 73.9968 16.8776 74.2908 18.4499C74.6234 20.2169 74.9328 22.0072 75.0334 23.7974C75.1958 26.7709 75.1958 29.7521 75.2422 32.7255C75.3351 38.6256 75.4201 44.518 75.4975 50.4182C75.4975 50.7062 75.3583 50.9864 75.2809 51.2744C74.8787 47.904 74.6466 44.5803 74.5383 41.2566C74.3372 35.1151 74.2134 28.9737 74.051 22.8322C73.9814 20.2636 73.5868 17.7728 72.1171 15.5699C71.9547 15.3286 71.9083 15.0017 71.8077 14.7137L71.8154 14.7059ZM86.474 54.4813C86.4276 55.7267 85.7082 56.5985 85.043 57.4859C82.5522 60.8096 79.9531 64.0554 77.5783 67.4725C74.2908 72.2129 71.1579 77.07 67.9864 81.8882C67.4527 82.6977 67.0659 83.6084 66.5708 84.5503C66.215 84.3012 65.9288 84.1689 65.7277 83.9587C63.1827 81.2421 60.4521 78.6735 58.1547 75.7623C53.6295 70.0101 49.3673 64.0399 44.9426 58.202C43.9834 56.941 43.7127 55.6878 44.2619 53.9442C45.1283 53.843 46.0797 53.6562 47.0312 53.6329C50.4348 53.5473 53.8229 53.4539 57.1646 52.621C59.3073 52.0917 59.4697 52.0372 59.4156 49.7565C59.2841 43.6618 59.0133 37.567 58.9515 31.4645C58.905 26.9265 59.0598 22.3808 59.2222 17.8428C59.2841 16.1693 60.1272 14.9861 61.8368 14.3946C63.6391 13.7719 65.4647 13.5695 67.3134 13.7329C68.1875 13.8108 69.3633 14.0988 69.812 14.7215C70.8872 16.2004 72.0011 17.8506 72.3801 19.5942C72.9448 22.1784 72.9835 24.895 73.0918 27.5648C73.4012 35.2708 73.6178 42.9846 73.9272 50.6984C73.9581 51.5235 74.3372 52.333 74.4996 52.9479C76.1782 53.7496 77.6402 53.6718 79.1331 53.5006C80.2934 53.3682 81.4847 53.267 82.645 53.3604C83.96 53.4694 85.3756 53.4461 86.4586 54.4735L86.474 54.4813ZM57.4121 50.387C57.2574 50.3948 57.095 50.4026 56.9402 50.4182C56.9402 49.8733 56.9712 49.3284 56.9402 48.7913C56.7855 46.4406 56.6076 44.0899 56.4529 41.747C56.3988 40.9452 56.2131 40.1046 56.3524 39.3418C56.9712 36.0648 56.5457 32.78 56.5922 29.4952C56.6308 26.9188 56.801 24.3501 56.917 21.7814C56.9402 21.7814 56.9635 21.797 56.9944 21.797C57.1336 31.3322 57.2729 40.8596 57.4198 50.3948L57.4121 50.387Z"
-                    fill="#0080A3"
-                  ></path>
-                </svg>
-              </div>
-              <div
-                class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-8"
-              >
-                <div
-                  class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-4"
-                >
-                  <p
-                    class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-[26px] text-center text-[#0080a3]"
-                  >
-                    <span
-                      class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-[26px] font-semibold text-center text-[#0080a3]"
-                      >Decrease in cholesterol production and absorption</span
-                    ><span
-                      class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-[26px] text-center text-[#0080a3]"
-                      >4,11</span
-                    >
-                  </p>
-                  <div
-                    class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-4"
-                  >
-                    <p
-                      class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-lg text-left text-[#191919]"
-                    >
-                      <span
-                        class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-lg text-left text-[#191919]"
-                        >Interference with embryonic development (hedgehog signaling)8</span
-                      ><br /><span
-                        class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-lg text-left text-[#191919]"
-                        >Altered vitamin D synthesis4,5</span
-                      ><br /><span
-                        class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-lg text-left text-[#191919]"
-                        >Effects on cell membranes/myelin, lipid rafts1,4</span
-                      ><br /><span
-                        class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-lg text-left text-[#191919]"
-                        >Deficiencies in steroid hormones, bile acids, and oxysterols1,5,12</span
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex flex-col justify-start items-center self-stretch flex-grow gap-4 px-4 pt-4 pb-8 rounded-2xl"
-            >
-              <div
-                class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5 px-24"
-              >
-                <svg
-                  width="130"
-                  height="98"
-                  viewBox="0 0 130 98"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="self-stretch flex-grow-0 flex-shrink-0 h-[97px] relative"
-                  preserveAspectRatio="xMidYMid meet"
-                >
-                  <path
-                    d="M91.6747 63.5287C93.0079 62.0739 94.341 60.619 95.768 59.0602C95.7962 60.4112 95.1296 61.3937 94.4255 62.3478C92.0127 65.626 89.6281 68.9136 87.1683 72.1539C86.3515 73.2214 85.3564 74.1567 84.4363 75.1298C82.3146 77.3687 80.2304 79.6455 78.0617 81.8278C74.7945 85.1059 72.1001 88.7903 69.922 92.8809C68.8799 94.8459 67.2745 95.271 65.0119 95.0537C62.5897 94.8175 61.2002 93.6083 59.961 91.8134C55.9709 86.0506 52.0278 80.2596 47.9533 74.5724C44.8833 70.2834 41.6162 66.1456 38.4805 61.9038C37.5416 60.6379 36.7155 59.2681 35.9175 57.9077C35.5419 57.2653 35.2603 56.5473 35.0725 55.8199C34.5374 53.7415 35.3354 52.23 37.4196 51.6443C38.4054 51.3703 39.4944 51.3325 40.5177 51.3892C44.1041 51.5687 47.681 51.8238 51.5021 52.0694C51.5772 50.1894 51.6898 48.4039 51.7086 46.6184C51.7931 38.9946 51.7556 31.3613 51.9715 23.747C52.0842 19.8359 52.4503 15.9059 53.0605 12.042C53.9337 6.52492 57.7172 3.52074 63.3032 3.53964C64.6551 3.53964 65.9977 3.70969 67.3496 3.71913C71.6964 3.75692 77.1604 8.51826 77.6767 12.486C77.9959 14.9517 78.6156 17.3985 78.7188 19.8642C79.0474 27.7903 78.7752 35.707 77.9396 43.6048C77.7237 45.6265 77.8363 47.6765 77.8645 49.7171C77.8645 50.2933 78.1274 50.8602 78.3339 51.7293C79.9675 51.7293 81.526 51.7293 83.0938 51.7293C85.5723 51.7293 88.0508 51.701 90.5294 51.6915C91.7686 51.6915 92.8577 51.9844 93.7589 52.9763C94.2377 53.4959 94.9982 53.7604 95.646 54.1194C96.8665 54.7902 97.6269 56.1505 97.3734 57.5015C97.2983 57.8983 96.8571 58.2195 96.3407 58.8808C96.0591 57.9927 95.9276 57.5109 95.7493 57.048C95.5897 56.6135 95.3831 56.1978 94.9888 55.7821C95.0451 58.9374 92.8201 61.0064 91.7029 63.5571C91.5433 63.7082 91.3931 63.8594 91.2335 64.0105C90.9424 64.464 90.642 64.9174 90.351 65.3709C90.1914 65.5221 90.0412 65.6732 89.8816 65.8244C89.5905 66.2873 89.2901 66.7407 88.9991 67.2036C87.281 69.1309 85.5348 71.0486 83.8543 73.0136C83.3848 73.5615 83.1126 74.2701 82.7558 74.903C82.5774 75.0731 82.4085 75.2337 82.2301 75.4037C82.0705 75.5454 81.9109 75.6871 81.7513 75.8288L81.648 75.895L81.7137 75.7911C81.8733 75.6494 82.0329 75.5076 82.1925 75.3565C82.3615 75.1959 82.5399 75.0258 82.7089 74.8652C85.4503 72.8436 87.3561 70.1322 88.9615 67.1659C89.2619 66.703 89.553 66.2495 89.8534 65.7866C90.013 65.6354 90.1632 65.4843 90.3228 65.3331C90.6139 64.8797 90.9143 64.4262 91.2053 63.9727C91.3649 63.8216 91.5151 63.6704 91.6747 63.5193L91.6747 63.5287ZM51.1453 73.9772C50.9669 73.8355 50.7792 73.6844 50.6008 73.5426C50.4881 73.2403 50.3661 72.9475 50.2534 72.6452C50.0751 72.4846 49.9061 72.324 49.7277 72.1634C49.5681 72.0217 49.4085 71.88 49.2489 71.7383C49.1268 71.4359 49.0142 71.1336 48.8921 70.8408C48.7137 70.6896 48.5448 70.5479 48.3664 70.3968C48.0566 68.7624 47.0051 67.6665 45.7095 66.7502C45.5593 66.599 45.3997 66.4479 45.2495 66.3062C44.949 65.8527 44.658 65.3898 44.3576 64.9363C43.9069 64.3317 43.4563 63.7271 43.0056 63.1225C42.8554 62.9713 42.6958 62.8202 42.5456 62.669C42.3766 62.5273 42.1982 62.3856 42.0293 62.2534C41.9166 61.9416 41.8039 61.6299 41.6913 61.3181C41.5129 61.1575 41.3439 60.9969 41.1655 60.8363C41.0059 60.6946 40.8557 60.5434 40.6961 60.4017C40.5741 60.1089 40.4614 59.8066 40.3394 59.5137L39.8136 59.0225C39.701 58.6918 39.5789 58.3612 39.4662 58.0305C39.2973 57.7471 39.1377 57.4731 38.9687 57.1897C38.8842 56.1883 38.8091 55.1869 38.7246 54.1855C38.1049 54.3556 37.6167 54.809 37.7012 55.0169C38.0298 55.7821 38.5462 56.4623 38.9874 57.1708C39.147 57.4448 39.3066 57.7282 39.4662 58.0022C39.5883 58.3328 39.7103 58.6635 39.8418 58.9941C40.0202 59.1547 40.1891 59.3248 40.3675 59.4854C40.4896 59.7782 40.6116 60.0805 40.7243 60.3734C40.8745 60.5151 41.0341 60.6663 41.1843 60.808C41.3627 60.9686 41.5411 61.1292 41.7194 61.2898C41.8321 61.6015 41.9448 61.9038 42.0668 62.2156C42.2358 62.3573 42.4048 62.499 42.5738 62.6407C42.724 62.7919 42.8742 62.9525 43.0244 63.1036C43.4751 63.7082 43.9351 64.3034 44.3857 64.908C44.6862 65.3615 44.9772 65.8149 45.2776 66.2778C45.4278 66.429 45.578 66.5896 45.7283 66.7407C46.6201 67.95 47.512 69.1592 48.3945 70.3779C48.5729 70.529 48.7513 70.6707 48.9297 70.8219C49.0517 71.1242 49.1644 71.4265 49.2864 71.7288C49.446 71.8705 49.6056 72.0122 49.7652 72.1539C49.9436 72.3145 50.1126 72.4751 50.291 72.6452C50.4036 72.9475 50.5257 73.2403 50.6477 73.5426C50.8073 73.6938 50.9669 73.845 51.1265 73.9961L51.2204 74.0811L51.1547 74.0056L51.1453 73.9772ZM53.8304 78.0678L54.7504 79.4282C56.1587 81.9884 57.52 84.5769 58.994 87.0992C59.961 88.7525 61.0876 90.3113 62.1391 91.9078C62.2893 91.8133 62.4301 91.7189 62.5803 91.615C60.4867 87.2315 57.6608 83.3015 54.7223 79.4471C54.4312 78.9747 54.1308 78.5118 53.8398 78.0395C53.8398 78.0111 53.821 77.9733 53.8116 77.945C53.8116 77.9828 53.8304 78.0206 53.8398 78.0584L53.8304 78.0678ZM68.7297 91.7189L68.7484 91.6622L68.7203 91.7567C67.8941 91.9362 67.481 92.4841 67.1994 93.1454C67.3214 93.2399 67.4341 93.3343 67.5561 93.4288C67.9504 92.862 68.3353 92.2857 68.7297 91.7189ZM58.2992 7.30903L58.4213 7.25235L58.3368 7.34682C56.553 8.31987 55.6517 9.94477 55.295 11.8531C54.8913 13.9976 54.5157 16.1704 54.3937 18.3432C54.1965 21.952 54.1965 25.5703 54.1402 29.1791C54.0275 36.34 53.9243 43.4914 53.8304 50.6523C53.8304 51.0019 53.9994 51.342 54.0933 51.6915C54.5815 47.6009 54.8631 43.567 54.9945 39.5331C55.2386 32.0793 55.3889 24.6256 55.586 17.1718C55.6705 14.0543 56.1493 11.0312 57.9331 8.35766C58.1302 8.0648 58.1866 7.66802 58.3086 7.31848L58.2992 7.30903ZM40.5084 55.5837C40.5647 57.0952 41.4378 58.1533 42.2452 59.2303C45.2682 63.2642 48.4227 67.2036 51.3049 71.3509C55.295 77.1042 59.0972 82.9992 62.9464 88.847C63.5942 89.8295 64.0637 90.9348 64.6645 92.0779C65.0964 91.7756 65.4437 91.615 65.6878 91.3599C68.7766 88.0628 72.0907 84.9453 74.879 81.4121C80.3712 74.4307 85.5442 67.1848 90.9143 60.0994C92.0784 58.569 92.407 57.048 91.7404 54.9319C90.689 54.8091 89.5342 54.5823 88.3794 54.554C84.2486 54.4501 80.1365 54.3367 76.0807 53.3259C73.4802 52.6835 73.283 52.6173 73.3487 49.8493C73.5083 42.4522 73.8369 35.0552 73.912 27.6486C73.9684 22.141 73.7806 16.6239 73.5834 11.1162C73.5083 9.08509 72.485 7.64913 70.4102 6.93115C68.2227 6.17538 66.007 5.92975 63.7632 6.12814C62.7024 6.22261 61.2753 6.57216 60.7308 7.32792C59.4258 9.12287 58.0739 11.1257 57.6139 13.2418C56.9285 16.3782 56.8816 19.6753 56.7502 22.9156C56.3746 32.2683 56.1118 41.6304 55.7362 50.9924C55.6987 51.9938 55.2386 52.9763 55.0415 53.7226C53.0042 54.6957 51.2298 54.6012 49.4179 54.3934C48.0096 54.2328 46.5638 54.11 45.1556 54.2233C43.5596 54.3556 41.8415 54.3273 40.5271 55.5743L40.5084 55.5837ZM75.7803 50.6145C75.9681 50.624 76.1652 50.6334 76.353 50.6523C76.353 49.991 76.3154 49.3297 76.353 48.6779C76.5407 45.8249 76.7567 42.9718 76.9444 40.1283C77.0102 39.1552 77.2355 38.1349 77.0665 37.2091C76.3154 33.2319 76.8318 29.2452 76.7755 25.2585C76.7285 22.1315 76.522 19.014 76.3812 15.8964C76.353 15.8964 76.3248 15.9153 76.2873 15.9153C76.1183 27.488 75.9493 39.0513 75.7709 50.624L75.7803 50.6145Z"
-                    fill="#0080A3"
-                  ></path>
-                </svg>
-              </div>
-              <div
-                class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 gap-8"
-              >
-                <div
-                  class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-4"
-                >
-                  <p
-                    class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-[26px] text-center text-[#0080a3]"
-                  >
-                    <span
-                      class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-[26px] font-semibold text-center text-[#0080a3]"
-                      >Decrease in primary bile acids</span
-                    ><span
-                      class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-[26px] text-center text-[#0080a3]"
-                      >12</span
-                    >
-                  </p>
-                  <div
-                    class="flex flex-col justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-4"
-                  >
-                    <p
-                      class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-lg text-left text-[#191919]"
-                    >
-                      <span
-                        class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-lg text-left text-[#191919]"
-                        >Primary bile acids are critical for:</span
-                      ><br /><span
-                        class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-lg text-left text-[#191919]"
-                        >Absorption of fat and fat-soluble vitamins13</span
-                      ><br /><span
-                        class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-lg text-left text-[#191919]"
-                        >Increased absorption of cholesterol4,6</span
-                      ><br /><span
-                        class="self-stretch flex-grow-0 flex-shrink-0 w-[321.33px] text-lg text-left text-[#191919]"
-                        >A decrease in bile acids may lead to poor nutrition and poor growth12</span
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
   </div>
-  <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0">
-    <div
-      class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 overflow-hidden gap-10 px-[150px] py-10 bg-gradient-to-r from-[#a05fa6] to-[#765ea5]"
-    >
-      <div class="flex justify-start items-center flex-grow relative gap-10">
-        <svg
-          width="112"
-          height="65"
-          viewBox="0 0 112 65"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="flex-grow-0 flex-shrink-0 w-28 h-16 relative"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <g clip-path="url(#clip0_6_3730)">
-            <path
-              d="M37.5915 23.9543C35.6832 23.9543 33.615 24.7255 31.981 26.0305C30.7012 24.689 28.8409 23.9543 26.6904 23.9543C23.6006 23.9543 20.7599 25.2388 19.3179 26.5119L19.1716 26.6419V41.232L19.5144 41.305C19.9784 41.4031 20.44 41.451 20.9679 41.451C21.3587 41.451 21.9346 41.4259 22.4625 41.305L22.7985 41.2274V28.2732C23.7789 27.7142 25.0907 27.372 26.2836 27.372C28.8455 27.372 30.1436 28.8413 30.1436 31.7365V41.2274L30.4795 41.305C30.9091 41.4031 31.3982 41.451 31.9741 41.451C32.518 41.451 33.0094 41.4008 33.4344 41.305L33.7704 41.2274V30.5798C33.7704 30.0094 33.6973 29.4185 33.551 28.8207C34.312 28.1545 35.4775 27.3743 37.187 27.3743C39.7488 27.3743 41.0469 28.8436 41.0469 31.7387V41.2297L41.3829 41.3073C41.8125 41.4054 42.3016 41.4533 42.8775 41.4533C43.4237 41.4533 43.915 41.4031 44.3378 41.3073L44.6737 41.2297V30.582C44.6737 26.2358 41.1132 23.9612 37.5983 23.9612L37.5915 23.9543Z"
-              fill="white"
-            ></path>
-            <path
-              d="M49.8501 24.26C49.3062 24.26 48.8217 24.3079 48.3623 24.406L48.0195 24.479V41.2296L48.3623 41.3026C48.8217 41.4007 49.3062 41.4487 49.8501 41.4487C50.394 41.4487 50.8854 41.3985 51.3104 41.3026L51.6464 41.2251V24.4859L51.3104 24.4083C50.8876 24.3102 50.3963 24.2623 49.8501 24.2623V24.26Z"
-              fill="white"
-            ></path>
-            <path
-              d="M65.8246 24.6137L65.5572 24.5224C64.4145 24.13 63.3084 23.9543 61.976 23.9543C58.9845 23.9543 56.4684 25.1818 55.2251 26.2335L55.072 26.3636V41.2297L55.4148 41.3027C55.8856 41.4031 56.345 41.4487 56.9026 41.4487C57.4602 41.4487 57.9675 41.4008 58.3972 41.3027L58.7331 41.2251V28.0382C59.517 27.623 60.5751 27.4039 61.8092 27.4039C62.8445 27.4039 63.8454 27.5203 64.627 27.7279L64.9036 27.8032L65.0795 27.5773C65.6257 26.8769 65.9274 25.8252 65.8497 24.8966L65.8268 24.616L65.8246 24.6137Z"
-              fill="white"
-            ></path>
-            <path
-              d="M81.4198 24.3286C80.8759 24.3286 80.3914 24.3765 79.932 24.4746L79.5892 24.5476V37.787C78.4351 38.1817 77.2696 38.3734 76.0355 38.3734C73.204 38.3734 71.7665 37.6889 71.7665 33.9428V24.5522L71.4305 24.4746C71.0078 24.3765 70.5164 24.3286 69.9702 24.3286C69.424 24.3286 68.9418 24.3765 68.4824 24.4746L68.1396 24.5476V35.0652C68.1396 39.3385 70.7815 41.7888 75.3842 41.7888C78.8213 41.7888 81.0518 41.0199 82.9509 40.1872L83.2092 40.0731V24.5522L82.8732 24.4746C82.4505 24.3765 81.9591 24.3286 81.4129 24.3286H81.4198Z"
-              fill="white"
-            ></path>
-            <path
-              d="M104.924 23.9543C103.016 23.9543 100.948 24.7255 99.314 26.0305C98.0342 24.689 96.1739 23.9543 94.0234 23.9543C90.9336 23.9543 88.093 25.2388 86.6509 26.5119L86.5046 26.6419V41.232L86.8474 41.305C87.3114 41.4031 87.773 41.451 88.3009 41.451C88.6917 41.451 89.2676 41.4259 89.7955 41.305L90.1315 41.2274V28.2732C91.1119 27.7142 92.4237 27.372 93.6166 27.372C96.1785 27.372 97.4766 28.8413 97.4766 31.7365V41.2274L97.8125 41.305C98.2422 41.4031 98.7312 41.451 99.3071 41.451C99.851 41.451 100.342 41.4008 100.767 41.305L101.103 41.2274V30.5798C101.103 30.0094 101.03 29.4185 100.884 28.8207C101.645 28.1545 102.811 27.372 104.522 27.372C107.084 27.372 108.382 28.8413 108.382 31.7365V41.2274L108.718 41.305C109.148 41.4031 109.637 41.451 110.213 41.451C110.759 41.451 111.25 41.4008 111.673 41.305L112.009 41.2274V30.5798C112.009 26.2335 108.451 23.9589 104.934 23.9589L104.924 23.9543Z"
-              fill="white"
-            ></path>
-            <path
-              d="M52.3274 48.6899C52.8828 47.2914 52.1972 45.7012 50.7963 45.1445C49.3953 44.5901 47.8025 45.2746 47.2448 46.6754C46.6895 48.074 47.3751 49.6641 48.7783 50.2208C49.457 50.49 50.1998 50.4786 50.8717 50.1889C51.5413 49.8991 52.0601 49.3675 52.3297 48.6899H52.3274Z"
-              fill="white"
-            ></path>
-            <path
-              d="M37.9275 53.6523C37.2145 53.4926 36.4832 53.6204 35.8661 54.0105C34.5932 54.8159 34.2115 56.5041 35.0183 57.7772C35.825 59.048 37.5161 59.429 38.7914 58.6236C40.0643 57.8183 40.4459 56.13 39.6392 54.8569C39.2484 54.2409 38.6405 53.8143 37.9275 53.6546V53.6523Z"
-              fill="white"
-            ></path>
-            <path
-              d="M22.3437 53.2644H22.33C20.8308 53.1754 19.5373 54.3162 19.4413 55.8128C19.3956 56.5406 19.6356 57.2433 20.1178 57.7886C20.6 58.3361 21.2673 58.6624 21.9963 58.7103H22.01C22.7345 58.7536 23.4315 58.5141 23.9754 58.035C24.5239 57.5536 24.8507 56.8874 24.8987 56.1596C24.9947 54.6584 23.8497 53.3579 22.346 53.2621L22.3437 53.2644Z"
-              fill="white"
-            ></path>
-            <path
-              d="M12.2014 48.5691C12.6676 48.0078 12.887 47.2983 12.8185 46.5728C12.7499 45.8472 12.4025 45.1902 11.8403 44.7248C10.6794 43.7643 8.95394 43.9262 7.99181 45.0852C7.02969 46.2442 7.19194 47.9667 8.3529 48.9272C8.91509 49.3927 9.62583 49.6117 10.3526 49.5432C11.0793 49.4748 11.7375 49.128 12.2037 48.5668L12.2014 48.5691Z"
-              fill="white"
-            ></path>
-            <path
-              d="M8.07633 33.7236C8.44884 33.0961 8.55397 32.3615 8.37342 31.6565C8.19288 30.9516 7.74724 30.3561 7.11877 29.9842C6.73712 29.7583 6.3189 29.6306 5.88926 29.6055C5.61045 29.5895 5.32707 29.6169 5.04825 29.6876C3.58792 30.0595 2.70349 31.5493 3.076 33.0072C3.25655 33.7144 3.70219 34.3076 4.33066 34.6795C4.95913 35.0514 5.69501 35.1563 6.40118 34.9761C7.10963 34.7958 7.70382 34.351 8.07633 33.7236Z"
-              fill="white"
-            ></path>
-            <path
-              d="M13.2618 19.0467C13.8171 17.6482 13.1315 16.058 11.7283 15.5013C11.4518 15.3918 11.1661 15.3279 10.8782 15.3119C10.4576 15.2868 10.0349 15.3599 9.63721 15.5332C8.96761 15.823 8.44883 16.3546 8.17916 17.0322C7.62383 18.4307 8.30943 20.0209 9.71263 20.5776C10.3914 20.8468 11.1341 20.8354 11.806 20.5456C12.4756 20.2559 12.9944 19.7243 13.264 19.0467H13.2618Z"
-              fill="white"
-            ></path>
-            <path
-              d="M20.5109 8.80993C20.351 9.52175 20.4789 10.2518 20.8697 10.8678C21.6765 12.1386 23.3676 12.5196 24.6428 11.7143C25.9158 10.9089 26.2974 9.2206 25.4907 7.94753C25.0016 7.17639 24.188 6.73379 23.3379 6.68359C22.7871 6.65165 22.2204 6.78398 21.7176 7.1011C21.1005 7.49124 20.6732 8.09811 20.5132 8.80765L20.5109 8.80993Z"
-              fill="white"
-            ></path>
-            <path
-              d="M38.5125 7.01208H38.4988C37.7743 6.96873 37.0773 7.20829 36.5334 7.6874C35.9849 8.16879 35.6581 8.83498 35.6101 9.56277C35.5644 10.2906 35.8044 10.991 36.2866 11.5385C36.7688 12.0861 37.4361 12.4123 38.1651 12.4602H38.1788C39.678 12.5492 40.9715 11.4085 41.0675 9.91184C41.1635 8.41063 40.0185 7.11018 38.5148 7.01436L38.5125 7.01208Z"
-              fill="white"
-            ></path>
-            <path
-              d="M52.0029 15.6794C50.4054 14.509 48.1589 14.8513 46.9865 16.446C45.8141 18.0408 46.1569 20.2835 47.7544 21.4539C49.3519 22.6243 51.5983 22.282 52.7707 20.6873C53.9431 19.0925 53.6003 16.8498 52.0029 15.6794Z"
-              fill="white"
-            ></path>
-            <path
-              d="M40.3476 50.1912C40.4162 50.8004 40.7201 51.348 41.2023 51.7312C42.1965 52.5206 43.6477 52.3564 44.4384 51.3639C44.8223 50.8825 44.9937 50.2825 44.9252 49.6711C44.8566 49.0619 44.5527 48.5144 44.0704 48.1311C43.5882 47.7478 42.9895 47.5767 42.3747 47.6451C41.7623 47.7136 41.2161 48.017 40.8321 48.4984C40.4482 48.9798 40.2768 49.5798 40.3453 50.1912H40.3476Z"
-              fill="white"
-            ></path>
-            <path
-              d="M32.4404 53.3215C32.2759 52.7283 31.8896 52.2378 31.3549 51.9344C30.8201 51.6332 30.1985 51.5556 29.6043 51.7199C28.3794 52.0576 27.6595 53.3284 28 54.5512C28.1645 55.1421 28.5508 55.6349 29.0855 55.9384C29.6203 56.2418 30.2419 56.3171 30.8361 56.1528C32.061 55.8152 32.7809 54.5444 32.4404 53.3238V53.3215Z"
-              fill="white"
-            ></path>
-            <path
-              d="M17.012 52.0462C17.5879 52.2606 18.2141 52.2401 18.774 51.9846C19.3339 51.7291 19.7613 51.2728 19.9761 50.6978C20.1909 50.1229 20.1703 49.4978 19.9144 48.9388C19.6584 48.3798 19.2014 47.9532 18.6255 47.7388C17.4371 47.2939 16.107 47.8985 15.6614 49.0871C15.2157 50.2758 15.8213 51.6036 17.012 52.0462Z"
-              fill="white"
-            ></path>
-            <path
-              d="M8.24551 40.6114C8.58602 41.1248 9.1048 41.4738 9.70813 41.597C10.3115 41.718 10.9262 41.6016 11.4404 41.2617C11.9546 40.9217 12.3043 40.4038 12.4254 39.8015C12.5488 39.1992 12.43 38.5855 12.0895 38.0744C11.6735 37.447 10.9993 37.0888 10.3 37.0478C9.82011 37.0204 9.32648 37.139 8.89683 37.4242C7.83872 38.1246 7.54619 39.5528 8.24779 40.6114H8.24551Z"
-              fill="white"
-            ></path>
-            <path
-              d="M10.3229 24.0227C10.3114 24.0227 10.3 24.0227 10.2863 24.0227C9.01795 23.9679 7.93926 24.9535 7.88442 26.2197C7.85699 26.8335 8.07181 27.4198 8.48775 27.8738C8.90368 28.3278 9.47958 28.5948 10.0852 28.6176C10.7 28.645 11.2873 28.4305 11.7421 28.0153C12.1946 27.6 12.4597 27.0342 12.4871 26.4205C12.5145 25.8068 12.2997 25.2205 11.8838 24.7664C11.477 24.3216 10.9216 24.0592 10.3206 24.025L10.3229 24.0227Z"
-              fill="white"
-            ></path>
-            <path
-              d="M19.6745 17.224C20.0584 16.7426 20.2298 16.1426 20.1613 15.5311C20.0927 14.9197 19.7888 14.3744 19.3066 13.9912C18.9226 13.6854 18.4678 13.5234 18.0108 13.4961C17.2863 13.4527 16.555 13.7516 16.0705 14.3585C15.6866 14.8399 15.5152 15.4399 15.5837 16.0513C15.6523 16.6628 15.9563 17.208 16.4385 17.5913C16.9207 17.9746 17.5217 18.148 18.1342 18.0773C18.7444 18.0088 19.2929 17.7054 19.6768 17.224H19.6745Z"
-              fill="white"
-            ></path>
-            <path
-              d="M28.0663 12.4008C28.4045 13.6237 29.6774 14.3424 30.9024 14.0024C32.1273 13.6648 32.8449 12.394 32.5067 11.1711C32.237 10.1992 31.3777 9.54672 30.4202 9.48968C30.1734 9.47599 29.922 9.50109 29.6706 9.56953C28.4456 9.90719 27.7258 11.178 28.0663 12.3986V12.4008Z"
-              fill="white"
-            ></path>
-            <path
-              d="M40.5305 15.0247C40.0849 16.2133 40.6905 17.5411 41.8811 17.9837C42.457 18.1982 43.0832 18.1777 43.6431 17.9221C44.203 17.6666 44.6304 17.2103 44.8452 16.6354C45.2909 15.449 44.6853 14.1212 43.4946 13.6763C43.2729 13.5942 43.0489 13.5486 42.825 13.5349C41.8423 13.4778 40.8939 14.0573 40.5305 15.0247Z"
-              fill="white"
-            ></path>
-            <path
-              d="M50.3529 58.2107C50.9128 57.5103 51.1642 56.6319 51.0614 55.7421C50.9608 54.8523 50.5174 54.0538 49.8136 53.4949C49.2651 53.0591 48.6115 52.8104 47.9259 52.7716C47.7339 52.7602 47.5374 52.7648 47.3408 52.7876C46.4495 52.888 45.6497 53.3306 45.0898 54.0333C44.5298 54.7337 44.2785 55.6121 44.3813 56.5019C44.4819 57.3916 44.9252 58.1901 45.6291 58.7468C46.3307 59.3058 47.2083 59.5567 48.1018 59.4541C48.9931 59.3537 49.793 58.9111 50.3529 58.2107Z"
-              fill="white"
-            ></path>
-            <path
-              d="M33.8893 60.5698C33.6494 59.7051 33.0872 58.9865 32.3056 58.5461C31.8531 58.2906 31.3572 58.1446 30.8498 58.1149C30.4842 58.0944 30.114 58.1332 29.7529 58.2336C28.8867 58.4731 28.1669 59.0344 27.7258 59.8146C27.2847 60.5949 27.1727 61.5007 27.4127 62.363C27.6527 63.2277 28.2148 63.9464 28.9964 64.3867C29.778 64.827 30.6853 64.9388 31.5492 64.6993C33.3363 64.2042 34.3853 62.3516 33.8893 60.5698Z"
-              fill="white"
-            ></path>
-            <path
-              d="M14.7405 52.9564C14.4205 52.8355 14.0891 52.767 13.7555 52.7465C13.2161 52.7146 12.6745 52.815 12.1694 53.0454C11.3536 53.4173 10.7297 54.0835 10.4143 54.923C9.76527 56.657 10.6497 58.5939 12.3843 59.2419C14.1188 59.8898 16.0614 59.0069 16.7104 57.2752C17.0258 56.4357 16.9938 55.5231 16.6213 54.7086C16.2488 53.8941 15.5815 53.2712 14.7405 52.9564Z"
-              fill="white"
-            ></path>
-            <path
-              d="M0.068571 41.5332C-0.109686 42.4115 0.0640003 43.3082 0.559919 44.0542C1.05584 44.8025 1.81229 45.3113 2.69214 45.4915C3.572 45.6695 4.46785 45.4961 5.21745 45.001C5.96704 44.5059 6.47667 43.7508 6.65721 42.8724C6.83775 41.994 6.66178 41.0997 6.16586 40.3514C5.66994 39.603 4.91349 39.0943 4.03364 38.914C3.15378 38.7338 2.25793 38.9095 1.50834 39.4045C0.758744 39.8996 0.249113 40.6548 0.068571 41.5332Z"
-              fill="white"
-            ></path>
-            <path
-              d="M0.0342525 23.838C-0.00459831 24.7347 0.306208 25.5902 0.914109 26.2518C1.51972 26.9135 2.34702 27.3013 3.24516 27.3378C4.14101 27.3766 5.0003 27.0663 5.66305 26.4595C6.3258 25.8549 6.71202 25.0267 6.75087 24.1324C6.78972 23.2357 6.47892 22.3802 5.87101 21.7185C5.27683 21.0706 4.46781 20.6873 3.59253 20.6348C3.57425 20.6348 3.55825 20.6348 3.53997 20.6326C1.68884 20.5527 0.116525 21.99 0.0342525 23.838Z"
-              fill="white"
-            ></path>
-            <path
-              d="M16.7401 11.9014C17.3 11.2009 17.5514 10.3226 17.4486 9.43279C17.348 8.54302 16.9047 7.7445 16.2008 7.18554C15.6523 6.74978 14.9987 6.50109 14.3131 6.46231C14.1189 6.4509 13.9246 6.45547 13.7281 6.47828C12.8368 6.57867 12.0369 7.02127 11.4793 7.72397C10.9194 8.42438 10.668 9.30275 10.7708 10.1925C10.8714 11.0823 11.3147 11.8808 12.0163 12.4375C12.7179 12.9965 13.5978 13.2474 14.4891 13.1448C15.3804 13.0444 16.1802 12.6018 16.7401 11.9014Z"
-              fill="white"
-            ></path>
-            <path
-              d="M34.1612 3.28191C33.7681 1.86283 32.5135 0.909171 31.1171 0.827038C30.7583 0.806505 30.3904 0.843008 30.0247 0.943393C29.1586 1.18295 28.4387 1.74419 27.9976 2.52446C27.5566 3.30472 27.4446 4.21047 27.6845 5.07287C27.9245 5.93755 28.4867 6.65621 29.2683 7.09654C30.0499 7.53914 30.9572 7.64865 31.821 7.4091C33.6081 6.91402 34.6571 5.06146 34.1612 3.27963V3.28191Z"
-              fill="white"
-            ></path>
-            <path
-              d="M49.4638 6.41652C49.1416 6.2956 48.8125 6.22943 48.4857 6.2089C47.0528 6.12449 45.6679 6.97091 45.1377 8.38315C44.4887 10.1171 45.3731 12.054 47.1077 12.702C48.8422 13.3499 50.7848 12.467 51.4338 10.7354C51.7492 9.89577 51.7172 8.98546 51.3447 8.16869C50.9722 7.3542 50.3049 6.73136 49.4638 6.41652Z"
-              fill="white"
-            ></path>
-          </g>
-          <defs>
-            <clipPath id="clip0_6_3730">
-              <rect width="112" height="64" fill="white" transform="translate(0 0.822266)"></rect>
-            </clipPath>
-          </defs>
-        </svg>
-        <div class="flex justify-between items-center flex-grow">
-          <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-10">
-            <p class="flex-grow-0 flex-shrink-0 text-base text-left text-white">
-              <span class="flex-grow-0 flex-shrink-0 text-base text-left text-white"
-                >© 2025 — Mirum Pharmaceuticals, Inc. </span
-              ><br /><span class="flex-grow-0 flex-shrink-0 text-base text-left text-white"
-                >All rights reserved. US-CHO-2300007v7 04/2025</span
-              >
-            </p>
-          </div>
-          <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-10">
-            <p class="flex-grow-0 flex-shrink-0 text-base text-left text-[#0080a3]">
-              Terms and Conditions
-            </p>
-            <p class="flex-grow-0 flex-shrink-0 text-base text-left text-[#0080a3]">
-              Privacy Policy
-            </p>
-            <p class="flex-grow-0 flex-shrink-0 text-base text-left text-[#0080a3]">Contact Us</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 </div>
