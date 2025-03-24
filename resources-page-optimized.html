@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#a05ea6',
+              light: '#a05ea6',
+              10: 'rgba(160, 94, 166, 0.1)'
+            },
+            teal: '#0080a3',
+            dark: '#191919',
+            muted: '#777776'
+          },
+          spacing: {
+            18: '4.5rem'
+          },
+          backgroundImage: {
+            'fade-white': 'linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0) 100%)',
+            'teal-primary': 'linear-gradient(to right, #0081a3 0%, #a05fa6 155.94%)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50">
+  <!-- Main container with responsive width -->
+  <div class="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <!-- Resources grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+      
+      <!-- Resource Card 1: Smith-Lemli-Opitz Foundation -->
+      <div class="flex flex-col bg-white/80 backdrop-blur-[80px] rounded-2xl p-6 gap-6">
+        <div class="flex justify-center px-4">
+          <img src="trtgf-1.png" alt="Smith-Lemli-Opitz Foundation Logo" class="h-24 object-contain">
+        </div>
+        
+        <div class="flex flex-col gap-4">
+          <h2 class="text-2xl font-semibold text-dark text-center">
+            The Smith-Lemli-Opitz Foundation<sup>1*</sup>
+          </h2>
+          <p class="text-base text-dark">
+            The Smith-Lemli-Opitz Foundation works worldwide to improve the quality of life
+            for people with SLOS. The Foundation continues to raise awareness of the syndrome
+            and funds research to improve treatments with the hope of someday finding a cure for SLOS.
+          </p>
+        </div>
+
+        <div class="flex items-center justify-center mt-auto">
+          <div class="flex items-center space-x-2">
+            <img src="decorative-line-vertical.svg" alt="" class="h-16">
+            <div class="flex flex-col items-center">
+              <img src="decorative-line-horizontal.svg" alt="" class="w-full">
+              <a href="#" class="px-6 py-3 text-teal font-semibold hover:text-primary transition-colors duration-200">
+                Learn more about the Smith-Lemli-Opitz Foundation
+              </a>
+              <img src="decorative-line-horizontal.svg" alt="" class="w-full">
+            </div>
+            <img src="decorative-line-vertical.svg" alt="" class="h-16">
+          </div>
+        </div>
+      </div>
+
+      <!-- Resource Card 2: NORD -->
+      <div class="flex flex-col bg-white/80 backdrop-blur-[80px] rounded-2xl p-6 gap-6">
+        <div class="flex justify-center px-4">
+          <img src="tttttt-1.png" alt="NORD Logo" class="h-24 object-contain">
+        </div>
+        
+        <div class="flex flex-col gap-4">
+          <h2 class="text-2xl font-semibold text-dark text-center">
+            National Organization for Rare Diseases (NORD)<sup>2*</sup>
+          </h2>
+          <p class="text-base text-dark">
+            Dedicated to helping people with rare orphan diseases and assisting the
+            organizations that serve these patients, NORD is committed to the
+            identification, treatment, and cure of rare disorders through programs of
+            education, advocacy, research, and service.
+          </p>
+        </div>
+
+        <div class="flex items-center justify-center mt-auto">
+          <div class="flex items-center space-x-2">
+            <img src="decorative-line-vertical.svg" alt="" class="h-16">
+            <div class="flex flex-col items-center">
+              <img src="decorative-line-horizontal.svg" alt="" class="w-full">
+              <a href="#" class="px-6 py-3 text-teal font-semibold hover:text-primary transition-colors duration-200">
+                Learn more about NORD
+              </a>
+              <img src="decorative-line-horizontal.svg" alt="" class="w-full">
+            </div>
+            <img src="decorative-line-vertical.svg" alt="" class="h-16">
+          </div>
+        </div>
+      </div>
+
+      <!-- Resource Card 3: GARD -->
+      <div class="flex flex-col bg-white/80 backdrop-blur-[80px] rounded-2xl p-6 gap-6">
+        <div class="flex justify-center px-4">
+          <img src="wewerrr-1.png" alt="GARD Logo" class="h-24 object-contain">
+        </div>
+        
+        <div class="flex flex-col gap-4">
+          <h2 class="text-2xl font-semibold text-dark text-center">
+            GARD<sup>3*</sup>
+          </h2>
+          <p class="text-base text-dark">
+            GARD is a program of the National Institutes of Health (NIH) that provides free
+            access to reliable, easy to understand information about genetic and rare
+            diseases.
+          </p>
+        </div>
+
+        <div class="flex items-center justify-center mt-auto">
+          <div class="flex items-center space-x-2">
+            <img src="decorative-line-vertical.svg" alt="" class="h-16">
+            <div class="flex flex-col items-center">
+              <img src="decorative-line-horizontal.svg" alt="" class="w-full">
+              <a href="#" class="px-6 py-3 text-teal font-semibold hover:text-primary transition-colors duration-200">
+                Learn more about GARD
+              </a>
+              <img src="decorative-line-horizontal.svg" alt="" class="w-full">
+            </div>
+            <img src="decorative-line-vertical.svg" alt="" class="h-16">
+          </div>
+        </div>
+      </div>
+
+      <!-- Resource Card 4: HPO -->
+      <div class="flex flex-col bg-white/80 backdrop-blur-[80px] rounded-2xl p-6 gap-6">
+        <div class="flex justify-center px-4">
+          <img src="wewewe-1.png" alt="HPO Logo" class="h-24 object-contain">
+        </div>
+        
+        <div class="flex flex-col gap-4">
+          <h2 class="text-2xl font-semibold text-dark text-center">
+            The Human Phenotype Ontology<sup>4*</sup>
+          </h2>
+          <p class="text-base text-dark">
+            The Human Phenotype Ontology (HPO) project provides an ontology of medically
+            relevant phenotypes, disease-phenotype annotations, and the algorithms that
+            operate on these.
+          </p>
+        </div>
+
+        <div class="flex items-center justify-center mt-auto">
+          <div class="flex items-center space-x-2">
+            <img src="decorative-line-vertical.svg" alt="" class="h-16">
+            <div class="flex flex-col items-center">
+              <img src="decorative-line-horizontal.svg" alt="" class="w-full">
+              <a href="#" class="px-6 py-3 text-teal font-semibold hover:text-primary transition-colors duration-200">
+                Learn more about the HPO project
+              </a>
+              <img src="decorative-line-horizontal.svg" alt="" class="w-full">
+            </div>
+            <img src="decorative-line-vertical.svg" alt="" class="h-16">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- Footnotes section -->
+    <div class="w-full max-w-3xl mx-auto px-4 py-8">
+      <div class="text-sm text-muted space-y-2">
+        <p>1* The Smith-Lemli-Opitz Foundation is a registered 501(c)(3) non-profit organization.</p>
+        <p>2* NORD is a registered trademark of the National Organization for Rare Disorders.</p>
+        <p>3* GARD is part of the National Center for Advancing Translational Sciences (NCATS).</p>
+        <p>4* HPO is funded by the National Institutes of Health (NIH).</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
