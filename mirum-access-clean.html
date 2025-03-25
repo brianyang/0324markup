@@ -1,82 +1,14 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/tailwind.min.css" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    content: [
-      './templates/**/*.html.twig',
-      './js/**/*.js',
-    ],
-    theme: {
-      extend: {
-        colors: {
-          primary: {
-            DEFAULT: '#a05ea6',
-            light: '#a05ea6',
-            10: 'rgba(160, 94, 166, 0.1)',
-            gradient: {
-              start: '#A05EA7',
-              end: '#765FA4'
-            }
-          },
-          secondary: '#739549',
-          text: {
-            DEFAULT: '#191919',
-            muted: '#777776',
-            blue: '#18314c',
-            purple: '#353d7c',
-            pink: '#D91B5B'
-          },
-          border: {
-            muted: 'rgba(115, 117, 120, 0.3)',
-            purple: '#353d7c'
-          },
-          teal: '#0080a3',
-          dark: '#231f20',
-          purple: '#765ea4',
-          bg: {
-            lightGray: '#eceded',
-          }
-        },
-        fontFamily: {
-          sans: ['Arial', 'sans-serif'],
-        },
-        container: {
-          center: true,
-          padding: '1rem',
-          screens: {
-            sm: '640px',
-            md: '768px',
-            lg: '1024px',
-            xl: '1280px',
-            '2xl': '1440px',
-          },
-        },
-        spacing: {
-          '18': '4.5rem',
-        },
-        backgroundImage: {
-          'fade-white': 'linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0) 100%)',
-          'primary-gradient': 'linear-gradient(to right, #A05EA7, #765FA4)',
-          'teal-primary-gradient': 'linear-gradient(to right, #0081a3 0%, #a05fa6 322.36%)',
-          'teal-primary-gradient-2': 'linear-gradient(to right, #0081a3 -110.9%, #a05fa6 211.89%)',
-          'teal-primary-gradient-3': 'linear-gradient(to right, #0081a3 -221.37%, #a05fa6 100%)',
-          'teal-primary': 'linear-gradient(to right, #0081a3 0%, #a05fa6 155.94%)',
-          'light-gray-gradient': 'linear-gradient(88.56deg, rgba(235,236,236,0) 12.58%, #eceded 97.35%)',
-          'light-gray-gradient-2': 'linear-gradient(85.44deg, rgba(235,236,236,0) -63.1%, #eceded 94.86%)',
-        }
-      },
-    },
-    plugins: [],
-  }
-</script>
+<script src="twconfig.js"></script>
 
 <div class="w-full max-w-[1440px] bg-white overflow-hidden m-auto">
   <!-- Header Section -->
-  <header class="pt-10 px-[150px] flex flex-col gap-8">
+  <header class="pt-10 flex flex-col gap-8">
     <div class="flex flex-col justify-center items-center gap-8">
       <div class="w-full flex flex-col gap-6">
         <div class="flex items-center gap-6">
-          <img src="mirum-access-plus-logo-plus-tagline-1.png" class="w-[423.87px] h-[204.32px] object-contain" alt="Mirum Access Plus Logo" />
+          <img src="/themes/cholbam/images/logo-map-2.svg" class="w-[423.87px] h-[204.32px] object-contain" alt="Mirum Access Plus Logo">
           <div class="flex flex-col justify-center gap-6 flex-grow">
             <p class="text-lg text-text-blue">
               If you'd like to prescribe CHOLBAM for your patient, download the Patient
@@ -87,36 +19,35 @@
         </div>
         
         <!-- Download Buttons -->
-        <div class="flex justify-center items-start gap-6 px-[172px]">
-          <div class="flex flex-col gap-[18px]">
-            <a href="#" class="rounded-[135px] border-2 border-text-purple px-14 py-[22px] text-center">
-              <p class="text-base font-semibold text-text-purple">
-                Download the Patient <br />Enrollment Form
-              </p>
-            </a>
-          </div>
-          <div class="flex flex-col gap-[18px]">
-            <a href="#" class="rounded-[135px] border-2 border-text-purple px-14 py-[22px] text-center">
-              <p class="text-base font-semibold text-text-purple">
-                Download the Patient <br />Authorization Form [English]
-              </p>
-            </a>
-          </div>
-          <div class="flex flex-col gap-[18px]">
-            <a href="#" class="rounded-[135px] border-2 border-text-purple px-14 py-[22px] text-center">
-              <p class="text-base font-semibold text-text-purple">
-                Descargar la Versión <br />en Español
-              </p>
-            </a>
+        <div class="download-buttons-wrapper">
+          <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-6 mt-6">
+            <div class="download-button-container">
+              <a href="#" class="inline-block rounded-full border-2 border-text-purple px-8 md:px-14 py-4 md:py-[22px] text-center hover:bg-text-purple/5 transition-colors">
+                <span class="text-base font-semibold text-text-purple">Download the Patient Enrollment Form</span>
+              </a>
+            </div>
+        
+            <div class="download-button-container">
+              <a href="#" class="inline-block rounded-full border-2 border-text-purple px-8 md:px-14 py-4 md:py-[22px] text-center hover:bg-text-purple/5 transition-colors">
+                <span class="text-base font-semibold text-text-purple">Download the Patient Authorization Form [English]</span>
+              </a>
+            </div>
+        
+            <div class="download-button-container">
+              <a href="#" class="inline-block rounded-full border-2 border-text-purple px-8 md:px-14 py-4 md:py-[22px] text-center hover:bg-text-purple/5 transition-colors">
+                <span class="text-base font-semibold text-text-purple">Descargar la Versión en Español</span>
+              </a>
+            </div>
           </div>
         </div>
+        
       </div>
     </div>
   </header>
 
   <!-- Support Information Section -->
   <section class="w-full" style="background: linear-gradient(88.56deg, rgba(235,236,236,0) 12.58%, #eceded 97.35%);">
-    <div class="px-[150px] py-24 flex flex-col gap-[26px]">
+    <div class="py-24 flex flex-col gap-[26px]">
       <div class="flex justify-center gap-[26px]">
         <div class="flex flex-col justify-center gap-[26px] flex-grow">
           <div class="flex flex-col gap-8">
@@ -139,9 +70,7 @@
           <div class="flex flex-col gap-2">
             <div class="flex items-center gap-6">
               <p class="text-[32px] font-light text-text-blue">Ready, Set, Go</p>
-              <svg width="902" height="3" viewBox="0 0 902 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow">
-                <line x1="1" y1="1.32214" x2="901" y2="1.32222" stroke="#D91B5B" stroke-width="2" stroke-linecap="round"></line>
-              </svg>
+              <img src="/themes/cholbam/images/decorative-line-pink.svg" class="flex-grow" alt="Decorative line" />
             </div>
             <p class="text-[40px] font-bold text-text-blue">Getting Your Patients the Treatment They Need</p>
           </div>
@@ -237,9 +166,7 @@
           <div class="flex flex-col gap-2">
             <div class="flex items-center gap-6">
               <p class="text-[32px] font-light text-text-blue">By Your Side at Every Turn</p>
-              <svg width="737" height="3" viewBox="0 0 737 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow">
-                <line x1="1" y1="1.32227" x2="736" y2="1.32233" stroke="#D91B5B" stroke-width="2" stroke-linecap="round"></line>
-              </svg>
+              <img src="/themes/cholbam/images/decorative-line-pink-by-your-side.svg" class="flex-grow" alt="Decorative line" />
             </div>
             <p class="text-[40px] font-bold text-text-blue">A Team Dedicated to Your Patient's Treatment Journey</p>
           </div>
@@ -293,9 +220,7 @@
               <p class="text-[32px] text-text-blue">
                 <span class="font-light">Mirum Access </span><span class="italic">PLUS</span>
               </p>
-              <svg width="824" height="3" viewBox="0 0 824 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow">
-                <line x1="1" y1="1.32227" x2="823" y2="1.32234" stroke="#D91B5B" stroke-width="2" stroke-linecap="round"></line>
-              </svg>
+              <img src="/themes/cholbam/images/decorative-line-pink-shorter.svg" class="flex-grow" alt="Decorative line" />
             </div>
             <p class="text-[40px] font-bold text-text-blue">Even More to Help Patients Start and Stay on Therapy</p>
           </div>
@@ -326,9 +251,7 @@
             </div>
           </div>
           <div class="flex items-start gap-4 flex-grow">
-            <svg width="70" height="71" viewBox="0 0 70 71" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[70px] h-[70px]">
-              <!-- SVG content preserved but omitted for brevity -->
-            </svg>
+            <img src="/themes/cholbam/images/icon-adherence.svg" class="w-[70px] h-[70px]" alt="Drive Adherence Icon" />
             <div class="flex flex-col gap-4 flex-grow">
               <p class="text-[26px] font-bold text-text-blue">Drive adherence</p>
               <p class="text-lg text-text-blue">
@@ -346,9 +269,7 @@
   <section class="h-[552px] relative">
     <div class="absolute left-0 top-[532px] w-[1440px] pl-[60px] pr-[150px] py-[72px] flex gap-[139px] items-center bg-light-gray-gradient-2">
       <div class="w-[422.84px] pl-[71px] py-[72px] rounded-tr-[140px] rounded-br-[140px] flex justify-center items-center" style="background: linear-gradient(266.68deg, #fff -0.69%, rgba(255,255,255,0) 97.26%);">
-        <svg width="239" height="138" viewBox="0 0 239 138" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[238px] h-[137px]">
-          <!-- SVG content preserved but omitted for brevity -->
-        </svg>
+        <img src="/themes/cholbam/images/mirum-logo-footer.svg" class="w-[238px] h-[137px]" alt="Mirum Logo" />
       </div>
       <div class="flex justify-center items-start flex-grow gap-2">
         <div class="flex justify-center items-center flex-grow gap-[43px]">
