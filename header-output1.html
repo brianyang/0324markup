@@ -1,0 +1,153 @@
+<header role="banner">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ region--header.html.twig
+   ▪️ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/cholbam/templates/layout/region--header.html.twig' -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  content: [
+    './templates/**/*.html.twig',
+    './js/**/*.js',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#a05ea6',
+          light: '#a05ea6',
+          10: 'rgba(160, 94, 166, 0.1)',
+          gradient: {
+            start: '#A05EA7',
+            end: '#765FA4'
+          }
+        },
+        secondary: '#739549',
+        text: {
+          DEFAULT: '#191919',
+          muted: '#777776',
+          blue: '#18314c',
+          purple: '#353d7c',
+          pink: '#D91B5B'
+        },
+        border: {
+          muted: 'rgba(115, 117, 120, 0.3)',
+          purple: '#353d7c'
+        },
+        teal: '#0080a3',
+        dark: '#231f20',
+        purple: '#765ea4',
+        bg: {
+          lightGray: '#eceded',
+        }
+      },
+      fontFamily: {
+        sans: ['Arial', 'sans-serif'],
+      },
+      container: {
+        center: true,
+        padding: '1rem',
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+          '2xl': '1440px',
+        },
+      },
+      spacing: {
+        '18': '4.5rem',
+      },
+      backgroundImage: {
+        'fade-white': 'linear-gradient(to bottom, #fff 80%, rgba(255,255,255,0) 100%)',
+        'primary-gradient': 'linear-gradient(to right, #A05EA7, #765FA4)',
+        'teal-primary-gradient': 'linear-gradient(to right, #0081a3 0%, #a05fa6 322.36%)',
+        'teal-primary-gradient-2': 'linear-gradient(to right, #0081a3 -110.9%, #a05fa6 211.89%)',
+        'teal-primary-gradient-3': 'linear-gradient(to right, #0081a3 -221.37%, #a05fa6 100%)',
+        'teal-primary': 'linear-gradient(to right, #0081a3 0%, #a05fa6 155.94%)',
+        'light-gray-gradient': 'linear-gradient(88.56deg, rgba(235,236,236,0) 12.58%, #eceded 97.35%)',
+        'light-gray-gradient-2': 'linear-gradient(85.44deg, rgba(235,236,236,0) -63.1%, #eceded 94.86%)',
+      }
+    },
+  },
+  plugins: [],
+}
+</script>
+
+<div class="container mx-auto">
+	<div class="bg-white">
+		<div>
+			<div class="gradient-bg">
+				<div class="bg-primary-light/10 py-2 text-center">
+					<p class="text-sm font-semibold">
+						For US HCPs Only
+					</p>
+				</div>
+				<div class="flex px-10">
+					<a href="/">
+						<div class="w-[286px] pb-2.5">
+							<img src="/themes/slos/images/logo.svg" alt="Site logo" width="286" height="110">
+						</div>
+					</a>
+					<div class="flex-grow">
+						<div class="flex justify-end">
+							<div class="flex gap-4">
+								<div class="flex gap-4">
+									<div class="p-0.5">
+										<p class="text-sm">
+											Patient Website
+										</p>
+									</div>
+									<div class="p-0.5">
+										<p class="text-sm">
+											Prescribing Information
+										</p>
+									</div>
+									<div class="p-0.5">
+										<p class="text-sm">
+											Contact an Account Manager
+										</p>
+									</div>
+									<div class="p-0.5">
+										<p class="text-sm">
+											Important Safety Information
+										</p>
+									</div>
+								</div>
+								<div class="flex items-center">
+									<img src="/themes/slos/images/email-icon.svg" alt="Email icon" width="15" height="10">
+									<div class="w-[152px] h-10">
+										<div>
+											<div class="pl-2 pr-4 py-4">
+												<p class="text-base font-bold text-primary">
+													Stay in the Know
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="p-4 rounded-lg bg-white border border-gray-400/30">
+									<select class="py-2 px-3 text-sm border-none focus:ring-primary focus:border-primary rounded-md bg-white">
+										<option value="slow" selected="">SLOS</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/cholbam/templates/layout/region--header.html.twig' -->
+
+
+  </header>
