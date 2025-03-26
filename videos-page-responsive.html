@@ -70,27 +70,27 @@
   }
 </script>
 
-<div class="flex flex-col justify-start items-start w-[1440px] relative overflow-hidden bg-white m-auto">
-  <div
-    class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 bg-[url('frame-626252.png')]">
-    <div
-      class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 opacity-90 gap-16 px-[150px] pt-2 pb-16">
-      <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-4">
-        <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[1140px] relative gap-2">
-          <p
-            class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[40px] font-semibold text-center text-[#191919]">
+<!-- Main container with full width instead of fixed width -->
+<div class="flex flex-col justify-start items-start w-full max-w-full relative overflow-hidden bg-white m-auto">
+  <div class="flex flex-col justify-start items-start self-stretch w-full bg-[url('frame-626252.png')] bg-cover bg-center">
+    <!-- First video section with responsive spacing -->
+    <div class="flex flex-col justify-start items-start w-full opacity-90 gap-8 md:gap-16 px-4 sm:px-8 md:px-12 lg:px-24 xl:px-[150px] pt-2 pb-8 md:pb-16">
+      <div class="flex flex-col justify-start items-start w-full gap-4">
+        <div class="flex flex-col justify-start items-start w-full relative gap-2">
+          <!-- Responsive typography for title -->
+          <p class="w-full text-2xl sm:text-3xl md:text-[40px] font-semibold text-center text-[#191919]">
             Meet Mallie, a Real Patient With SLOS
           </p>
-          <div
-            class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5 px-[104px]">
-            <p class="flex-grow w-[932px] text-[26px] text-center text-[#191919]">
+          <!-- Responsive padding and typography for description -->
+          <div class="flex justify-center items-center w-full relative gap-2.5 px-2 sm:px-4 md:px-8 lg:px-[104px]">
+            <p class="w-full text-lg sm:text-xl md:text-2xl lg:text-[26px] text-center text-[#191919]">
               Mallie experienced improvements in her cholesterol levels, as well as increases in
               height and weight, after starting CHOLBAM.
             </p>
           </div>
         </div>
-        <div
-          class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-8 p-8 rounded-[20px] bg-white/60 backdrop-blur-[100px]"
+        <!-- Video container with responsive padding -->
+        <div class="flex flex-col justify-start items-start w-full relative gap-4 sm:gap-8 p-4 sm:p-8 rounded-[20px] bg-white/60 backdrop-blur-[100px]"
           style="box-shadow: 0px 0px 12px 0 rgba(0,128,163,0.12);">
           <div class="w-full aspect-video">
             <iframe
@@ -102,40 +102,43 @@
         </div>
       </div>
     </div>
-    <div
-      class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 opacity-90 gap-16 px-[150px] pb-16">
-      <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 gap-4">
-        <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[1140px] relative gap-2">
-          <p
-            class="self-stretch flex-grow-0 flex-shrink-0 w-[1140px] text-[40px] font-semibold text-center text-[#191919]">
+    
+    <!-- Second video section with responsive spacing -->
+    <div class="flex flex-col justify-start items-start w-full opacity-90 gap-8 md:gap-16 px-4 sm:px-8 md:px-12 lg:px-24 xl:px-[150px] pb-8 md:pb-16">
+      <div class="flex flex-col justify-start items-start w-full gap-4">
+        <div class="flex flex-col justify-start items-start w-full relative gap-2">
+          <!-- Responsive typography for title -->
+          <p class="w-full text-2xl sm:text-3xl md:text-[40px] font-semibold text-center text-[#191919]">
             How Did My Child Get SLOS?
           </p>
-          <div
-            class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5 px-[104px]">
-            <p class="flex-grow w-[932px] text-[26px] text-left text-[#191919]">
-              Help parents understand what is causing their childâ€™s symptoms and empower them to ask
+          <!-- Responsive padding and typography for description -->
+          <div class="flex justify-center items-center w-full relative gap-2.5 px-2 sm:px-4 md:px-8 lg:px-[104px]">
+            <p class="w-full text-lg sm:text-xl md:text-2xl lg:text-[26px] text-left text-[#191919]">
+              Help parents understand what is causing their child's symptoms and empower them to ask
               questions and make informed decisions about future pregnancies. Learn about basic
               genetics and the likelihood of a child to be unaffected, a carrier of SLOS, or to have
               SLOS.
             </p>
           </div>
         </div>
-        <div
-          class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-8 p-8 rounded-[20px] bg-white/60 backdrop-blur-[100px] aspect-video"
+        <!-- Video container with responsive padding -->
+        <div class="flex flex-col justify-start items-start w-full relative gap-4 sm:gap-8 p-4 sm:p-8 rounded-[20px] bg-white/60 backdrop-blur-[100px]"
           style="box-shadow: 0px 0px 12px 0 rgba(0,128,163,0.12);">
-
-          <iframe
-            src="https://player.vimeo.com/video/YOUR_VIMEO_VIDEO_ID?autoplay=1&amp;muted=1&amp;loop=1&amp;color=f7f7f7&amp;title=0&amp;byline=0&amp;portrait=0"
-            width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen="" title="Looping background video">
-          </iframe>
+          <div class="w-full aspect-video">
+            <iframe
+              src="https://player.vimeo.com/video/YOUR_VIMEO_VIDEO_ID?autoplay=1&amp;muted=1&amp;loop=1&amp;color=f7f7f7&amp;title=0&amp;byline=0&amp;portrait=0"
+              class="w-full h-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen title="Looping background video">
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div
-    class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 absolute left-[411px] top-[317px] gap-[68px]">
-    <p class="flex-grow-0 flex-shrink-0 text-[90px] font-bold text-left text-[#ff00c7]/[0.15]">
+  
+  <!-- FPO text only shown on larger screens, positioned using responsive values -->
+  <div class="hidden lg:flex flex-col justify-start items-start absolute left-1/4 top-[20%] gap-[68px]">
+    <p class="text-4xl md:text-6xl lg:text-[90px] font-bold text-left text-[#ff00c7]/[0.15]">
       FPO
     </p>
   </div>

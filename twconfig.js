@@ -35,7 +35,8 @@ tailwind.config = {
         }
       },
       fontFamily: {
-        sans: ['Arial', 'sans-serif'],
+        sans: ['Raleway', 'Arial', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'],
       },
       container: {
         center: true,

@@ -1,5 +1,23 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/tailwind.min.css" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Raleway', 'Arial', 'sans-serif'],
+          raleway: ['Raleway', 'sans-serif'],
+        },
+      },
+    },
+    // This is how you would properly customize the base layer in a full Tailwind setup
+    // This doesn't work with the CDN version, which is why we're using the external CSS file
+    corePlugins: {
+      preflight: false, // Disable preflight when using custom base styles
+    },
+  };
+</script>
 
 <div class="flex flex-col justify-start items-start w-[1440px] overflow-hidden m-auto">
   <div
