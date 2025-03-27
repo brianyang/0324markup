@@ -1,0 +1,95 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/tailwind.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="twconfig.js"></script>
+<style>
+.bg-texture {
+  background: url(/themes/cholbam/images/bg-texture.png);
+  background-size: 100%;
+  max-height: 600px;
+  background-position: 100% -213px;
+}
+.bg-texture-top{
+  background: url(/themes/cholbam/images/bg-texture-top.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+}
+</style>
+
+<div class="flex flex-col justify-start items-start w-full max-w-full relative overflow-hidden bg-white m-auto max-w-[1440px]">
+  <div class="w-full max-w-[1440px] overflow-hidden m-auto">
+    <div class="flex flex-col justify-center items-end self-stretch flex-grow-0 flex-shrink-0 h-[343px] gap-2.5 px-[150px]" style="background: linear-gradient(to right, rgba(255,255,255,0) 33.78%, #fff 56.15%);">
+    <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[461px] gap-4 pb-[57px]">
+      <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
+        <p class="self-stretch flex-grow-0 flex-shrink-0 w-[461px] text-[52px] font-bold text-left text-[#0080a3]">
+         VIDEOS &amp; RESOURCES
+        </p>
+      </div>
+      <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
+        <p class="flex-grow w-[461px] text-base text-left text-[#191919]">
+
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col justify-start items-start self-stretch w-full bg-[url('frame-626252.png')] bg-cover bg-center">
+    <!-- First video section with responsive spacing -->
+    <div class="flex flex-col justify-start items-start w-full opacity-90 gap-8 md:gap-16 px-4 sm:px-8 md:px-12 lg:px-24 xl:px-[150px] pt-2 pb-8 md:pb-16  bg-[#F7F7F7]">
+      <div class="flex flex-col justify-start items-start w-full gap-4">
+        <div class="flex flex-col justify-start items-start w-full relative gap-2">
+          <!-- Responsive typography for title -->
+          <p class="w-full text-2xl sm:text-3xl md:text-[40px] font-semibold text-center text-[#191919]">
+            Meet Mallie, a Real Patient With SLOS
+          </p>
+          <!-- Responsive padding and typography for description -->
+          <div class="flex justify-center items-center w-full relative gap-2.5 px-2 sm:px-4 md:px-8 lg:px-[104px]">
+            <p class="w-full text-lg sm:text-xl md:text-2xl lg:text-[26px] text-center text-[#191919]">
+              Mallie experienced improvements in her cholesterol levels, as well as increases in
+              height and weight, after starting CHOLBAM.
+            </p>
+          </div>
+        </div>
+        <!-- Video container with responsive padding -->
+        <div class="flex flex-col justify-start items-start w-full relative gap-4 sm:gap-8 p-4 sm:p-8 rounded-[20px] bg-white/60 backdrop-blur-[100px]" style="box-shadow: 0px 0px 12px 0 rgba(0,128,163,0.12);">
+          <div class="w-full aspect-video">
+            <iframe src="https://player.vimeo.com/video/980152026?autoplay=1&amp;muted=1&amp;loop=1&amp;color=f7f7f7&amp;title=0&amp;byline=0&amp;portrait=0" class="w-full h-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Looping background video">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Second video section with responsive spacing -->
+    <div class="flex flex-col justify-start items-start w-full opacity-90 gap-8 md:gap-16 px-4 sm:px-8 md:px-12 lg:px-24 xl:px-[150px] pb-8 md:pb-16 bg-texture">
+      <div class="flex flex-col justify-start items-start w-full gap-4">
+        <div class="flex flex-col justify-start items-start w-full relative gap-2">
+          <!-- Responsive typography for title -->
+          <p class="w-full text-2xl sm:text-3xl md:text-[40px] font-semibold text-center text-[#191919]">
+            How Did My Child Get SLOS?
+          </p>
+          <!-- Responsive padding and typography for description -->
+          <div class="flex justify-center items-center w-full relative gap-2.5 px-2 sm:px-4 md:px-8 lg:px-[104px]">
+            <p class="w-full text-lg sm:text-xl md:text-2xl lg:text-[26px] text-left text-[#191919]">
+              Help parents understand what is causing their child's symptoms and empower them to ask
+              questions and make informed decisions about future pregnancies. Learn about basic
+              genetics and the likelihood of a child to be unaffected, a carrier of SLOS, or to have
+              SLOS.
+            </p>
+          </div>
+        </div>
+        <!-- Video container with responsive padding -->
+        <div class="flex flex-col justify-start items-start w-full relative gap-4 sm:gap-8 p-4 sm:p-8 rounded-[20px] bg-white/60 backdrop-blur-[100px]" style="box-shadow: 0px 0px 12px 0 rgba(0,128,163,0.12);">
+          <div class="w-full aspect-video">
+            <iframe src="https://player.vimeo.com/video/980151652?autoplay=1&amp;muted=1&amp;loop=1&amp;color=f7f7f7&amp;title=0&amp;byline=0&amp;portrait=0" class="w-full h-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Looping background video">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- FPO text only shown on larger screens, positioned using responsive values -->
+  <div class="hidden lg:flex flex-col justify-start items-start absolute left-1/4 top-[20%] gap-[68px]">
+    
+  </div>
+</div></div>
