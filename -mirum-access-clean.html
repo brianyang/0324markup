@@ -23,7 +23,7 @@
   }
 </style>
 
-<div class="w-full max-w-[1440px] bg-white overflow-hidden m-auto px-8">
+<div class="w-full max-w-[1440px] bg-white overflow-hidden m-auto">
   <div class="w-full max-w-[1440px] overflow-hidden m-auto">
     <div class="flex flex-col md:flex-row about-page relative">
 
@@ -44,8 +44,7 @@
 
     </div>
 
-    <!-- Header Section -->
-    <header class="pt-10 flex flex-col gap-8">
+<div class="wrap px-4"><header class="pt-10 flex flex-col gap-8">
       <div class="flex flex-col justify-center items-center gap-8">
         <div class="w-full flex flex-col gap-6">
           <div class="flex flex-col md:flex-row items-center gap-6">
@@ -78,8 +77,8 @@
               <div class="download-button-container">
                 <a href="#" class="inline-block w-full rounded-full border-2 border-text-purple px-8 md:px-14 py-4 md:py-[22px] text-center hover:bg-text-purple/5 transition-colors">
                   <span class="text-base font-semibold text-text-purple">
-                    Descargar la VersiÃ³n 
-                    en EspaÃ±ol
+                    Descargar la VersiÃƒÆ’Ã‚Â³n 
+                    en EspaÃƒÆ’Ã‚Â±ol
                   </span>
                 </a>
               </div>
@@ -87,10 +86,7 @@
           </div>
         </div>
       </div>
-    </header>
-
-    <!-- Support Information Section -->
-    <section class="w-full" style="background: linear-gradient(88.56deg, rgba(235,236,236,0) 12.58%, #eceded 97.35%);">
+    </header><section class="w-full" style="background: linear-gradient(88.56deg, rgba(235,236,236,0) 12.58%, #eceded 97.35%);">
       <div class="py-24 flex flex-col gap-[26px] p-8 mt-8">
 
         <p>Mirum Access Plus is available to help you, your office, and your patient not only get started with CHOLBAM
@@ -103,10 +99,7 @@
         </p>
 
       </div>
-    </section>
-
-    <!-- Ready, Set, Go Section -->
-    <section class="py-16">
+    </section><section class="py-16">
       <div class="flex flex-col gap-6">
         <div class="flex flex-col gap-16">
           <!-- Section Header -->
@@ -146,23 +139,30 @@
               </div>
             </div>
 
-            <!-- Financial Support -->
-            <div class="flex items-start gap-4">
-              <img src="/themes/cholbam/images/icon-dollar.svg" class="w-[70px] h-[70px] object-cover" alt="Financial Support Icon">
-              <div class="flex flex-col gap-4 flex-grow">
-                <p class="text-[26px] font-bold text-text-blue">Financial Support for Patients</p>
-                <p class="text-lg text-text-blue">
-                  <span class="font-bold">Mirum Access Plus Savings Program: </span>
-                  Eligible patients with commercial or private insurance may
-                  <span class="font-bold">pay as little as $0 out of pocket per fill</span>
-                  for CHOLBAM.*
-                  <br><br>
-                  <span class="font-bold">Mirum Patient Assistance Program (PAP): </span>
-                  Provides CHOLBAM at no cost for up to 1 calendar year for patients
-                  without insurance coverage, with eligibility reviewed each year.ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬&nbsp;
-                </p>
-              </div>
-            </div>
+<!-- Financial Support -->
+<div class="flex items-start gap-4">
+  <img src="/themes/cholbam/images/icon-dollar.svg" class="w-[70px] h-[70px] object-cover" alt="Financial Support Icon">
+  <div class="flex flex-col gap-4 flex-grow">
+    <h3 class="text-[26px] font-bold text-text-blue">Financial Support for Patients</h3>
+    
+    <div class="text-lg text-text-blue">
+      <!-- First program -->
+      <div class="mb-4">
+        <strong class="font-bold">Mirum Access Plus Savings Program:</strong>
+        Eligible patients with commercial or private insurance may
+        <strong class="font-bold">pay as little as $0 out of pocket per fill</strong>
+        for CHOLBAM.*
+      </div>
+      
+      <!-- Second program -->
+      <div>
+        <strong class="font-bold">Mirum Patient Assistance Program (PAP):</strong>
+        Provides CHOLBAM at no cost for up to 1 calendar year for patients
+        without insurance coverage, with eligibility reviewed each year.
+      </div>
+    </div>
+  </div>
+</div>
 
             <!-- Specialty Pharmacy -->
             <div class="flex items-start gap-4">
@@ -177,32 +177,33 @@
               </div>
             </div>
 
-            <!-- Footnotes -->
-            <div class="flex flex-col">
-              <div class="flex">
-                <p class="text-sm text-text-blue">*</p>
-                <p class="text-sm text-text-blue ml-1">
-                  Eligibility restrictions: This program is not available to individuals who
-                  use any state or federal government-funded health care program to cover a
-                  portion of medication costs, such as Medicare, Medicaid, TRICARE,
-                  Department of Defense, or Veterans Administration, or any other state or
-                  federal government-funded health care program.
-                </p>
-              </div>
-              <div class="flex">
-                <p class="text-sm text-text-blue">ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬&nbsp;</p>
-                <p class="text-sm text-text-blue ml-1">
-                  Subject to program terms and conditions.
-                </p>
-              </div>
-            </div>
+<!-- Footnotes -->
+<div class="flex flex-col gap-2">
+  <!-- First footnote -->
+  <div class="flex">
+    <span class="text-sm text-text-blue flex-shrink-0">*</span>
+    <span class="text-sm text-text-blue ml-1">
+      Eligibility restrictions: This program is not available to individuals who
+      use any state or federal government-funded health care program to cover a
+      portion of medication costs, such as Medicare, Medicaid, TRICARE,
+      Department of Defense, or Veterans Administration, or any other state or
+      federal government-funded health care program.
+    </span>
+  </div>
+  
+  <!-- Second footnote -->
+  <div class="flex">
+    <span class="text-sm text-text-blue flex-shrink-0">†</span>
+    <span class="text-sm text-text-blue ml-1">
+      Subject to program terms and conditions.
+    </span>
+  </div>
+</div>
+
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- By Your Side Section -->
-    <section class="pb-16">
+    </section><section class="pb-16">
       <div class="flex flex-col gap-6">
         <div class="flex flex-col gap-16">
           <!-- Section Header -->
@@ -252,10 +253,7 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Mirum Access Plus -->
-    <section class="">
+    </section><section class="">
       <div class="flex flex-col gap-6">
         <div class="flex flex-col gap-16">
           <!-- Section Header -->
@@ -311,7 +309,22 @@
 
         </div>
       </div>
-    </section>
+    </section></div>
+
+    <!-- Header Section -->
+    
+
+    <!-- Support Information Section -->
+    
+
+    <!-- Ready, Set, Go Section -->
+    
+
+    <!-- By Your Side Section -->
+    
+
+    <!-- Mirum Access Plus -->
+    
 
     <!-- Footer/About Mirum Section -->
     <section class="h-[552px] relative">

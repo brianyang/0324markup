@@ -2,35 +2,61 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="twconfig.js"></script>
 <style>
-.bg-texture {
-  background: url(/themes/cholbam/images/bg-texture.png);
-  background-size: 100%;
-  max-height: 600px;
-  background-position: 100% -213px;
-}
-.bg-texture-top{
-  background: url(/themes/cholbam/images/bg-texture-top.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100%;
-}
+  .bg-texture {
+    background: url(/themes/cholbam/images/bg-texture.png);
+    background-size: 100%;
+    background-position: 100% -213px;
+  }
+
+  .bg-texture-top {
+    background: url(/themes/cholbam/images/bg-texture-top.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+  }
+
+  .bg-texture-top-gray {
+    background: url(/themes/cholbam/images/bg-texture-top-gray.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+  }
+  
+  .bg-hero-gradient {
+    background: url(/themes/cholbam/images/hero-understanding.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .about-hero {
+    background: url(/themes/cholbam/images/hero-about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% center; /* First value pushes focal point left */
+  } 
 </style>
 
-<div class="flex flex-col justify-start items-start w-full max-w-full relative overflow-hidden bg-white m-auto max-w-[1440px]">
-  <div class="w-full max-w-[1440px] overflow-hidden m-auto">
-    <div class="flex flex-col justify-center items-end self-stretch flex-grow-0 flex-shrink-0 h-[343px] gap-2.5 px-[150px]" style="background: linear-gradient(to right, rgba(255,255,255,0) 33.78%, #fff 56.15%);">
-    <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[461px] gap-4 pb-[57px]">
-      <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
-        <p class="self-stretch flex-grow-0 flex-shrink-0 w-[461px] text-[52px] font-bold text-left text-[#0080a3]">
-         VIDEOS &amp; RESOURCES
-        </p>
+<div class="w-full max-w-[1440px] overflow-hidden m-auto">
+  <div class="flex flex-col md:flex-row about-page relative">
+    <!-- Left column with hero image -->
+    <div class="md:w-1/2 h-[150px] md:h-[343px] about-hero">
+      <!-- This is empty intentionally, just for background space -->
+    </div>
+    
+    <!-- Right column with text content -->
+    <div class="md:w-1/2 flex flex-col justify-center items-start gap-2 px-4 md:px-8 py-8 md:py-0">
+      <div class="flex flex-col justify-start items-start self-stretch relative gap-2.5">
+        <p class="self-stretch text-[36px] md:text-[52px] font-bold text-left text-[#0080a3]">VIDEOS</p>
       </div>
-      <div class="flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
-        <p class="flex-grow w-[461px] text-base text-left text-[#191919]">
-
+      <div class="flex justify-start items-start self-stretch relative gap-2.5">
+        <p class="text-base text-left text-[#191919]">
+          <span class="text-base font-semibold text-left text-[#191919]">Hear from peers, as well as real patients and their families, as they share their unique experiences—life before diagnosis, challenges before starting CHOLBAM, and the difference CHOLBAM is making in patients’ lives.*</span><sup>1-3</sup>
         </p>
       </div>
     </div>
+    
+    <!-- Texture overlay - desktop only -->
+    <div class="hidden md:block absolute w-full h-full top-0 left-0 pointer-events-none bg-texture-top-gray"></div>
   </div>
   <div class="flex flex-col justify-start items-start self-stretch w-full bg-[url('frame-626252.png')] bg-cover bg-center">
     <!-- First video section with responsive spacing -->
@@ -58,7 +84,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Second video section with responsive spacing -->
     <div class="flex flex-col justify-start items-start w-full opacity-90 gap-8 md:gap-16 px-4 sm:px-8 md:px-12 lg:px-24 xl:px-[150px] pb-8 md:pb-16 bg-texture">
       <div class="flex flex-col justify-start items-start w-full gap-4">
@@ -87,9 +113,9 @@
       </div>
     </div>
   </div>
-  
+
   <!-- FPO text only shown on larger screens, positioned using responsive values -->
   <div class="hidden lg:flex flex-col justify-start items-start absolute left-1/4 top-[20%] gap-[68px]">
-    
+
   </div>
-</div></div>
+</div>
