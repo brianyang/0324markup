@@ -106,8 +106,8 @@
           <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
               <div class="flex items-center gap-6">
-                <p class="text-[32px] font-light text-text-blue">Ready, Set, Go</p>
-                <img src="/themes/cholbam/images/decorative-line-pink.svg" class="flex-grow" alt="Decorative line">
+                <p class="text-[32px] font-light text-text-blue whitespace-normal md:w-auto">Ready, Set, Go</p>
+                <img src="/themes/cholbam/images/decorative-line-pink.svg" class="flex-grow w-full max-w-[250px] md:max-w-none" alt="Decorative line">
               </div>
               <p class="text-[40px] font-bold text-text-blue">Getting Your Patients the Treatment They Need</p>
             </div>
@@ -210,8 +210,8 @@
           <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
               <div class="flex items-center gap-6">
-                <p class="text-[32px] font-light text-text-blue">By Your Side at Every Turn</p>
-                <img src="/themes/cholbam/images/decorative-line-pink-by-your-side.svg" class="flex-grow" alt="Decorative line">
+                <p class="text-[32px] font-light text-text-blue whitespace-normal md:w-auto">By Your Side at Every Turn</p>
+                <img src="/themes/cholbam/images/decorative-line-pink-by-your-side.svg" class="flex-grow w-full max-w-[150px] md:max-w-none" alt="Decorative line">
               </div>
               <p class="text-[40px] font-bold text-text-blue">A Team Dedicated to Your Patient's Treatment Journey</p>
             </div>
@@ -261,10 +261,10 @@
           <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
               <div class="flex items-center gap-4 md:gap-6">
-                <p class="text-2xl md:text-[32px] text-text-blue">
+                <p class="text-2xl md:text-[32px] text-text-blue whitespace-normal md:w-auto">
                   <span class="font-light">Mirum Access </span><span class="italic">PLUS</span>
                 </p>
-                <img src="/themes/cholbam/images/decorative-line-pink-shorter.svg" class="flex-grow" alt="Decorative line">
+                <img src="/themes/cholbam/images/decorative-line-pink-shorter.svg" class="flex-grow w-full max-w-[150px] md:max-w-none" alt="Decorative line">
               </div>
               <p class="text-3xl md:text-[40px] font-bold text-text-blue">Even More to Help Patients Start and Stay on
                 Therapy</p>
@@ -327,33 +327,72 @@
     
 
     <!-- Footer/About Mirum Section -->
-    <section class="h-[552px] relative">
-      <div class="absolute left-0 w-[1440px] pl-[60px] pr-[150px] py-[72px] flex gap-[139px] items-center bg-light-gray-gradient-2">
-        <div class="w-[422.84px] pl-[71px] py-[72px] rounded-tr-[140px] rounded-br-[140px] flex justify-center items-center" style="background: linear-gradient(266.68deg, #fff -0.69%, rgba(255,255,255,0) 97.26%);">
-          <img src="/themes/cholbam/images/mirum-logo-footer.svg" class="w-[238px] h-[137px]" alt="Mirum Logo">
+    <section class="relative bg-light-gray-gradient-2">
+      <!-- Mobile layout (stacked) -->
+      <div class="md:hidden py-12 px-4">
+        <div class="flex flex-col gap-8 items-center">
+          <!-- Logo section on top for mobile -->
+          <div class="w-full flex justify-center items-center py-8 rounded-tr-[70px] rounded-br-[70px]" style="background: linear-gradient(266.68deg, #fff -0.69%, rgba(255,255,255,0) 97.26%);">
+            <img src="/themes/cholbam/images/mirum-logo-footer.svg" class="w-[180px] h-auto" alt="Mirum Logo">
+          </div>
+          
+          <!-- Content section on bottom for mobile -->
+          <div class="flex flex-col justify-center items-start gap-6">
+            <div class="w-full">
+              <div class="flex flex-col gap-4">
+                <p class="text-2xl font-bold text-text-blue">
+                  Mirum Is Your Partner in Patient-Centric Care
+                </p>
+                <p class="text-base text-text-blue">
+                  Mirum has a driven and focused team whose mission is to create
+                  transformative, life-changing medicine for patients with rare diseases.
+                  We have a strong understanding of the significant impact rare diseases
+                  have on quality of life for patients and caregivers. With 140+ industry
+                  veterans, scientists, and thought leaders, Mirum is backed by
+                  significant expertise in rare diseases and pharmaceutical development.
+                  We aim to always provide dedicated leadership and safe, effective
+                  treatments that you, your patients, and their caregivers can rely on.
+                </p>
+                <div class="mt-4">
+                  <a href="https://mirumpharma.com/" class="inline-block px-8 py-4 rounded-full border-2 border-text-purple text-base font-semibold text-text-purple text-center">
+                    Discover Mirum
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flex justify-center items-start flex-grow gap-2">
-          <div class="flex justify-center items-center flex-grow gap-[43px]">
-            <div class="flex flex-col justify-center items-start flex-grow gap-6">
-              <div class="w-full">
-                <div class="gap-[18px] flex flex-col">
-                  <p class="w-[569.69px] text-[32px] font-bold text-text-blue">
-                    Mirum Is Your Partner in Patient-Centric Care
-                  </p>
-                  <p class="w-[668.16px] text-lg text-text-blue">
-                    Mirum has a driven and focused team whose mission is to create
-                    transformative, life-changing medicine for patients with rare diseases.
-                    We have a strong understanding of the significant impact rare diseases
-                    have on quality of life for patients and caregivers. With 140+ industry
-                    veterans, scientists, and thought leaders, Mirum is backed by
-                    significant expertise in rare diseases and pharmaceutical development.
-                    We aim to always provide dedicated leadership and safe, effective
-                    treatments that you, your patients, and their caregivers can rely on.
-                  </p>
-                  <div class="gap-[18px]">
-                    <a href="https://mirumpharma.com/" class="inline-block px-20 py-[22px] rounded-[135px] border-2 border-text-purple text-base font-semibold text-text-purple text-center">
-                      Discover Mirum
-                    </a>
+      </div>
+      
+      <!-- Desktop layout (original styling preserved) -->
+      <div class="hidden md:block h-[552px] relative">
+        <div class="absolute left-0 w-[1440px] pl-[60px] pr-[150px] py-[72px] flex gap-[139px] items-center">
+          <div class="w-[422.84px] pl-[71px] py-[72px] rounded-tr-[140px] rounded-br-[140px] flex justify-center items-center" style="background: linear-gradient(266.68deg, #fff -0.69%, rgba(255,255,255,0) 97.26%);">
+            <img src="/themes/cholbam/images/mirum-logo-footer.svg" class="w-[238px] h-[137px]" alt="Mirum Logo">
+          </div>
+          <div class="flex justify-center items-start flex-grow gap-2">
+            <div class="flex justify-center items-center flex-grow gap-[43px]">
+              <div class="flex flex-col justify-center items-start flex-grow gap-6">
+                <div class="w-full">
+                  <div class="gap-[18px] flex flex-col">
+                    <p class="w-[569.69px] text-[32px] font-bold text-text-blue">
+                      Mirum Is Your Partner in Patient-Centric Care
+                    </p>
+                    <p class="w-[668.16px] text-lg text-text-blue">
+                      Mirum has a driven and focused team whose mission is to create
+                      transformative, life-changing medicine for patients with rare diseases.
+                      We have a strong understanding of the significant impact rare diseases
+                      have on quality of life for patients and caregivers. With 140+ industry
+                      veterans, scientists, and thought leaders, Mirum is backed by
+                      significant expertise in rare diseases and pharmaceutical development.
+                      We aim to always provide dedicated leadership and safe, effective
+                      treatments that you, your patients, and their caregivers can rely on.
+                    </p>
+                    <div class="gap-[18px]">
+                      <a href="https://mirumpharma.com/" class="inline-block px-20 py-[22px] rounded-[135px] border-2 border-text-purple text-base font-semibold text-text-purple text-center">
+                        Discover Mirum
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
