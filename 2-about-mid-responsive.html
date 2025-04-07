@@ -20,8 +20,31 @@
     background: url(/themes/cholbam/images/hero-about.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 20% center; /* First value pushes focal point left */
-  } 
+    background-position: 20% center;
+    /* First value pushes focal point left */
+  }
+
+  .btn-with-svg {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    background-image: url("/themes/cholbam/images/button-gradient-white.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.2s ease;
+    padding: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .btn-with-svg:hover {
+    transform: scale(1.05);
+  }
 </style>
 
 <div class="w-full max-w-[1440px] overflow-hidden m-auto" data-charset="UTF-8">
@@ -32,7 +55,7 @@
     <div class="md:w-1/2 h-[150px] md:h-[343px] about-hero">
       <!-- This is empty intentionally, just for background space -->
     </div>
-    
+
     <!-- Right column with text content -->
     <div class="md:w-1/2 flex flex-col justify-center items-start gap-2 px-4 md:px-8 py-8 md:py-0">
       <div class="flex flex-col justify-start items-start self-stretch relative gap-2.5">
@@ -48,351 +71,412 @@
         </p>
       </div>
     </div>
-    
+
     <!-- Texture overlay - desktop only -->
     <div class="hidden md:block absolute w-full h-full top-0 left-0 pointer-events-none bg-texture-top"></div>
   </div>
-    
-  
-  
-    <div class="flex flex-col gap-8 md:gap-16 pb-8 md:pb-16 bg-white">
-      <div class="flex flex-col gap-8">
-  
-        <div class="w-full overflow-hidden bg-white">
-          <div class="">
-            <div class="opacity-90 gap-8 px-3 md:px-[150px] about-page bg-texture">
-              <p class="w-full max-w-[1140px] text-center text-text">
-                <span class="text-[32px] md:text-[40px] font-semibold text-center">CHOLBAM may help your patients with
-                  SLOS<sup>1-3*:</sup></span>
-  
-              </p>
-              <div class="gap-6 md:gap-10">
-                <!-- Mobile layout -->
-                <div class="flex flex-col md:hidden w-full">
-                  <div class="flex flex-col items-center w-full gap-2 pt-2 pb-6 rounded-2xl">
-                    <div class="px-24 gap-2.5"></div>
-                    <div class="flex flex-col items-center gap-8">
-                      <div class="flex flex-col items-center gap-4">
-                        <p class="w-full max-w-[351px] text-[26px] text-center text-teal">
-                          <span class="font-semibold">Increase plasma cholesterol</span>
-                        </p>
-                      </div>
+
+
+
+  <div class="flex flex-col gap-8 md:gap-16 pb-8 md:pb-16 bg-white">
+    <div class="flex flex-col gap-8">
+
+      <div class="w-full overflow-hidden bg-white">
+        <div class="">
+          <div class="opacity-90 gap-8 px-3 md:px-[150px] about-page bg-texture">
+            <p class="w-full max-w-[1140px] text-center text-text">
+              <span class="text-[32px] md:text-[40px] font-semibold text-center">CHOLBAM may help your patients with
+                SLOS<sup>1-3*:</sup></span>
+
+            </p>
+            <div class="gap-6 md:gap-10">
+              <!-- Mobile layout -->
+              <div class="flex flex-col md:hidden w-full">
+                <div class="flex flex-col items-center w-full gap-2 pt-2 pb-6 rounded-2xl">
+                  <div class="px-24 gap-2.5"></div>
+                  <div class="flex flex-col items-center gap-8">
+                    <div class="flex flex-col items-center gap-4">
+                      <p class="w-full max-w-[351px] text-[26px] text-center text-teal">
+                        <span class="font-semibold">Increase plasma cholesterol</span>
+                      </p>
                     </div>
                   </div>
-                  <div class="flex flex-col items-center w-full gap-2 pt-2 pb-6 rounded-2xl">
-                    <div class="px-24 gap-2.5"></div>
-                    <div class="flex flex-col items-center gap-8">
+                </div>
+                <div class="flex flex-col items-center w-full gap-2 pt-2 pb-6 rounded-2xl">
+                  <div class="px-24 gap-2.5"></div>
+                  <div class="flex flex-col items-center gap-8">
+                    <div class="flex flex-col items-center gap-4">
+                      <p class="w-full max-w-[351px] text-[26px] font-semibold text-center text-teal">
+                        Lower key liver enzymes
+                      </p>
                       <div class="flex flex-col items-center gap-4">
-                        <p class="w-full max-w-[351px] text-[26px] font-semibold text-center text-teal">
-                          Lower key liver enzymes
+                        <p class="w-full max-w-[351px] text-lg text-left text-text">
+                          <span>Alanine aminotransferase (ALT) or aspartate aminotransferase (AST) values </span>
+                          <span class="font-bold">reduced</span>
+                          <span> to less than 50 U/L, or baseline levels </span>
+                          <span class="font-bold">reduced</span>
+                          <span> by 80%. </span><br><br>
+                          <span>Total bilirubin values </span>
+                          <span class="font-bold">reduced</span>
+                          <span> to less than or equal to 1 mg/dL.</span>
                         </p>
-                        <div class="flex flex-col items-center gap-4">
-                          <p class="w-full max-w-[351px] text-lg text-left text-text">
-                            <span>Alanine aminotransferase (ALT) or aspartate aminotransferase (AST) values </span>
-                            <span class="font-bold">reduced</span>
-                            <span> to less than 50 U/L, or baseline levels </span>
-                            <span class="font-bold">reduced</span>
-                            <span> by 80%. </span><br><br>
-                            <span>Total bilirubin values </span>
-                            <span class="font-bold">reduced</span>
-                            <span> to less than or equal to 1 mg/dL.</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flex flex-col items-center w-full gap-2 pt-2 rounded-2xl">
-                    <div class="px-24 gap-2.5"></div>
-                    <div class="flex flex-col items-center gap-8">
-                      <div class="flex flex-col items-center gap-4">
-                        <p class="w-full max-w-[351px] text-[26px] font-semibold text-center text-teal">
-                          Improve certain growth parameters
-                        </p>
-                        <div class="flex flex-col items-center gap-4">
-                          <p class="w-full max-w-[351px] text-lg text-left text-text">
-                            <span>In a pivotal study, responders saw a </span>
-                            <span class="font-bold">9% increase in body weight or maintained weight above the 50th
-                              percentile</span>
-                            <span>.1*</span><br><br>
-                            <span>In a 2-month pilot study, 9 of 12 patients showed an </span>
-                            <span class="font-bold">increasing trend in weight gain</span>
-                            <span> from baseline, though statistical significance was not reached.2 </span>
-                          </p>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-  
-                <!-- Desktop layout -->
-                <div class="hidden md:flex gap-14">
-                  <div class="flex flex-col items-center flex-grow gap-2 pb-12 rounded-2xl sm:w-1/2 md:w-1/3">
-                    <div class="px-24">
-                      <img src="/themes/cholbam/images/icon-plasma.svg">
-  
-                    </div>
-                    <div class="flex flex-col items-center gap-8">
-                      <div class="gap-4">
-                        <p class="text-[26px] text-center text-teal">
-                          <span class="text-[26px] font-semibold text-center">Increase plasma cholesterol</span>
+                <div class="flex flex-col items-center w-full gap-2 pt-2 rounded-2xl">
+                  <div class="px-24 gap-2.5"></div>
+                  <div class="flex flex-col items-center gap-8">
+                    <div class="flex flex-col items-center gap-4">
+                      <p class="w-full max-w-[351px] text-[26px] font-semibold text-center text-teal">
+                        Improve certain growth parameters
+                      </p>
+                      <div class="flex flex-col items-center gap-4">
+                        <p class="w-full max-w-[351px] text-lg text-left text-text">
+                          <span>In a pivotal study, responders saw a </span>
+                          <span class="font-bold">9% increase in body weight or maintained weight above the 50th
+                            percentile</span>
+                          <span>.1*</span><br><br>
+                          <span>In a 2-month pilot study, 9 of 12 patients showed an </span>
+                          <span class="font-bold">increasing trend in weight gain</span>
+                          <span> from baseline, though statistical significance was not reached.2 </span>
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div class="flex flex-col items-center flex-grow gap-2 pb-12 rounded-2xl sm:w-1/2 md:w-1/3">
-                    <div class="px-24">
-                      <img src="/themes/cholbam/images/icon-enzymes.svg">
+                </div>
+              </div>
+
+              <!-- Desktop layout -->
+              <div class="hidden md:flex gap-14">
+                <div class="flex flex-col items-center flex-grow gap-2 pb-12 rounded-2xl sm:w-1/2 md:w-1/3">
+                  <div class="px-24">
+                    <img src="/themes/cholbam/images/icon-plasma.svg">
+
+                  </div>
+                  <div class="flex flex-col items-center gap-8">
+                    <div class="gap-4">
+                      <p class="text-[26px] text-center text-teal">
+                        <span class="text-[26px] font-semibold text-center">Increase plasma cholesterol</span>
+                      </p>
                     </div>
-                    <div class="flex flex-col items-center gap-8">
+                  </div>
+                </div>
+                <div class="flex flex-col items-center flex-grow gap-2 pb-12 rounded-2xl sm:w-1/2 md:w-1/3">
+                  <div class="px-24">
+                    <img src="/themes/cholbam/images/icon-enzymes.svg">
+                  </div>
+                  <div class="flex flex-col items-center gap-8">
+                    <div class="gap-4">
+                      <p class="text-[26px] font-semibold text-center text-teal">
+                        <span class="text-[26px] font-semibold text-center">Lower key liver </span><br><span
+                          class="text-[26px] font-semibold text-center">enzymes</span>
+                      </p>
                       <div class="gap-4">
-                        <p class="text-[26px] font-semibold text-center text-teal">
-                          <span class="text-[26px] font-semibold text-center">Lower key liver </span><br><span class="text-[26px] font-semibold text-center">enzymes</span>
+                        <p class="text-lg text-left text-text">
+                          <span class="text-lg text-left">Alanine aminotransferase (ALT) or aspartate aminotransferase
+                            (AST) values </span><span class="text-lg font-bold text-left">reduced</span><span
+                            class="text-lg text-left">
+                            to less than 50 U/L, or baseline levels </span><span
+                            class="text-lg font-bold text-left">reduced</span><span class="text-lg text-left">
+                            by 80%. </span><br><br><span class="text-lg text-left">Total bilirubin values </span><span
+                            class="text-lg font-bold text-left">reduced</span><span class="text-lg text-left">
+                            to less than or equal to 1 mg/dL.</span>
                         </p>
-                        <div class="gap-4">
-                          <p class="text-lg text-left text-text">
-                            <span class="text-lg text-left">Alanine aminotransferase (ALT) or aspartate aminotransferase
-                              (AST) values </span><span class="text-lg font-bold text-left">reduced</span><span class="text-lg text-left">
-                              to less than 50 U/L, or baseline levels </span><span class="text-lg font-bold text-left">reduced</span><span class="text-lg text-left">
-                              by 80%. </span><br><br><span class="text-lg text-left">Total bilirubin values </span><span class="text-lg font-bold text-left">reduced</span><span class="text-lg text-left">
-                              to less than or equal to 1 mg/dL.</span>
-                          </p>
-                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="flex flex-col items-center flex-grow gap-2 rounded-2xl sm:w-2/2 md:w-1/3">
-                    <div class="px-24">
-                      <img src="/themes/cholbam/images/icon-growth.svg">
-                    </div>
-                    <div class="flex flex-col items-center gap-8">
+                </div>
+                <div class="flex flex-col items-center flex-grow gap-2 rounded-2xl sm:w-2/2 md:w-1/3">
+                  <div class="px-24">
+                    <img src="/themes/cholbam/images/icon-growth.svg">
+                  </div>
+                  <div class="flex flex-col items-center gap-8">
+                    <div class="gap-4">
+                      <p class="text-[26px] font-semibold text-center text-teal">
+                        Improve certain growth parameters
+                      </p>
                       <div class="gap-4">
-                        <p class="text-[26px] font-semibold text-center text-teal">
-                          Improve certain growth parameters
+                        <p class="text-lg text-left text-text">
+                          <span class="text-lg text-left">In a pivotal study, responders saw a </span><span
+                            class="text-lg font-bold text-left">10% increase in body weight or maintained weight above
+                            the 50th
+                            percentile.<sup>1</sup>*</span><br><br><span class="text-lg text-left">In a 2-month pilot
+                            study, 9 of 12 patients showed an </span><span
+                            class="text-lg font-bold text-left">increasing trend in weight gain</span><span
+                            class="text-lg text-left">
+                            from baseline, though statistical significance was not
+                            reached.<sup>2</sup></span><br><br><span class="text-lg font-bold text-left">Statistically
+                            significant improvements in
+                            height</span><span class="text-lg text-left">
+                            have been reported.<sup>3</sup></span>
                         </p>
-                        <div class="gap-4">
-                          <p class="text-lg text-left text-text">
-                            <span class="text-lg text-left">In a pivotal study, responders saw a </span><span class="text-lg font-bold text-left">10% increase in body weight or maintained weight above
-                              the 50th
-                              percentile.<sup>1</sup>*</span><br><br><span class="text-lg text-left">In a 2-month pilot
-                              study, 9 of 12 patients showed an </span><span class="text-lg font-bold text-left">increasing trend in weight gain</span><span class="text-lg text-left">
-                              from baseline, though statistical significance was not
-                              reached.<sup>2</sup></span><br><br><span class="text-lg font-bold text-left">Statistically
-                              significant improvements in
-                              height</span><span class="text-lg text-left">
-                              have been reported.<sup>3</sup></span>
-                          </p>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-  
-            <!-- Years of Clinical Data section -->
-            <div class="opacity-90 gap-10 px-3 md:px-[150px] py-8 md:py-16 bg-[#F7F7F7]">
-              <div class="flex flex-col items-center flex-grow gap-10">
-                <div class="gap-4">
-                  <p class="text-[32px] md:text-[40px] font-semibold text-center text-text">
-                    <span class="font-semibold text-center">Years of Clinical Data and </span>
-                    <span class="md:hidden"><br></span>
-                    <span class="font-semibold text-center">Real-World Use</span>
-                  </p>
-                  <div class="flex justify-center gap-2.5">
-                    <p class="w-full max-w-[704px] text-lg text-left text-text">Backed by &gt;18 years of safety data,
-                      CHOLBAM has a well-characterized safety and tolerability profile. There were 12 adverse reactions
-                      reported across 9 patients in the clinical trials.<sup>1ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¡</sup> In clinical trials, the most
-                      common adverse reaction (~2%) reported was diarrhea.<sup>1</sup></p>
-                  </div>
+          </div>
+
+          <!-- Years of Clinical Data section -->
+          <div class="opacity-90 gap-10 px-3 md:px-[150px] py-8 md:py-16 bg-[#F7F7F7]">
+            <div class="flex flex-col items-center flex-grow gap-10">
+              <div class="gap-4">
+                <p class="text-[32px] md:text-[40px] font-semibold text-center text-text">
+                  <span class="font-semibold text-center">Years of Clinical Data and </span>
+                  <span class="md:hidden"><br></span>
+                  <span class="font-semibold text-center">Real-World Use</span>
+                </p>
+                <div class="flex justify-center gap-2.5">
+                  <p class="w-full max-w-[704px] text-lg text-left text-text">Backed by &gt;18 years of safety data,
+                    CHOLBAM has a well-characterized safety and tolerability profile. There were 12 adverse reactions
+                    reported across 9 patients in the clinical trials.<sup>1ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¡</sup> In clinical trials,
+                    the most
+                    common adverse reaction (~2%) reported was diarrhea.<sup>1</sup></p>
                 </div>
-  
-                <!-- FDA approved banner -->
-                <div class="bg-[url('/themes/cholbam/images/bg-header-blue.svg')] bg-no-repeat bg-cover w-full bg-center py-10 px-5 md:py-12" style="background-size: 100% 100%;">
-                  <h2 class="text-white font-semibold text-center text-[26px] md:text-[32px]">
-                    CHOLBAM has been FDA approved and helping patients absorb what matters since 2015.
-                  </h2>
-                </div>
-  
-                <!-- Table section - only visible on desktop -->
-                <div class="hidden md:block gap-8">
-                  <div class="gap-2.5 px-[104px]">
-                    <div class="gap-8 px-8 rounded-[20px]">
-                      <div>
-                        <div class="gap-2.5">
-                          <p class="text-[32px] text-left text-text">
-                            <span class="text-[32px] font-semibold text-left">Most common adverse reactions in Trials 1
-                              and 2<sup>2</sup></span>
-                          </p>
-                        </div>
+              </div>
+
+              <!-- FDA approved banner -->
+              <div
+                class="bg-[url('/themes/cholbam/images/bg-header-blue.svg')] bg-no-repeat bg-cover w-full bg-center py-10 px-5 md:py-12"
+                style="background-size: 100% 100%;">
+                <h2 class="text-white font-semibold text-center text-[26px] md:text-[32px]">
+                  CHOLBAM has been FDA approved and helping patients absorb what matters since 2015.
+                </h2>
+              </div>
+
+              <!-- Table section - only visible on desktop -->
+              <div class="hidden md:block gap-8">
+                <div class="gap-2.5 px-[104px]">
+                  <div class="gap-8 px-8 rounded-[20px]">
+                    <div>
+                      <div class="gap-2.5">
+                        <p class="text-[32px] text-left text-text">
+                          <span class="text-[32px] font-semibold text-left">Most common adverse reactions in Trials 1
+                            and 2<sup>2</sup></span>
+                        </p>
                       </div>
-                      <!-- Table content remains unchanged for desktop -->
-                      <div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 overflow-hidden rounded-xl bg-white" style="box-shadow: 0px 0px 12px 0 rgba(160,94,166,0.12);">
+                    </div>
+                    <!-- Table content remains unchanged for desktop -->
+                    <div
+                      class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 overflow-hidden rounded-xl bg-white"
+                      style="box-shadow: 0px 0px 12px 0 rgba(160,94,166,0.12);">
                       <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0">
-                        <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-white" style="background: linear-gradient(86.73deg, #a05ea7 13.35%, #765fa4 321.4%);">
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-white"
+                          style="background: linear-gradient(86.73deg, #a05ea7 13.35%, #765fa4 321.4%);">
                           <p class="flex-grow w-[220px] text-lg font-semibold text-left text-white">
                             Adverse Reactions
                           </p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-white" style="background: linear-gradient(85.12deg, #a05ea7 13.83%, #865fa5 136.48%, #805fa5 166.1%, #765fa4 215.17%);">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-white"
+                          style="background: linear-gradient(85.12deg, #a05ea7 13.83%, #865fa5 136.48%, #805fa5 166.1%, #765fa4 215.17%);">
                           <p class="flex-grow w-[205.33px] text-lg font-semibold text-center text-white">Trial 1</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-white" style="background: linear-gradient(to right, #a05ea7 -21.67%, #855fa5 95.06%, #765fa4 161.67%);">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-white"
+                          style="background: linear-gradient(to right, #a05ea7 -21.67%, #855fa5 95.06%, #765fa4 161.67%);">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-white">
-                            <span class="flex-grow w-[205.33px] text-lg font-semibold text-center text-white">Trial 2</span><sup>Â§</sup>
+                            <span class="flex-grow w-[205.33px] text-lg font-semibold text-center text-white">Trial
+                              2</span><sup>Â§</sup>
                           </p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5" style="background: linear-gradient(84.87deg, #a05ea7 -96.36%, #765fa4 87.27%);">
+                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5"
+                          style="background: linear-gradient(84.87deg, #a05ea7 -96.36%, #765fa4 87.27%);">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-white">
-                            <span class="flex-grow w-[205.33px] text-lg font-semibold text-center text-white">Overall </span><span class="flex-grow w-[205.33px] text-lg text-center text-white">(%)</span>
+                            <span class="flex-grow w-[205.33px] text-lg font-semibold text-center text-white">Overall
+                            </span><span class="flex-grow w-[205.33px] text-lg text-center text-white">(%)</span>
                           </p>
                         </div>
                       </div>
-                      <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
-                        <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                      <div
+                        class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[220px] text-base font-semibold text-left text-[#191919]">Diarrhea</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">2<sup>Â§</sup></p>
                         </div>
                         <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">3 (2%)</p>
                         </div>
                       </div>
-                      <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
-                        <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                      <div
+                        class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[220px] text-base font-semibold text-left text-[#191919]">
                             Reflux esophagitis
                           </p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">0</p>
                         </div>
                         <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1 (1%)</p>
                         </div>
                       </div>
-                      <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
-                        <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                      <div
+                        class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[220px] text-base font-semibold text-left text-[#191919]">Malaise</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">0</p>
                         </div>
                         <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1 (1%)</p>
                         </div>
                       </div>
-                      <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
-                        <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                      <div
+                        class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[220px] text-base font-semibold text-left text-[#191919]">Jaundice</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">0</p>
                         </div>
                         <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1 (1%)</p>
                         </div>
                       </div>
-                      <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
-                        <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                      <div
+                        class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[220px] text-base font-semibold text-left text-[#191919]">
                             Skin lesion
                           </p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">0</p>
                         </div>
                         <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1 (1%)</p>
                         </div>
                       </div>
-                      <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
-                        <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                      <div
+                        class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[220px] text-base font-semibold text-left text-[#191919]">Nausea</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">0</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1<sup>Â§</sup></p>
                         </div>
                         <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1 (1%)</p>
                         </div>
                       </div>
-                      <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
-                        <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                      <div
+                        class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[220px] text-base font-semibold text-left text-[#191919]">
                             Abdominal pain
                           </p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">0</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1<sup>Â§</sup></p>
                         </div>
                         <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1 (1%)</p>
                         </div>
                       </div>
-                      <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
-                        <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                      <div
+                        class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[220px] text-base font-semibold text-left text-[#191919]">
                             Intestinal polyp
                           </p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">0</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1<sup>Â§</sup></p>
                         </div>
                         <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1 (1%)</p>
                         </div>
                       </div>
-                      <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
-                        <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                      <div
+                        class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 border-t-0 border-r-0 border-b border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[220px] text-base font-semibold text-left text-[#191919]">
                             Urinary tract infection
                           </p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">0</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1<sup>Â§</sup></p>
                         </div>
                         <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1 (1%)</p>
                         </div>
                       </div>
-                      <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10">
-                        <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                      <div
+                        class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 bg-[#a05ea6]/10">
+                        <div
+                          class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[252px] relative gap-2.5 pl-8 py-2 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[220px] text-base font-semibold text-left text-[#191919]">
                             Peripheral neuropathy
                           </p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">0</p>
                         </div>
-                        <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
+                        <div
+                          class="flex justify-center items-center self-stretch flex-grow relative gap-2.5 border-t-0 border-r border-b-0 border-l-0 border-[#a05ea6]/30">
                           <p class="flex-grow w-[205.33px] text-lg text-center text-[#191919]">1</p>
                         </div>
                         <div class="flex justify-center items-center self-stretch flex-grow relative gap-2.5">
@@ -400,143 +484,124 @@
                         </div>
                       </div>
                     </div>
-  
-  
-                    </div>
+
+
                   </div>
                 </div>
-  
-                <div class="footnotes text-sm mt-8">
-                  <h2 class="font-semibold mb-4">Footnotes</h2>
-  
-                  <p class="mb-2">
-                    No evaluable patients with SLOS were in the pivotal studies.<sup>1</sup> Patients had
-                    other bile acid synthesis disorders due to single enzyme defects.*
-                  </p>
-  
-                  <p class="mb-2">
-                    In 11 of 12 patients with SLOS given CHOLBAM 10 mg/kg/day and cholesterol
-                    supplementation for 2 months, in an open-label, pilot study. Long-term studies
-                    are needed to determine durability of effect and possible clinical benefits.<sup>2</sup>
-                  </p>
-  
-                  <p class="mb-4">
-                    Clinical safety experience with CHOLBAM consists of<sup>1</sup>:<br>
-                    Trial 1: a non-randomized, open-label, single-arm trial of 50 patients with
-                    bile acid synthesis disorders due to single enzyme defects (SEDs) and 29
-                    patients with peroxisomal disorders (PDs) including Zellweger spectrum
-                    disorders. Safety data are available over the 18 years of the trial<br>
-                    Trial 2: an extension trial of 12 new patients (10 SED and 2 PD) along with
-                    31 (21 SED and 10 PD) patients who rolled over from Trial 1<br>
-                    Safety data are available for 3 years and 11 months of treatment. Adverse
-                    events were not collected systematically in either of these trials. Most
-                    patients received an oral dose of 10 to 15 mg/kg/day of CHOLBAM.
-                  </p>
-  
-                  <p>
-                    Adverse reactions that occurred in new patients.
-                  </p>
+              </div>
+
+              <div class="footnotes text-sm mt-8">
+                <h2 class="font-semibold mb-4">Footnotes</h2>
+
+                <p class="mb-2">
+                  No evaluable patients with SLOS were in the pivotal studies.<sup>1</sup> Patients had
+                  other bile acid synthesis disorders due to single enzyme defects.*
+                </p>
+
+                <p class="mb-2">
+                  In 11 of 12 patients with SLOS given CHOLBAM 10 mg/kg/day and cholesterol
+                  supplementation for 2 months, in an open-label, pilot study. Long-term studies
+                  are needed to determine durability of effect and possible clinical benefits.<sup>2</sup>
+                </p>
+
+                <p class="mb-4">
+                  Clinical safety experience with CHOLBAM consists of<sup>1</sup>:<br>
+                  Trial 1: a non-randomized, open-label, single-arm trial of 50 patients with
+                  bile acid synthesis disorders due to single enzyme defects (SEDs) and 29
+                  patients with peroxisomal disorders (PDs) including Zellweger spectrum
+                  disorders. Safety data are available over the 18 years of the trial<br>
+                  Trial 2: an extension trial of 12 new patients (10 SED and 2 PD) along with
+                  31 (21 SED and 10 PD) patients who rolled over from Trial 1<br>
+                  Safety data are available for 3 years and 11 months of treatment. Adverse
+                  events were not collected systematically in either of these trials. Most
+                  patients received an oral dose of 10 to 15 mg/kg/day of CHOLBAM.
+                </p>
+
+                <p>
+                  Adverse reactions that occurred in new patients.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col md:grid md:grid-cols-2 opacity-90 gap-10 mt-6 lg:mt-16 w-full max-w-[750px] m-auto">
+          <!-- First box -->
+          <div
+            class="flex flex-col items-center px-4 pt-12 pb-6 lg:pt-4 lg:pb-8 rounded-2xl bg-teal-primary-gradient shadow-md h-full">
+            <div class="px-24 min-h-[103px] flex items-center">
+              <img src="/themes/cholbam/images/icons/icon-group.svg" width="67" height="80">
+            </div>
+            <div class="flex flex-col items-center gap-4">
+              <div class="flex flex-col items-center gap-4">
+                <p class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">Mirum Access Plus
+                  can make starting CHOLBAM easier for you and your patients</p>
+              </div>
+              <div class="flex">
+                <div class="flex space-x-[-1px]">
+                  <!-- svg placeholder -->&nbsp;
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="flex justify-center gap-2 px-8 py-4">
+                    <!-- Main wrapper with a single link that wraps everything --><!-- CKEditor-Resistant Decorative Button -->
+
+                      <a class="" href="/support">
+                        <button class="btn-with-svg">
+                          Learn more about Mirum Access Plus
+                        </button>
+                      </a>
+
+                  </div>
+                </div>
+                <div class="flex">
+                  <!-- svg placeholder -->&nbsp;
                 </div>
               </div>
             </div>
           </div>
-        <div class="flex flex-col md:grid md:grid-cols-2 opacity-90 gap-10 mt-6 lg:mt-16 w-full max-w-[750px] m-auto">
-                        <!-- First box -->
-                        <div class="flex flex-col items-center px-4 pt-12 pb-6 lg:pt-4 lg:pb-8 rounded-2xl bg-teal-primary-gradient shadow-md h-full">
-                            <div class="px-24 min-h-[103px] flex items-center">
-                                <img src="/themes/cholbam/images/icons/icon-group.svg" width="67" height="80">
-                            </div>
-                            <div class="flex flex-col items-center gap-4">
-                                <div class="flex flex-col items-center gap-4">
-                                    <p class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">Mirum Access Plus can make starting CHOLBAM easier for you and your patients</p>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex space-x-[-1px]">
-                                        <!-- svg placeholder -->&nbsp;
-                                    </div>
-                                    <div class="flex flex-col items-center">
-                                        <div class="flex justify-center gap-2 px-8 py-4">
-                                            <!-- Main wrapper with a single link that wraps everything --><!-- CKEditor-Resistant Decorative Button -->
-                                            <div class="decorative-button flex justify-start items-center text-white hover:text-yellow-400 transition-colors duration-300 w-auto">
-                                                <!-- Left decorative elements -->
-                                                <div class="left-decorative flex justify-start items-center self-stretch flex-shrink-0 relative space-x-[-1px]">
-                                                    <!-- Combined SVG for left elements to avoid splitting --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="self-stretch flex-shrink-0" width="6" height="65" viewBox="0 0 6 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><!-- First path --><path d="M1.79965 62.8018C1.92701 42.2405 1.67838 21.6646 1.33106 1.27787C1.2689 -0.239124 0.85943 -0.175462 0.83406 1.46522C0.831523 2.06548 0.838119 2.673 0.842432 3.27144C0.985013 16.7134 1.29833 29.9135 1.29833 43.3718C1.30341 49.8491 1.30087 56.3318 1.25952 62.8036C1.28337 64.6444 1.77377 64.648 1.79965 62.8036V62.8018Z" fill="currentColor"></path><!-- Second path, moved 2px to the right --><path d="M3.7977 62.9369C3.36867 47.4846 3.61894 31.9942 3.21076 16.5332C3.13528 12.7047 3.03994 8.87792 2.928712 5.05286C2.982342 3.33824 2.320914 0.140607 3.87219 0.189004C3.87219 0.189004 3.8702 0.187275 3.86921 0.185547C5.68267 0.271969 4.91001 5.86869 5.201 8.04826C5.37877 16.3414 5.42148 24.6397 5.50192 32.9362C5.5635 40.709 5.62606 48.4784 5.71644 56.2513C5.55257 58.6642 6.15938 61.6198 5.56946 63.7545C5.04806 64.5081 3.89007 64.2972 3.7987 62.9352L3.7977 62.9369Z" fill="currentColor"></path></svg></a>
-                                                </div>
-                                                <!-- Button content -->
-                                                <div class="button-content flex flex-col justify-start items-center relative">
-                                                    <!-- Combined decorative lines with text in the middle to prevent splitting -->
-                                                    <div class="button-inner">
-                                                        <!-- Top decorative line --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M164.444 4.16076C137.067 4.44214 109.858 2.24474 82.5245 1.75873C58.0436 1.78309 33.5514 1.83912 9.07689 2.12172C6.85165 1.89394 2.40599 3.30933 0.922497 2.24474C0.293624 0.957242 3.16709 0.991348 4.21844 0.752607C24.5617 -0.321731 45.0775 0.437127 65.4691 0.563806C81.7602 0.847616 98.0464 0.338463 114.337 0.552843C131.041 0.811074 147.737 1.35555 164.443 1.52852C167.424 1.48467 167.83 4.16077 164.443 4.16198L164.444 4.16076Z" fill="currentColor"></path><path d="M101.779 3.66788C86.0028 3.59115 70.2294 3.25496 54.4527 3.20015C39.9499 3.31221 25.4423 3.24278 10.9427 3.48396C8.15312 3.52781 5.35866 3.67276 2.56743 3.57897C2.07078 3.55826 1.42578 3.29272 1.42578 2.86761C1.42578 2.35968 2.22074 2.16588 2.76415 2.14883C7.69678 1.99292 12.631 1.94907 17.5669 1.91496C37.5763 1.52396 57.5681 2.524 77.5759 2.2682C86.9945 2.17563 96.347 1.62384 105.743 1.2706C121.362 0.670093 137 1.09885 152.625 1.28156C155.934 1.31932 159.239 1.34247 162.548 1.34125C163.377 1.34125 164.589 1.67987 164.589 2.43629C164.589 3.19272 163.377 3.53012 162.548 3.53134C142.29 3.43998 122.036 3.69091 101.778 3.66776H101.779Z" fill="currentColor"></path></svg></a>
-                                                                                                                <div class="button-label flex justify-center items-center relative gap-2 px-8 py-4 cursor-pointer">
-                                                            <a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><span class="text-base font-semibold text-center capitalize !whitespace-normal">Learn
-                                                                    more about Mirum Access Plus</span></a></div>
-                                                        <!-- Bottom decorative line --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M113.26 3.16048C76.1734 2.30865 39.003 2.73144 1.93024 2.45256C1.37299 2.40161 0.719722 2.12452 0.850377 1.7661C1.70514 0.656844 7.98915 1.51582 10.0513 1.28611C30.4837 1.09036 50.8847 1.34689 71.2983 1.82419C94.698 1.94933 118.107 1.45683 141.475 0.818628C146.922 0.675614 153.001 0.567459 158.202 0.415507C160.927 0.600531 165.303 -0.587378 166.833 1.12789C166.855 3.0988 160.041 2.22285 157.708 2.56787C142.911 3.10774 128.087 3.49656 113.26 3.16137V3.16048Z" fill="currentColor"></path><path d="M102.75 4.18109C86.6492 4.10691 70.5551 3.69395 54.4515 3.74311C46.044 3.7449 37.6428 3.9201 29.2368 3.88971C20.3932 3.82535 11.5434 3.82446 2.70923 4.08277C1.48455 4.13551 0.415698 3.21396 2.50459 2.97441C7.43955 2.66247 12.4328 2.78045 17.3913 2.76437C38.6896 2.70627 59.9878 3.40167 81.2782 2.79207C109.093 2.05645 136.932 2.0493 164.763 1.80617C167.032 1.79992 167.518 3.25151 164.763 3.33642C161.572 3.38022 158.393 3.53574 155.203 3.60278C137.726 3.91294 120.238 4.22668 102.75 4.18109Z" fill="currentColor"></path></svg></a>
-                                                    </div>
-                                                </div>
-                                                <!-- Right decorative element -->
-                                                <div class="right-decorative flex justify-start items-center self-stretch flex-shrink-0 relative gap-2.5">
-                                                    <a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="self-stretch flex-shrink-0" width="3" height="65" viewBox="0 0 3 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M1.3284 62.6947C1.01083 42.3476 1.597 21.9323 0.833496 1.63072C0.893597 -0.222769 2.10749 -0.293023 2.27963 1.41789C3.1433 16.998 2.65359 32.9417 2.73372 48.6561C2.73669 53.3363 2.7493 58.0186 2.83315 62.6947C2.83983 63.079 2.74931 63.4385 2.64914 63.67C2.26108 64.5709 1.39518 64.3188 1.3284 62.6947Z" fill="currentColor"></path></svg></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex">
-                                        <!-- svg placeholder -->&nbsp;
-                                    </div>
-                                </div>
-                            </div>
+
+          <!-- Second box -->
+          <div class="flex flex-col items-center px-4 pt-2 pb-6 lg:pt-4 lg:pb-8 rounded-2xl shadow-md h-full"
+            style="background: linear-gradient(to right, #0081A3 0%, #A05FA6 100%);">
+            <div class="px-24 min-h-[103px] flex items-center">
+              <img src="/themes/cholbam/images/icons/icon-map-logo.svg" width="168" height="74">
+            </div>
+            <div class="flex flex-col items-center gap-4">
+              <div class="flex flex-col items-center gap-4">
+                <p class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">CHOLBAM is simple
+                  for patients to start</p>
+              </div>
+              <div class="flex">
+                <div class="flex space-x-[-1px]">
+                  <!-- svg placeholder -->&nbsp;
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="flex justify-center gap-2 px-8 py-4">
+                    <!-- Main wrapper with a single link that wraps everything --><!-- CKEditor-Resistant Decorative Button -->
+                    <div
+                      class="decorative-button flex justify-start items-center text-white hover:text-yellow-400 transition-colors duration-300 w-auto">
+                      <!-- Left decorative elements -->
+                      <!-- Button content -->
+                      <div class="button-content flex flex-col justify-start items-center relative">
+                        <!-- Combined decorative lines with text in the middle to prevent splitting -->
+                        <div class="button-inner">
+                          <a class="" href="/dosing">
+                            <button class="btn-with-svg">See dosing</button>
+                          </a>
                         </div>
-                        
-                        <!-- Second box -->
-                        <div class="flex flex-col items-center px-4 pt-2 pb-6 lg:pt-4 lg:pb-8 rounded-2xl shadow-md h-full" style="background: linear-gradient(to right, #0081A3 0%, #A05FA6 100%);">
-                            <div class="px-24 min-h-[103px] flex items-center">
-                                <img src="/themes/cholbam/images/icons/icon-map-logo.svg" width="168" height="74">
-                            </div>
-                            <div class="flex flex-col items-center gap-4">
-                                <div class="flex flex-col items-center gap-4">
-                                    <p class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">CHOLBAM is simple for patients to start</p>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex space-x-[-1px]">
-                                        <!-- svg placeholder -->&nbsp;
-                                    </div>
-                                    <div class="flex flex-col items-center">
-                                        <div class="flex justify-center gap-2 px-8 py-4">
-                                            <!-- Main wrapper with a single link that wraps everything --><!-- CKEditor-Resistant Decorative Button -->
-                                            <div class="decorative-button flex justify-start items-center text-white hover:text-yellow-400 transition-colors duration-300 w-auto">
-                                                <!-- Left decorative elements -->
-                                                <div class="left-decorative flex justify-start items-center self-stretch flex-shrink-0 relative space-x-[-1px]">
-                                                    <!-- Combined SVG for left elements to avoid splitting --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="self-stretch flex-shrink-0" width="6" height="65" viewBox="0 0 6 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><!-- First path --><path d="M1.79965 62.8018C1.92701 42.2405 1.67838 21.6646 1.33106 1.27787C1.2689 -0.239124 0.85943 -0.175462 0.83406 1.46522C0.831523 2.06548 0.838119 2.673 0.842432 3.27144C0.985013 16.7134 1.29833 29.9135 1.29833 43.3718C1.30341 49.8491 1.30087 56.3318 1.25952 62.8036C1.28337 64.6444 1.77377 64.648 1.79965 62.8036V62.8018Z" fill="currentColor"></path><!-- Second path, moved 2px to the right --><path d="M3.7977 62.9369C3.36867 47.4846 3.61894 31.9942 3.21076 16.5332C3.13528 12.7047 3.03994 8.87792 2.928712 5.05286C2.982342 3.33824 2.320914 0.140607 3.87219 0.189004C3.87219 0.189004 3.8702 0.187275 3.86921 0.185547C5.68267 0.271969 4.91001 5.86869 5.201 8.04826C5.37877 16.3414 5.42148 24.6397 5.50192 32.9362C5.5635 40.709 5.62606 48.4784 5.71644 56.2513C5.55257 58.6642 6.15938 61.6198 5.56946 63.7545C5.04806 64.5081 3.89007 64.2972 3.7987 62.9352L3.7977 62.9369Z" fill="currentColor"></path></svg></a>
-                                                </div>
-                                                <!-- Button content -->
-                                                <div class="button-content flex flex-col justify-start items-center relative">
-                                                    <!-- Combined decorative lines with text in the middle to prevent splitting -->
-                                                    <div class="button-inner">
-                                                        <!-- Top decorative line --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M164.444 4.16076C137.067 4.44214 109.858 2.24474 82.5245 1.75873C58.0436 1.78309 33.5514 1.83912 9.07689 2.12172C6.85165 1.89394 2.40599 3.30933 0.922497 2.24474C0.293624 0.957242 3.16709 0.991348 4.21844 0.752607C24.5617 -0.321731 45.0775 0.437127 65.4691 0.563806C81.7602 0.847616 98.0464 0.338463 114.337 0.552843C131.041 0.811074 147.737 1.35555 164.443 1.52852C167.424 1.48467 167.83 4.16077 164.443 4.16198L164.444 4.16076Z" fill="currentColor"></path><path d="M101.779 3.66788C86.0028 3.59115 70.2294 3.25496 54.4527 3.20015C39.9499 3.31221 25.4423 3.24278 10.9427 3.48396C8.15312 3.52781 5.35866 3.67276 2.56743 3.57897C2.07078 3.55826 1.42578 3.29272 1.42578 2.86761C1.42578 2.35968 2.22074 2.16588 2.76415 2.14883C7.69678 1.99292 12.631 1.94907 17.5669 1.91496C37.5763 1.52396 57.5681 2.524 77.5759 2.2682C86.9945 2.17563 96.347 1.62384 105.743 1.2706C121.362 0.670093 137 1.09885 152.625 1.28156C155.934 1.31932 159.239 1.34247 162.548 1.34125C163.377 1.34125 164.589 1.67987 164.589 2.43629C164.589 3.19272 163.377 3.53012 162.548 3.53134C142.29 3.43998 122.036 3.69091 101.778 3.66776H101.779Z" fill="currentColor"></path></svg></a>
-                                                        <div class="button-label flex justify-center items-center relative gap-2 px-8 py-4 cursor-pointer">
-                                                            <a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#">
-                                                              <span class="text-base font-semibold text-center capitalize whitespace-normal">
-                                                                See dosing</span></a>
-                                                        </div>
-                                                        <!-- Bottom decorative line --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M113.26 3.16048C76.1734 2.30865 39.003 2.73144 1.93024 2.45256C1.37299 2.40161 0.719722 2.12452 0.850377 1.7661C1.70514 0.656844 7.98915 1.51582 10.0513 1.28611C30.4837 1.09036 50.8847 1.34689 71.2983 1.82419C94.698 1.94933 118.107 1.45683 141.475 0.818628C146.922 0.675614 153.001 0.567459 158.202 0.415507C160.927 0.600531 165.303 -0.587378 166.833 1.12789C166.855 3.0988 160.041 2.22285 157.708 2.56787C142.911 3.10774 128.087 3.49656 113.26 3.16137V3.16048Z" fill="currentColor"></path><path d="M102.75 4.18109C86.6492 4.10691 70.5551 3.69395 54.4515 3.74311C46.044 3.7449 37.6428 3.9201 29.2368 3.88971C20.3932 3.82535 11.5434 3.82446 2.70923 4.08277C1.48455 4.13551 0.415698 3.21396 2.50459 2.97441C7.43955 2.66247 12.4328 2.78045 17.3913 2.76437C38.6896 2.70627 59.9878 3.40167 81.2782 2.79207C109.093 2.05645 136.932 2.0493 164.763 1.80617C167.032 1.79992 167.518 3.25151 164.763 3.33642C161.572 3.38022 158.393 3.53574 155.203 3.60278C137.726 3.91294 120.238 4.22668 102.75 4.18109Z" fill="currentColor"></path></svg></a>
-                                                    </div>
-                                                </div>
-                                                <!-- Right decorative element -->
-                                                <div class="right-decorative flex justify-start items-center self-stretch flex-shrink-0 relative gap-2.5">
-                                                    <a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="self-stretch flex-shrink-0" width="3" height="65" viewBox="0 0 3 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M1.3284 62.6947C1.01083 42.3476 1.597 21.9323 0.833496 1.63072C0.893597 -0.222769 2.10749 -0.293023 2.27963 1.41789C3.1433 16.998 2.65359 32.9417 2.73372 48.6561C2.73669 53.3363 2.7493 58.0186 2.83315 62.6947C2.83983 63.079 2.74931 63.4385 2.64914 63.67C2.26108 64.5709 1.39518 64.3188 1.3284 62.6947Z" fill="currentColor"></path></svg></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex">
-                                        <!-- svg placeholder -->&nbsp;
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex">
+                  <!-- svg placeholder -->&nbsp;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  
-  
   </div>
+
+
+</div>
