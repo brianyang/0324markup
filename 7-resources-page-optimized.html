@@ -49,14 +49,29 @@
     height: 100%;
   }
 
+  .btn-with-svg-border {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        color: #000;
+        cursor: pointer;
+        position: relative;
+        background-image: url("/themes/cholbam/images/button-border.svg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: transform 0.2s ease;
+        padding: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 
+    .btn-with-svg-border:hover {
+        transform: scale(1.05);
+    }
 
-  /* --- Styling for Demo --- */
-  body {
-    font-family: sans-serif;
-    padding: 30px;
-    background-color: #f0f0f0;
-  }
+ 
 </style>
 <div class="w-full max-w-7xl mx-auto">
   <div class="flex flex-col md:flex-row about-page relative">
@@ -68,8 +83,7 @@
       </div>
       <div class="flex justify-start items-start self-stretch relative gap-2.5 mx-auto">
         <p class="text-base text-left text-white">
-          <span class="text-base font-semibold text-left text-white">Several resources are available to help you
-            Ã¢â‚¬Â¨prescribe and access CHOLBAM for your patients.
+          <span class="text-base font-semibold text-left text-white">Several resources are available to help you prescribe and access CHOLBAM for your patients.
           </span>
         </p>
       </div>
@@ -101,15 +115,13 @@
 
           <div class="flex items-center justify-center mt-auto">
             <div class="flex items-center space-x-2">
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
-              <div class="flex flex-col items-center">
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-                <a href="#" class="px-6 py-3 text-teal font-semibold hover:text-primary transition-colors duration-200">
+
+              <a class="mt-8" href="/">
+                <button class="btn-with-svg-border">
                   Learn more about the Smith-Lemli-Opitz Foundation
-                </a>
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-              </div>
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
+                </button>
+              </a>
+
             </div>
           </div>
 
@@ -143,15 +155,13 @@
 
           <div class="flex items-center justify-center mt-auto">
             <div class="flex items-center space-x-2">
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
-              <div class="flex flex-col items-center">
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-                <a href="#" class="px-6 py-3 text-teal font-semibold hover:text-primary transition-colors duration-200">
+
+              <a class="mt-8" href="/">
+                <button class="btn-with-svg-border">
                   Learn more about NORD
-                </a>
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-              </div>
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
+                </button>
+              </a>
+
             </div>
           </div>
 
@@ -185,17 +195,13 @@
           </div>
 
           <div class="flex items-center justify-center mt-auto">
-            <div class="flex items-center space-x-2">
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
-              <div class="flex flex-col items-center">
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-                <a href="#" class="px-6 py-3 text-teal font-semibold hover:text-primary transition-colors duration-200">
+
+            <a class="mt-8" href="/">
+              <button class="btn-with-svg-border">
                   Learn more about GARD
-                </a>
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-              </div>
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
-            </div>
+              </button>
+            </a>
+
           </div>
 
 
@@ -227,17 +233,13 @@
           </div>
 
           <div class="flex items-center justify-center mt-auto">
-            <div class="flex items-center space-x-2">
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
-              <div class="flex flex-col items-center">
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-                <a href="#" class="px-6 py-3 text-teal font-semibold hover:text-primary transition-colors duration-200">
+
+            <a class="mt-8" href="/">
+              <button class="btn-with-svg-border">
                   Learn more about the HPO project
-                </a>
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-              </div>
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
-            </div>
+              </button>
+            </a>
+
           </div>
 
         </div>
@@ -268,17 +270,14 @@
           </div>
 
           <div class="flex items-center justify-center mt-auto">
-            <div class="flex items-center space-x-2">
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
-              <div class="flex flex-col items-center">
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-                <a href="#" class="px-6 py-3 text-teal font-semibold hover:text-primary transition-colors duration-200">
+
+            <a class="mt-8" href="/">
+              <button class="btn-with-svg-border">
                   Download the CHOLBAM Brochure
-                </a>
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-              </div>
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
-            </div>
+              </button>
+            </a>
+
+
           </div>
 
 
@@ -310,17 +309,14 @@
           </div>
 
           <div class="flex items-center justify-center mt-auto">
-            <div class="flex items-center space-x-2">
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
-              <div class="flex flex-col items-center">
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-                <a href="#" class="px-6 py-3 text-teal font-semibold hover:text-primary transition-colors duration-200">
+
+
+            <a class="mt-8" href="/">
+              <button class="btn-with-svg-border">
                   Access Caregiver Resources
-                </a>
-                <img src="decorative-line-horizontal.svg" alt="" class="w-full">
-              </div>
-              <img src="decorative-line-vertical.svg" alt="" class="h-16">
-            </div>
+              </button>
+            </a>
+
           </div>
         </div>
 
@@ -358,9 +354,9 @@
           <div class="flex flex-col items-center">
             <div class="flex justify-center gap-2 px-8 py-4">
 
-<a class="" href="/videos">
+<a class="" href="/support">
                         <button class="btn-with-svg">
-                          Hear real patient stories
+                          Learn more about Mirum Access Plus
                         </button>
                       </a>
 
@@ -388,9 +384,9 @@
 
 <div class="flex justify-center gap-2 px-8 py-4">
 
-<a class="" href="/videos">
+<a class="" href="/dosing">
                         <button class="btn-with-svg">
-                          Hear real patient stories
+                          See dosing
                         </button>
                       </a>
 
