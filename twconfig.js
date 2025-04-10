@@ -30,6 +30,8 @@ tailwind.config = {
         teal: '#0080a3',
         dark: '#231f20',
         purple: '#765ea4',
+        green: '#617D3B',
+        blue: '#0080A3',
         bg: {
           lightGray: '#eceded',
         }
