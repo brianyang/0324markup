@@ -32,6 +32,8 @@ tailwind.config = {
         purple: '#765ea4',
         green: '#617D3B',
         blue: '#0080A3',
+        orange: '#BD5A0F',
+        purple2: '#A05EA6',
         bg: {
           lightGray: '#eceded',
         }

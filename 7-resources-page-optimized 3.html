@@ -1,0 +1,403 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/tailwind.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="twconfig.js"></script>
+<style>
+  .bg-texture {
+    background: url(/themes/cholbam/images/bg-texture.png);
+    background-size: 100%;
+    background-position: 100% -213px;
+  }
+
+  .bg-texture-top {
+    background: url(/themes/cholbam/images/bg-texture-top.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+  }
+
+  .bg-hero-gradient {
+    background: url(/themes/cholbam/images/hero-understanding.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .resources-hero {
+    background: url(/themes/cholbam/images/hero-about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% center;
+    /* First value pushes focal point left */
+  }
+
+
+
+
+  .gradient-border-pseudo {
+    position: relative;
+    padding: 4px;
+    background: linear-gradient(90deg, #0081A3, #A05FA6);
+    border-radius: 18px;
+    width: fit-content;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  .gradient-border-pseudo .content {
+    background-color: white;
+    border-radius: 14px;
+    height: 100%;
+  }
+
+  .btn-with-svg-border {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        color: #000;
+        cursor: pointer;
+        position: relative;
+        background-image: url("/themes/cholbam/images/button-border.svg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: transform 0.2s ease;
+        padding: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .btn-with-svg-border:hover {
+        transform: scale(1.05);
+    }
+
+ 
+</style>
+<div class="w-full max-w-7xl mx-auto">
+  <div class="flex flex-col md:flex-row about-page relative">
+
+    <div class="md:w-full flex flex-col justify-center items-start gap-2 px-4 md:px-8 py-28 md:py-0 h-[150px] md:h-[343px] bg-hero-gradient">
+      <div class="flex flex-col justify-start items-start self-stretch relative gap-2.5">
+        <p class="self-stretch text-[30px] md:text-[36px] md:text-[52px] font-bold text-left text-white md:text-center">
+          RESOURCES</p>
+      </div>
+      <div class="flex justify-start items-start self-stretch relative gap-2.5 mx-auto">
+        <p class="text-base text-left text-white">
+          <span class="text-base font-semibold text-left text-white">Several resources are available to help you prescribe and access CHOLBAM for your patients.
+          </span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <!-- Resources grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8 max-w-[1140px] mx-auto">
+    <!-- Resource Card 1: Smith-Lemli-Opitz Foundation -->
+    <div class="flex flex-col bg-white/80 backdrop-blur-[80px] rounded-2xl gap-6 shadow-sm">
+
+      <div class="gradient-border-pseudo">
+        <div class="content p-6">
+
+          <div class="flex justify-center px-4">
+            <img src="/themes/cholbam/images/logo-resources-smith.png" alt="Smith-Lemli-Opitz Foundation Logo" class="h-24 object-contain">
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h2 class="text-2xl font-semibold text-dark text-center">
+              The Smith-Lemli-Opitz Foundation<sup>1*</sup>
+            </h2>
+            <p class="text-base text-dark">
+              The Smith-Lemli-Opitz Foundation works worldwide to improve the quality of life
+              for people with SLOS. The Foundation continues to raise awareness of the syndrome
+              and funds research to improve treatments with the hope of someday finding a cure for SLOS.
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center mt-auto">
+            <div class="flex items-center space-x-2">
+
+              <a class="mt-8" href="/">
+                <button class="btn-with-svg-border">
+                  Learn more about the Smith-Lemli-Opitz Foundation
+                </button>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Resource Card 2: NORD -->
+    <div class="flex flex-col bg-white/80 backdrop-blur-[80px] rounded-2xl gap-6 shadow-sm">
+
+      <div class="gradient-border-pseudo">
+        <div class="content p-6">
+
+          <div class="flex justify-center px-4">
+            <img src="/themes/cholbam/images/logo-resources-nord.png" alt="NORD Logo" class="h-24 object-contain">
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h2 class="text-2xl font-semibold text-dark text-center">
+              National Organization for Rare Diseases (NORD)<sup>2*</sup>
+            </h2>
+            <p class="text-base text-dark">
+              Dedicated to helping people with rare orphan diseases and assisting the
+              organizations that serve these patients, NORD is committed to the
+              identification, treatment, and cure of rare disorders through programs of
+              education, advocacy, research, and service.
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center mt-auto">
+            <div class="flex items-center space-x-2">
+
+              <a class="mt-8" href="/">
+                <button class="btn-with-svg-border">
+                  Learn more about NORD
+                </button>
+              </a>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Resource Card 3: GARD -->
+    <div class="flex flex-col bg-white/80 backdrop-blur-[80px] rounded-2xl gap-6 shadow-sm">
+
+      <div class="gradient-border-pseudo">
+        <div class="content p-6">
+
+
+
+          <div class="flex justify-center px-4">
+            <img src="/themes/cholbam/images/logo-resources-gard.png" alt="GARD Logo" class="h-24 object-contain">
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h2 class="text-2xl font-semibold text-dark text-center">
+              GARD<sup>3*</sup>
+            </h2>
+            <p class="text-base text-dark">
+              GARD is a program of the National Institutes of Health (NIH) that provides free
+              access to reliable, easy to understand information about genetic and rare
+              diseases.
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center mt-auto">
+
+            <a class="mt-8" href="/">
+              <button class="btn-with-svg-border">
+                  Learn more about GARD
+              </button>
+            </a>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Resource Card 4: HPO -->
+    <div class="flex flex-col bg-white/80 backdrop-blur-[80px] rounded-2xl gap-6 shadow-sm">
+
+      <div class="gradient-border-pseudo">
+        <div class="content p-6">
+
+
+          <div class="flex justify-center px-4">
+            <img src="/themes/cholbam/images/logo-resources-human.png" alt="HPO Logo" class="h-24 object-contain">
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h2 class="text-2xl font-semibold text-dark text-center">
+              The Human Phenotype Ontology<sup>4*</sup>
+            </h2>
+            <p class="text-base text-dark">
+              The Human Phenotype Ontology (HPO) project provides an ontology of medically
+              relevant phenotypes, disease-phenotype annotations, and the algorithms that
+              operate on these.
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center mt-auto">
+
+            <a class="mt-8" href="/">
+              <button class="btn-with-svg-border">
+                  Learn more about the HPO project
+              </button>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Resource Card: CHOLBAM Patient Brochure -->
+    <div class="flex flex-col bg-white/80 backdrop-blur-[80px] rounded-2xl gap-6 shadow-sm">
+
+      <div class="gradient-border-pseudo">
+        <div class="content p-6">
+
+
+          <div class="flex justify-center px-4">
+            <img src="/themes/cholbam/images/logo-resources-download.png" alt="CHOLBAM Brochure" class="h-24 object-contain">
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h2 class="text-2xl font-semibold text-dark text-center">
+              CHOLBAM Patient Brochure
+            </h2>
+            <p class="text-base text-dark">
+              Provide this resource to your patients considering or receiving CHOLBAM treatment. This brochure contains
+              essential information about the medication, its benefits, and important safety information.
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center mt-auto">
+
+            <a class="mt-8" href="/">
+              <button class="btn-with-svg-border">
+                  Download the CHOLBAM Brochure
+              </button>
+            </a>
+
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Resource Card: CHOLBAM Caregiver Guide -->
+    <div class="flex flex-col bg-white/80 backdrop-blur-[80px] rounded-2xl gap-6 shadow-sm">
+
+      <div class="gradient-border-pseudo">
+        <div class="content p-6">
+
+
+          <div class="flex justify-center px-4">
+            <img src="/themes/cholbam/images/logo-resources-download.png" alt="CHOLBAM Guide" class="h-24 object-contain">
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h2 class="text-2xl font-semibold text-dark text-center">
+              CHOLBAM Caregiver Guide
+            </h2>
+            <p class="text-base text-dark">
+              This comprehensive guide helps caregivers understand CHOLBAM treatment, including dosing information,
+              administration tips, and how to monitor for potential side effects.
+            </p>
+          </div>
+
+          <div class="flex items-center justify-center mt-auto">
+
+
+            <a class="mt-8" href="/">
+              <button class="btn-with-svg-border">
+                  Access Caregiver Resources
+              </button>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!-- Footnotes section -->
+  <div class="w-full max-w-3xl mx-auto px-4 py-8">
+    <div class="text-sm text-muted space-y-2">
+      <p>1* The Smith-Lemli-Opitz Foundation is a registered 501(c)(3) non-profit organization.</p>
+      <p>2* NORD is a registered trademark of the National Organization for Rare Disorders.</p>
+      <p>3* GARD is part of the National Center for Advancing Translational Sciences (NCATS).</p>
+      <p>4* HPO is funded by the National Institutes of Health (NIH).</p>
+    </div>
+  </div>
+  <div class="flex flex-col md:grid md:grid-cols-2 opacity-90 gap-10 mt-6 lg:mt-16 w-full max-w-[750px] m-auto">
+    <!-- First box -->
+    <div class="flex flex-col items-center px-4 pt-12 pb-6 lg:pt-4 lg:pb-8 rounded-2xl bg-teal-primary-gradient shadow-md h-full">
+      <div class="px-24 min-h-[103px] flex items-center">
+        <img src="/themes/cholbam/images/icons/icon-group.svg" width="67" height="80">
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <div class="flex flex-col items-center gap-4">
+          <p class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">Mirum Access Plus can make
+            starting CHOLBAM easier for you and your patients</p>
+        </div>
+        <div class="flex">
+          <div class="flex space-x-[-1px]">
+            <!-- svg placeholder -->&nbsp;
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="flex justify-center gap-2 px-8 py-4">
+
+<a class="" href="/support">
+                        <button class="btn-with-svg">
+                          Learn more about Mirum Access Plus
+                        </button>
+                      </a>
+
+
+</div>
+          </div>
+          <div class="flex">
+            <!-- svg placeholder -->&nbsp;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second box -->
+    <div class="flex flex-col items-center px-4 pt-2 pb-6 lg:pt-4 lg:pb-8 rounded-2xl shadow-md h-full" style="background: linear-gradient(to right, #0081A3 0%, #A05FA6 100%);">
+      <div class="px-24 min-h-[103px] flex items-center">
+        <img src="/themes/cholbam/images/icons/icon-map-logo.svg" width="168" height="74">
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <div class="flex flex-col items-center gap-4">
+          <p class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">CHOLBAM is simple for
+            patients to start</p>
+        </div>
+        <div class="flex">
+
+<div class="flex justify-center gap-2 px-8 py-4">
+
+<a class="" href="/dosing">
+                        <button class="btn-with-svg">
+                          See dosing
+                        </button>
+                      </a>
+
+
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

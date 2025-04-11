@@ -21,6 +21,21 @@
     background-size: cover;
     background-position: center;
   }
+
+
+  .bg-texture-green {
+    background: url(/themes/cholbam/images/bg-texture-green.png);
+    background-size: 100%;
+    background-position: 100% -213px;
+  }
+
+  .bg-hero-gradient-green {
+    background: url(/themes/cholbam/images/hero-understanding-green-flat.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
 </style>
 
 <main class="w-full max-w-screen-2xl mx-auto overflow-hidden m-auto">
@@ -34,11 +49,9 @@
     <!-- Hero section with two columns that stack on mobile -->
     <div class="flex flex-col md:flex-row about-page relative">
 
-      <div
-        class="md:w-full flex flex-col justify-center items-start gap-2 px-4 md:px-8 py-28 md:py-0 h-[150px] md:h-[343px] bg-hero-gradient">
+      <div class="md:w-full flex flex-col justify-center items-start gap-2 px-4 md:px-8 py-28 md:py-0 h-[150px] md:h-[343px] bg-hero-gradient-green">
         <div class="flex flex-col justify-start items-start self-stretch relative gap-2.5">
-          <p
-            class="self-stretch text-[30px] md:text-[36px] md:text-[52px] font-bold text-left text-white md:text-center">
+          <p class="self-stretch text-[30px] md:text-[36px] md:text-[52px] font-bold text-left text-white md:text-center">
             UNDERSTANDING SLOS
           </p>
         </div>
@@ -56,116 +69,23 @@
 
     <section class="flex flex-col">
       <div class="w-full">
-        <div class="px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 pt-6 pb-16 bg-texture">
-          <div class="flex flex-col lg:flex-row gap-6 lg:gap-10">
-            <div class="flex flex-col gap-6 pb-10 w-full lg:w-1/2">
-              <div class="relative">
-                <p class="text-lg text-text">
-                  <span class="font-semibold">SLOS results from an autosomal recessive mutation on the
-                    7-dehydrocholesterol reductase (DHCR7) gene.</span><sup class="font-normal">1,3</sup>
-                </p>
-              </div>
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-4 pl-6 border-l-2 border-teal">
-                  <div class="relative">
-                    <p class="text-lg text-text">
-                      Deficient activity of DHCR7 impairs the final step in cholesterol biosynthesis4. This results in:
-                    </p>
-                  </div>
-                  <div class="flex gap-1">
-                    <div class="flex flex-grow">
-                      <div class="flex flex-col gap-4">
-                        <div class="flex flex-col">
-                          <div class="relative">
-                            <p class="text-base text-text">
-                              Low cholesterol levels<sup class="font-normal">1,5</sup>
-                            </p>
-                          </div>
-                          <div class="relative">
-                            <p class="text-base text-text">
-                              A buildup of toxic cholesterol precursors 7-DHC (7-dehydrocholesterol) and 8-DHC
-                              (8-dehydrocholesterol)<sup class="font-normal">4,5</sup>
-                            </p>
-                          </div>
-                          <div class="relative">
-                            <p class="text-base text-text">
-                              Bile acids are also impacted because cholesterol is needed for bile acid synthesis<sup
-                                class="font-normal">1,6</sup>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Right Diagram -->
-            <div class="w-full lg:w-1/2 relative h-[480px]">
-              <!-- Diagram title --><img class="w-full h-full" src="/themes/cholbam/images/chart-understanding.svg"
-                width="398" height="480">
-            </div>
-          </div>
-          <!-- Bottom Cards -->
-          <div class="flex flex-col gap-10 mt-10 relative">
-            <div
-              class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-3 pl-8 pr-[70px] py-6 rounded-xl bg-white">
-              <p class="flex-grow-0 flex-shrink-0 w-[476px] text-lg text-left text-[#191919]">
-                <span class="flex-grow-0 flex-shrink-0 w-[476px] text-lg font-semibold text-left text-[#191919]">Low
-                  cholesterol levels and high concentrations of 7-DHC and 8-DHC are seen in patients with
-                  SLOS.</span><sup class="font-normal">1,5,8,9</sup>
-              </p>
-              <svg class="flex-grow" width="111" height="3" viewBox="0 0 111 3" fill="none"
-                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <line x1="1" y1="1.82239" x2="110" y2="1.82239" stroke="#0080A3" stroke-width="2" stroke-linecap="round"
-                  stroke-dasharray="5 5"></line>
-              </svg>
-              <div
-                class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2 px-10 py-4 rounded-[10px] bg-[#0080a3] border border-[#0080a3]">
-                <p class="flex-grow-0 flex-shrink-0 text-lg font-bold text-left text-white">
-                  Cholesterol
-                </p>
-              </div>
-            </div>
-            <div
-              class="flex justify-center items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-3 px-8 py-6 rounded-xl bg-white">
-              <p class="flex-grow-0 flex-shrink-0 text-lg text-left text-[#191919]">
-                <span class="flex-grow-0 flex-shrink-0 text-lg font-semibold text-left text-[#191919]">Low cholesterol
-                  levels result in low levels of bile acids.</span><sup class="font-normal">2</sup>
-              </p>
-              <svg class="flex-grow" width="92" height="3" viewBox="0 0 92 3" fill="none"
-                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <line x1="1" y1="1.82239" x2="91" y2="1.82239" stroke="#A05EA6" stroke-width="2" stroke-linecap="round"
-                  stroke-dasharray="5 5"></line>
-              </svg>
-              <div
-                class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 relative gap-0.5 px-10 py-2 rounded-[59px] bg-[#a05ea6]">
-                <p class="flex-grow-0 flex-shrink-0 text-lg font-bold text-left text-white">
-                  Primary Bile Acids
-                </p>
-                <p class="flex-grow-0 flex-shrink-0 text-lg text-left text-white">
-                  Cholic Acid
-                </p>
-              </div>
-            </div>
-            <!-- Connector SVG between cards -->
-            <div class="absolute left-3/4 top-[98px]">
-              <img class="w-[12px] h-[62px]" src="/themes/cholbam/images/vertical-connector.svg"
-                alt="Vertical Connector">
-            </div>
-          </div>
-        </div>
+        <h1>content here</h1>
         <!-- Bottom Section -->
         <section class="px-4 sm:px-8 md:px-16 lg:px-24 py-16  bg-[#F7F7F7]">
           <div class="flex flex-col items-center gap-10">
             <!-- Section Title -->
-            <div class="text-center">
-              <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-text">
-                Patients with SLOS can present&nbsp;<br>
-                with broad clinical manifestations<sup class="font-normal">1,8,10</sup>
-              </h2>
-              <p class="text-lg text-text text-center mt-2 max-w-4xl mx-auto">
-                Clinical SLOS phenotypes may include major and minor malformations<sup class="font-normal">1,5</sup>:
+            <div class="">
+              <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-text text-center">
+  
+  
+Clinical presentation  
+  
+
+
+</h2>
+              <p class="text-lg text-text mt-2 max-w-4xl mx-auto mb-8">Patients with milder signs and symptoms may have a delay in diagnosis, as these signs and symptoms may not appear abnormal to parents. In addition, many other diseases present similarly. Overall, common presenting signs include developmental delay and other neurologic abnormalities, vision impairment (due to retinal degeneration), sensorineural hearing loss, and evidence of liver disease.2,8<sup class="font-normal">1,5</sup>:
+              </p>
+<p class="text-lg text-text mt-2 max-w-4xl mx-auto">In affected patients, the severity and range of signs and symptoms vary according to subgroup, based on age at presentation. Signs and symptoms also can vary by patient within severity subgroups, ie, not every patient will present the same way, even if they are grouped as all severe, all moderate, or all mild.1,2<sup class="font-normal">1,5</sup>:
               </p>
             </div>
             <!-- Three Columns -->
@@ -173,59 +93,78 @@
               <!-- Column 1 -->
               <div class="flex flex-col items-center gap-4 p-4 rounded-2xl">
                 <div class="px-6">
-                  <img class="h-24 w-auto" src="/themes/cholbam/images/icon-arrow-up.svg" alt="Pathway Icon 1"
-                    width="130" height="98">
+                  <img class="h-24 w-auto" src="/themes/cholbam/images/icon-arrow-up.svg" alt="Pathway Icon 1" width="130" height="98">
                 </div>
                 <div class="text-center">
-                  <p class="text-xl md:text-2xl font-semibold text-teal">
-                    Increase in toxic cholesterol precursors 7-DHC and 8-DHC<sup class="font-normal">1,5,7</sup>
+  
+  
+                  <p class="text-xl md:text-2xl font-semibold text-teal">Nutrition<sup class="font-normal">1,5,7</sup>
                   </p>
+
+<div class="text-lg text-left">
+  
+  
+  <li>Clinical assessment uncovers nutritional issues, including steatorrhea and failure to thrive<sup>1,9</sup></li> 
+
+  <li>Failure to thrive is defined as either a weight for age that falls below the fifth percentile on multiple occasions or a weight deceleration that crosses 2 major percentile lines on a growth chart<sup>10</sup></li>
+
+  <li>Depleted pool of primary bile acids in PBD-ZSD can lead to poor absorption of fats and fat-soluble vitamins, and poor growth<sup>1,3</sup></li>
+  
+  
+                    </div>
                 </div>
               </div>
               <!-- Column 2 -->
               <div class="flex flex-col items-center gap-4 p-4 rounded-2xl">
                 <div class="px-6">
-                  <img class="h-24 w-auto" src="/themes/cholbam/images/icon-arrow-down.svg" alt="Pathway Icon 1"
-                    width="130" height="98">
+                  <img class="h-24 w-auto" src="/themes/cholbam/images/icon-arrow-down.svg" alt="Pathway Icon 1" width="130" height="98">
                 </div>
                 <div class="text-center">
-                  <p class="text-xl md:text-2xl font-semibold text-teal">
-                    Decrease in cholesterol production and absorption<sup class="font-normal">4,11</sup>
+                  <p class="text-xl md:text-2xl font-semibold text-teal">Liver function tests<sup class="font-normal"><sup>4,11</sup>
                   </p>
-                  <div class="mt-4 text-left">
-                    <p class="text-lg text-text">
-                      Interference with embryonic development (hedgehog signaling)<sup class="font-normal">8</sup><br>
-                      Altered vitamin D synthesis<sup class="font-normal">4,5</sup><br>
-                      Effects on cell membranes/myelin, lipid rafts<sup class="font-normal">1,4</sup><br>
-                      Deficiencies in steroid hormones, bile acids, and oxysterols<sup class="font-normal">1,5,12</sup>
-                    </p>
+                  <div class="text-lg text-left">
+                    <ul class="list-disc pl-5">
+                      <li>Interference with embryonic development (hedgehog signaling)<sup class="font-normal">8</sup></li>
+                      <li>Altered vitamin D synthesis<sup class="font-normal">4,5</sup></li>
+                      <li>Effects on cell membranes/myelin, lipid rafts<sup class="font-normal">1,4</sup></li>
+                      <li>Deficiencies in steroid hormones, bile acids, and oxysterols<sup class="font-normal">1,5,12</sup></li>
+                    </ul>
                   </div>
                 </div>
               </div>
               <!-- Column 3 -->
               <div class="flex flex-col items-center gap-4 p-4 rounded-2xl">
                 <div class="px-6">
-                  <img class="h-24 w-auto" src="/themes/cholbam/images/icon-arrow-down-2.svg" alt="Pathway Icon 1"
-                    width="130" height="98">
+                  <img class="h-24 w-auto" src="/themes/cholbam/images/icon-arrow-down-2.svg" alt="Pathway Icon 1" width="130" height="98">
                 </div>
                 <div class="text-center">
-                  <p class="text-xl md:text-2xl font-semibold text-teal">
-                    Decrease in primary bile acids<sup class="font-normal">12</sup>
+                  <p class="text-xl md:text-2xl font-semibold text-teal">Atypical bile acids<sup class="font-normal">12</sup>
                   </p>
-                  <div class="mt-4 text-left">
-                    <p class="text-lg text-text">
-                      Primary bile acids are critical for:<br>
-                      Absorption of fat and fat-soluble vitamins<sup class="font-normal">13</sup><br>
-                      Increased absorption of cholesterol<sup class="font-normal">4,6</sup><br>
-                      A decrease in bile acids may lead to poor nutrition and poor growth<sup
-                        class="font-normal">12</sup>
-                    </p>
+                  <div class="text-lg text-left">
+                    <p class="mb-2">Primary bile acids are critical for:</p>
+                    <ul class="list-disc pl-5">
+                      <li>Absorption of fat and fat-soluble vitamins<sup class="font-normal">13</sup></li>
+                      <li>Increased absorption of cholesterol<sup class="font-normal">4,6</sup></li>
+                      <li>A decrease in bile acids may lead to poor nutrition and poor growth<sup class="font-normal">12</sup></li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+<div class="bg-[url('/themes/cholbam/images/bg-header-green.svg')] bg-no-repeat bg-cover w-full bg-center py-10 px-5 md:py-12" style="background-size: 100% 100%;">
+                <h2 class="text-white font-semibold text-center text-[26px] md:text-[32px]">
+                  CHOLBAM has been FDA approved and helping patients absorb what matters since 2015.
+                </h2>
+              </div>
         </section>
+
+<div style="background-size: 100% 100%;">
+                <h2 class="text-white font-semibold text-center text-[26px] md:text-[32px]">
+                  CHOLBAM has been FDA approved and helping patients absorb what matters since 2015.
+                </h2>
+              </div>
       </div>
     </section>
   </div>
