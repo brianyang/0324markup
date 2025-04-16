@@ -31,7 +31,7 @@
     }
 
     .btn-with-svg:hover {
-        transform: scale(1.05);
+        transform: scale(1);
     }
     
     .btn-with-arrow-animation {
@@ -59,7 +59,7 @@
     #contact-btn .scribble-animation-container {
         pointer-events: none;
         z-index: 5; /* Increased z-index to be above button content */
-        transform: scale(1.2); /* Scale up the animation */
+        transform: scale(1); /* Don't scale the animation to maintain correct height */
     }
     
     /* Adjust button text for better appearance with animation */
@@ -79,11 +79,13 @@
     /* Additional styles for the scribble SVG */
     .scribble-svg {
         width: 100% !important;
-        height: auto !important;
+        height: 72px !important; /* Fixed height matching correct SVG height */
+        max-height: 100% !important; /* Prevent overflow */
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        overflow: hidden; /* Hide any content that exceeds the dimensions */
     }
     
     /* For fine-tuning the animation position */
@@ -91,7 +93,9 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(1);
+        height: 72px; /* Adjusted to the correct height */
+        max-height: 72px; /* Ensure the height doesn't exceed this value */
     }
 
     .bg-texture {
@@ -634,10 +638,10 @@
                 animContainer.style.left = '0';
                 animContainer.style.top = '0';
                 animContainer.style.width = '100%'; 
-                animContainer.style.height = '100%';
+                animContainer.style.height = '72px'; // Set exact height for animation container
                 animContainer.style.pointerEvents = 'none';
                 animContainer.style.zIndex = '5';
-                animContainer.style.transform = 'scale(1.2)';
+                animContainer.style.transform = 'scale(1)'; // Don't scale to maintain correct height
                 contactBtn.appendChild(animContainer);
             }
             
@@ -650,7 +654,7 @@
                 path: 'lottie-btn/scribble.json',
                 rendererSettings: {
                     // Ensure animation is rendered at the proper size
-                    preserveAspectRatio: 'xMidYMid meet',
+                    preserveAspectRatio: 'xMidYMid slice', // Use slice to maintain width and crop height if necessary
                     className: 'scribble-svg'
                 }
             });
