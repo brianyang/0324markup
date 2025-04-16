@@ -119,10 +119,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 container._lottie.setDirection(-1);
                 container._lottie.goToAndPlay(currentFrame, true);
                 
-                // Add completion callback
-                container._lottie.addEventListener('complete', function() {
-                    button.animationState.isReversing = false;
-                });
+                // Ensure animation continues to play and is visible
+                setTimeout(function() {
+                    if (container._lottie && container._lottie.isPaused) {
+                        container._lottie.play();
+                    }
+                }, 50);
+                
+                // Add completion callback with deferred execution to avoid event conflicts
+                setTimeout(function() {
+                    container._lottie.addEventListener('complete', function onComplete() {
+                        button.animationState.isReversing = false;
+                        // Remove the event listener after it fires once
+                        container._lottie.removeEventListener('complete', onComplete);
+                    });
+                }, 10);
             }
             
             // Reset text color
@@ -270,10 +281,21 @@ document.addEventListener('DOMContentLoaded', function() {
             anim.setDirection(-1);
             anim.goToAndPlay(currentFrame, true);
             
-            // Add completion callback
-            anim.addEventListener('complete', function() {
-                buttonElement.animationState.isReversing = false;
-            });
+            // Ensure animation continues to play and is visible
+            setTimeout(function() {
+                if (anim && anim.isPaused) {
+                    anim.play();
+                }
+            }, 50);
+            
+            // Add completion callback with deferred execution to avoid event conflicts
+            setTimeout(function() {
+                anim.addEventListener('complete', function onComplete() {
+                    buttonElement.animationState.isReversing = false;
+                    // Remove the event listener after it fires once
+                    anim.removeEventListener('complete', onComplete);
+                });
+            }, 10);
             
             // Reset text color
             const textSpan = this.querySelector('span');

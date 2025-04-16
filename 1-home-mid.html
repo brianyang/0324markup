@@ -41,7 +41,57 @@
     
     .btn-with-scribble-animation {
         position: relative;
-        overflow: hidden;
+        overflow: visible;
+        min-width: 250px; /* Set a minimum width for the button */
+        transition: all 0.3s ease;
+    }
+    
+    /* Special styles for contact button to ensure animation completes */
+    #contact-btn {
+        min-width: 350px;
+        width: 100%;
+        max-width: 500px; /* Increased max-width */
+        position: relative;
+        overflow: visible;
+        padding: 1.5rem 2.5rem;
+    }
+    
+    #contact-btn .scribble-animation-container {
+        pointer-events: none;
+        z-index: 5; /* Increased z-index to be above button content */
+        transform: scale(1.2); /* Scale up the animation */
+    }
+    
+    /* Adjust button text for better appearance with animation */
+    #contact-btn span {
+        position: relative;
+        z-index: 10;
+        font-weight: 500;
+    }
+    
+    /* Retain animation visibility even after hover ends */
+    #contact-btn:not(:hover) .scribble-animation-container {
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: none;
+    }
+    
+    /* Additional styles for the scribble SVG */
+    .scribble-svg {
+        width: 100% !important;
+        height: auto !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    /* For fine-tuning the animation position */
+    #scribble-animation-container svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.2);
     }
 
     .bg-texture {
@@ -357,13 +407,13 @@
                                         Get your patients with SLOS started on CHOLBAM
                                     </p>
                                 </div>
-                                <div class="flex flex-col sm:flex-row gap-4">
-                                    <a class="" href="/support"><button id="enrollment-btn" class="btn-with-svg btn-with-arrow-animation flex items-center"><span class="mr-2">Download the Patient Enrollment Form
-                                            </span><div id="arrow-animation-container" class="inline-block w-6 h-6 mt-[2px]"></div>
-                                        </button>&nbsp;</a>
-                                    <a class="" href="/contact"><button id="contact-btn" class="btn-with-svg btn-with-scribble-animation flex items-center"><span class="relative z-10">Contact Support
-                                            </span><div id="scribble-animation-container" class="absolute inset-0 w-full h-full"></div>
-                                        </button>&nbsp;</a>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <a class="w-full max-w-[500px]" href="/contact">
+                                        <button id="contact-btn" class="btn-with-svg btn-with-scribble-animation flex items-center justify-center">
+                                            <span class="relative z-10 whitespace-normal text-center">Learn More About Mirum Access Plus</span>
+                                            <div id="scribble-animation-container" class="absolute inset-0 w-full h-full"></div>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -571,20 +621,116 @@
 <!-- Initialize Lottie animations for specific buttons -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Initialize arrow animation for enrollment button
-        const enrollmentBtn = document.getElementById('enrollment-btn');
-        if (enrollmentBtn) {
-            initArrowAnimation(enrollmentBtn);
-        }
-        
-        // Initialize scribble animation for contact button
+        // Get the contact button
         const contactBtn = document.getElementById('contact-btn');
         if (contactBtn) {
-            initScribbleAnimation(contactBtn);
+            // Create container for the animation
+            let animContainer = contactBtn.querySelector('#scribble-animation-container');
+            if (!animContainer) {
+                animContainer = document.createElement('div');
+                animContainer.id = 'scribble-animation-container';
+                animContainer.className = 'scribble-animation-container';
+                animContainer.style.position = 'absolute';
+                animContainer.style.left = '0';
+                animContainer.style.top = '0';
+                animContainer.style.width = '100%'; 
+                animContainer.style.height = '100%';
+                animContainer.style.pointerEvents = 'none';
+                animContainer.style.zIndex = '5';
+                animContainer.style.transform = 'scale(1.2)';
+                contactBtn.appendChild(animContainer);
+            }
+            
+            // Initialize the animation
+            const anim = bodymovin.loadAnimation({
+                container: animContainer,
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'lottie-btn/scribble.json',
+                rendererSettings: {
+                    // Ensure animation is rendered at the proper size
+                    preserveAspectRatio: 'xMidYMid meet',
+                    className: 'scribble-svg'
+                }
+            });
+            
+            // Store animation state
+            contactBtn.animState = {
+                isPlaying: false,
+                isReversing: false,
+                animation: anim
+            };
+            
+            // Play animation on hover
+            contactBtn.addEventListener('mouseenter', function() {
+                if (this.animState && this.animState.animation) {
+                    const anim = this.animState.animation;
+                    anim.stop();
+                    this.animState.isPlaying = true;
+                    this.animState.isReversing = false;
+                    anim.setDirection(1);
+                    anim.goToAndPlay(0, true);
+                    
+                    // Change text color to white
+                    const textSpan = this.querySelector('span');
+                    if (textSpan) {
+                        textSpan.style.color = 'white';
+                    }
+                }
+            });
+            
+            // Reverse animation on hover off
+            contactBtn.addEventListener('mouseleave', function() {
+                if (this.animState && this.animState.animation) {
+                    const anim = this.animState.animation;
+                    
+                    // Get current frame
+                    const currentFrame = Math.min(anim.currentFrame, anim.totalFrames - 1);
+                    
+                    // Force the reverse animation
+                    anim.stop();
+                    this.animState.isPlaying = false;
+                    this.animState.isReversing = true;
+                    anim.setDirection(-1);
+                    anim.goToAndPlay(currentFrame, true);
+                    
+                    // Ensure animation keeps running
+                    const btn = this;
+                    function checkAnimation() {
+                        if (btn.animState && btn.animState.animation && 
+                            (btn.animState.animation.isPaused || !btn.animState.animation.isLoaded)) {
+                            btn.animState.animation.play();
+                        }
+                        
+                        if (btn.animState && btn.animState.isReversing) {
+                            setTimeout(checkAnimation, 50);
+                        }
+                    }
+                    
+                    setTimeout(checkAnimation, 50);
+                    
+                    // Reset text color
+                    const textSpan = this.querySelector('span');
+                    if (textSpan) {
+                        textSpan.style.color = '';
+                    }
+                }
+            });
+            
+            // Reset animation on mouseout (additional safety)
+            document.addEventListener('mouseout', function(e) {
+                if (!e.relatedTarget && contactBtn.animState && 
+                    contactBtn.animState.isReversing && contactBtn.animState.animation) {
+                    // If mouse leaves the document while reversing
+                    contactBtn.animState.animation.goToAndStop(0, true);
+                    contactBtn.animState.isReversing = false;
+                }
+            });
         }
         
         // Find any other buttons that should have animations
-        document.querySelectorAll('.btn-with-arrow-animation:not(#enrollment-btn)').forEach(btn => {
+        document.querySelectorAll('.btn-with-arrow-animation:not(#contact-btn)').forEach(btn => {
             initArrowAnimation(btn);
         });
         
