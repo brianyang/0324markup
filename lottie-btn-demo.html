@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottie Button Animations Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/tailwind.min.css" rel="stylesheet">
+    <!-- Lottie Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.0/lottie.min.js"></script>
+    <script src="lottie-buttons.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .demo-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #008AA3;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #7658A5;
+            margin-bottom: 20px;
+        }
+        
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .btn-with-svg {
+            padding: 15px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            color: #000;
+            cursor: pointer;
+            position: relative;
+            background-image: url("/themes/cholbam/images/button-gradient-white.svg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .btn-with-svg:hover {
+            transform: scale(1.05);
+        }
+        
+        .btn-teal {
+            background-color: #008AA3;
+            color: white;
+        }
+        
+        .btn-purple {
+            background-color: #7658A5;
+            color: white;
+        }
+        
+        .btn-with-arrow-animation {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-with-scribble-animation {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .code-block {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 20px 0;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-3xl font-bold">Lottie Button Animations Demo</h1>
+        
+        <div class="demo-section">
+            <h2 class="text-xl font-semibold">Arrow Animation Buttons</h2>
+            <p>These buttons showcase the arrow.json Lottie animation that plays on hover and reverses on hover-off:</p>
+            
+            <div class="btn-container">
+                <button id="arrow-btn-1" class="btn-with-svg btn-with-arrow-animation">
+                    Download PDF
+                </button>
+                
+                <button id="arrow-btn-2" class="btn-with-svg btn-with-arrow-animation btn-teal text-white">
+                    Learn More
+                </button>
+            </div>
+            
+            <div class="code-block">
+                <pre>
+&lt;button id="arrow-btn" class="btn-with-svg btn-with-arrow-animation"&gt;
+    Download PDF
+&lt;/button&gt;
+
+&lt;script&gt;
+    document.addEventListener('DOMContentLoaded', function() {
+        const arrowBtn = document.getElementById('arrow-btn');
+        initArrowAnimation(arrowBtn);
+        
+        // The following behaviors are automatically included:
+        // 1. Animation plays forward on hover
+        // 2. Animation reverses on hover-off
+    });
+&lt;/script&gt;</pre>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2 class="text-xl font-semibold">Scribble Animation Buttons</h2>
+            <p>These buttons showcase the scribble.json Lottie animation that plays on hover. The animation reverses on hover-off, and the text changes to white color while hovering:</p>
+            
+            <div class="btn-container">
+                <button id="scribble-btn-1" class="btn-with-svg btn-with-scribble-animation">
+                    <span class="relative z-10">Contact Us</span>
+                </button>
+                
+                <button id="scribble-btn-2" class="btn-with-svg btn-with-scribble-animation btn-purple text-white">
+                    <span class="relative z-10">Subscribe Now</span>
+                </button>
+            </div>
+            
+            <div class="code-block">
+                <pre>
+&lt;button id="scribble-btn" class="btn-with-svg btn-with-scribble-animation"&gt;
+    &lt;span class="relative z-10"&gt;Contact Us&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;script&gt;
+    document.addEventListener('DOMContentLoaded', function() {
+        const scribbleBtn = document.getElementById('scribble-btn');
+        initScribbleAnimation(scribbleBtn);
+        
+        // The following behaviors are automatically included:
+        // 1. Animation plays forward on hover
+        // 2. Animation reverses on hover-off
+        // 3. Text color changes to white on hover
+        // 4. Text color returns to original on hover-off
+    });
+&lt;/script&gt;</pre>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2 class="text-xl font-semibold">Implementation in Real World Example</h2>
+            <p>Here's how the animations can be used in a real application context:</p>
+            
+            <div class="btn-container">
+                <button id="enrollment-btn" class="btn-with-svg btn-with-arrow-animation flex items-center">
+                    <span class="mr-2">Download the Patient Enrollment Form</span>
+                </button>
+                
+                <button id="contact-btn" class="btn-with-svg btn-with-scribble-animation">
+                    <span class="relative z-10">Contact Support</span>
+                </button>
+            </div>
+            
+            <p class="mt-4">Integration Steps:</p>
+            <ol class="list-decimal ml-6 mt-2">
+                <li>Include the Lottie library: <code>bodymovin.js</code> or <code>lottie-web.js</code></li>
+                <li>Include the custom <code>lottie-buttons.js</code> file</li>
+                <li>Add proper CSS classes to buttons</li>
+                <li>Initialize the animations on page load</li>
+            </ol>
+        </div>
+    </div>
+    
+    <!-- Initialize Lottie animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Arrow buttons
+            const arrowBtns = [
+                document.getElementById('arrow-btn-1'),
+                document.getElementById('arrow-btn-2'),
+                document.getElementById('enrollment-btn')
+            ];
+            
+            arrowBtns.forEach(btn => {
+                if (btn) initArrowAnimation(btn);
+            });
+            
+            // Scribble buttons
+            const scribbleBtns = [
+                document.getElementById('scribble-btn-1'),
+                document.getElementById('scribble-btn-2'),
+                document.getElementById('contact-btn')
+            ];
+            
+            scribbleBtns.forEach(btn => {
+                if (btn) initScribbleAnimation(btn);
+            });
+        });
+    </script>
+</body>
+</html>
