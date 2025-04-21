@@ -33,75 +33,92 @@
     .btn-with-svg:hover {
         transform: scale(1);
     }
-    
+
     .btn-with-arrow-animation {
         position: relative;
         overflow: hidden;
     }
-    
+
     .btn-with-scribble-animation {
         position: relative;
         overflow: visible;
-        min-width: 250px; /* Set a minimum width for the button */
+        min-width: 250px;
+        /* Set a minimum width for the button */
         transition: all 0.3s ease;
     }
-    
+
     /* Special styles for contact button to ensure animation completes */
     #contact-btn {
         min-width: 350px;
         width: 100%;
-        max-width: 500px; /* Increased max-width */
+        max-width: 500px;
+        /* Increased max-width */
         position: relative;
         overflow: visible;
         padding: 2rem 3.5rem;
     }
-    
+
     #contact-btn .scribble-animation-container {
         pointer-events: none;
-        z-index: 5; /* Increased z-index to be above button content */
-        transform: scale(1); /* Don't scale the animation to maintain correct height */
+        z-index: 5;
+        /* Increased z-index to be above button content */
+        transform: scale(1);
+        /* Don't scale the animation to maintain correct height */
     }
-    
+
     /* Adjust button text for better appearance with animation */
     #contact-btn span {
         position: relative;
         z-index: 10;
         font-weight: 500;
     }
-    
+
     /* Retain animation visibility even after hover ends */
     #contact-btn:not(:hover) .scribble-animation-container {
         visibility: visible !important;
         opacity: 1 !important;
         pointer-events: none;
     }
-    
+
     /* Additional styles for the scribble SVG */
     .scribble-svg {
         width: 97% !important;
-        height: 72px !important; /* Fixed height matching correct SVG height */
-        max-height: 100% !important; /* Prevent overflow */
+        height: 72px !important;
+        /* Fixed height matching correct SVG height */
+        max-height: 100% !important;
+        /* Prevent overflow */
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        overflow: hidden; /* Hide any content that exceeds the dimensions */
+        overflow: hidden;
+        /* Hide any content that exceeds the dimensions */
     }
-    
+
     /* For fine-tuning the animation position */
-    #scribble-animation-container svg {
+    .scribble-animation-container svg {
         position: absolute;
         top: 8px;
         left: 7px;
         transform: translate(-50%, -50%) scale(1);
-        height: 72px; /* Adjusted to the correct height */
-        max-height: 72px; /* Ensure the height doesn't exceed this value */
+        height: 72px;
+        /* Adjusted to the correct height */
+        max-height: 72px;
+        /* Ensure the height doesn't exceed this value */
     }
 
     .bg-texture {
         background: url(/themes/cholbam/images/bg-texture.png);
         background-size: 100%;
         background-position: 100% -213px;
+    }
+
+    iframe#home-video {
+        position: absolute;
+        top: -147px;
+        left: -74px;
+        width: 87%;
+        height: 29%;
     }
 </style>
 
@@ -113,14 +130,12 @@
                 <div class="w-full flex flex-col lg:flex-row">
                     <!-- First column content -->
                     <div class="w-full lg:w-1/2 flex flex-col justify-between items-center order-2 lg:order-1">
-                        <!-- Video container with overflow hidden -->
-                        <div style="height:360px;overflow:hidden;position:relative;width:100%;">
-                            <!-- Iframe positioned to show only right half --><iframe style="height:200%;left:-50%;position:absolute;top:-150px;width:250%;" src="https://player.vimeo.com/video/1071470106?background=1&amp;loop=0&amp;controls=0" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
-                        </div>
+
                         <!-- Caption at bottom -->
                         <div class="mt-auto w-full flex justify-center">
-                            <div class="rounded-2xl w-full sm:max-w-[358px]" style="filter:drop-shadow(0px 0px 12px rgba(0,0,0,0.12));">
-                                <p class="w-full max-w-[351px] text-sm text-left text-dark">
+                            <div class="rounded-2xl w-full sm:max-w-[358px]"
+                                style="filter:drop-shadow(0px 0px 12px rgba(0,0,0,0.12));">
+                                <p class="w-full max-w-[351px] text-sm text-left text-dark bg-white rounded-2xl p-4">
                                     <span class="font-semibold">This is 4-year-old Mallie in her clogging class</span>.
                                     She has Smith-Lemli-Opitz Syndrome (SLOS) and has been taking CHOLBAM since 2023.
                                     Individual results may vary.
@@ -129,23 +144,29 @@
                         </div>
                     </div>
                     <!--  Right column -->
-                    <div class="w-full lg:w-1/2 order-1 lg:order-2">
-                        <div class="">
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2 z-10 pl-12 pt-12 relative overflow-hidden"
+                        id="bg-white-fade">
+                        <div>
                             <div class="flex w-full">
-                                <p class="w-full max-w-[580px] text-base lg:text-lg font-semibold text-center lg:text-left text-teal">
+                                <p
+                                    class="w-full max-w-[580px] text-base lg:text-lg font-semibold text-center lg:text-left text-teal">
                                     When it comes to cholesterol, fat-soluble vitamins, nutrients, weight, and growth
                                 </p>
                             </div>
                             <div class="flex flex-col items-center lg:items-start lg:space-y-[-16px] w-full">
                                 <div class="flex justify-center lg:justify-start w-full">
-                                    <p class="w-full max-w-[580px] text-[40px] lg:text-[80px] text-center lg:text-left text-teal">
-                                        <img src="/themes/cholbam/images/callout-home-text-absorb.svg" alt="Absorb more. Gain more." width="600" height="180">
+                                    <p
+                                        class="w-full max-w-[580px] text-[40px] lg:text-[80px] text-center lg:text-left text-teal">
+                                        <img src="/themes/cholbam/images/callout-home-text-absorb.svg"
+                                            alt="Absorb more. Gain more." width="600" height="180">
                                     </p>
                                 </div>
                             </div>
                             <div class="flex flex-col gap-6 w-full max-w-[580px]">
                                 <!-- Product description -->
-                                <p class="w-full max-w-[580px] text-base font-semibold text-left text-text">CHOLBAM is a cholic acid replacement therapy designed to help patients with SLOS increase cholesterol levels, lower liver enzymes, and improve certain growth parameters.</p>
+                                <p class="w-full max-w-[580px] text-base font-semibold text-left text-text">CHOLBAM is a
+                                    cholic acid replacement therapy designed to help patients with SLOS increase
+                                    cholesterol levels, lower liver enzymes, and improve certain growth parameters.</p>
                             </div>
                         </div>
                         <!-- Third section - Desktop version (only visible on desktop) -->
@@ -154,7 +175,8 @@
                                 <span class="font-semibold">CHOLBAM may help patients with (SLOS)</span><sup>1-3</sup>*:
                             </p>
                             <!-- Benefits list -->
-                            <div class="flex flex-col gap-2 border-l-2 border-teal lg:border-0 lg:flex-row lg:items-start lg:gap-4 w-full">
+                            <div
+                                class="flex flex-col gap-2 border-l-2 border-teal lg:border-0 lg:flex-row lg:items-start lg:gap-4 w-full">
                                 <div class="flex lg:items-center">
                                     <div class="flex justify-center grow lg:justify-start">
                                         <p class="w-full max-w-[351px] lg:max-w-none text-base text-left text-text">
@@ -186,7 +208,8 @@
                         <span class="font-semibold">CHOLBAM may help patients with (SLOS)</span><sup>1-3</sup>*:
                     </p>
                     <!-- Benefits list -->
-                    <div class="flex flex-col gap-2 border-l-2 border-teal lg:border-0 lg:flex-row lg:items-start lg:gap-4 w-full">
+                    <div
+                        class="flex flex-col gap-2 border-l-2 border-teal lg:border-0 lg:flex-row lg:items-start lg:gap-4 w-full">
                         <div class="flex lg:items-center">
                             <div class="flex justify-center grow lg:justify-start">
                                 <p class="w-full max-w-[351px] lg:max-w-none text-base text-left text-text">
@@ -214,15 +237,18 @@
                     <!-- Content section --><!-- Heading section -->
                     <div class="flex flex-col items-center lg:items-start gap-4 lg:pl-5 md:mt-[216px] lg:mt-0 m-auto">
                         <!-- Cards section --><!-- Main content -->
-                        <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 opacity-90 gap-6 mt-6 lg:mt-16 w-full max-w-[1200px]">
+                        <div
+                            class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 opacity-90 gap-6 mt-6 lg:mt-16 w-full max-w-[1200px]">
                             <!-- Card 1 -->
-                            <div class="flex flex-col items-center px-4 pt-2 pb-6 lg:pt-4 lg:pb-8 rounded-2xl bg-teal-primary-gradient shadow-md h-full">
+                            <div
+                                class="flex flex-col items-center px-4 pt-2 pb-6 lg:pt-4 lg:pb-8 rounded-2xl bg-teal-primary-gradient shadow-md h-full">
                                 <div class="px-24 min-h-[103px]">
                                     <img src="/themes/cholbam/images/icon-clipboard.svg" width="135" height="102">
                                 </div>
                                 <div class="flex flex-col items-center gap-4">
                                     <div class="flex flex-col items-center gap-4">
-                                        <p class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">
+                                        <p
+                                            class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">
                                             Sustained benefits for patients with SLOS
                                         </p>
                                     </div>
@@ -232,330 +258,399 @@
                                         </div>
                                         <div class="flex flex-col items-center">
                                             <div class="flex justify-center gap-2 px-8 py-4">
+
                                                 <!-- Main wrapper with a single link that wraps everything --><!-- CKEditor-Resistant Decorative Button -->
-                                                <div class="decorative-button flex justify-start items-center text-white hover:text-yellow-400 transition-colors duration-300 w-auto">
-                                                    <!-- Left decorative elements -->
-                                                    <div class="left-decorative flex justify-start items-center self-stretch flex-shrink-0 relative space-x-[-1px]">
-                                                        <!-- Combined SVG for left elements to avoid splitting --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="self-stretch flex-shrink-0" width="6" height="65" viewBox="0 0 6 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><!-- First path -->
-                                                                <path d="M1.79965 62.8018C1.92701 42.2405 1.67838 21.6646 1.33106 1.27787C1.2689 -0.239124 0.85943 -0.175462 0.83406 1.46522C0.831523 2.06548 0.838119 2.673 0.842432 3.27144C0.985013 16.7134 1.29833 29.9135 1.29833 43.3718C1.30341 49.8491 1.30087 56.3318 1.25952 62.8036C1.28337 64.6444 1.77377 64.648 1.79965 62.8036V62.8018Z" fill="currentColor"></path>
-                                                                <!-- Second path, moved 2px to the right -->
-                                                                <path d="M3.7977 62.9369C3.36867 47.4846 3.61894 31.9942 3.21076 16.5332C3.13528 12.7047 3.03994 8.87792 2.928712 5.05286C2.982342 3.33824 2.320914 0.140607 3.87219 0.189004C3.87219 0.189004 3.8702 0.187275 3.86921 0.185547C5.68267 0.271969 4.91001 5.86869 5.201 8.04826C5.37877 16.3414 5.42148 24.6397 5.50192 32.9362C5.5635 40.709 5.62606 48.4784 5.71644 56.2513C5.55257 58.6642 6.15938 61.6198 5.56946 63.7545C5.04806 64.5081 3.89007 64.2972 3.7987 62.9352L3.7977 62.9369Z" fill="currentColor"></path>
-                                                            </svg></a>
-                                                    </div>
-                                                    <!-- Button content -->
-                                                    <div class="button-content flex flex-col justify-start items-center relative">
-                                                        <!-- Combined decorative lines with text in the middle to prevent splitting -->
-                                                        <div class="button-inner">
-                                                            <!-- Top decorative line --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                                                                    <path d="M164.444 4.16076C137.067 4.44214 109.858 2.24474 82.5245 1.75873C58.0436 1.78309 33.5514 1.83912 9.07689 2.12172C6.85165 1.89394 2.40599 3.30933 0.922497 2.24474C0.293624 0.957242 3.16709 0.991348 4.21844 0.752607C24.5617 -0.321731 45.0775 0.437127 65.4691 0.563806C81.7602 0.847616 98.0464 0.338463 114.337 0.552843C131.041 0.811074 147.737 1.35555 164.443 1.52852C167.424 1.48467 167.83 4.16077 164.443 4.16198L164.444 4.16076Z" fill="currentColor"></path>
-                                                                    <path d="M101.779 3.66788C86.0028 3.59115 70.2294 3.25496 54.4527 3.20015C39.9499 3.31221 25.4423 3.24278 10.9427 3.48396C8.15312 3.52781 5.35866 3.67276 2.56743 3.57897C2.07078 3.55826 1.42578 3.29272 1.42578 2.86761C1.42578 2.35968 2.22074 2.166 2.76415 2.14895C7.69678 1.99304 12.631 1.94919 17.5669 1.91508C37.5763 1.52408 57.5681 2.52412 77.5759 2.26832C86.9945 2.17575 96.347 1.62396 105.743 1.27072C121.362 0.670215 137 1.09898 152.625 1.28169C155.934 1.31945 159.239 1.34259 162.548 1.34137C163.377 1.34137 164.589 1.67999 164.589 2.43642C164.589 3.19284 163.377 3.53024 162.548 3.53146C142.29 3.44011 122.036 3.69103 101.778 3.66788H101.779Z" fill="currentColor"></path>
-                                                                </svg></a><!-- Button Label -->
-                                                            <div class="button-label flex justify-center items-center relative gap-2 px-8 py-4 cursor-pointer">
-                                                                <a class="decorative-button-link block outline-none focus:outline-none no-underline" href="/understanding-slos"><span class="text-base font-semibold text-center capitalize whitespace-normal">See
-                                                                        the data&nbsp;</span></a>
-                                                            </div>
-                                                            <!-- Bottom decorative line --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                                                                    <path d="M113.26 3.16048C76.1734 2.30865 39.003 2.73144 1.93024 2.45256C1.37299 2.40161 0.719722 2.12452 0.850377 1.7661C1.70514 0.656844 7.98915 1.51582 10.0513 1.28611C30.4837 1.09036 50.8847 1.34689 71.2983 1.82419C94.698 1.94933 118.107 1.45683 141.475 0.818628C146.922 0.675614 153.001 0.567459 158.202 0.415507C160.927 0.600531 165.303 -0.587378 166.833 1.12789C166.855 3.0988 160.041 2.22285 157.708 2.56787C142.911 3.10774 128.087 3.49656 113.26 3.16137V3.16048Z" fill="currentColor"></path>
-                                                                    <path d="M102.75 4.18109C86.6492 4.10691 70.5551 3.69395 54.4515 3.74311C46.044 3.7449 37.6428 3.9201 29.2368 3.88971C20.3932 3.82535 11.5434 3.82446 2.70923 4.08277C1.48455 4.13551 0.415698 3.21396 2.50459 2.97441C7.43955 2.66247 12.4328 2.78045 17.3913 2.76437C38.6896 2.70627 59.9878 3.40167 81.2782 2.79207C109.093 2.05645 136.932 2.0493 164.763 1.80617C167.032 1.79992 167.518 3.25151 164.763 3.33642C161.572 3.38022 158.393 3.53574 155.203 3.60278C137.726 3.91294 120.238 4.22668 102.75 4.18109Z" fill="currentColor"></path>
-                                                                </svg></a>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Right decorative element -->
-                                                    <div class="right-decorative flex justify-start items-center self-stretch flex-shrink-0 relative gap-2.5">
-                                                        <a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="self-stretch flex-shrink-0" width="3" height="65" viewBox="0 0 3 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                                                                <path d="M1.3284 62.6947C1.01083 42.3476 1.597 21.9323 0.833496 1.63072C0.893597 -0.222769 2.10749 -0.293023 2.27963 1.41789C3.1433 16.998 2.65359 32.9417 2.73372 48.6561C2.73669 53.3363 2.7493 58.0186 2.83315 62.6947C2.83983 63.079 2.74931 63.4385 2.64914 63.67C2.26108 64.5709 1.39518 64.3188 1.3284 62.6947Z" fill="currentColor"></path>
-                                                            </svg></a>
-                                                    </div>
+                                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                                    <a class="w-full max-w-[500px]" href="/understanding-slos">
+                                                        <button id="see-data-btn"
+                                                            class="btn-with-svg btn-with-scribble-animation flex items-center justify-center">
+                                                            <span
+                                                                class="relative z-10 whitespace-normal text-center">See
+                                                                the data</span>
+                                                            <div id="scribble-animation-container"
+                                                                class="absolute inset-0 w-full h-full"></div>
+                                                        </button>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="flex">
-                                            <!-- svg placeholder -->&nbsp;
-                                        </div>
                                     </div>
+                                    <!-- Card 2 -->
+                                    </ADDITIONAL_METADATA>
                                 </div>
                             </div>
-                            <!-- Card 2 -->
-                            <div class="flex flex-col items-center px-4 pt-2 pb-6 lg:pt-4 lg:pb-8 rounded-2xl bg-teal-primary-gradient-2 shadow-md h-full">
-                                <div class="px-24 min-h-[103px]">
-                                    <img src="/themes/cholbam/images/icon-pill.svg" width="136" height="102">
-                                </div>
-                                <div class="flex flex-col items-center gap-4">
-                                    <div class="flex flex-col items-center gap-4">
-                                        <p class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">
-                                            <span>Simple to&nbsp;</span><br>
-                                            <span>start</span>
-                                        </p>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="flex space-x-[-1px]">
-                                            <!-- svg placeholder -->&nbsp;
-                                        </div>
-                                        <div class="flex flex-col items-center">
-                                            <div class="flex justify-center gap-2 px-8 py-4">
-                                                <!-- Main wrapper with a single link that wraps everything --><!-- CKEditor-Resistant Decorative Button -->
-                                                <div class="decorative-button flex justify-start items-center text-white hover:text-yellow-400 transition-colors duration-300 w-auto">
-                                                    <!-- Left decorative elements -->
-                                                    <div class="left-decorative flex justify-start items-center self-stretch flex-shrink-0 relative space-x-[-1px]">
-                                                        <!-- Combined SVG for left elements to avoid splitting --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="self-stretch flex-shrink-0" width="6" height="65" viewBox="0 0 6 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><!-- First path -->
-                                                                <path d="M1.79965 62.8018C1.92701 42.2405 1.67838 21.6646 1.33106 1.27787C1.2689 -0.239124 0.85943 -0.175462 0.83406 1.46522C0.831523 2.06548 0.838119 2.673 0.842432 3.27144C0.985013 16.7134 1.29833 29.9135 1.29833 43.3718C1.30341 49.8491 1.30087 56.3318 1.25952 62.8036C1.28337 64.6444 1.77377 64.648 1.79965 62.8036V62.8018Z" fill="currentColor"></path>
-                                                                <!-- Second path, moved 2px to the right -->
-                                                                <path d="M3.7977 62.9369C3.36867 47.4846 3.61894 31.9942 3.21076 16.5332C3.13528 12.7047 3.03994 8.87792 2.928712 5.05286C2.982342 3.33824 2.320914 0.140607 3.87219 0.189004C3.87219 0.189004 3.8702 0.187275 3.86921 0.185547C5.68267 0.271969 4.91001 5.86869 5.201 8.04826C5.37877 16.3414 5.42148 24.6397 5.50192 32.9362C5.5635 40.709 5.62606 48.4784 5.71644 56.2513C5.55257 58.6642 6.15938 61.6198 5.56946 63.7545C5.04806 64.5081 3.89007 64.2972 3.7987 62.9352L3.7977 62.9369Z" fill="currentColor"></path>
-                                                            </svg></a>
-                                                    </div>
-                                                    <!-- Button content -->
-                                                    <div class="button-content flex flex-col justify-start items-center relative">
-                                                        <!-- Combined decorative lines with text in the middle to prevent splitting -->
-                                                        <div class="button-inner">
-                                                            <!-- Top decorative line --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                                                                    <path d="M164.444 4.16076C137.067 4.44214 109.858 2.24474 82.5245 1.75873C58.0436 1.78309 33.5514 1.83912 9.07689 2.12172C6.85165 1.89394 2.40599 3.30933 0.922497 2.24474C0.293624 0.957242 3.16709 0.991348 4.21844 0.752607C24.5617 -0.321731 45.0775 0.437127 65.4691 0.563806C81.7602 0.847616 98.0464 0.338463 114.337 0.552843C131.041 0.811074 147.737 1.35555 164.443 1.52852C167.424 1.48467 167.83 4.16077 164.443 4.16198L164.444 4.16076Z" fill="currentColor"></path>
-                                                                    <path d="M101.779 3.66788C86.0028 3.59115 70.2294 3.25496 54.4527 3.20015C39.9499 3.31221 25.4423 3.24278 10.9427 3.48396C8.15312 3.52781 5.35866 3.67276 2.56743 3.57897C2.07078 3.55826 1.42578 3.29272 1.42578 2.86761C1.42578 2.35968 2.22074 2.166 2.76415 2.14895C7.69678 1.99304 12.631 1.94919 17.5669 1.91508C37.5763 1.52408 57.5681 2.52412 77.5759 2.26832C86.9945 2.17575 96.347 1.62396 105.743 1.27072C121.362 0.670215 137 1.09898 152.625 1.28169C155.934 1.31945 159.239 1.34259 162.548 1.34137C163.377 1.34137 164.589 1.67999 164.589 2.43642C164.589 3.19284 163.377 3.53024 162.548 3.53146C142.29 3.44011 122.036 3.69103 101.778 3.66788H101.779Z" fill="currentColor"></path>
-                                                                </svg></a><!-- Button Label -->
-                                                            <div class="button-label flex justify-center items-center relative gap-2 px-8 py-4 cursor-pointer">
-                                                                <a class="decorative-button-link block outline-none focus:outline-none no-underline" href="/dosing"><span class="text-base font-semibold text-center capitalize whitespace-normal">See
-                                                                        dosing&nbsp;</span></a>
-                                                            </div>
-                                                            <!-- Bottom decorative line --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                                                                    <path d="M113.26 3.16048C76.1734 2.30865 39.003 2.73144 1.93024 2.45256C1.37299 2.40161 0.719722 2.12452 0.850377 1.7661C1.70514 0.656844 7.98915 1.51582 10.0513 1.28611C30.4837 1.09036 50.8847 1.34689 71.2983 1.82419C94.698 1.94933 118.107 1.45683 141.475 0.818628C146.922 0.675614 153.001 0.567459 158.202 0.415507C160.927 0.600531 165.303 -0.587378 166.833 1.12789C166.855 3.0988 160.041 2.22285 157.708 2.56787C142.911 3.10774 128.087 3.49656 113.26 3.16137V3.16048Z" fill="currentColor"></path>
-                                                                    <path d="M102.75 4.18109C86.6492 4.10691 70.5551 3.69395 54.4515 3.74311C46.044 3.7449 37.6428 3.9201 29.2368 3.88971C20.3932 3.82535 11.5434 3.82446 2.70923 4.08277C1.48455 4.13551 0.415698 3.21396 2.50459 2.97441C7.43955 2.66247 12.4328 2.78045 17.3913 2.76437C38.6896 2.70627 59.9878 3.40167 81.2782 2.79207C109.093 2.05645 136.932 2.0493 164.763 1.80617C167.032 1.79992 167.518 3.25151 164.763 3.33642C161.572 3.38022 158.393 3.53574 155.203 3.60278C137.726 3.91294 120.238 4.22668 102.75 4.18109Z" fill="currentColor"></path>
-                                                                </svg></a>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Right decorative element -->
-                                                    <div class="right-decorative flex justify-start items-center self-stretch flex-shrink-0 relative gap-2.5">
-                                                        <a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="self-stretch flex-shrink-0" width="3" height="65" viewBox="0 0 3 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                                                                <path d="M1.3284 62.6947C1.01083 42.3476 1.597 21.9323 0.833496 1.63072C0.893597 -0.222769 2.10749 -0.293023 2.27963 1.41789C3.1433 16.998 2.65359 32.9417 2.73372 48.6561C2.73669 53.3363 2.7493 58.0186 2.83315 62.6947C2.83983 63.079 2.74931 63.4385 2.64914 63.67C2.26108 64.5709 1.39518 64.3188 1.3284 62.6947Z" fill="currentColor"></path>
-                                                            </svg></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <!-- svg placeholder -->&nbsp;
-                                        </div>
-                                    </div>
-                                </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="flex flex-col items-center px-4 pt-2 pb-6 lg:pt-4 lg:pb-8 rounded-2xl bg-teal-primary-gradient-2 shadow-md h-full">
+                        <div class="px-24 min-h-[103px]">
+                            <img src="/themes/cholbam/images/icon-pill.svg" width="136" height="102">
+                        </div>
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="flex flex-col items-center gap-4">
+                                <p class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">
+                                    <span>Simple to&nbsp;</span><br>
+                                    <span>start</span>
+                                </p>
                             </div>
-                            <!-- Card 3 -->
-                            <div class="flex flex-col items-center px-4 pt-2 pb-6 lg:pt-4 lg:pb-8 rounded-2xl bg-teal-primary-gradient-3 shadow-md h-full md:col-span-2 lg:col-span-1">
-                                <div class="px-24 min-h-[103px]">
-                                    <img src="/themes/cholbam/images/icon-magnify.svg" width="135" height="102">
+                            <div class="flex">
+                                <div class="flex space-x-[-1px]">
+                                    <!-- svg placeholder -->&nbsp;
                                 </div>
-                                <div class="flex flex-col items-center gap-4">
-                                    <div class="flex flex-col items-center gap-4">
-                                        <p class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">
-                                            <span>Well-studied&nbsp;</span><br>
-                                            <span>safety profile</span>
-                                        </p>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="flex space-x-[-1px]">
-                                            <!-- svg placeholder -->&nbsp;
-                                        </div>
-                                        <div class="flex flex-col items-center">
-                                            <div class="flex justify-center gap-2 px-8 py-4">
-                                                <!-- Main wrapper with a single link that wraps everything --><!-- CKEditor-Resistant Decorative Button -->
-                                                <div class="decorative-button flex justify-start items-center text-white hover:text-yellow-400 transition-colors duration-300 w-auto">
-                                                    <!-- Left decorative elements -->
-                                                    <div class="left-decorative flex justify-start items-center self-stretch flex-shrink-0 relative space-x-[-1px]">
-                                                        <!-- Combined SVG for left elements to avoid splitting --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="self-stretch flex-shrink-0" width="6" height="65" viewBox="0 0 6 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><!-- First path -->
-                                                                <path d="M1.79965 62.8018C1.92701 42.2405 1.67838 21.6646 1.33106 1.27787C1.2689 -0.239124 0.85943 -0.175462 0.83406 1.46522C0.831523 2.06548 0.838119 2.673 0.842432 3.27144C0.985013 16.7134 1.29833 29.9135 1.29833 43.3718C1.30341 49.8491 1.30087 56.3318 1.25952 62.8036C1.28337 64.6444 1.77377 64.648 1.79965 62.8036V62.8018Z" fill="currentColor"></path>
-                                                                <!-- Second path, moved 2px to the right -->
-                                                                <path d="M3.7977 62.9369C3.36867 47.4846 3.61894 31.9942 3.21076 16.5332C3.13528 12.7047 3.03994 8.87792 2.928712 5.05286C2.982342 3.33824 2.320914 0.140607 3.87219 0.189004C3.87219 0.189004 3.8702 0.187275 3.86921 0.185547C5.68267 0.271969 4.91001 5.86869 5.201 8.04826C5.37877 16.3414 5.42148 24.6397 5.50192 32.9362C5.5635 40.709 5.62606 48.4784 5.71644 56.2513C5.55257 58.6642 6.15938 61.6198 5.56946 63.7545C5.04806 64.5081 3.89007 64.2972 3.7987 62.9352L3.7977 62.9369Z" fill="currentColor"></path>
-                                                            </svg></a>
+                                <div class="flex flex-col items-center">
+                                    <div class="flex justify-center gap-2 px-8 py-4">
+                                        <!-- Main wrapper with a single link that wraps everything --><!-- CKEditor-Resistant Decorative Button -->
+                                        <div
+                                            class="decorative-button flex justify-start items-center text-white hover:text-yellow-400 transition-colors duration-300 w-auto">
+                                            <!-- Left decorative elements -->
+                                            <div
+                                                class="left-decorative flex justify-start items-center self-stretch flex-shrink-0 relative space-x-[-1px]">
+                                                <!-- Combined SVG for left elements to avoid splitting --><a
+                                                    class="decorative-button-link block outline-none focus:outline-none no-underline"
+                                                    href="#"><svg class="self-stretch flex-shrink-0" width="6"
+                                                        height="65" viewBox="0 0 6 65" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        preserveAspectRatio="none"><!-- First path -->
+                                                        <path
+                                                            d="M1.79965 62.8018C1.92701 42.2405 1.67838 21.6646 1.33106 1.27787C1.2689 -0.239124 0.85943 -0.175462 0.83406 1.46522C0.831523 2.06548 0.838119 2.673 0.842432 3.27144C0.985013 16.7134 1.29833 29.9135 1.29833 43.3718C1.30341 49.8491 1.30087 56.3318 1.25952 62.8036C1.28337 64.6444 1.77377 64.648 1.79965 62.8036V62.8018Z"
+                                                            fill="currentColor"></path>
+                                                        <!-- Second path, moved 2px to the right -->
+                                                        <path
+                                                            d="M3.7977 62.9369C3.36867 47.4846 3.61894 31.9942 3.21076 16.5332C3.13528 12.7047 3.03994 8.87792 2.928712 5.05286C2.982342 3.33824 2.320914 0.140607 3.87219 0.189004C3.87219 0.189004 3.8702 0.187275 3.86921 0.185547C5.68267 0.271969 4.91001 5.86869 5.201 8.04826C5.37877 16.3414 5.42148 24.6397 5.50192 32.9362C5.5635 40.709 5.62606 48.4784 5.71644 56.2513C5.55257 58.6642 6.15938 61.6198 5.56946 63.7545C5.04806 64.5081 3.89007 64.2972 3.7987 62.9352L3.7977 62.9369Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></a>
+                                            </div>
+                                            <!-- Button content -->
+                                            <div
+                                                class="button-content flex flex-col justify-start items-center relative">
+                                                <!-- Combined decorative lines with text in the middle to prevent splitting -->
+                                                <div class="button-inner">
+                                                    <!-- Top decorative line --><a
+                                                        class="decorative-button-link block outline-none focus:outline-none no-underline"
+                                                        href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            preserveAspectRatio="none">
+                                                            <path
+                                                                d="M164.444 4.16076C137.067 4.44214 109.858 2.24474 82.5245 1.75873C58.0436 1.78309 33.5514 1.83912 9.07689 2.12172C6.85165 1.89394 2.40599 3.30933 0.922497 2.24474C0.293624 0.957242 3.16709 0.991348 4.21844 0.752607C24.5617 -0.321731 45.0775 0.437127 65.4691 0.563806C81.7602 0.847616 98.0464 0.338463 114.337 0.552843C131.041 0.811074 147.737 1.35555 164.443 1.52852C167.424 1.48467 167.83 4.16077 164.443 4.16198L164.444 4.16076Z"
+                                                                fill="currentColor"></path>
+                                                            <path
+                                                                d="M101.779 3.66788C86.0028 3.59115 70.2294 3.25496 54.4527 3.20015C39.9499 3.31221 25.4423 3.24278 10.9427 3.48396C8.15312 3.52781 5.35866 3.67276 2.56743 3.57897C2.07078 3.55826 1.42578 3.29272 1.42578 2.86761C1.42578 2.35968 2.22074 2.166 2.76415 2.14895C7.69678 1.99304 12.631 1.94919 17.5669 1.91508C37.5763 1.52408 57.5681 2.52412 77.5759 2.26832C86.9945 2.17575 96.347 1.62396 105.743 1.27072C121.362 0.670215 137 1.09898 152.625 1.28169C155.934 1.31945 159.239 1.34259 162.548 1.34137C163.377 1.34137 164.589 1.67999 164.589 2.43642C164.589 3.19284 163.377 3.53024 162.548 3.53146C142.29 3.44011 122.036 3.69103 101.778 3.66788H101.779Z"
+                                                                fill="currentColor"></path>
+                                                        </svg></a><!-- Button Label -->
+                                                    <div
+                                                        class="button-label flex justify-center items-center relative gap-2 px-8 py-4 cursor-pointer">
+                                                        <a class="decorative-button-link block outline-none focus:outline-none no-underline"
+                                                            href="/dosing"><span
+                                                                class="text-base font-semibold text-center capitalize whitespace-normal">See
+                                                                dosing&nbsp;</span></a>
                                                     </div>
-                                                    <!-- Button content -->
-                                                    <div class="button-content flex flex-col justify-start items-center relative">
-                                                        <!-- Combined decorative lines with text in the middle to prevent splitting -->
-                                                        <div class="button-inner">
-                                                            <!-- Top decorative line --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                                                                    <path d="M164.444 4.16076C137.067 4.44214 109.858 2.24474 82.5245 1.75873C58.0436 1.78309 33.5514 1.83912 9.07689 2.12172C6.85165 1.89394 2.40599 3.30933 0.922497 2.24474C0.293624 0.957242 3.16709 0.991348 4.21844 0.752607C24.5617 -0.321731 45.0775 0.437127 65.4691 0.563806C81.7602 0.847616 98.0464 0.338463 114.337 0.552843C131.041 0.811074 147.737 1.35555 164.443 1.52852C167.424 1.48467 167.83 4.16077 164.443 4.16198L164.444 4.16076Z" fill="currentColor"></path>
-                                                                    <path d="M101.779 3.66788C86.0028 3.59115 70.2294 3.25496 54.4527 3.20015C39.9499 3.31221 25.4423 3.24278 10.9427 3.48396C8.15312 3.52781 5.35866 3.67276 2.56743 3.57897C2.07078 3.55826 1.42578 3.29272 1.42578 2.86761C1.42578 2.35968 2.22074 2.166 2.76415 2.14895C7.69678 1.99304 12.631 1.94919 17.5669 1.91508C37.5763 1.52408 57.5681 2.52412 77.5759 2.26832C86.9945 2.17575 96.347 1.62396 105.743 1.27072C121.362 0.670215 137 1.09898 152.625 1.28169C155.934 1.31945 159.239 1.34259 162.548 1.34137C163.377 1.34137 164.589 1.67999 164.589 2.43642C164.589 3.19284 163.377 3.53024 162.548 3.53146C142.29 3.44011 122.036 3.69103 101.778 3.66788H101.779Z" fill="currentColor"></path>
-                                                                </svg></a><!-- Button Label -->
-                                                            <div class="button-label flex justify-center items-center relative gap-2 px-8 py-4 cursor-pointer">
-                                                                <a class="decorative-button-link block outline-none focus:outline-none no-underline" href="/support"><span class="text-base font-semibold text-center capitalize whitespace-normal">See
-                                                                        safety information&nbsp;</span></a>
-                                                            </div>
-                                                            <!-- Bottom decorative line --><a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                                                                    <path d="M113.26 3.16048C76.1734 2.30865 39.003 2.73144 1.93024 2.45256C1.37299 2.40161 0.719722 2.12452 0.850377 1.7661C1.70514 0.656844 7.98915 1.51582 10.0513 1.28611C30.4837 1.09036 50.8847 1.34689 71.2983 1.82419C94.698 1.94933 118.107 1.45683 141.475 0.818628C146.922 0.675614 153.001 0.567459 158.202 0.415507C160.927 0.600531 165.303 -0.587378 166.833 1.12789C166.855 3.0988 160.041 2.22285 157.708 2.56787C142.911 3.10774 128.087 3.49656 113.26 3.16137V3.16048Z" fill="currentColor"></path>
-                                                                    <path d="M102.75 4.18109C86.6492 4.10691 70.5551 3.69395 54.4515 3.74311C46.044 3.7449 37.6428 3.9201 29.2368 3.88971C20.3932 3.82535 11.5434 3.82446 2.70923 4.08277C1.48455 4.13551 0.415698 3.21396 2.50459 2.97441C7.43955 2.66247 12.4328 2.78045 17.3913 2.76437C38.6896 2.70627 59.9878 3.40167 81.2782 2.79207C109.093 2.05645 136.932 2.0493 164.763 1.80617C167.032 1.79992 167.518 3.25151 164.763 3.33642C161.572 3.38022 158.393 3.53574 155.203 3.60278C137.726 3.91294 120.238 4.22668 102.75 4.18109Z" fill="currentColor"></path>
-                                                                </svg></a>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Right decorative element -->
-                                                    <div class="right-decorative flex justify-start items-center self-stretch flex-shrink-0 relative gap-2.5">
-                                                        <a class="decorative-button-link block outline-none focus:outline-none no-underline" href="#"><svg class="self-stretch flex-shrink-0" width="3" height="65" viewBox="0 0 3 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                                                                <path d="M1.3284 62.6947C1.01083 42.3476 1.597 21.9323 0.833496 1.63072C0.893597 -0.222769 2.10749 -0.293023 2.27963 1.41789C3.1433 16.998 2.65359 32.9417 2.73372 48.6561C2.73669 53.3363 2.7493 58.0186 2.83315 62.6947C2.83983 63.079 2.74931 63.4385 2.64914 63.67C2.26108 64.5709 1.39518 64.3188 1.3284 62.6947Z" fill="currentColor"></path>
-                                                            </svg></a>
-                                                    </div>
+                                                    <!-- Bottom decorative line --><a
+                                                        class="decorative-button-link block outline-none focus:outline-none no-underline"
+                                                        href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            preserveAspectRatio="none">
+                                                            <path
+                                                                d="M113.26 3.16048C76.1734 2.30865 39.003 2.73144 1.93024 2.45256C1.37299 2.40161 0.719722 2.12452 0.850377 1.7661C1.70514 0.656844 7.98915 1.51582 10.0513 1.28611C30.4837 1.09036 50.8847 1.34689 71.2983 1.82419C94.698 1.94933 118.107 1.45683 141.475 0.818628C146.922 0.675614 153.001 0.567459 158.202 0.415507C160.927 0.600531 165.303 -0.587378 166.833 1.12789C166.855 3.0988 160.041 2.22285 157.708 2.56787C142.911 3.10774 128.087 3.49656 113.26 3.16137V3.16048Z"
+                                                                fill="currentColor"></path>
+                                                            <path
+                                                                d="M102.75 4.18109C86.6492 4.10691 70.5551 3.69395 54.4515 3.74311C46.044 3.7449 37.6428 3.9201 29.2368 3.88971C20.3932 3.82535 11.5434 3.82446 2.70923 4.08277C1.48455 4.13551 0.415698 3.21396 2.50459 2.97441C7.43955 2.66247 12.4328 2.78045 17.3913 2.76437C38.6896 2.70627 59.9878 3.40167 81.2782 2.79207C109.093 2.05645 136.932 2.0493 164.763 1.80617C167.032 1.79992 167.518 3.25151 164.763 3.33642C161.572 3.38022 158.393 3.53574 155.203 3.60278C137.726 3.91294 120.238 4.22668 102.75 4.18109Z"
+                                                                fill="currentColor"></path>
+                                                        </svg></a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="flex">
-                                            <!-- svg placeholder -->&nbsp;
+                                            <!-- Right decorative element -->
+                                            <div
+                                                class="right-decorative flex justify-start items-center self-stretch flex-shrink-0 relative gap-2.5">
+                                                <a class="decorative-button-link block outline-none focus:outline-none no-underline"
+                                                    href="#"><svg class="self-stretch flex-shrink-0" width="3"
+                                                        height="65" viewBox="0 0 3 65" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                                        <path
+                                                            d="M1.3284 62.6947C1.01083 42.3476 1.597 21.9323 0.833496 1.63072C0.893597 -0.222769 2.10749 -0.293023 2.27963 1.41789C3.1433 16.998 2.65359 32.9417 2.73372 48.6561C2.73669 53.3363 2.7493 58.0186 2.83315 62.6947C2.83983 63.079 2.74931 63.4385 2.64914 63.67C2.26108 64.5709 1.39518 64.3188 1.3284 62.6947Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></a>
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="flex">
+                                    <!-- svg placeholder -->&nbsp;
                                 </div>
                             </div>
                         </div>
-                        <!-- Bottom section -->
-                        <div class="flex flex-col items-center gap-4 px-4 py-8 md:flex-row md:items-center md:gap-8 lg:gap-28 md:px-8 lg:px-16 md:py-12 lg:py-20 rounded-2xl bg-white/80 backdrop-blur-[80px] shadow-md mt-6 lg:mt-16 w-full max-w-[1200px]">
-                            <div class="flex flex-col items-center px-20 md:px-4 lg:px-0 md:justify-center md:items-start md:w-[180px] lg:w-[232px] md:gap-2.5">
-                                <div class="relative overflow-hidden">
-                                    <img src="/themes/cholbam/images/logo-map.svg" width="232" height="112">
-                                </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="flex flex-col items-center px-4 pt-2 pb-6 lg:pt-4 lg:pb-8 rounded-2xl bg-teal-primary-gradient-3 shadow-md h-full md:col-span-2 lg:col-span-1">
+                        <div class="px-24 min-h-[103px]">
+                            <img src="/themes/cholbam/images/icon-magnify.svg" width="135" height="102">
+                        </div>
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="flex flex-col items-center gap-4">
+                                <p class="w-full max-w-[326.67px] text-[26px] font-semibold text-center text-white">
+                                    <span>Well-studied&nbsp;</span><br>
+                                    <span>safety profile</span>
+                                </p>
                             </div>
-                            <div class="flex flex-col items-center gap-6 md:items-start md:flex-grow">
-                                <div class="flex flex-col items-center md:items-start gap-4">
-                                    <p class="w-full max-w-[668px] text-[26px] md:text-[28px] lg:text-[32px] font-semibold text-center md:text-left text-text">
-                                        Get your patients with SLOS started on CHOLBAM
-                                    </p>
+                            <div class="flex">
+                                <div class="flex space-x-[-1px]">
+                                    <!-- svg placeholder -->&nbsp;
                                 </div>
-                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <a class="w-full max-w-[500px]" href="/contact">
-                                        <button id="contact-btn" class="btn-with-svg btn-with-scribble-animation flex items-center justify-center">
-                                            <span class="relative z-10 whitespace-normal text-center">Learn More About Mirum Access Plus</span>
-                                            <div id="scribble-animation-container" class="absolute inset-0 w-full h-full"></div>
-                                        </button>
-                                    </a>
+                                <div class="flex flex-col items-center">
+                                    <div class="flex justify-center gap-2 px-8 py-4">
+                                        <!-- Main wrapper with a single link that wraps everything --><!-- CKEditor-Resistant Decorative Button -->
+                                        <div
+                                            class="decorative-button flex justify-start items-center text-white hover:text-yellow-400 transition-colors duration-300 w-auto">
+                                            <!-- Left decorative elements -->
+                                            <div
+                                                class="left-decorative flex justify-start items-center self-stretch flex-shrink-0 relative space-x-[-1px]">
+                                                <!-- Combined SVG for left elements to avoid splitting --><a
+                                                    class="decorative-button-link block outline-none focus:outline-none no-underline"
+                                                    href="#"><svg class="self-stretch flex-shrink-0" width="6"
+                                                        height="65" viewBox="0 0 6 65" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        preserveAspectRatio="none"><!-- First path -->
+                                                        <path
+                                                            d="M1.79965 62.8018C1.92701 42.2405 1.67838 21.6646 1.33106 1.27787C1.2689 -0.239124 0.85943 -0.175462 0.83406 1.46522C0.831523 2.06548 0.838119 2.673 0.842432 3.27144C0.985013 16.7134 1.29833 29.9135 1.29833 43.3718C1.30341 49.8491 1.30087 56.3318 1.25952 62.8036C1.28337 64.6444 1.77377 64.648 1.79965 62.8036V62.8018Z"
+                                                            fill="currentColor"></path>
+                                                        <!-- Second path, moved 2px to the right -->
+                                                        <path
+                                                            d="M3.7977 62.9369C3.36867 47.4846 3.61894 31.9942 3.21076 16.5332C3.13528 12.7047 3.03994 8.87792 2.928712 5.05286C2.982342 3.33824 2.320914 0.140607 3.87219 0.189004C3.87219 0.189004 3.8702 0.187275 3.86921 0.185547C5.68267 0.271969 4.91001 5.86869 5.201 8.04826C5.37877 16.3414 5.42148 24.6397 5.50192 32.9362C5.5635 40.709 5.62606 48.4784 5.71644 56.2513C5.55257 58.6642 6.15938 61.6198 5.56946 63.7545C5.04806 64.5081 3.89007 64.2972 3.7987 62.9352L3.7977 62.9369Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></a>
+                                            </div>
+                                            <!-- Button content -->
+                                            <div
+                                                class="button-content flex flex-col justify-start items-center relative">
+                                                <!-- Combined decorative lines with text in the middle to prevent splitting -->
+                                                <div class="button-inner">
+                                                    <!-- Top decorative line --><a
+                                                        class="decorative-button-link block outline-none focus:outline-none no-underline"
+                                                        href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            preserveAspectRatio="none">
+                                                            <path
+                                                                d="M164.444 4.16076C137.067 4.44214 109.858 2.24474 82.5245 1.75873C58.0436 1.78309 33.5514 1.83912 9.07689 2.12172C6.85165 1.89394 2.40599 3.30933 0.922497 2.24474C0.293624 0.957242 3.16709 0.991348 4.21844 0.752607C24.5617 -0.321731 45.0775 0.437127 65.4691 0.563806C81.7602 0.847616 98.0464 0.338463 114.337 0.552843C131.041 0.811074 147.737 1.35555 164.443 1.52852C167.424 1.48467 167.83 4.16077 164.443 4.16198L164.444 4.16076Z"
+                                                                fill="currentColor"></path>
+                                                            <path
+                                                                d="M101.779 3.66788C86.0028 3.59115 70.2294 3.25496 54.4527 3.20015C39.9499 3.31221 25.4423 3.24278 10.9427 3.48396C8.15312 3.52781 5.35866 3.67276 2.56743 3.57897C2.07078 3.55826 1.42578 3.29272 1.42578 2.86761C1.42578 2.35968 2.22074 2.166 2.76415 2.14895C7.69678 1.99304 12.631 1.94919 17.5669 1.91508C37.5763 1.52408 57.5681 2.52412 77.5759 2.26832C86.9945 2.17575 96.347 1.62396 105.743 1.27072C121.362 0.670215 137 1.09898 152.625 1.28169C155.934 1.31945 159.239 1.34259 162.548 1.34137C163.377 1.34137 164.589 1.67999 164.589 2.43642C164.589 3.19284 163.377 3.53024 162.548 3.53146C142.29 3.44011 122.036 3.69103 101.778 3.66788H101.779Z"
+                                                                fill="currentColor"></path>
+                                                        </svg></a><!-- Button Label -->
+                                                    <div
+                                                        class="button-label flex justify-center items-center relative gap-2 px-8 py-4 cursor-pointer">
+                                                        <a class="decorative-button-link block outline-none focus:outline-none no-underline"
+                                                            href="/support"><span
+                                                                class="text-base font-semibold text-center capitalize whitespace-normal">See
+                                                                safety information&nbsp;</span></a>
+                                                    </div>
+                                                    <!-- Bottom decorative line --><a
+                                                        class="decorative-button-link block outline-none focus:outline-none no-underline"
+                                                        href="#"><svg class="w-full h-1" viewBox="0 0 167 5" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            preserveAspectRatio="none">
+                                                            <path
+                                                                d="M113.26 3.16048C76.1734 2.30865 39.003 2.73144 1.93024 2.45256C1.37299 2.40161 0.719722 2.12452 0.850377 1.7661C1.70514 0.656844 7.98915 1.51582 10.0513 1.28611C30.4837 1.09036 50.8847 1.34689 71.2983 1.82419C94.698 1.94933 118.107 1.45683 141.475 0.818628C146.922 0.675614 153.001 0.567459 158.202 0.415507C160.927 0.600531 165.303 -0.587378 166.833 1.12789C166.855 3.0988 160.041 2.22285 157.708 2.56787C142.911 3.10774 128.087 3.49656 113.26 3.16137V3.16048Z"
+                                                                fill="currentColor"></path>
+                                                            <path
+                                                                d="M102.75 4.18109C86.6492 4.10691 70.5551 3.69395 54.4515 3.74311C46.044 3.7449 37.6428 3.9201 29.2368 3.88971C20.3932 3.82535 11.5434 3.82446 2.70923 4.08277C1.48455 4.13551 0.415698 3.21396 2.50459 2.97441C7.43955 2.66247 12.4328 2.78045 17.3913 2.76437C38.6896 2.70627 59.9878 3.40167 81.2782 2.79207C109.093 2.05645 136.932 2.0493 164.763 1.80617C167.032 1.79992 167.518 3.25151 164.763 3.33642C161.572 3.38022 158.393 3.53574 155.203 3.60278C137.726 3.91294 120.238 4.22668 102.75 4.18109Z"
+                                                                fill="currentColor"></path>
+                                                        </svg></a>
+                                                </div>
+                                            </div>
+                                            <!-- Right decorative element -->
+                                            <div
+                                                class="right-decorative flex justify-start items-center self-stretch flex-shrink-0 relative gap-2.5">
+                                                <a class="decorative-button-link block outline-none focus:outline-none no-underline"
+                                                    href="#"><svg class="self-stretch flex-shrink-0" width="3"
+                                                        height="65" viewBox="0 0 3 65" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                                        <path
+                                                            d="M1.3284 62.6947C1.01083 42.3476 1.597 21.9323 0.833496 1.63072C0.893597 -0.222769 2.10749 -0.293023 2.27963 1.41789C3.1433 16.998 2.65359 32.9417 2.73372 48.6561C2.73669 53.3363 2.7493 58.0186 2.83315 62.6947C2.83983 63.079 2.74931 63.4385 2.64914 63.67C2.26108 64.5709 1.39518 64.3188 1.3284 62.6947Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <!-- svg placeholder -->&nbsp;
                                 </div>
                             </div>
                         </div>
-                        <!-- Two-box container --><!-- End of Two-box container -->
+                    </div>
+                </div>
+                <!-- Bottom section -->
+                <div
+                    class="flex flex-col items-center gap-4 px-4 py-8 md:flex-row md:items-center md:gap-8 lg:gap-28 md:px-8 lg:px-16 md:py-12 lg:py-20 rounded-2xl bg-white/80 backdrop-blur-[80px] shadow-md mt-6 lg:mt-16 w-full max-w-[1200px]">
+                    <div
+                        class="flex flex-col items-center px-20 md:px-4 lg:px-0 md:justify-center md:items-start md:w-[180px] lg:w-[232px] md:gap-2.5">
+                        <div class="relative overflow-hidden">
+                            <img src="/themes/cholbam/images/logo-map.svg" width="232" height="112">
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center gap-6 md:items-start md:flex-grow">
+                        <div class="flex flex-col items-center md:items-start gap-4">
+                            <p
+                                class="w-full max-w-[668px] text-[26px] md:text-[28px] lg:text-[32px] font-semibold text-center md:text-left text-text">
+                                Get your patients with SLOS started on CHOLBAM
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a class="w-full max-w-[500px]" href="/contact">
+                                <button id="contact-btn"
+                                    class="btn-with-svg btn-with-scribble-animation flex items-center justify-center">
+                                    <span class="relative z-10 whitespace-normal text-center">Learn More About Mirum
+                                        Access Plus</span>
+                                    <div class="scribble-animation-container absolute inset-0 w-full h-full"></div>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Two-box container --><!-- End of Two-box container -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mx-auto px-5 py-5 max-w-7xl">
+</div>
+
+
+</div>
+
+<div class="bg-texture">
+    <div class="max-w-[1140px] mx-auto">
+        <form id="stayUpToDateForm" class="p-8 rounded-md transition-colors">
+            <div class="md:flex md:gap-8">
+                <!-- Left column (text content) -->
+                <div class="md:w-2/5">
+                    <!-- Form header -->
+                    <div class="relative mb-4">
+                        <h2 class="text-3xl font-bold text-black">
+                            Stay Up to Date
+                        </h2>
+                    </div>
+
+                    <!-- Form description -->
+                    <div class="mb-6 text-black">
+                        <p>To receive more information about CHOLBAM as it becomes available, please fill out this
+                            form.
+                        </p>
+                    </div>
+
+                    <!-- Step indicator -->
+                    <div class="mb-2">
+                        <p id="stepIndicator" class="text-lg text-black">Step 1/2</p>
+                    </div>
+
+                    <div class="mb-6 text-[#e53935]">
+                        <p>*Required.</p>
+                    </div>
+                </div>
+
+                <!-- Right column (form fields) -->
+                <div class="md:w-3/5">
+                    <!-- Step 1 fields -->
+                    <div class="step-1-fields space-y-6">
+                        <div>
+                            <label for="title" class="block mb-2 text-black">
+                                Title<span class="text-[#e53935] ml-1">*</span>
+                            </label>
+                            <input type="text" id="title" name="title" required=""
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <div>
+                            <label for="firstName" class="block mb-2 text-black">
+                                First Name<span class="text-[#e53935] ml-1">*</span>
+                            </label>
+                            <input type="text" id="firstName" name="firstName" required=""
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <div>
+                            <label for="lastName" class="block mb-2 text-black">
+                                Last Name<span class="text-[#e53935] ml-1">*</span>
+                            </label>
+                            <input type="text" id="lastName" name="lastName" required=""
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="button" id="nextButton"
+                                class="bg-[#8e63aa] text-white px-8 py-3 rounded-md hover:bg-[#7b539b] focus:outline-none">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 fields -->
+                    <div class="step-2-fields hidden space-y-6">
+                        <div>
+                            <label for="email" class="block mb-2 text-black">
+                                Email<span class="text-[#e53935] ml-1">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" required=""
+                                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <div>
+                            <label for="topics" class="block mb-2 text-black">
+                                Topics of Interest
+                            </label>
+                            <div class="relative">
+                                <select id="topics" name="topics"
+                                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-white pr-10 relative">
+                                    <option value="">Select...</option>
+                                    <option value="topic1">Topic 1</option>
+                                    <option value="topic2">Topic 2</option>
+                                    <option value="topic3">Topic 3</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="#" id="viewPrivacyPolicy" class="text-black underline block mb-3">
+                                View Privacy Policy<span class="text-[#e53935] ml-1">*</span>
+                            </a>
+
+                            <div class="flex items-start gap-3">
+                                <input type="checkbox" id="privacyConsent" name="privacyConsent" required=""
+                                    class="w-5 h-5 mt-1">
+                                <label for="privacyConsent" class="text-black">
+                                    I consent to the use of my information as contained in the Mirum Privacy Policy.
+                                </label>
+                            </div>
+                        </div>
+
+                        <p class="text-sm text-black mt-6">
+                            By completing this form, you agree to our
+                            <a href="#" class="underline">Terms of Use</a> and
+                            <a href="#" class="underline">Privacy Policy</a>.
+                        </p>
+
+                        <div class="space-y-4 pt-4">
+                            <button type="submit" id="submitButton"
+                                class="bg-[#8e63aa] text-white px-8 py-3 rounded-md hover:bg-[#7b539b] focus:outline-none">
+                                Submit
+                            </button>
+                            <a href="#" id="backButton" class="block text-black underline">
+                                Back
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container mx-auto px-5 py-5 max-w-7xl">
-        </div>
-
-
+        </form>
     </div>
 
-    <div class="bg-texture">
-        <div class="max-w-[1140px] mx-auto">
-            <form id="stayUpToDateForm" class="p-8 rounded-md transition-colors">
-                <div class="md:flex md:gap-8">
-                    <!-- Left column (text content) -->
-                    <div class="md:w-2/5">
-                        <!-- Form header -->
-                        <div class="relative mb-4">
-                            <h2 class="text-3xl font-bold text-black">
-                                Stay Up to Date
-                            </h2>
-                        </div>
-
-                        <!-- Form description -->
-                        <div class="mb-6 text-black">
-                            <p>To receive more information about CHOLBAM as it becomes available, please fill out this
-                                form.
-                            </p>
-                        </div>
-
-                        <!-- Step indicator -->
-                        <div class="mb-2">
-                            <p id="stepIndicator" class="text-lg text-black">Step 1/2</p>
-                        </div>
-
-                        <div class="mb-6 text-[#e53935]">
-                            <p>*Required.</p>
-                        </div>
-                    </div>
-
-                    <!-- Right column (form fields) -->
-                    <div class="md:w-3/5">
-                        <!-- Step 1 fields -->
-                        <div class="step-1-fields space-y-6">
-                            <div>
-                                <label for="title" class="block mb-2 text-black">
-                                    Title<span class="text-[#e53935] ml-1">*</span>
-                                </label>
-                                <input type="text" id="title" name="title" required="" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            </div>
-
-                            <div>
-                                <label for="firstName" class="block mb-2 text-black">
-                                    First Name<span class="text-[#e53935] ml-1">*</span>
-                                </label>
-                                <input type="text" id="firstName" name="firstName" required="" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            </div>
-
-                            <div>
-                                <label for="lastName" class="block mb-2 text-black">
-                                    Last Name<span class="text-[#e53935] ml-1">*</span>
-                                </label>
-                                <input type="text" id="lastName" name="lastName" required="" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            </div>
-
-                            <div class="pt-4">
-                                <button type="button" id="nextButton" class="bg-[#8e63aa] text-white px-8 py-3 rounded-md hover:bg-[#7b539b] focus:outline-none">
-                                    Next
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Step 2 fields -->
-                        <div class="step-2-fields hidden space-y-6">
-                            <div>
-                                <label for="email" class="block mb-2 text-black">
-                                    Email<span class="text-[#e53935] ml-1">*</span>
-                                </label>
-                                <input type="email" id="email" name="email" required="" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            </div>
-
-                            <div>
-                                <label for="topics" class="block mb-2 text-black">
-                                    Topics of Interest
-                                </label>
-                                <div class="relative">
-                                    <select id="topics" name="topics" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-white pr-10 relative">
-                                        <option value="">Select...</option>
-                                        <option value="topic1">Topic 1</option>
-                                        <option value="topic2">Topic 2</option>
-                                        <option value="topic3">Topic 3</option>
-                                    </select>
-                                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="pt-4">
-                                <a href="#" id="viewPrivacyPolicy" class="text-black underline block mb-3">
-                                    View Privacy Policy<span class="text-[#e53935] ml-1">*</span>
-                                </a>
-
-                                <div class="flex items-start gap-3">
-                                    <input type="checkbox" id="privacyConsent" name="privacyConsent" required="" class="w-5 h-5 mt-1">
-                                    <label for="privacyConsent" class="text-black">
-                                        I consent to the use of my information as contained in the Mirum Privacy Policy.
-                                    </label>
-                                </div>
-                            </div>
-
-                            <p class="text-sm text-black mt-6">
-                                By completing this form, you agree to our
-                                <a href="#" class="underline">Terms of Use</a> and
-                                <a href="#" class="underline">Privacy Policy</a>.
-                            </p>
-
-                            <div class="space-y-4 pt-4">
-                                <button type="submit" id="submitButton" class="bg-[#8e63aa] text-white px-8 py-3 rounded-md hover:bg-[#7b539b] focus:outline-none">
-                                    Submit
-                                </button>
-                                <a href="#" id="backButton" class="block text-black underline">
-                                    Back
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-    </div>
+</div>
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -624,27 +719,26 @@
 
 <!-- Initialize Lottie animations for specific buttons -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         // Get the contact button
         const contactBtn = document.getElementById('contact-btn');
         if (contactBtn) {
             // Create container for the animation
-            let animContainer = contactBtn.querySelector('#scribble-animation-container');
+            let animContainer = contactBtn.querySelector('.scribble-animation-container');
             if (!animContainer) {
                 animContainer = document.createElement('div');
-                animContainer.id = 'scribble-animation-container';
                 animContainer.className = 'scribble-animation-container';
                 animContainer.style.position = 'absolute';
                 animContainer.style.left = '0';
                 animContainer.style.top = '0';
-                animContainer.style.width = '100%'; 
+                animContainer.style.width = '100%';
                 animContainer.style.height = '72px'; // Set exact height for animation container
                 animContainer.style.pointerEvents = 'none';
                 animContainer.style.zIndex = '5';
                 animContainer.style.transform = 'scale(1)'; // Don't scale to maintain correct height
                 contactBtn.appendChild(animContainer);
             }
-            
+
             // Initialize the animation
             const anim = bodymovin.loadAnimation({
                 container: animContainer,
@@ -658,16 +752,16 @@
                     className: 'scribble-svg'
                 }
             });
-            
+
             // Store animation state
             contactBtn.animState = {
                 isPlaying: false,
                 isReversing: false,
                 animation: anim
             };
-            
+
             // Play animation on hover
-            contactBtn.addEventListener('mouseenter', function() {
+            contactBtn.addEventListener('mouseenter', function () {
                 if (this.animState && this.animState.animation) {
                     const anim = this.animState.animation;
                     anim.stop();
@@ -675,7 +769,7 @@
                     this.animState.isReversing = false;
                     anim.setDirection(1);
                     anim.goToAndPlay(0, true);
-                    
+
                     // Change text color to white
                     const textSpan = this.querySelector('span');
                     if (textSpan) {
@@ -683,48 +777,46 @@
                     }
                 }
             });
-            
+
             // Reverse animation on hover off
-            contactBtn.addEventListener('mouseleave', function() {
+            contactBtn.addEventListener('mouseleave', function () {
                 if (this.animState && this.animState.animation) {
                     const anim = this.animState.animation;
-                    
+
                     // Get current frame
                     const currentFrame = Math.min(anim.currentFrame, anim.totalFrames - 1);
-                    
+
                     // Force the reverse animation
                     anim.stop();
                     this.animState.isPlaying = false;
                     this.animState.isReversing = true;
                     anim.setDirection(-1);
                     anim.goToAndPlay(currentFrame, true);
-                    
+
                     // Ensure animation keeps running
                     const btn = this;
                     function checkAnimation() {
-                        if (btn.animState && btn.animState.animation && 
+                        if (btn.animState && btn.animState.animation &&
                             (btn.animState.animation.isPaused || !btn.animState.animation.isLoaded)) {
                             btn.animState.animation.play();
                         }
-                        
+
                         if (btn.animState && btn.animState.isReversing) {
                             setTimeout(checkAnimation, 50);
                         }
                     }
-                    
+
                     setTimeout(checkAnimation, 50);
-                    
+
                     // Reset text color
                     const textSpan = this.querySelector('span');
-                    if (textSpan) {
-                        textSpan.style.color = '';
-                    }
+                    if (textSpan) textSpan.style.color = '';
                 }
             });
-            
+
             // Reset animation on mouseout (additional safety)
-            document.addEventListener('mouseout', function(e) {
-                if (!e.relatedTarget && contactBtn.animState && 
+            document.addEventListener('mouseout', function (e) {
+                if (!e.relatedTarget && contactBtn.animState &&
                     contactBtn.animState.isReversing && contactBtn.animState.animation) {
                     // If mouse leaves the document while reversing
                     contactBtn.animState.animation.goToAndStop(0, true);
@@ -732,12 +824,86 @@
                 }
             });
         }
-        
+
+        // Initialize Scribble animation for the "See the data" button (Card 1)
+        const seeDataBtn = document.getElementById('see-data-btn');
+        if (seeDataBtn) {
+            // Create or find container for the animation
+            let seeDataContainer = seeDataBtn.querySelector('.scribble-animation-container');
+            if (!seeDataContainer) {
+                seeDataContainer = document.createElement('div');
+                seeDataContainer.className = 'scribble-animation-container';
+                seeDataContainer.style.position = 'absolute';
+                seeDataContainer.style.left = '0';
+                seeDataContainer.style.top = '0';
+                seeDataContainer.style.width = '100%';
+                // Match the button height so the SVG fits perfectly
+                seeDataContainer.style.height = seeDataBtn.offsetHeight + 'px';
+                seeDataContainer.style.pointerEvents = 'none';
+                seeDataContainer.style.zIndex = '5';
+                seeDataContainer.style.transform = 'scale(1)';
+                seeDataBtn.appendChild(seeDataContainer);
+            }
+
+            // Initialize the animation
+            const seeDataAnim = bodymovin.loadAnimation({
+                container: seeDataContainer,
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: 'lottie-btn/scribble.json',
+                rendererSettings: {
+                    preserveAspectRatio: 'xMidYMid slice',
+                    className: 'scribble-svg'
+                }
+            });
+
+            // Store animation state
+            seeDataBtn.animState = {
+                isPlaying: false,
+                isReversing: false,
+                animation: seeDataAnim
+            };
+
+            // Play animation on hover
+            seeDataBtn.addEventListener('mouseenter', function () {
+                if (this.animState && this.animState.animation) {
+                    const anim = this.animState.animation;
+                    anim.stop();
+                    this.animState.isPlaying = true;
+                    this.animState.isReversing = false;
+                    anim.setDirection(1);
+                    anim.goToAndPlay(0, true);
+
+                    // Change text color to white for contrast
+                    const textSpan = this.querySelector('span');
+                    if (textSpan) textSpan.style.color = 'white';
+                }
+            });
+
+            // Reverse animation on hover off
+            seeDataBtn.addEventListener('mouseleave', function () {
+                if (this.animState && this.animState.animation) {
+                    const anim = this.animState.animation;
+                    const currentFrame = Math.min(anim.currentFrame, anim.totalFrames - 1);
+                    anim.stop();
+                    this.animState.isPlaying = false;
+                    this.animState.isReversing = true;
+                    anim.setDirection(-1);
+                    anim.goToAndPlay(currentFrame, true);
+
+                    // Reset text color
+                    const textSpan = this.querySelector('span');
+                    if (textSpan) textSpan.style.color = '';
+                }
+            });
+        }
+
         // Find any other buttons that should have animations
         document.querySelectorAll('.btn-with-arrow-animation:not(#contact-btn)').forEach(btn => {
             initArrowAnimation(btn);
         });
-        
+
         document.querySelectorAll('.btn-with-scribble-animation:not(#contact-btn)').forEach(btn => {
             initScribbleAnimation(btn);
         });
