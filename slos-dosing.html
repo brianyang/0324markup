@@ -1,63 +1,4 @@
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.23/tailwind.min.css" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="twconfig.js"></script>
-<style>
-  .bg-texture-purple {
-    position: relative;
-  }
-
-  .bg-texture-purple::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(/themes/cholbam/images/bg-texture-purple.png);
-    background-size: 100%;
-    background-position: 100% -213px;
-    opacity: 0.3;
-    z-index: -1;
-  }
-
-  .dosing-hero {
-    background: url(/themes/cholbam/images/hero-about.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 20% center;
-    /* First value pushes focal point left */
-  }
-
-  .bg-texture-top-gray {
-    background: url(/themes/cholbam/images/bg-texture-top-gray.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100%;
-  }
-  .btn-with-svg {
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 4px;
-        color: #000;
-        cursor: pointer;
-        position: relative;
-        background-image: url("/themes/cholbam/images/button-gradient-white.svg");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        transition: transform 0.2s ease;
-        padding: 1.5rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    .btn-with-svg:hover {
-        transform: scale(1.05);
-    }
-</style>
-
-<div class="flex flex-col w-full max-w-[1440px] relative overflow-hidden bg-white m-auto">
+<div class="flex flex-col w-full max-w-[1440px] relative overflow-hidden bg-white m-auto" id="main-page-content">
 
   <!-- Hero section with two columns that stack on mobile -->
   <div class="flex flex-col md:flex-row about-page relative">
@@ -575,7 +516,7 @@
             <div class="flex flex-col items-center">
               <div class="flex justify-center gap-2 px-8 py-4">
 
-<a class="" href="/videos">
+<a class="" href="/slos/videos">
                         <button class="btn-with-svg">
                           Hear real patient stories
                         </button>
@@ -608,7 +549,7 @@
             <div class="flex flex-col items-center">
               <div class="flex justify-center gap-2 px-8 py-4">
                 <!-- Main wrapper with a single link that wraps everything --><!-- CKEditor-Resistant Decorative Button -->
-                <a class="" href="/support">
+                <a class="" href="/slos/support">
                         <button class="btn-with-svg">
                           Learn more about Mirum Access Plus
                         </button>
