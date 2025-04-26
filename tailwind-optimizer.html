@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Responsive Code Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .editor {
+            min-height: 300px;
+            font-family: monospace;
+        }
+        .result {
+            min-height: 300px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .preview-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="container mx-auto">
+        <h1 class="text-2xl font-bold mb-6">Tailwind Responsive Code Generator</h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Mobile Input -->
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="text-lg font-semibold mb-2">Mobile HTML</h2>
+                <textarea id="mobileInput" class="editor w-full p-2 border border-gray-300 rounded" placeholder="Paste your mobile HTML here..."></textarea>
+            </div>
+
+            <!-- Desktop Input -->
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="text-lg font-semibold mb-2">Desktop HTML</h2>
+                <textarea id="desktopInput" class="editor w-full p-2 border border-gray-300 rounded" placeholder="Paste your desktop HTML here..."></textarea>
+            </div>
+        </div>
+
+        <div class="flex justify-center my-6 gap-4">
+            <button id="loadExampleBtn" class="px-6 py-3 bg-gray-600 text-white font-semibold rounded hover:bg-gray-700 focus:outline-none">Load Example</button>
+            <button id="generateBtn" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 focus:outline-none">Generate Responsive HTML</button>
+        </div>
+
+        <div class="bg-white p-4 rounded shadow mt-6">
+            <h2 class="text-lg font-semibold mb-2">Optimized Responsive HTML</h2>
+            <pre id="resultOutput" class="result p-4 bg-gray-100 rounded"></pre>
+            <div class="flex justify-between mt-4">
+                <button id="copyBtn" class="px-4 py-2 bg-gray-600 text-white font-semibold rounded hover:bg-gray-700">Copy to Clipboard</button>
+                <button id="previewBtn" class="px-4 py-2 bg-green-600 text-white font-semibold rounded hover:bg-green-700">Preview</button>
+            </div>
+        </div>
+
+        <div id="previewContainer" class="preview-container hidden bg-white rounded shadow"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileInput = document.getElementById('mobileInput');
+            const desktopInput = document.getElementById('desktopInput');
+            const generateBtn = document.getElementById('generateBtn');
+            const resultOutput = document.getElementById('resultOutput');
+            const copyBtn = document.getElementById('copyBtn');
+            const previewBtn = document.getElementById('previewBtn');
+            const previewContainer = document.getElementById('previewContainer');
+
+            generateBtn.addEventListener('click', function() {
+                const mobileHTML = mobileInput.value.trim();
+                const desktopHTML = desktopInput.value.trim();
+
+                if (!mobileHTML || !desktopHTML) {
+                    alert('Please provide both mobile and desktop HTML.');
+                    return;
+                }
+
+                try {
+                    const optimizedHTML = generateResponsiveHTML(mobileHTML, desktopHTML);
+                    resultOutput.textContent = optimizedHTML;
+                } catch (error) {
+                    alert('Error generating responsive HTML: ' + error.message);
+                    console.error(error);
+                }
+            });
+
+            copyBtn.addEventListener('click', function() {
+                if (!resultOutput.textContent) {
+                    alert('Nothing to copy.');
+                    return;
+                }
+
+                navigator.clipboard.writeText(resultOutput.textContent)
+                    .then(() => alert('Copied to clipboard!'))
+                    .catch(err => alert('Failed to copy: ' + err));
+            });
+
+            previewBtn.addEventListener('click', function() {
+                if (!resultOutput.textContent) {
+                    alert('Nothing to preview.');
+                    return;
+                }
+
+                previewContainer.innerHTML = resultOutput.textContent;
+                previewContainer.classList.remove('hidden');
+
+                // Scroll to the preview
+                previewContainer.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            function generateResponsiveHTML(mobileHTML, desktopHTML) {
+                // Parse the HTML
+                const mobileDoc = new DOMParser().parseFromString(mobileHTML, 'text/html');
+                const desktopDoc = new DOMParser().parseFromString(desktopHTML, 'text/html');
+
+                // Extract the main elements
+                const mobileRoot = mobileDoc.body.firstElementChild;
+                const desktopRoot = desktopDoc.body.firstElementChild;
+
+                if (!mobileRoot || !desktopRoot) {
+                    throw new Error('Could not parse HTML input');
+                }
+
+                // Generate responsive code
+                const responsiveHTML = mergeAndOptimizeElements(mobileRoot, desktopRoot);
+
+                return responsiveHTML;
+            }
+
+            function mergeAndOptimizeElements(mobileElement, desktopElement) {
+                // Create a new element based on the mobile element
+                const mergedElement = document.createElement(mobileElement.tagName);
+
+                // Process attributes - merge classes and other attributes
+                mergeElementAttributes(mergedElement, mobileElement, desktopElement);
+
+                // Process children recursively if they have the same structure
+                if (mobileElement.children.length === desktopElement.children.length) {
+                    for (let i = 0; i < mobileElement.children.length; i++) {
+                        const mergedChild = mergeAndOptimizeElements(
+                            mobileElement.children[i],
+                            desktopElement.children[i]
+                        );
+                        mergedElement.innerHTML += mergedChild;
+                    }
+                } else {
+                    // If structure differs, handle with responsive classes
+                    handleDifferentStructures(mergedElement, mobileElement, desktopElement);
+                }
+
+                // If element has no children but has text content
+                if (mergedElement.children.length === 0 && mobileElement.textContent.trim()) {
+                    mergedElement.textContent = mobileElement.textContent;
+                }
+
+                return mergedElement.outerHTML;
+            }
+
+            function mergeElementAttributes(mergedElement, mobileElement, desktopElement) {
+                // Get all attributes from both elements
+                const mobileAttrs = Array.from(mobileElement.attributes);
+                const desktopAttrs = Array.from(desktopElement.attributes);
+
+                // Process class attributes separately
+                let mobileClasses = mobileElement.getAttribute('class') || '';
+                let desktopClasses = desktopElement.getAttribute('class') || '';
+
+                // Merge and optimize classes
+                const mergedClasses = mergeAndOptimizeClasses(mobileClasses, desktopClasses);
+                if (mergedClasses) {
+                    mergedElement.setAttribute('class', mergedClasses);
+                }
+
+                // Process other attributes
+                mobileAttrs.forEach(attr => {
+                    if (attr.name !== 'class') {
+                        mergedElement.setAttribute(attr.name, attr.value);
+                    }
+                });
+
+                // Add desktop-specific attributes (excluding class)
+                desktopAttrs.forEach(attr => {
+                    if (attr.name !== 'class' && !mergedElement.hasAttribute(attr.name)) {
+                        mergedElement.setAttribute(attr.name, attr.value);
+                    }
+                });
+            }
+
+            function mergeAndOptimizeClasses(mobileClassStr, desktopClassStr) {
+                // Split classes into arrays
+                const mobileClasses = mobileClassStr.split(/\s+/).filter(c => c);
+                const desktopClasses = desktopClassStr.split(/\s+/).filter(c => c);
+
+                // Categorize classes
+                const {
+                    commonClasses,
+                    mobileOnlyClasses,
+                    desktopOnlyClasses
+                } = categorizeClasses(mobileClasses, desktopClasses);
+
+                // Process responsive variants
+                const responsiveClasses = processResponsiveVariants(mobileOnlyClasses, desktopOnlyClasses);
+
+                // Combine all classes
+                const mergedClasses = [
+                    ...commonClasses,
+                    ...responsiveClasses
+                ];
+
+                return mergedClasses.join(' ');
+            }
+
+            function categorizeClasses(mobileClasses, desktopClasses) {
+                const commonClasses = [];
+                const mobileOnlyClasses = [];
+                const desktopOnlyClasses = [];
+
+                // Find common classes
+                mobileClasses.forEach(cls => {
+                    if (desktopClasses.includes(cls)) {
+                        commonClasses.push(cls);
+                    } else {
+                        mobileOnlyClasses.push(cls);
+                    }
+                });
+
+                // Find desktop-only classes
+                desktopClasses.forEach(cls => {
+                    if (!mobileClasses.includes(cls)) {
+                        desktopOnlyClasses.push(cls);
+                    }
+                });
+
+                return { commonClasses, mobileOnlyClasses, desktopOnlyClasses };
+            }
+
+            function processResponsiveVariants(mobileClasses, desktopClasses) {
+                const responsiveClasses = [];
+
+                // Group classes by property
+                const mobileByProperty = groupClassesByProperty(mobileClasses);
+                const desktopByProperty = groupClassesByProperty(desktopClasses);
+
+                // Process each property group
+                const allProperties = new Set([
+                    ...Object.keys(mobileByProperty),
+                    ...Object.keys(desktopByProperty)
+                ]);
+
+                allProperties.forEach(property => {
+                    const mobileValue = mobileByProperty[property];
+                    const desktopValue = desktopByProperty[property];
+
+                    if (mobileValue && desktopValue) {
+                        // Both have values for this property
+                        responsiveClasses.push(mobileValue);
+                        responsiveClasses.push(`lg:${desktopValue}`);
+                    } else if (mobileValue) {
+                        // Only mobile has this property
+                        responsiveClasses.push(mobileValue);
+                    } else if (desktopValue) {
+                        // Only desktop has this property
+                        responsiveClasses.push(`lg:${desktopValue}`);
+                    }
+                });
+
+                return responsiveClasses;
+            }
+
+            function groupClassesByProperty(classes) {
+                const propertyMap = {};
+
+                classes.forEach(cls => {
+                    // Extract property from class
+                    // This is a simplified approach - in a real implementation,
+                    // you'd need more sophisticated parsing
+                    const property = cls.split('-')[0];
+                    if (property) {
+                        propertyMap[property] = cls;
+                    }
+                });
+
+                return propertyMap;
+            }
+
+            function handleDifferentStructures(mergedElement, mobileElement, desktopElement) {
+                // Add mobile version with lg:hidden
+                const mobileWrapper = document.createElement('div');
+                mobileWrapper.setAttribute('class', 'block lg:hidden');
+                mobileWrapper.innerHTML = mobileElement.innerHTML;
+
+                // Add desktop version with hidden lg:block
+                const desktopWrapper = document.createElement('div');
+                desktopWrapper.setAttribute('class', 'hidden lg:block');
+                desktopWrapper.innerHTML = desktopElement.innerHTML;
+
+                // Add both versions to the merged element
+                mergedElement.appendChild(mobileWrapper);
+                mergedElement.appendChild(desktopWrapper);
+            }
+        });
+    </script>
+
+    <footer class="mt-10 text-center text-gray-600">
+        <p>This tool helps optimize Tailwind HTML for responsive designs by merging mobile and desktop versions.</p>
+    </footer>
+</body>
+</html>
