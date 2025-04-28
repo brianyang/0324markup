@@ -1,29 +1,85 @@
-<div class="flex flex-col w-full max-w-[1440px] mx-auto homepage bg-main mt-16" id="main-page-content">
+<div class="flex flex-col w-full max-w-[1440px] mx-auto homepage bg-main md:mt-16" id="main-page-content">
     <!-- Top section -->
     <div class="w-full flex flex-col lg:flex-row lg:justify-end">
         <div class="flex flex-col items-center lg:items-start w-full gap-3 px-3 pt-4 lg:pl-5">
-            <div class="w-full flex flex-col lg:flex-row"><!-- Left column (image area) - Only visible on desktop --><div class="lg:flex w-full lg:w-1/2 flex-col justify-between items-center lg:order-1"><!-- Caption at bottom - only visible on desktop --><div class="mt-auto w-full flex justify-center"><div class="rounded-2xl w-full sm:max-w-[358px]" style="filter:drop-shadow(0px 0px 12px rgba(0,0,0,0.12));"></div></div></div><!-- Right column (text content) --><div class="w-full lg:w-1/2 lg:order-2" id="bg-white-fade"><!-- Top text section --><div><!-- Headline text --><div class="flex w-full"><p class="w-full max-w-[580px] text-base lg:text-lg font-semibold text-center lg:text-left text-teal">When it comes to cholesterol, fat-soluble vitamins, nutrients, weight, and growth</p></div><!-- Absorb more. Gain more. text/image --><div class="flex flex-col items-center lg:items-start w-full"><div class="flex justify-center lg:justify-start w-full"><p class="w-full max-w-[580px] text-[40px] lg:text-[80px] text-center lg:text-left text-teal"><img class="w-full max-w-[300px] lg:max-w-[580px] m-auto mt-4" src="/themes/cholbam/images/callout-home-text-absorb.svg" alt="Absorb more. Gain more."></p></div></div><!-- This div is for the image (handled by background layer) --><div class="w-full h-[300px] lg:h-[500px] md:hidden">&nbsp;</div><!-- Mobile caption - visible only on mobile/small screens --><!-- Product description --></div><!-- Benefits section - DESKTOP VERSION (only visible on desktop) --><div class="hidden lg:block w-full mt-6" id="benefits-desktop"><p class="w-full max-w-[580px] text-base lg:text-lg text-left text-text"><span class="font-semibold">CHOLBAM may help patients with (SLOS)</span><sup>1-3</sup>*:</p><!-- Benefits list for desktop - 3 columns on md+ screens, 1 column on mobile --><div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-2"><div class="flex items-center"><div class="w-2 h-2 bg-teal rounded-full mr-2 flex-shrink-0">&nbsp;</div><p class="text-base text-left text-text">Increase plasma cholesterol<sup>2</sup></p></div><div class="flex items-center"><div class="w-2 h-2 bg-teal rounded-full mr-2 flex-shrink-0">&nbsp;</div><p class="text-base text-left text-text">Lower liver enzymes<sup>1</sup>*</p></div><div class="flex items-center"><div class="w-2 h-2 bg-teal rounded-full mr-2 flex-shrink-0">&nbsp;</div><p class="text-base text-left text-text">Improve certain growth parameters<sup>1-3</sup></p></div></div><!-- Footnotes for desktop --><div class="flex flex-col mt-4 w-full max-w-[580px]"><p class="w-full max-w-[580px] text-sm text-left text-text">*No evaluable patients with SLOS were in the pivotal studies.<sup>1</sup> Patients had other bile acid synthesis disorders due to single enzyme defects.</p><p class="w-full max-w-[580px] text-sm text-left text-text mt-2">In 11 of 12 patients with SLOS given CHOLBAM 10 mg/kg/day and cholesterol supplementation for 2 months, in an open-label, pilot study. Long-term studies are needed to determine durability of effect and possible clinical benefits.<sup>2</sup></p><p class="w-full max-w-[580px] text-sm text-left text-text mt-2">In a pivotal trial, body weight increased by 10% or was stable at greater than the 50th percentile, among responders.<sup>1</sup> In a 2-month pilot study, 9 of 12 patients showed an increasing trend in weight gain from baseline but did not reach statistical significance.<sup>2</sup></p></div></div></div></div>
-            <!-- Third section - Mobile version (only visible on mobile) -->
-            <div class="block lg:hidden w-full mt-6" id="benefits-mobile">
-                
-                
-                
-                <!-- Mobile footnotes -->
-                <div class="flex flex-col mt-4 w-full max-w-[580px]">
-                    <p class="w-full max-w-[580px] text-sm text-left text-text">
-Some diseases may be rare. 
-Treatment options shouldn’t have to be.
+            <div class="w-full flex flex-col lg:flex-row"><!-- Left column (image area) - Only visible on desktop -->
+                <div class="lg:flex w-full lg:w-1/2 flex-col justify-between items-center lg:order-1">
+                    <!-- Caption at bottom - only visible on desktop -->
+                    <div class="mt-auto w-full flex justify-center">
+                        <div class="rounded-2xl w-full sm:max-w-[358px]"
+                            style="filter:drop-shadow(0px 0px 12px rgba(0,0,0,0.12));"></div>
+                    </div>
+                </div><!-- Right column (text content) -->
+                <div class="w-full lg:w-1/2 lg:order-2"><!-- Top text section -->
+                    <div class="mt-4 md:mt-8"><!-- Headline text -->
+                        <div class="flex w-full">
+                            <p
+                                class="w-full max-w-[580px] text-base lg:text-lg font-semibold text-center lg:text-left text-[#a05ea6]">
+                                When it comes to cholesterol, fat-soluble vitamins, nutrients, weight, and growth</p>
+                        </div><!-- Absorb more. Gain more. text/image -->
+                        <div class="flex flex-col items-center lg:items-start w-full">
+                            <div class="flex justify-center lg:justify-start w-full">
+                                <p
+                                    class="w-full max-w-[580px] text-[40px] lg:text-[80px] text-center lg:text-left text-teal">
+                                    <img class="w-full max-w-[300px] lg:max-w-[580px] m-auto mt-4"
+                                        src="/themes/cholbam/images/callout-home-text-absorb.svg"
+                                        alt="Absorb more. Gain more.">
+                                </p>
+                            </div>
+                        </div>
+                        <!-- This div is for the image (handled by background layer) -->
+                        <div class="w-full h-[400px] lg:h-[500px] md:hidden">&nbsp;</div>
 
-</p>
+                        <div class="text-[#191919] text-[18px] lg:text-[26px] font-normal leading-[40px] mt-2 text-center lg:text-left">
+                            <h4>Some diseases may be rare. <br>Treatment options shouldn't have to be.</h4>
+                        </div>
+                        <!-- Mobile caption - visible only on mobile/small screens --><!-- Product description -->
+                    </div><!-- Benefits section - DESKTOP VERSION (only visible on desktop) -->
+                    <div class="hidden lg:block w-full mt-6" id="benefits-desktop">
+                        <p class="w-full max-w-[580px] text-base lg:text-lg text-left text-text"><span
+                                class="font-semibold">CHOLBAM may help patients with (SLOS)</span><sup>1-3</sup>*:</p>
+                        <!-- Benefits list for desktop - 3 columns on md+ screens, 1 column on mobile -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-2">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-teal rounded-full mr-2 flex-shrink-0">&nbsp;</div>
+                                <p class="text-base text-left text-text">Increase plasma cholesterol<sup>2</sup></p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-teal rounded-full mr-2 flex-shrink-0">&nbsp;</div>
+                                <p class="text-base text-left text-text">Lower liver enzymes<sup>1</sup>*</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-teal rounded-full mr-2 flex-shrink-0">&nbsp;</div>
+                                <p class="text-base text-left text-text">Improve certain growth parameters<sup>1-3</sup>
+                                </p>
+                            </div>
+                        </div><!-- Footnotes for desktop -->
+                        <div class="flex flex-col mt-4 w-full max-w-[580px]">
+                            <p class="w-full max-w-[580px] text-sm text-left text-text">*No evaluable patients with SLOS
+                                were in the pivotal studies.<sup>1</sup> Patients had other bile acid synthesis
+                                disorders due to single enzyme defects.</p>
+                            <p class="w-full max-w-[580px] text-sm text-left text-text mt-2">In 11 of 12 patients with
+                                SLOS given CHOLBAM 10 mg/kg/day and cholesterol supplementation for 2 months, in an
+                                open-label, pilot study. Long-term studies are needed to determine durability of effect
+                                and possible clinical benefits.<sup>2</sup></p>
+                            <p class="w-full max-w-[580px] text-sm text-left text-text mt-2">In a pivotal trial, body
+                                weight increased by 10% or was stable at greater than the 50th percentile, among
+                                responders.<sup>1</sup> In a 2-month pilot study, 9 of 12 patients showed an increasing
+                                trend in weight gain from baseline but did not reach statistical
+                                significance.<sup>2</sup></p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="flex flex-col items-center lg:items-start gap-4 w-full pb-16">
                 <!-- Content section --><!-- Heading section -->
                 <div class="flex flex-col items-center lg:items-start gap-4 lg:pl-5 md:mt-[216px] lg:mt-0 m-auto">
                     <!-- Cards section --><!-- Main content -->
-                    <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 opacity-90 gap-6 mt-6 lg:mt-16 w-full max-w-[1200px]">
+                    <div
+                        class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 opacity-90 gap-12 mt-6 lg:mt-16 w-full max-w-[1200px]">
                         <!-- Card 1 -->
-                        <div class="flex flex-col items-center rounded-2xl shadow-md h-full">
+                        <div class="flex flex-col items-center rounded-2xl shadow-md h-[264px] xl:h-[336px] xl:w-[354px]">
                             <div class="gradient-border-pseudo gateway1">
                                 <div class="content p-6 flex flex-col h-full">
                                     <div class="flex flex-col gap-4">
@@ -37,7 +93,7 @@ Treatment options shouldn’t have to be.
                                     <div class="flex items-center justify-center mt-auto">
                                         <div class="flex items-center space-x-2">
                                             <a href="/slos"><button class="btn-with-svg-border">
-                                                    Treat SLOS
+                                                    Learn More About SLOS
                                                 </button> &nbsp;</a>
                                         </div>
                                     </div>
@@ -45,7 +101,7 @@ Treatment options shouldn’t have to be.
                             </div>
                         </div>
                         <!-- Card 2 -->
-                        <div class="flex flex-col items-center rounded-2xl shadow-md h-full">
+                        <div class="flex flex-col items-center rounded-2xl shadow-md h-[264px] xl:h-[336px] xl:w-[354px]">
                             <div class="gradient-border-pseudo gateway2">
                                 <div class="content p-6 flex flex-col h-full">
                                     <div class="flex flex-col gap-4">
@@ -58,15 +114,14 @@ Treatment options shouldn’t have to be.
                                     </div>
                                     <div class="flex items-center justify-center mt-auto">
                                         <div class="flex items-center space-x-2">
-                                            <a href="/pbd_zsd"><button class="btn-with-svg-border">Treat
-                                                    PBD‑ZSD</button> &nbsp;</a>
+                                            <a href="/pbd_zsd"><button class="btn-with-svg-border">Learn More About PBD‑ZSD</button> &nbsp;</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Card 3 -->
-                        <div class="flex flex-col items-center rounded-2xl shadow-md h-full">
+                        <div class="flex flex-col items-center rounded-2xl shadow-md h-[264px] xl:h-[336px] xl:w-[354px]">
                             <div class="gradient-border-pseudo gateway3">
                                 <div class="content p-6 flex flex-col h-full">
                                     <div class="flex flex-col gap-4">
@@ -80,7 +135,7 @@ Treatment options shouldn’t have to be.
                                     <div class="flex items-center justify-center mt-auto">
                                         <div class="flex items-center space-x-2">
                                             <a href="/basd"><button class="btn-with-svg-border">
-                                                    Treat BASD
+                                                    Learn More About BASD
                                                 </button> &nbsp;</a>
                                         </div>
                                     </div>
@@ -89,94 +144,146 @@ Treatment options shouldn’t have to be.
                         </div>
                     </div>
                     <!-- Bottom section -->
-                    <div class="flex flex-col items-center gap-4 px-4 py-8 md:flex-row md:items-center md:gap-8 lg:gap-28 md:px-8 lg:px-16 md:py-12 lg:py-20 rounded-2xl bg-white/80 backdrop-blur-[80px] shadow-md mt-6 lg:mt-16 w-full max-w-[1200px]">
-                        <div class="flex flex-col items-center px-20 md:px-4 lg:px-0 md:justify-center md:items-start md:w-[180px] lg:w-[232px] md:gap-2.5">
+                    <div
+                        class="flex flex-col items-center gap-4 px-4 py-8 md:flex-row md:items-center md:gap-8 lg:gap-28 md:px-8 lg:px-16 md:py-12 lg:py-20 rounded-2xl bg-white/80 backdrop-blur-[80px] shadow-md mt-6 lg:mt-16 w-full max-w-[1200px]">
+                        <div
+                            class="flex flex-col items-center px-20 md:px-4 lg:px-0 md:justify-center md:items-start md:w-[180px] lg:w-[232px] md:gap-2.5">
                             <div class="relative overflow-hidden">
-                                <img src="/themes/cholbam/images/logo-map.svg" width="232" height="112" alt="Mirum Access Plus logo">
+                                <img src="/themes/cholbam/images/logo-map.svg" width="232" height="112"
+                                    alt="Mirum Access Plus logo">
                             </div>
                         </div>
                         <div class="flex flex-col items-center gap-6 md:items-start md:flex-grow">
                             <div class="flex flex-col items-center md:items-start gap-4">
-                                <p class="w-full max-w-[668px] text-[26px] md:text-[28px] lg:text-[32px] font-semibold text-center md:text-left text-text">
+                                <p
+                                    class="w-full max-w-[668px] text-[26px] md:text-[28px] lg:text-[32px] font-semibold text-center md:text-left text-text">
                                     Get your patients started on CHOLBAM
                                 </p>
                             </div>
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center"><a class="w-full max-w-[500px]" target="_blank" href="https://cholbamhcp.com/wp-content/uploads/2024/08/CHOLBAM_Patient-Enrollment-Form_DIGITAL_FINAL_7.2.24.pdf"><button class="btn-with-svg btn-with-scribble-animation flex items-center justify-center !pb-[25px]" id="contact-btn">
-                                        <span class="relative z-10 whitespace-normal text-center text-[#a05ea6]">Download
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center"><a class="w-full max-w-[500px]"
+                                    target="_blank"
+                                    href="https://cholbamhcp.com/wp-content/uploads/2024/08/CHOLBAM_Patient-Enrollment-Form_DIGITAL_FINAL_7.2.24.pdf"><button
+                                        class="btn-with-svg btn-with-scribble-animation flex items-center justify-center !pb-[25px]"
+                                        id="contact-btn">
+                                        <span
+                                            class="relative z-10 whitespace-normal text-center text-[#a05ea6]">Download
                                             the Patient Enrollment Form</span>
-                                        <img src="/themes/cholbam/images/icons/down-arrow-purple.svg" alt="" class="mt-[2px] ml-4">
+                                        <img src="/themes/cholbam/images/icons/down-arrow-purple.svg" alt=""
+                                            class="mt-[2px] ml-4">
                                         <div class="scribble-animation-container absolute inset-0 w-full h-full">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 128" width="304" height="128" class="scribble-svg" preserveAspectRatio="xMidYMid slice" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 128" width="304"
+                                                height="128" class="scribble-svg" preserveAspectRatio="xMidYMid slice"
+                                                style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
                                                 <defs>
                                                     <clipPath id="__lottie_element_3">
                                                         <rect width="304" height="128" x="0" y="0"></rect>
                                                     </clipPath>
                                                 </defs>
                                                 <g clip-path="url(#__lottie_element_3)">
-                                                    <g transform="matrix(1,0,0,1,152,64)" opacity="1" style="display: block;">
+                                                    <g transform="matrix(1,0,0,1,152,64)" opacity="1"
+                                                        style="display: block;">
                                                         <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                                                            <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(118,94,165)" stroke-opacity="1" stroke-width="8" d="M0 0"></path>
+                                                            <path stroke-linecap="butt" stroke-linejoin="miter"
+                                                                fill-opacity="0" stroke-miterlimit="4"
+                                                                stroke="rgb(118,94,165)" stroke-opacity="1"
+                                                                stroke-width="8" d="M0 0"></path>
                                                         </g>
                                                     </g>
-                                                    <g transform="matrix(-1,0,0,-1,150,61)" opacity="1" style="display: block;">
+                                                    <g transform="matrix(-1,0,0,-1,150,61)" opacity="1"
+                                                        style="display: block;">
                                                         <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                                                            <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(118,94,165)" stroke-opacity="1" stroke-width="8" d="M0 0"></path>
+                                                            <path stroke-linecap="butt" stroke-linejoin="miter"
+                                                                fill-opacity="0" stroke-miterlimit="4"
+                                                                stroke="rgb(118,94,165)" stroke-opacity="1"
+                                                                stroke-width="8" d="M0 0"></path>
                                                         </g>
                                                     </g>
                                                 </g>
-                                            </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 128" width="304" height="128" class="scribble-svg" preserveAspectRatio="xMidYMid slice" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                                            </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 128"
+                                                width="304" height="128" class="scribble-svg"
+                                                preserveAspectRatio="xMidYMid slice"
+                                                style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
                                                 <defs>
                                                     <clipPath id="__lottie_element_5">
                                                         <rect width="304" height="128" x="0" y="0"></rect>
                                                     </clipPath>
                                                 </defs>
                                                 <g clip-path="url(#__lottie_element_5)">
-                                                    <g transform="matrix(1,0,0,1,152,64)" opacity="1" style="display: block;">
+                                                    <g transform="matrix(1,0,0,1,152,64)" opacity="1"
+                                                        style="display: block;">
                                                         <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                                                            <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(118,94,165)" stroke-opacity="1" stroke-width="8" d="M0 0"></path>
+                                                            <path stroke-linecap="butt" stroke-linejoin="miter"
+                                                                fill-opacity="0" stroke-miterlimit="4"
+                                                                stroke="rgb(118,94,165)" stroke-opacity="1"
+                                                                stroke-width="8" d="M0 0"></path>
                                                         </g>
                                                     </g>
-                                                    <g transform="matrix(-1,0,0,-1,150,61)" opacity="1" style="display: block;">
+                                                    <g transform="matrix(-1,0,0,-1,150,61)" opacity="1"
+                                                        style="display: block;">
                                                         <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                                                            <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(118,94,165)" stroke-opacity="1" stroke-width="8" d="M0 0"></path>
+                                                            <path stroke-linecap="butt" stroke-linejoin="miter"
+                                                                fill-opacity="0" stroke-miterlimit="4"
+                                                                stroke="rgb(118,94,165)" stroke-opacity="1"
+                                                                stroke-width="8" d="M0 0"></path>
                                                         </g>
                                                     </g>
                                                 </g>
-                                            </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 128" width="304" height="128" class="scribble-svg" preserveAspectRatio="xMidYMid slice" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                                            </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 128"
+                                                width="304" height="128" class="scribble-svg"
+                                                preserveAspectRatio="xMidYMid slice"
+                                                style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
                                                 <defs>
                                                     <clipPath id="__lottie_element_19">
                                                         <rect width="304" height="128" x="0" y="0"></rect>
                                                     </clipPath>
                                                 </defs>
                                                 <g clip-path="url(#__lottie_element_19)">
-                                                    <g transform="matrix(1,0,0,1,152,64)" opacity="1" style="display: block;">
+                                                    <g transform="matrix(1,0,0,1,152,64)" opacity="1"
+                                                        style="display: block;">
                                                         <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                                                            <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(118,94,165)" stroke-opacity="1" stroke-width="8" d="M0 0"></path>
+                                                            <path stroke-linecap="butt" stroke-linejoin="miter"
+                                                                fill-opacity="0" stroke-miterlimit="4"
+                                                                stroke="rgb(118,94,165)" stroke-opacity="1"
+                                                                stroke-width="8" d="M0 0"></path>
                                                         </g>
                                                     </g>
-                                                    <g transform="matrix(-1,0,0,-1,150,61)" opacity="1" style="display: block;">
+                                                    <g transform="matrix(-1,0,0,-1,150,61)" opacity="1"
+                                                        style="display: block;">
                                                         <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                                                            <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(118,94,165)" stroke-opacity="1" stroke-width="8" d="M0 0"></path>
+                                                            <path stroke-linecap="butt" stroke-linejoin="miter"
+                                                                fill-opacity="0" stroke-miterlimit="4"
+                                                                stroke="rgb(118,94,165)" stroke-opacity="1"
+                                                                stroke-width="8" d="M0 0"></path>
                                                         </g>
                                                     </g>
                                                 </g>
                                             </svg>
 
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 128" width="304" height="128" class="scribble-svg" preserveAspectRatio="xMidYMid slice" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304 128" width="304"
+                                                height="128" class="scribble-svg" preserveAspectRatio="xMidYMid slice"
+                                                style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
                                                 <defs>
                                                     <clipPath id="__lottie_element_5">
                                                         <rect width="304" height="128" x="0" y="0"></rect>
                                                     </clipPath>
                                                 </defs>
                                                 <g clip-path="url(#__lottie_element_5)">
-                                                    <g transform="matrix(1,0,0,1,152,64)" opacity="1" style="display: block;">
+                                                    <g transform="matrix(1,0,0,1,152,64)" opacity="1"
+                                                        style="display: block;">
                                                         <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                                                            <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(118,94,165)" stroke-opacity="1" stroke-width="8" d="M0 0"></path>
+                                                            <path stroke-linecap="butt" stroke-linejoin="miter"
+                                                                fill-opacity="0" stroke-miterlimit="4"
+                                                                stroke="rgb(118,94,165)" stroke-opacity="1"
+                                                                stroke-width="8" d="M0 0"></path>
                                                         </g>
                                                     </g>
-                                                    <g transform="matrix(-1,0,0,-1,150,61)" opacity="1" style="display: block;">
+                                                    <g transform="matrix(-1,0,0,-1,150,61)" opacity="1"
+                                                        style="display: block;">
                                                         <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                                                            <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(118,94,165)" stroke-opacity="1" stroke-width="8" d="M0 0"></path>
+                                                            <path stroke-linecap="butt" stroke-linejoin="miter"
+                                                                fill-opacity="0" stroke-miterlimit="4"
+                                                                stroke="rgb(118,94,165)" stroke-opacity="1"
+                                                                stroke-width="8" d="M0 0"></path>
                                                         </g>
                                                     </g>
                                                 </g>
@@ -193,7 +300,8 @@ Treatment options shouldn’t have to be.
     <div class="bg-texture">
         <div class="max-w-[1140px] mx-auto">
             <form class="transition-colors" id="stayUpToDateForm">
-                <div class="flex flex-col justify-center items-start self-stretch gap-16 pt-10 pb-8 bg-cover bg-no-repeat bg-center">
+                <div
+                    class="flex flex-col justify-center items-start self-stretch gap-16 pt-10 pb-8 bg-cover bg-no-repeat bg-center">
                     <div class="flex flex-col md:flex-row justify-center items-start self-stretch px-3 md:gap-8">
                         <!-- Form header and description -->
                         <div class="flex flex-col justify-start items-start self-stretch md:w-2/5 relative gap-4">
@@ -205,7 +313,8 @@ Treatment options shouldn’t have to be.
                                 form.
                             </p>
                             <p class="self-stretch text-lg text-left text-[#191919]">
-                                <span class="text-lg font-semibold text-left text-[#191919]">Step 1</span><span class="text-lg text-left text-[#191919]">/2</span>
+                                <span class="text-lg font-semibold text-left text-[#191919]">Step 1</span><span
+                                    class="text-lg text-left text-[#191919]">/2</span>
                             </p>
                         </div>
 
@@ -234,8 +343,10 @@ Treatment options shouldn’t have to be.
                                                 <p class="text-[26px] text-left text-[#de1135]">*</p>
                                             </div>
                                         </div>
-                                        <div class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578]">
-                                            <input class="w-full h-6 bg-transparent outline-none" type="text" id="title" name="title" required="">
+                                        <div
+                                            class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578]">
+                                            <input class="w-full h-6 bg-transparent outline-none" type="text" id="title"
+                                                name="title" required="">
                                         </div>
                                     </div>
                                     <div class="flex flex-col justify-start items-start self-stretch md:w-1/2 gap-2">
@@ -253,8 +364,10 @@ Treatment options shouldn’t have to be.
                                                 <p class="text-[26px] text-left text-[#de1135]">*</p>
                                             </div>
                                         </div>
-                                        <div class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578]">
-                                            <input class="w-full h-6 bg-transparent outline-none" type="text" id="firstName" name="firstName" required="">
+                                        <div
+                                            class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578]">
+                                            <input class="w-full h-6 bg-transparent outline-none" type="text"
+                                                id="firstName" name="firstName" required="">
                                         </div>
                                     </div>
 
@@ -268,22 +381,27 @@ Treatment options shouldn’t have to be.
                                                 <p class="text-[26px] text-left text-[#de1135]">*</p>
                                             </div>
                                         </div>
-                                        <div class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578]">
-                                            <input class="w-full h-6 bg-transparent outline-none" type="text" id="lastName" name="lastName" required="">
+                                        <div
+                                            class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578]">
+                                            <input class="w-full h-6 bg-transparent outline-none" type="text"
+                                                id="lastName" name="lastName" required="">
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Next button -->
                                 <div class="pt-4">
-                                    <button class="bg-[url('/themes/cholbam/images/bg-btn-form.svg')] bg-no-repeat bg-cover text-white px-9 py-3 rounded-md hover:bg-[#7b539b] focus:outline-none min-h-16 min-w-28" type="button" id="nextButton">
+                                    <button
+                                        class="bg-[url('/themes/cholbam/images/bg-btn-form.svg')] bg-no-repeat bg-cover text-white px-9 py-3 rounded-md hover:bg-[#7b539b] focus:outline-none min-h-16 min-w-28"
+                                        type="button" id="nextButton">
                                         Next
                                     </button>
                                 </div>
                             </div>
 
                             <!-- Step 2 fields -->
-                            <div class="step-2-fields hidden flex flex-col justify-start items-start self-stretch gap-6">
+                            <div
+                                class="step-2-fields hidden flex flex-col justify-start items-start self-stretch gap-6">
                                 <!-- Email and Specialty fields -->
                                 <div class="flex flex-col md:flex-row justify-start items-center self-stretch gap-6">
                                     <!-- Email field -->
@@ -296,8 +414,10 @@ Treatment options shouldn’t have to be.
                                                 <p class="text-[26px] text-left text-[#de1135]">*</p>
                                             </div>
                                         </div>
-                                        <div class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578]">
-                                            <input class="w-full h-6 bg-transparent outline-none" type="email" id="email" name="email" required="">
+                                        <div
+                                            class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578]">
+                                            <input class="w-full h-6 bg-transparent outline-none" type="email"
+                                                id="email" name="email" required="">
                                         </div>
                                     </div>
 
@@ -311,8 +431,10 @@ Treatment options shouldn’t have to be.
                                                 <p class="text-[26px] text-left text-[#de1135]">*</p>
                                             </div>
                                         </div>
-                                        <div class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578]">
-                                            <input class="w-full h-6 bg-transparent outline-none" type="text" id="specialty" name="specialty" required="">
+                                        <div
+                                            class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578]">
+                                            <input class="w-full h-6 bg-transparent outline-none" type="text"
+                                                id="specialty" name="specialty" required="">
                                         </div>
                                     </div>
                                 </div>
@@ -326,16 +448,21 @@ Treatment options shouldn’t have to be.
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578] relative">
-                                        <select class="w-full h-6 bg-transparent outline-none appearance-none" id="topics" name="topics">
+                                    <div
+                                        class="flex justify-start items-start self-stretch gap-2 p-4 rounded-lg bg-white border border-[#737578] relative">
+                                        <select class="w-full h-6 bg-transparent outline-none appearance-none"
+                                            id="topics" name="topics">
                                             <option value="">Select...</option>
                                             <option value="topic1">Topic 1</option>
                                             <option value="topic2">Topic 2</option>
                                             <option value="topic3">Topic 3</option>
                                         </select>
-                                        <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
-                                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        <div
+                                            class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
                                             </svg>
                                         </div>
                                     </div>
@@ -344,11 +471,13 @@ Treatment options shouldn’t have to be.
                                 <!-- Privacy Policy section -->
                                 <div class="flex flex-col justify-start items-start self-stretch gap-3">
                                     <div class="flex justify-start items-center self-stretch relative">
-                                        <a class="text-lg font-semibold text-left text-[#191919] underline" href="#" id="viewPrivacyPolicy">View Privacy Policy</a>
+                                        <a class="text-lg font-semibold text-left text-[#191919] underline" href="#"
+                                            id="viewPrivacyPolicy">View Privacy Policy</a>
                                         <p class="text-[26px] text-left text-[#de1135]">*</p>
                                     </div>
                                     <div class="flex items-start gap-3">
-                                        <input class="w-5 h-5 mt-1" type="checkbox" id="privacyConsent" name="privacyConsent" required="">
+                                        <input class="w-5 h-5 mt-1" type="checkbox" id="privacyConsent"
+                                            name="privacyConsent" required="">
                                         <label class="text-base text-[#191919]" for="privacyConsent">I consent to the
                                             use of my information as contained in the Mirum Privacy Policy.</label>
                                     </div>
@@ -356,13 +485,17 @@ Treatment options shouldn’t have to be.
 
                                 <!-- Terms text -->
                                 <p class="text-sm text-[#191919] mt-2">
-                                    By completing this form, you agree to our <a class="underline text-[#191919]" href="#">Terms of Use</a> and <a class="underline text-[#191919]" href="#">Privacy
+                                    By completing this form, you agree to our <a class="underline text-[#191919]"
+                                        href="#">Terms of Use</a> and <a class="underline text-[#191919]"
+                                        href="#">Privacy
                                         Policy</a>.
                                 </p>
 
                                 <!-- Submit and Back buttons -->
                                 <div class="flex flex-col gap-4 pt-4">
-                                    <button class="bg-[#8e63aa] text-white px-8 py-3 rounded-md hover:bg-[#7b539b] focus:outline-none" type="submit" id="submitButton">
+                                    <button
+                                        class="bg-[#8e63aa] text-white px-8 py-3 rounded-md hover:bg-[#7b539b] focus:outline-none"
+                                        type="submit" id="submitButton">
                                         Submit
                                     </button>
                                     <a class="text-[#191919] underline" href="#" id="backButton">Back</a>
@@ -370,7 +503,9 @@ Treatment options shouldn’t have to be.
                             </div>
                         </div>
                     </div>
-            
-        </div></form>
+
+                </div>
+            </form>
+        </div>
     </div>
-</div></div>
+</div>
